@@ -1,0 +1,4 @@
+Clue 2 found: summer homework
+Clue: There seems to be some papers on the desk. Wait, isn’t this summer homework? They promised that they had finished that.
+MC: (Maybe that’s enough. Let’s go talk to them.)
+EndQueue

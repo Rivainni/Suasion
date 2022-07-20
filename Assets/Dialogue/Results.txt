@@ -1,0 +1,12 @@
+Results
+F: Alright. Go fetch me the game, will you? We’ll see about that.
+(Sometimes you can do tasks for characters. They may help in persuasion)
+(Player goes outside to fetch the game)
+MC: Here it is.
+Two cases:
+Success
+F: Okay, I think it looks good. Let’s go!
+Failure
+F: Uhhh, maybe not.
+(results displayed. success!)
+EndQueue
