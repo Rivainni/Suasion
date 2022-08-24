@@ -7,6 +7,7 @@ public class StoryElement : MonoBehaviour
 {
     [SerializeField] TextAsset TextFileAsset; // your imported text file for your NPC
     [SerializeField] string title;
+    [SerializeField] string type;
     [SerializeField] GameManager gameManager; // need to access the player state to determine whether to start dialogue or nah.
     Queue<string> dialogue = new Queue<string>(); // stores the dialogue (Great Performance!)
 
@@ -23,19 +24,19 @@ public class StoryElement : MonoBehaviour
     public void TriggerDialogue()
     {
         ReadTextFile(); // loads in the text file
-        if (title == "Table" || title == "Bed" || title == "Start")
+        if (type == "Object")
         {
             FindObjectOfType<StoryManager>().StartDialogue(dialogue, 0); // Accesses Dialogue Manager and Starts Dialogue
         }
-        else if (title == "Intro")
+        else if (type == "Intro")
         {
             FindObjectOfType<StoryManager>().StartDialogue(dialogue, 1); // Accesses Dialogue Manager and Starts Dialogue
+            gameObject.SetActive(false);
         }
-        else if (title == "Persuade")
+        else if (type == "Persuade")
         {
             FindObjectOfType<StoryManager>().StartDialogue(dialogue, 2); // Accesses Dialogue Manager and Starts Dialogue
         }
-        gameObject.SetActive(false);
     }
 
     /* loads in your text file */

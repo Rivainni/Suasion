@@ -12,7 +12,6 @@ public class StoryManager : MonoBehaviour
     [SerializeField] MainUI mainUI;
     [SerializeField] GameManager gameManager;
     [SerializeField] TextMeshProUGUI[] storyText;
-    [SerializeField] bool cutscene = true;
     Queue<string> inputStream = new Queue<string>();
     bool pause = false;
     bool primarySpeaker = false;
@@ -50,6 +49,7 @@ public class StoryManager : MonoBehaviour
         }
         inputStream = dialogue; // store the dialogue from dialogue trigger
         PrintDialogue(); // Prints out the first line of dialogue
+        gameManager.LockMovement(true);
     }
 
     public void AdvanceDialogue() // call when a player presses a button in Dialogue Trigger
@@ -151,6 +151,7 @@ public class StoryManager : MonoBehaviour
         gameManager.SetIntro(false);
         gameManager.SetIntro(false);
         gameManager.Reset();
+        gameManager.LockMovement(false);
     }
 
     void SetName(InputField input, GameObject toRemove)
@@ -159,12 +160,5 @@ public class StoryManager : MonoBehaviour
         Destroy(toRemove);
         pause = false;
         PrintDialogue();
-    }
-
-
-    // separated tutorial because it's built different
-    void Tutorial(string action)
-    {
-
     }
 }

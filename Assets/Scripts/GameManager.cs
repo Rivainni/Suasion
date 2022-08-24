@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] MainUI mainUI;
     [SerializeField] TextAsset keywordsFile;
+    [SerializeField] PlayerMovement playerMovement;
     // Start is called before the first frame update
 
     public struct SaveFile
@@ -57,8 +58,6 @@ public class GameManager : MonoBehaviour
         ClearKeywords();
         AddTurn();
     }
-
-
 
     public void Calculate()
     {
@@ -157,5 +156,17 @@ public class GameManager : MonoBehaviour
     public float GetEmpathy()
     {
         return empathy;
+    }
+
+    public void LockMovement(bool status)
+    {
+        if (status)
+        {
+            playerMovement.LockMovement();
+        }
+        else
+        {
+            playerMovement.UnlockMovement();
+        }
     }
 }
