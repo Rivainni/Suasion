@@ -1,0 +1,11 @@
+MC: Hmm...
+[ACTION=Choose]
+MC: You good mate?
+F: Fine, just tired.
+MC: Hmmm alright. You know-
+[ACTION=Choose]
+MC: I’m gonna look inside your house.
+F: Fine, ask nicely next time.
+MC: Alright. May I please come in, my dear old friend of mine?
+F: Stop
+EndQueue
