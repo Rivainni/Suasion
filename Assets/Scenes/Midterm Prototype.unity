@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextFileAsset: {fileID: 4900000, guid: c4d0bee9223f4404390ce27a78cec250, type: 3}
+  dialogue: {fileID: 0}
   title: Bed
   type: Object
   gameManager: {fileID: 1901980257}
@@ -24049,6 +24049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1068479569}
   - component: {fileID: 1068479568}
+  - component: {fileID: 1068479570}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -24085,6 +24086,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1068479570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068479567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: 3f0fc6c694a2b47f3b7f7b418feeb5ef, type: 2}
+  title: Start
+  type: Start
+  gameManager: {fileID: 1901980257}
 --- !u!1 &1089262672
 GameObject:
   m_ObjectHideFlags: 0
@@ -24315,7 +24332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextFileAsset: {fileID: 4900000, guid: e53cf604284f8204fae149c188c8e284, type: 3}
+  dialogue: {fileID: 0}
   title: Intro
   type: Intro
   gameManager: {fileID: 1901980257}
@@ -32203,7 +32220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextFileAsset: {fileID: 4900000, guid: 822e67d675e65444181fd0e983b02746, type: 3}
+  dialogue: {fileID: 0}
   title: Start
   type: 
   gameManager: {fileID: 1901980257}
@@ -32451,7 +32468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextFileAsset: {fileID: 4900000, guid: da92f2b383843a0478f6c8ce84792976, type: 3}
+  dialogue: {fileID: 0}
   title: Table
   type: Object
   gameManager: {fileID: 1901980257}
@@ -34211,7 +34228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextFileAsset: {fileID: 4900000, guid: 790546c8daff59944b0d3f14d34fa743, type: 3}
+  dialogue: {fileID: 0}
   title: Persuade
   type: PCharacter
   gameManager: {fileID: 1901980257}

@@ -6,26 +6,34 @@ using TMPro;
 
 public class StoryManager : MonoBehaviour
 {
-    [SerializeField] GameObject outerDialogue;
-    [SerializeField] GameObject introDialogue;
-    [SerializeField] GameObject persuasionDialogue;
-    [SerializeField] MainUI mainUI;
-    [SerializeField] GameManager gameManager;
-    [SerializeField] TextMeshProUGUI[] storyText;
-    Queue<string> inputStream = new Queue<string>();
+    [SerializeField]
+    GameObject outerDialogue;
+
+    [SerializeField]
+    GameObject introDialogue;
+
+    [SerializeField]
+    GameObject persuasionDialogue;
+
+    [SerializeField]
+    MainUI mainUI;
+
+    [SerializeField]
+    GameManager gameManager;
+
+    [SerializeField]
+    TextMeshProUGUI[] storyText;
+
+    DialogueNode current;
     bool pause = false;
-    bool primarySpeaker = false;
     int currentTextIndex = 0;
 
     bool actionTaken = false;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() { }
 
-    }
-
-    public void StartDialogue(Queue<string> dialogue, int dialogueType)
+    public void StartDialogue(Dialogue dialogue, int dialogueType)
     {
         // open the dialogue box
         switch (dialogueType)
@@ -47,7 +55,7 @@ public class StoryManager : MonoBehaviour
             default:
                 break;
         }
-        inputStream = dialogue; // store the dialogue from dialogue trigger
+        current = dialogue.firstNode; // store the dialogue from dialogue trigger
         PrintDialogue(); // Prints out the first line of dialogue
         gameManager.LockMovement(true);
     }
@@ -67,84 +75,25 @@ public class StoryManager : MonoBehaviour
 
     void PrintDialogue()
     {
-        if (inputStream.Count == 0 || inputStream.Peek().Contains("EndQueue")) // special phrase to stop dialogue
+        if (current is BasicDialogueNode)
         {
-            inputStream.Dequeue(); // Clear Queue
-            EndDialogue();
+            BasicDialogueNode basicNode = current as BasicDialogueNode;
+            storyText[currentTextIndex].text = basicNode.NarrationLine.Text;
+            Debug.Log(basicNode.NarrationLine.Text);
+            current = basicNode.NextNode;
         }
-        else if (inputStream.Peek().Contains("[NAME="))
+        else if (current is KeywordNode)
         {
-            string name = inputStream.Peek();
-            name = inputStream.Dequeue().Substring(name.IndexOf('=') + 1, name.IndexOf(']') - (name.IndexOf('=') + 1));
-            // characterName.text = name;
-            primarySpeaker = true;
-            PrintDialogue();
-        }
-        else if (inputStream.Peek().Contains("[ACTION="))
-        {
-            string action = inputStream.Peek();
-            action = inputStream.Dequeue().Substring(action.IndexOf('=') + 1, action.IndexOf(']') - (action.IndexOf('=') + 1));
-            actionTaken = true;
-
-            if (action == "Choose")
-            {
-                if (gameManager.CheckIntro())
-                {
-                    mainUI.DisplayKeywords("Tutorial", gameManager.GetTurn(), false);
-                }
-                else if (gameManager.CheckPersuade())
-                {
-
-                    mainUI.DisplayKeywords("Tutorial", gameManager.GetTurn(), true);
-                }
-            }
-
-            PrintDialogue();
-        }
-        else if (inputStream.Peek().Contains("{0}"))
-        {
-            string current = inputStream.Dequeue();
-
-            int stop = 0;
-            for (int i = 0; i < current.Length; i++)
-            {
-                if (current[i] == ':')
-                {
-                    stop = i;
-                    break;
-                }
-            }
-            string expression = current.Substring(0, stop);
-            // storyText.text = string.Format(current.Substring(stop + 1), playerState.GetName());
-        }
-        else if (inputStream.Peek().Contains(":"))
-        {
-            string current = inputStream.Dequeue();
-
-            int stop = 0;
-            for (int i = 0; i < current.Length; i++)
-            {
-                if (current[i] == ':')
-                {
-                    stop = i;
-                    break;
-                }
-            }
-            string expression = current.Substring(0, stop);
-            storyText[currentTextIndex].text = current.Substring(stop + 1);
-        }
-        else
-        {
-            storyText[currentTextIndex].text = inputStream.Dequeue();
+            KeywordNode keywordNode = current as KeywordNode;
+            storyText[currentTextIndex].text = keywordNode.NarrationLine.Text;
+            mainUI.DisplayKeywords(keywordNode.NarrationLine.Speaker.CharacterName, gameManager.GetTurn(), gameManager.CheckPersuade());
         }
     }
 
     public void EndDialogue()
     {
-
         storyText[currentTextIndex].text = "";
-        // characterName.text = "";
-        inputStream.Clear();
+        current = null;
         outerDialogue.SetActive(false);
         introDialogue.SetActive(false);
         persuasionDialogue.SetActive(false);
