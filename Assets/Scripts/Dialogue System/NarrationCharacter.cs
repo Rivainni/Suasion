@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Scriptable Objects/Narration/Character")]
+[CreateAssetMenu(menuName = "ScriptableObjects/Narration/Character")]
 public class NarrationCharacter : ScriptableObject
 {
     [SerializeField]

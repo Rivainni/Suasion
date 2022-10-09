@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Scriptable Objects/Narration/Dialogue/Node/Basic")]
+[CreateAssetMenu(menuName = "ScriptableObjects/Narration/Dialogue/Node/Basic")]
 public class BasicDialogueNode : DialogueNode
 {
     [SerializeField]
