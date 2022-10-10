@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
         bool inIntro;
         float lastPValue;
         float lastMultiplier;
+        int level;
     }
 
     float currentCorrect;
@@ -22,9 +23,10 @@ public class GameManager : MonoBehaviour
     float empathy = 30;
     int turn = 1;
     string currentCharacter = "";
-    string mood;
+    string mood = "neutral";
     bool inPersuade = false;
     bool inIntro = false;
+    int level = 0;
     DialogueNode next = null;
 
     List<string> keywordList = new List<string>();
@@ -64,6 +66,7 @@ public class GameManager : MonoBehaviour
     public void Calculate()
     {
         int basePoints = 0;
+        Debug.Log("You have " + keywordList.Count + " keywords");
         foreach (Combination combination in combinationList)
         {
             if (combination.CheckKeywords(keywordList, mood) > 0)
@@ -195,5 +198,32 @@ public class GameManager : MonoBehaviour
         {
             playerMovement.UnlockMovement();
         }
+    }
+
+    public void RandomiseMood()
+    {
+        int rand = Random.Range(0, 3);
+        if (rand == 0)
+        {
+            mood = "positive";
+        }
+        else if (rand == 1)
+        {
+            mood = "neutral";
+        }
+        else
+        {
+            mood = "negative";
+        }
+    }
+
+    public int GetLevel()
+    {
+        return level;
+    }
+
+    public void AddLevel()
+    {
+        level++;
     }
 }

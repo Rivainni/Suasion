@@ -23,6 +23,8 @@ public class StoryManager : MonoBehaviour
 
     [SerializeField]
     TextMeshProUGUI[] storyText;
+    [SerializeField]
+    TextMeshProUGUI[] nameText;
 
     DialogueNode current;
     bool pause = false;
@@ -55,6 +57,11 @@ public class StoryManager : MonoBehaviour
             default:
                 break;
         }
+
+        if ((dialogueType == 1 || dialogueType == 2) && gameManager.GetLevel() > 0)
+        {
+            gameManager.RandomiseMood();
+        }
         current = dialogue.firstNode; // store the dialogue from dialogue trigger
         PrintDialogue(); // Prints out the first line of dialogue
         gameManager.LockMovement(true);
@@ -80,12 +87,14 @@ public class StoryManager : MonoBehaviour
         if (current is BasicDialogueNode)
         {
             BasicDialogueNode basicNode = current as BasicDialogueNode;
+            nameText[currentTextIndex].text = current.NarrationLine.Speaker.CharacterName;
             storyText[currentTextIndex].text = basicNode.NarrationLine.Text;
             current = basicNode.NextNode;
         }
         else if (current is KeywordNode)
         {
             KeywordNode keywordNode = current as KeywordNode;
+            nameText[currentTextIndex].text = current.NarrationLine.Speaker.CharacterName;
             storyText[currentTextIndex].text = keywordNode.NarrationLine.Text;
             mainUI.DisplayKeywords(keywordNode.Keywords, keywordNode.Type);
             foreach (Combination combination in keywordNode.Combinations)
