@@ -35,7 +35,7 @@ public class StoryManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue, int dialogueType)
     {
-        // open the dialogue box
+        // open the dialogue box, this cah
         switch (dialogueType)
         {
             case 0:
@@ -68,6 +68,8 @@ public class StoryManager : MonoBehaviour
             {
                 mainUI.EndTurn();
                 actionTaken = false;
+                current = gameManager.GetNext();
+                gameManager.ResetNext();
             }
             PrintDialogue();
         }
@@ -86,7 +88,16 @@ public class StoryManager : MonoBehaviour
         {
             KeywordNode keywordNode = current as KeywordNode;
             storyText[currentTextIndex].text = keywordNode.NarrationLine.Text;
-            mainUI.DisplayKeywords(keywordNode.NarrationLine.Speaker.CharacterName, gameManager.GetTurn(), gameManager.CheckPersuade());
+            mainUI.DisplayKeywords(keywordNode.Keywords, keywordNode.Type);
+            foreach (Combination combination in keywordNode.Combinations)
+            {
+                gameManager.AddCombination(combination);
+            }
+            actionTaken = true;
+        }
+        else if (current == null)
+        {
+            EndDialogue();
         }
     }
 

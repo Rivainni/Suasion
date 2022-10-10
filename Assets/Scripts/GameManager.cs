@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] MainUI mainUI;
-    [SerializeField] TextAsset keywordsFile;
     [SerializeField] PlayerMovement playerMovement;
     // Start is called before the first frame update
 
@@ -23,16 +22,19 @@ public class GameManager : MonoBehaviour
     float empathy = 30;
     int turn = 1;
     string currentCharacter = "";
+    string mood;
     bool inPersuade = false;
     bool inIntro = false;
+    DialogueNode next = null;
 
-    List<TextRW.Keyword> keywordList = new List<TextRW.Keyword>();
+    List<string> keywordList = new List<string>();
+    List<Combination> combinationList = new List<Combination>();
 
     SaveFile current;
     void Start()
     {
         current = new SaveFile();
-        TextRW.SetKeywords(keywordsFile);
+        // TextRW.SetKeywords(keywordsFile);
         // foreach (TextRW.Keyword keyword in TextRW.GetKeywords())
         // {
         //     Debug.Log(keyword.Word);
@@ -61,36 +63,40 @@ public class GameManager : MonoBehaviour
 
     public void Calculate()
     {
-        int correct = 0;
-        int incorrect = 0;
-        foreach (TextRW.Keyword keyword in keywordList)
+        int basePoints = 0;
+        foreach (Combination combination in combinationList)
         {
-            if (keyword.Correct)
+            if (combination.CheckKeywords(keywordList, mood) > 0)
             {
-                correct++;
-            }
-            else
-            {
-                incorrect++;
+                basePoints += combination.CheckKeywords(keywordList, mood);
+                next = combination.NextNode;
+                break;
             }
         }
-        float calc = (correct - incorrect) * 5.0f;
+        float calc = 0;
 
         if (inIntro)
         {
+            calc = basePoints * (1 - (empathy * 0.01f));
             Debug.Log("bruh" + calc);
             empathy += calc;
         }
         else if (inPersuade)
         {
+            calc = basePoints * (1 - (persuasion * 0.01f));
             Debug.Log("bruh2" + calc);
             persuasion += calc;
         }
     }
 
-    public void AddKeyword(TextRW.Keyword keyword)
+    public void AddKeyword(string keyword)
     {
         keywordList.Add(keyword);
+    }
+
+    public void RemoveKeyword(string keyword)
+    {
+        keywordList.Remove(keyword);
     }
 
     public void ClearKeywords()
@@ -98,8 +104,19 @@ public class GameManager : MonoBehaviour
         keywordList.Clear();
     }
 
+    public void AddCombination(Combination combination)
+    {
+        combinationList.Add(combination);
+    }
+
+    public void ClearCombinations()
+    {
+        combinationList.Clear();
+    }
+
     public void Reset()
     {
+        ClearCombinations();
         ClearKeywords();
         persuasion = 30;
         empathy = 30;
@@ -156,6 +173,16 @@ public class GameManager : MonoBehaviour
     public float GetEmpathy()
     {
         return empathy;
+    }
+
+    public DialogueNode GetNext()
+    {
+        return next;
+    }
+
+    public void ResetNext()
+    {
+        next = null;
     }
 
     public void LockMovement(bool status)
