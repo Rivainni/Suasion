@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43fa58f7907c74fb49d95e06fde851a2, type: 3}
   m_Name: T8_Intro
   m_EditorClassIdentifier: 
-  m_Speaker: {fileID: 0}
+  m_Speaker: {fileID: 11400000, guid: 2c29fb22818034fffbe9e66e60115037, type: 2}
   m_Text: You can select one per category. Each combination will create a different
     response.

@@ -81,7 +81,6 @@ public class StoryManager : MonoBehaviour
         {
             BasicDialogueNode basicNode = current as BasicDialogueNode;
             storyText[currentTextIndex].text = basicNode.NarrationLine.Text;
-            Debug.Log(basicNode.NarrationLine.Text);
             current = basicNode.NextNode;
         }
         else if (current is KeywordNode)

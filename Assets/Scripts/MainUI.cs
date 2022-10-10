@@ -10,7 +10,10 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject answerPanelP;
     [SerializeField] GameObject dialogueP;
     [SerializeField] GameObject dialogueI;
+    [SerializeField] GameObject dialoguePBox;
+    [SerializeField] GameObject dialogueIBox;
     [SerializeField] GameObject buttonPrefab;
+    [SerializeField] GameObject togglePrefab;
     [SerializeField] HealthBar persuasionBar;
     [SerializeField] HealthBar empathyBar;
     [SerializeField] GameManager gameManager;
@@ -52,26 +55,26 @@ public class MainUI : MonoBehaviour
             GameObject panel = Instantiate(answerPanelP, new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0), Quaternion.identity, dialogueP.transform);
             foreach (string keyword in keywordSet.Topic)
             {
-                GameObject button = Instantiate(buttonPrefab, panel.transform.GetChild(0).GetChild(0).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(0).transform);
-                Button actualButton = button.GetComponent<Button>();
+                GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(0).GetChild(0).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(0).transform);
+                Toggle actualButton = button.GetComponent<Toggle>();
                 actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-                actualButton.onClick.AddListener(() => LockKeyword(button, keyword));
+                actualButton.onValueChanged.AddListener(delegate { LockKeyword(button, keyword); });
             }
 
             foreach (string keyword in keywordSet.Tone)
             {
-                GameObject button = Instantiate(buttonPrefab, panel.transform.GetChild(0).GetChild(1).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(1).transform);
-                Button actualButton = button.GetComponent<Button>();
+                GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(0).GetChild(1).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(1).transform);
+                Toggle actualButton = button.GetComponent<Toggle>();
                 actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-                actualButton.onClick.AddListener(() => LockKeyword(button, keyword));
+                actualButton.onValueChanged.AddListener(delegate { LockKeyword(button, keyword); });
             }
 
             foreach (string keyword in keywordSet.Honesty)
             {
-                GameObject button = Instantiate(buttonPrefab, panel.transform.GetChild(0).GetChild(2).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(2).transform);
-                Button actualButton = button.GetComponent<Button>();
+                GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(0).GetChild(2).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(2).transform);
+                Toggle actualButton = button.GetComponent<Toggle>();
                 actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-                actualButton.onClick.AddListener(() => LockKeyword(button, keyword));
+                actualButton.onValueChanged.AddListener(delegate { LockKeyword(button, keyword); });
             }
 
             kaboom = panel;
@@ -81,20 +84,20 @@ public class MainUI : MonoBehaviour
             GameObject panel = Instantiate(answerPanelI, new Vector3(Screen.width * 0.25f, Screen.height * 0.5f, 0), Quaternion.identity, dialogueI.transform);
             foreach (string keyword in keywordSet.Topic)
             {
-                GameObject button = Instantiate(buttonPrefab, panel.transform.GetChild(0).GetChild(0).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(0).transform);
+                GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(0).GetChild(0).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(0).transform);
 
-                Button actualButton = button.GetComponent<Button>();
+                Toggle actualButton = button.GetComponent<Toggle>();
                 actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-                actualButton.onClick.AddListener(() => LockKeyword(button, keyword));
+                actualButton.onValueChanged.AddListener(delegate {LockKeyword(button, keyword);});
             }
 
             foreach (string keyword in keywordSet.Tone)
             {
-                GameObject button = Instantiate(buttonPrefab, panel.transform.GetChild(0).GetChild(1).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(1).transform);
+                GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(0).GetChild(1).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(1).transform);
 
-                Button actualButton = button.GetComponent<Button>();
+                Toggle actualButton = button.GetComponent<Toggle>();
                 actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-                actualButton.onClick.AddListener(() => LockKeyword(button, keyword));
+                actualButton.onValueChanged.AddListener(delegate { LockKeyword(button, keyword); });
             }
 
             kaboom = panel;
@@ -111,5 +114,34 @@ public class MainUI : MonoBehaviour
         {
             gameManager.RemoveKeyword(keyword);
         }
+    }
+
+    public void ChangeColor(bool mc, bool persuade)
+    {
+        // change color of dialogueIBox to #DDB3B3
+        if (mc)
+        {
+            if (persuade)
+            {
+                dialoguePBox.GetComponent<Image>().color = new Color32(221, 179, 179, 120);
+            }
+            else
+            {
+                dialogueIBox.GetComponent<Image>().color = new Color32(221, 179, 179, 120);
+            }
+        }
+        else
+        {
+            // change color of DialogueIBox to #B3B7DD
+            if (persuade)
+            {
+                dialoguePBox.GetComponent<Image>().color = new Color32(179, 183, 221, 120);
+            }
+            else
+            {
+                dialogueIBox.GetComponent<Image>().color = new Color32(179, 183, 221, 120);
+            }
+        }
+        //B3B7DD
     }
 }
