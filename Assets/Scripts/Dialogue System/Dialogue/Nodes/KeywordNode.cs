@@ -20,9 +20,13 @@ public class Combination
     public int Points => m_Points;
     public DialogueNode NextNode => m_NextNode;
 
-    public int CheckKeywords(List<string> keywords, string currMood)
+    public int CheckKeywords(List<string> keywords, string currMood, bool persuasion)
     {
-        if (Set.Contains(keywords[0]) && Set.Contains(keywords[1]) && Set.Contains(keywords[2]) && Mood == currMood)
+        if (persuasion && Set.Contains(keywords[0]) && Set.Contains(keywords[1]) && Set.Contains(keywords[2]) && Mood == currMood)
+        {
+            return Points;
+        }
+        else if (!persuasion && Set.Contains(keywords[0]) && Set.Contains(keywords[1]) && Mood == currMood)
         {
             return Points;
         }

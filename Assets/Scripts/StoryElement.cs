@@ -22,9 +22,13 @@ public class StoryElement : MonoBehaviour
     /* Called when you want to start dialogue */
     public void TriggerDialogue()
     {
-        if (type == "Object" || type == "Start")
+        if (type == "Object" || type == "Start" || type == "Clue")
         {
             FindObjectOfType<StoryManager>().StartDialogue(dialogue, 0); // Accesses Dialogue Manager and Starts Dialogue
+            if (type == "Clue")
+            {
+                gameManager.AddClue(title, ((BasicDialogueNode)dialogue.firstNode).NextNode.NarrationLine.Text, dialogue.firstNode.NarrationLine.Speaker.CharacterName);
+            }
         }
         else if (type == "Intro")
         {
@@ -35,10 +39,20 @@ public class StoryElement : MonoBehaviour
         {
             FindObjectOfType<StoryManager>().StartDialogue(dialogue, 2); // Accesses Dialogue Manager and Starts Dialogue
         }
+        this.enabled = false;
     }
     
     void OnMouseDown()
     {
         TriggerDialogue();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Player")
+        {
+            TriggerDialogue();
+            gameObject.SetActive(false);
+        }
     }
 }

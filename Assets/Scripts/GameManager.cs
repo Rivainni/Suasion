@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     List<string> keywordList = new List<string>();
     List<Combination> combinationList = new List<Combination>();
+    List<Clue> clueList = new List<Clue>();
 
     SaveFile current;
     void Start()
@@ -51,11 +52,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void StartIntro()
-    {
-
-    }
-
     public void EndTurn()
     {
         Calculate();
@@ -69,9 +65,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("You have " + keywordList.Count + " keywords");
         foreach (Combination combination in combinationList)
         {
-            if (combination.CheckKeywords(keywordList, mood) > 0)
+            if (combination.CheckKeywords(keywordList, mood, CheckPersuade()) > 0)
             {
-                basePoints += combination.CheckKeywords(keywordList, mood);
+                basePoints += combination.CheckKeywords(keywordList, mood, CheckPersuade());
                 next = combination.NextNode;
                 break;
             }
@@ -105,6 +101,11 @@ public class GameManager : MonoBehaviour
     public void ClearKeywords()
     {
         keywordList.Clear();
+    }
+
+    public bool ContainsKeyword(string keyword)
+    {
+        return keywordList.Contains(keyword);
     }
 
     public void AddCombination(Combination combination)
@@ -224,6 +225,37 @@ public class GameManager : MonoBehaviour
 
     public void AddLevel()
     {
+        Reset();
+        ClearClues();
         level++;
+        playerMovement.gameObject.transform.position = new Vector3(0, 0, 0);
+
+        if (level == 0)
+        {
+            GameObject.Find("Tutorial").SetActive(false);
+        }
+        else
+        {
+            GameObject.Find("Level " + level).SetActive(true);
+        }
+        foreach (GameObject renew in GameObject.FindGameObjectsWithTag("Respawn"))
+        {
+            renew.SetActive(true);
+        }
+    }
+
+    public void AddClue(string name, string description, string character)
+    {
+        clueList.Add(new Clue(name, description, character));
+    }
+
+    public void ClearClues()
+    {
+        clueList.Clear();
+    }
+
+    public List<Clue> GetClues()
+    {
+        return clueList;
     }
 }

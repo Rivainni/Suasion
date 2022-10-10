@@ -17,6 +17,8 @@ public class MainUI : MonoBehaviour
     [SerializeField] HealthBar persuasionBar;
     [SerializeField] HealthBar empathyBar;
     [SerializeField] GameManager gameManager;
+    [SerializeField] TextMeshProUGUI notebookText;
+    List<string> proscriptionList = new List<string>();
 
     GameObject kaboom;
 
@@ -50,31 +52,80 @@ public class MainUI : MonoBehaviour
 
     public void DisplayKeywords(KeywordSet keywordSet, string type)
     {
+
+        // for blocking keywords in tutorial
+        if (gameManager.CheckIntro() && gameManager.GetLevel() == 0)
+        {
+            if (gameManager.GetTurn() == 1)
+            {
+                proscriptionList.Add("game");
+                proscriptionList.Add("weather");
+                proscriptionList.Add("demanding");
+                proscriptionList.Add("cheerful");
+            }
+            if (gameManager.GetTurn() == 2)
+            {
+                proscriptionList.Add("inside");
+                proscriptionList.Add("inspect");
+                proscriptionList.Add("demanding");
+            }
+        }
+
         if (type == "Persuasion")
         {
             GameObject panel = Instantiate(answerPanelP, new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0), Quaternion.identity, dialogueP.transform);
+            ToggleGroup topic = panel.transform.GetChild(0).GetChild(0).gameObject.AddComponent<ToggleGroup>();
+            topic.allowSwitchOff = true;
             foreach (string keyword in keywordSet.Topic)
             {
                 GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(0).GetChild(0).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(0).transform);
                 Toggle actualButton = button.GetComponent<Toggle>();
+                actualButton.group = topic;
                 actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-                actualButton.onValueChanged.AddListener(delegate { LockKeyword(button, keyword); });
+                if (proscriptionList.Contains(keyword))
+                {
+                    actualButton.interactable = false;
+                }
+                else
+                {
+                    actualButton.onValueChanged.AddListener(delegate { LockKeyword(actualButton, keyword); });
+                }
             }
 
+            ToggleGroup tone = panel.transform.GetChild(0).GetChild(1).gameObject.AddComponent<ToggleGroup>();
+            tone.allowSwitchOff = true;
             foreach (string keyword in keywordSet.Tone)
             {
                 GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(0).GetChild(1).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(1).transform);
                 Toggle actualButton = button.GetComponent<Toggle>();
+                actualButton.group = tone;
                 actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-                actualButton.onValueChanged.AddListener(delegate { LockKeyword(button, keyword); });
+                if (proscriptionList.Contains(keyword))
+                {
+                    actualButton.interactable = false;
+                }
+                else
+                {
+                    actualButton.onValueChanged.AddListener(delegate { LockKeyword(actualButton, keyword); });
+                }
             }
 
+            ToggleGroup honesty = panel.transform.GetChild(0).GetChild(2).gameObject.AddComponent<ToggleGroup>();
+            honesty.allowSwitchOff = true;
             foreach (string keyword in keywordSet.Honesty)
             {
                 GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(0).GetChild(2).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(2).transform);
                 Toggle actualButton = button.GetComponent<Toggle>();
+                actualButton.group = honesty;
                 actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-                actualButton.onValueChanged.AddListener(delegate { LockKeyword(button, keyword); });
+                if (proscriptionList.Contains(keyword))
+                {
+                    actualButton.interactable = false;
+                }
+                else
+                {
+                    actualButton.onValueChanged.AddListener(delegate { LockKeyword(actualButton, keyword); });
+                }
             }
 
             kaboom = panel;
@@ -82,31 +133,54 @@ public class MainUI : MonoBehaviour
         else
         {
             GameObject panel = Instantiate(answerPanelI, new Vector3(Screen.width * 0.25f, Screen.height * 0.5f, 0), Quaternion.identity, dialogueI.transform);
+            ToggleGroup topic = panel.transform.GetChild(0).GetChild(0).gameObject.AddComponent<ToggleGroup>();
+            topic.allowSwitchOff = true;
             foreach (string keyword in keywordSet.Topic)
             {
                 GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(0).GetChild(0).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(0).transform);
 
                 Toggle actualButton = button.GetComponent<Toggle>();
+                actualButton.group = topic;
                 actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-                actualButton.onValueChanged.AddListener(delegate {LockKeyword(button, keyword);});
+                if (proscriptionList.Contains(keyword))
+                {
+                    actualButton.interactable = false;
+                }
+                else
+                {
+                    actualButton.onValueChanged.AddListener(delegate { LockKeyword(actualButton, keyword); });
+                }
             }
 
+            ToggleGroup tone = panel.transform.GetChild(0).GetChild(1).gameObject.AddComponent<ToggleGroup>();
+            tone.allowSwitchOff = true;
             foreach (string keyword in keywordSet.Tone)
             {
                 GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(0).GetChild(1).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(1).transform);
 
                 Toggle actualButton = button.GetComponent<Toggle>();
+                actualButton.group = tone;
                 actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-                actualButton.onValueChanged.AddListener(delegate { LockKeyword(button, keyword); });
+                if (proscriptionList.Contains(keyword))
+                {
+                    actualButton.interactable = false;
+                }
+                else
+                {
+                    actualButton.onValueChanged.AddListener(delegate { LockKeyword(actualButton, keyword); });
+                }
             }
 
             kaboom = panel;
         }
+
+        proscriptionList.Clear();
     }
 
-    public void LockKeyword(GameObject button, string keyword)
+    public void LockKeyword(Toggle button, string keyword)
     {
-        if (!button.GetComponent<Toggle>().isOn)
+        Debug.Log("Keyword: " + keyword);
+        if (!gameManager.ContainsKeyword(keyword) && button.isOn)
         {
             gameManager.AddKeyword(keyword);
         }
@@ -116,32 +190,19 @@ public class MainUI : MonoBehaviour
         }
     }
 
-    public void ChangeColor(bool mc, bool persuade)
+    public void UpdateNotebook()
     {
-        // change color of dialogueIBox to #DDB3B3
-        if (mc)
+        notebookText.text = "";
+        foreach (Clue clue in gameManager.GetClues())
         {
-            if (persuade)
-            {
-                dialoguePBox.GetComponent<Image>().color = new Color32(221, 179, 179, 120);
-            }
-            else
-            {
-                dialogueIBox.GetComponent<Image>().color = new Color32(221, 179, 179, 120);
-            }
+            notebookText.text += clue.character;
+            notebookText.text += "\n" + clue.name;
+            notebookText.text += "\n" + clue.description;
         }
-        else
-        {
-            // change color of DialogueIBox to #B3B7DD
-            if (persuade)
-            {
-                dialoguePBox.GetComponent<Image>().color = new Color32(179, 183, 221, 120);
-            }
-            else
-            {
-                dialogueIBox.GetComponent<Image>().color = new Color32(179, 183, 221, 120);
-            }
-        }
-        //B3B7DD
+    }
+
+    public void CycleNotebook()
+    {
+
     }
 }

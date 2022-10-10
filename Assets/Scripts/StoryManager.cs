@@ -4,6 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+public struct Clue
+{
+    public string name;
+    public string description;
+    public string character;
+
+    public Clue(string name, string description, string character)
+    {
+        this.name = name;
+        this.description = description;
+        this.character = character;
+    }
+}
+
 public class StoryManager : MonoBehaviour
 {
     [SerializeField]
@@ -25,6 +39,8 @@ public class StoryManager : MonoBehaviour
     TextMeshProUGUI[] storyText;
     [SerializeField]
     TextMeshProUGUI[] nameText;
+    [SerializeField]
+    TextMeshProUGUI notebookText;
 
     DialogueNode current;
     bool pause = false;
@@ -117,7 +133,7 @@ public class StoryManager : MonoBehaviour
         introDialogue.SetActive(false);
         persuasionDialogue.SetActive(false);
         gameManager.SetIntro(false);
-        gameManager.SetIntro(false);
+        gameManager.SetPersuade(false);
         gameManager.Reset();
         gameManager.LockMovement(false);
     }

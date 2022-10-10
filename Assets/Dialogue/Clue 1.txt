@@ -1,3 +1,0 @@
-Clue 1 found: crumpled bedsheets
-Clue: The bedsheets are crumpled, as if they haven’t been touched since their user woke up.
-EndQueue
