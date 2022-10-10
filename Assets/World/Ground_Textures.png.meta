@@ -441,7 +441,7 @@ TextureImporter:
         height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 1, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -462,7 +462,7 @@ TextureImporter:
         height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 1, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -708,13 +708,13 @@ TextureImporter:
       name: Ground_Textures_28
       rect:
         serializedVersion: 2
-        x: 377
-        y: 255
-        width: 46
-        height: 109
+        x: 334
+        y: 261
+        width: 83
+        height: 103
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 46, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -729,13 +729,13 @@ TextureImporter:
       name: Ground_Textures_29
       rect:
         serializedVersion: 2
-        x: 432
-        y: 171
-        width: 32
-        height: 185
+        x: 435
+        y: 163
+        width: 43
+        height: 194
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 3, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -752,11 +752,11 @@ TextureImporter:
         serializedVersion: 2
         x: 478
         y: 272
-        width: 190
+        width: 186
         height: 97
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 3, y: 5, z: 0, w: 5}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -771,13 +771,13 @@ TextureImporter:
       name: Ground_Textures_31
       rect:
         serializedVersion: 2
-        x: 750
+        x: 755
         y: 267
-        width: 62
+        width: 57
         height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 4, z: 4, w: 6}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -798,7 +798,7 @@ TextureImporter:
         height: 112
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 3, z: 6, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -813,13 +813,13 @@ TextureImporter:
       name: Ground_Textures_33
       rect:
         serializedVersion: 2
-        x: 904
-        y: 269
-        width: 78
-        height: 79
+        x: 910
+        y: 286
+        width: 72
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 4, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -840,7 +840,7 @@ TextureImporter:
         height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 3, y: 5, z: 3, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -941,11 +941,11 @@ TextureImporter:
         serializedVersion: 2
         x: 702
         y: 173
-        width: 60
-        height: 70
+        width: 58
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 3, z: 0, w: 23}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -962,8 +962,8 @@ TextureImporter:
         serializedVersion: 2
         x: 793
         y: 183
-        width: 84
-        height: 50
+        width: 85
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
