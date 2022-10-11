@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2dc1e7a860824eb79994fe973e0ddfe, type: 3}
-  m_Name: T37cohe_Persuasion
+  m_Name: T39gad_Persuasion
   m_EditorClassIdentifier: 
-  m_DialogueLine: {fileID: 11400000, guid: 1388c5c2c6ffc460abf06a810717cf27, type: 2}
-  m_NextNode: {fileID: 11400000, guid: 9305bd9a631bc4d098daf354b6bd9403, type: 2}
+  m_DialogueLine: {fileID: 11400000, guid: c4c58899b2f1544bcad6913fcc78a822, type: 2}
+  m_NextNode: {fileID: 11400000, guid: c0b07f63c02904003978c14cead5602c, type: 2}

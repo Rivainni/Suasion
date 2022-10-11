@@ -9,6 +9,7 @@ public class StoryElement : MonoBehaviour
     [SerializeField] string title;
     [SerializeField] string type;
     [SerializeField] GameManager gameManager; // need to access the player state to determine whether to start dialogue or nah.
+    [SerializeField] GameObject reference = null; // the object that the player clicks on to start the dialogue
 
     void Start()
     {
@@ -44,7 +45,10 @@ public class StoryElement : MonoBehaviour
     
     void OnMouseDown()
     {
-        Debug.Log("Boop");
+        if (reference != null)
+        {
+            reference.SetActive(true);
+        }
         TriggerDialogue();
     }
 
@@ -52,7 +56,24 @@ public class StoryElement : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            TriggerDialogue();
+            if (reference)
+            {
+                if (reference.transform.parent.name == "Tasks")
+                {
+                    if (gameManager.Success())
+                    {
+                        TriggerDialogue();
+                    }
+                    else
+                    {
+                        Application.Quit();
+                    }
+                }
+            }
+            else
+            {
+                TriggerDialogue();
+            }
             gameObject.SetActive(false);
         }
     }

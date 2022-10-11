@@ -80,13 +80,11 @@ public class GameManager : MonoBehaviour
         if (inIntro)
         {
             calc = basePoints * (1 - (empathy * 0.01f));
-            Debug.Log("bruh" + calc);
             empathy += calc;
         }
         else if (inPersuade)
         {
-            calc = basePoints * (1 - (persuasion * 0.01f));
-            Debug.Log("bruh2" + calc);
+            calc = basePoints * (1 - (persuasion * 0.01f)) * (1 + (empathy * 0.01f));
             if (mood == "neutral" && hMult == 0)
             {
                 calc += 0.01f * 5;
@@ -272,5 +270,19 @@ public class GameManager : MonoBehaviour
     public List<Clue> GetClues()
     {
         return clueList;
+    }
+
+    public bool Success()
+    {
+        // roll a random number between 0 and 100, then check if the random number is less than or equal to persuasion
+        int rand = Random.Range(0, 100);
+        if (rand <= persuasion)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
