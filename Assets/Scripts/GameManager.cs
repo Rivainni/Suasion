@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     float currentIncorrect;
     float persuasion = 30;
     float empathy = 30;
+    float honesty = 0;
     int turn = 1;
     string currentCharacter = "";
     string mood = "neutral";
@@ -62,12 +63,14 @@ public class GameManager : MonoBehaviour
     public void Calculate()
     {
         int basePoints = 0;
+        int hMult = 0;
         Debug.Log("You have " + keywordList.Count + " keywords");
         foreach (Combination combination in combinationList)
         {
             if (combination.CheckKeywords(keywordList, mood, CheckPersuade()) > 0)
             {
                 basePoints += combination.CheckKeywords(keywordList, mood, CheckPersuade());
+                hMult += combination.CheckHonesty();
                 next = combination.NextNode;
                 break;
             }
@@ -84,6 +87,18 @@ public class GameManager : MonoBehaviour
         {
             calc = basePoints * (1 - (persuasion * 0.01f));
             Debug.Log("bruh2" + calc);
+            if (mood == "neutral" && hMult == 0)
+            {
+                calc += 0.01f * 5;
+            }
+            else if (mood == "positive" && hMult == 1)
+            {
+                calc *= 0.01f * 15;
+            }
+            else if (mood == "negative")
+            {
+                calc *= 0.01f * 10;
+            }
             persuasion += calc;
         }
     }

@@ -70,6 +70,18 @@ public class MainUI : MonoBehaviour
                 proscriptionList.Add("demanding");
             }
         }
+        else if (gameManager.CheckPersuade() && gameManager.GetLevel() == 0)
+        {
+            if (gameManager.GetTurn() == 1)
+            {
+                proscriptionList.Add("state");
+                proscriptionList.Add("weather");
+                proscriptionList.Add("assertive");
+                proscriptionList.Add("cautious");
+                proscriptionList.Add("exaggerate");
+                proscriptionList.Add("downplay");
+            }
+        }
 
         if (type == "Persuasion")
         {

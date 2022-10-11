@@ -35,6 +35,22 @@ public class Combination
             return 0;
         }
     }
+
+    public int CheckHonesty()
+    {
+        if (Set.Contains("straight"))
+        {
+            return 0;
+        }
+        else if (Set.Contains("exaggerate"))
+        {
+            return 1;
+        }
+        else
+        {
+            return 2;
+        }
+    }
 }
 
 [Serializable]

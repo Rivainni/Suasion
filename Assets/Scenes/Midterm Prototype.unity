@@ -412,7 +412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   answerPanelI: {fileID: 1599441723716276376, guid: 54e40e32c737bed409b99851987253d7, type: 3}
   answerPanelP: {fileID: 1599441723716276376, guid: f876ebdce94d99f4d946e588528b4d4e, type: 3}
-  dialogueP: {fileID: 4809935391406929761, guid: a65fc358ada3843b882a081d00546f8b, type: 3}
+  dialogueP: {fileID: 270239092}
   dialogueI: {fileID: 515141159}
   dialoguePBox: {fileID: 1192716324}
   dialogueIBox: {fileID: 60814969}
@@ -44867,7 +44867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1042689360
 Transform:
   m_ObjectHideFlags: 0
@@ -50449,6 +50449,7 @@ GameObject:
   - component: {fileID: 2043834998}
   - component: {fileID: 2043835000}
   - component: {fileID: 2043834999}
+  - component: {fileID: 2043835001}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -50549,6 +50550,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2043835001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043834997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: 3b0c5060bd7fe47f99c77e3047c89650, type: 2}
+  title: Summer homework
+  type: Clue
+  gameManager: {fileID: 1901980257}
 --- !u!1 &2089739100
 GameObject:
   m_ObjectHideFlags: 0
@@ -50663,7 +50680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: c6f5d5760c8904fb6bd7962f3333f37d, type: 2}
-  title: Persuade
-  type: PCharacter
+  dialogue: {fileID: 11400000, guid: 5d20d985636e14e18a1d5af9ab1c9ca7, type: 2}
+  title: Persuasion Tutorial
+  type: Persuade
   gameManager: {fileID: 1901980257}

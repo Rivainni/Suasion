@@ -44,6 +44,7 @@ public class StoryElement : MonoBehaviour
     
     void OnMouseDown()
     {
+        Debug.Log("Boop");
         TriggerDialogue();
     }
 
