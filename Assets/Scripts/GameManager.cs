@@ -100,6 +100,8 @@ public class GameManager : MonoBehaviour
             }
             persuasion += calc;
         }
+        Debug.Log("Empathy: " + empathy);
+        Debug.Log("Persuasion ni Bossing: " + persuasion);
     }
 
     public void AddKeyword(string keyword)
