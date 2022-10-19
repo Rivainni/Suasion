@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     float empathy = 30;
     float honesty = 0;
     int turn = 1;
+    int turnMultiplier = 0;
     string currentCharacter = "";
     string mood = "neutral";
     bool inPersuade = false;
@@ -79,23 +80,23 @@ public class GameManager : MonoBehaviour
 
         if (inIntro)
         {
-            calc = basePoints * (1 - (empathy * 0.01f));
+            calc = basePoints * turnMultiplier;
             empathy += calc;
         }
         else if (inPersuade)
         {
-            calc = basePoints * (1 + (empathy * 0.01f));
+            calc = basePoints * (1 + (empathy * 0.01f)) * turnMultiplier;
             if (mood == "neutral" && hMult == 0)
             {
-                calc += 0.01f * 5;
+                calc += 5;
             }
             else if (mood == "positive" && hMult == 1)
             {
-                calc *= 0.01f * 15;
+                calc *= 15;
             }
             else if (mood == "negative")
             {
-                calc *= 0.01f * 10;
+                calc *= 10;
             }
             persuasion += calc;
         }
@@ -150,6 +151,11 @@ public class GameManager : MonoBehaviour
     public void AddTurn()
     {
         turn++;
+    }
+
+    public void SetMultiplier(int multiplier)
+    {
+        turnMultiplier = multiplier;
     }
 
     public bool CheckIntro()

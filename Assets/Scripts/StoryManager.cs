@@ -77,6 +77,15 @@ public class StoryManager : MonoBehaviour
         if ((dialogueType == 1 || dialogueType == 2) && gameManager.GetLevel() > 0)
         {
             gameManager.RandomiseMood();
+            switch (gameManager.GetLevel())
+            {
+                case 0:
+                    gameManager.SetMultiplier(2);
+                    break;
+                case 1:
+                    gameManager.SetMultiplier(2);
+                    break;
+            }
         }
         current = dialogue.firstNode; // store the dialogue from dialogue trigger
         PrintDialogue(); // Prints out the first line of dialogue
