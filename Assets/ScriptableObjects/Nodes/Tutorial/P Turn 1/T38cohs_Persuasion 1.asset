@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2dc1e7a860824eb79994fe973e0ddfe, type: 3}
+  m_Name: T38cohs_Persuasion 1
+  m_EditorClassIdentifier: 
+  m_DialogueLine: {fileID: 11400000, guid: ce24556a7a49444dbb8faad620f8456f, type: 2}
+  m_NextNode: {fileID: 11400000, guid: f311ad5c94dc743ed97afa5c0c551650, type: 2}

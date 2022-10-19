@@ -1,5 +1,0 @@
-MC: <friend> doesn’t want to play with me today. I wonder why?
-MC: I’mma knock and ask
-(Use mouse to interact with nearby objects, tell player to knock on door)
-MC: Hoyyy!!! I want to play games! Games!!!
-EndQueue
