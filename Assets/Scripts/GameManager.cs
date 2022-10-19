@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
         }
         else if (inPersuade)
         {
-            calc = basePoints * (1 - (persuasion * 0.01f)) * (1 + (empathy * 0.01f));
+            calc = basePoints * (1 + (empathy * 0.01f));
             if (mood == "neutral" && hMult == 0)
             {
                 calc += 0.01f * 5;
