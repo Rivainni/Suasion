@@ -74,16 +74,20 @@ public class StoryManager : MonoBehaviour
                 break;
         }
 
-        if ((dialogueType == 1 || dialogueType == 2) && gameManager.GetLevel() > 0)
+        if (dialogueType == 1 || dialogueType == 2)
         {
-            gameManager.RandomiseMood();
+            if (gameManager.GetLevel() > 0)
+            {
+                gameManager.RandomiseMood();
+            }
+
             switch (gameManager.GetLevel())
             {
                 case 0:
-                    gameManager.SetMultiplier(2);
+                    gameManager.SetMultiplier(3);
                     break;
                 case 1:
-                    gameManager.SetMultiplier(2);
+                    gameManager.SetMultiplier(3);
                     break;
             }
         }

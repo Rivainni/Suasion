@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
         if (inIntro)
         {
             calc = basePoints * turnMultiplier;
-            empathy += calc;
+            empathy = Mathf.Clamp(empathy + calc, 0, 100);
         }
         else if (inPersuade)
         {
@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
             {
                 calc *= 10;
             }
-            persuasion += calc;
+            persuasion = Mathf.Clamp(persuasion + calc, 0, 100);
         }
         Debug.Log("Empathy: " + empathy);
         Debug.Log("Persuasion ni Bossing: " + persuasion);
