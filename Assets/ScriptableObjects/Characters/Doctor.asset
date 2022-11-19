@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d2439e6b6a94254bbc7eb2506d8719, type: 3}
   m_Name: Doctor
   m_EditorClassIdentifier: 
-  m_CharacterName: Dr. Antoni
+  m_CharacterName: DR. ANTONI
