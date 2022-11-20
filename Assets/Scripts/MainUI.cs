@@ -89,29 +89,62 @@ public class MainUI : MonoBehaviour
             button.interactable = true;
         }
 
-        foreach (string keyword in keywordSet.Topic)
-        {
-            Button button = keywordPanel.transform.GetChild(buttonIndex).GetComponent<Button>();
-            button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-
-            if (proscriptionList.Contains(keyword))
-            {
-                button.interactable = false;
-            }
-            else
-            {
-                button.onClick.AddListener(delegate { LockKeyword(button, keyword); });
-            }
-        }
-
         proscriptionList.Clear();
     }
 
-    public void SwitchKeywords(string keyword, string type, bool isKeyword)
+    public void SpawnKeywords(Button originalButton, string type)
     {
-        for (int i = 0; i < 3; i++)
+        if (type == "topic")
         {
-            Button current = keywordPanel.transform.GetChild(i).GetComponent<Button>();
+            foreach (string keyword in keywordSet.Topic)
+            {
+                Button button = keywordPanel.transform.GetChild(buttonIndex).GetComponent<Button>();
+                button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
+
+                if (proscriptionList.Contains(keyword))
+                {
+                    button.interactable = false;
+                }
+                else
+                {
+                    button.onClick.AddListener(delegate { LockKeyword(button, keyword); });
+                }
+            }
+        }
+        else if (type == "tone")
+        {
+            foreach (string keyword in keywordSet.Tone)
+            {
+                Button button = keywordPanel.transform.GetChild(buttonIndex).GetComponent<Button>();
+                button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
+
+                if (proscriptionList.Contains(keyword))
+                {
+                    button.interactable = false;
+                }
+                else
+                {
+                    button.onClick.AddListener(delegate { LockKeyword(button, keyword); });
+                }
+            }
+        }
+        else if (type == "honesty")
+        {
+            foreach (string keyword in keywordSet.Honesty)
+            {
+                Button button = keywordPanel.transform.GetChild(buttonIndex).GetComponent<Button>();
+                button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
+
+                if (proscriptionList.Contains(keyword))
+                {
+                    button.interactable = false;
+                }
+                else
+                {
+                    button.onClick.AddListener(delegate { LockKeyword(button, keyword); });
+                }
+            }
+
         }
     }
 
