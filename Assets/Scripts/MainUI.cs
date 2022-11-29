@@ -83,68 +83,74 @@ public class MainUI : MonoBehaviour
         }
 
         int buttonIndex = 0;
+        string category = "";
 
         foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
         {
             button.interactable = true;
+            button.onClick.AddListener(delegate { SpawnKeywords(keywordSet, button, buttonIndex); });
+            buttonIndex++;
         }
 
         proscriptionList.Clear();
     }
 
-    public void SpawnKeywords(Button originalButton, string type)
+    public void SpawnKeywords(KeywordSet keywordSet, Button originalButton, int category)
     {
-        if (type == "topic")
+        GameObject panel = Instantiate(answerPanel, new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0), Quaternion.identity, originalButton.transform);
+        if (category == 0)
         {
             foreach (string keyword in keywordSet.Topic)
             {
-                Button button = keywordPanel.transform.GetChild(buttonIndex).GetComponent<Button>();
+                GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(0).GetChild(0).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(0).transform);
+                Button actualButton = button.GetComponent<Button>();
                 button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
 
                 if (proscriptionList.Contains(keyword))
                 {
-                    button.interactable = false;
+                    actualButton.interactable = false;
                 }
                 else
                 {
-                    button.onClick.AddListener(delegate { LockKeyword(button, keyword); });
+                    actualButton.onClick.AddListener(delegate { LockKeyword(actualButton, keyword); });
                 }
             }
         }
-        else if (type == "tone")
+        else if (category == 1)
         {
             foreach (string keyword in keywordSet.Tone)
             {
-                Button button = keywordPanel.transform.GetChild(buttonIndex).GetComponent<Button>();
+                GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(1).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(0).transform);
+                Button actualButton = button.GetComponent<Button>();
                 button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
 
                 if (proscriptionList.Contains(keyword))
                 {
-                    button.interactable = false;
+                    actualButton.interactable = false;
                 }
                 else
                 {
-                    button.onClick.AddListener(delegate { LockKeyword(button, keyword); });
+                    actualButton.onClick.AddListener(delegate { LockKeyword(actualButton, keyword); });
                 }
             }
         }
-        else if (type == "honesty")
+        else if (category == 2)
         {
             foreach (string keyword in keywordSet.Honesty)
             {
-                Button button = keywordPanel.transform.GetChild(buttonIndex).GetComponent<Button>();
+                GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(2).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(0).transform);
+                Button actualButton = button.GetComponent<Button>();
                 button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
 
                 if (proscriptionList.Contains(keyword))
                 {
-                    button.interactable = false;
+                    actualButton.interactable = false;
                 }
                 else
                 {
-                    button.onClick.AddListener(delegate { LockKeyword(button, keyword); });
+                    actualButton.onClick.AddListener(delegate { LockKeyword(actualButton, keyword); });
                 }
             }
-
         }
     }
 
