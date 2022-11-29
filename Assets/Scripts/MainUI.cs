@@ -26,6 +26,11 @@ public class MainUI : MonoBehaviour
     {
         persuasionBar.SetHealth(30);
         empathyBar.SetHealth(30);
+
+        foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
+        {
+            button.interactable = false;
+        }
     }
 
     // Update is called once per frame
@@ -83,7 +88,6 @@ public class MainUI : MonoBehaviour
         }
 
         int buttonIndex = 0;
-        string category = "";
 
         foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
         {

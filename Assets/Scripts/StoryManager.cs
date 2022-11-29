@@ -67,7 +67,7 @@ public class StoryManager : MonoBehaviour
                 break;
             case 2:
                 persuasionDialogue.SetActive(true);
-                currentTextIndex = 2;
+                currentTextIndex = 1;
                 gameManager.SetPersuade(true);
                 break;
             default:
@@ -116,15 +116,35 @@ public class StoryManager : MonoBehaviour
         if (current is BasicDialogueNode)
         {
             BasicDialogueNode basicNode = current as BasicDialogueNode;
-            nameText[currentTextIndex].text = current.NarrationLine.Speaker.CharacterName;
-            storyText[currentTextIndex].text = basicNode.NarrationLine.Text;
+
+            // if it's the main character talking
+            if (current.NarrationLine.Speaker.CharacterName == "AMSEL")
+            {
+                nameText[currentTextIndex].text = current.NarrationLine.Speaker.CharacterName;
+                storyText[currentTextIndex].text = basicNode.NarrationLine.Text;
+            }
+            else if (currentTextIndex > 0)
+            {
+                nameText[currentTextIndex + 1].text = current.NarrationLine.Speaker.CharacterName;
+                storyText[currentTextIndex + 1].text = basicNode.NarrationLine.Text;
+            }
             current = basicNode.NextNode;
         }
         else if (current is KeywordNode)
         {
             KeywordNode keywordNode = current as KeywordNode;
+
             nameText[currentTextIndex].text = current.NarrationLine.Speaker.CharacterName;
-            storyText[currentTextIndex].text = keywordNode.NarrationLine.Text;
+            // if it's the main character talking
+            if (current.NarrationLine.Speaker.CharacterName == "AMSEL")
+            {
+                storyText[currentTextIndex].text = keywordNode.NarrationLine.Text;
+            }
+            else if (currentTextIndex > 0)
+            {
+                storyText[currentTextIndex + 1].text = keywordNode.NarrationLine.Text;
+            }
+
             mainUI.DisplayKeywords(keywordNode.Keywords, keywordNode.Type);
             foreach (Combination combination in keywordNode.Combinations)
             {
