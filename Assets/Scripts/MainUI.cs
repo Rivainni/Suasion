@@ -26,6 +26,7 @@ public class MainUI : MonoBehaviour
     {
         persuasionBar.SetHealth(30);
         empathyBar.SetHealth(30);
+        ResetKeywords();
 
         foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
         {
@@ -58,7 +59,7 @@ public class MainUI : MonoBehaviour
     {
 
         // for blocking keywords in tutorial
-        if (gameManager.CheckIntro() && gameManager.GetLevel() == 0)
+        if (type == "Persuasion" && gameManager.GetLevel() == 0)
         {
             if (gameManager.GetTurn() == 1)
             {
@@ -74,7 +75,7 @@ public class MainUI : MonoBehaviour
                 proscriptionList.Add("demanding");
             }
         }
-        else if (gameManager.CheckPersuade() && gameManager.GetLevel() == 0)
+        else if (type == "Intro" && gameManager.GetLevel() == 0)
         {
             if (gameManager.GetTurn() == 1)
             {
@@ -87,26 +88,32 @@ public class MainUI : MonoBehaviour
             }
         }
 
-        int buttonIndex = 0;
-
         foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
         {
+            if (button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text == "" && type == "Intro")
+            {
+                break;
+            }
             button.interactable = true;
-            button.onClick.AddListener(delegate { SpawnKeywords(keywordSet, button, buttonIndex); });
-            buttonIndex++;
+            string category = button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text;
+            button.onClick.AddListener(delegate { SpawnKeywords(keywordSet, button.gameObject, category); });
         }
-
-        proscriptionList.Clear();
     }
 
-    public void SpawnKeywords(KeywordSet keywordSet, Button originalButton, int category)
+    public void SpawnKeywords(KeywordSet keywordSet, GameObject originalButton, string category)
     {
-        GameObject panel = Instantiate(answerPanel, new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0), Quaternion.identity, originalButton.transform);
-        if (category == 0)
+        GameObject panel = Instantiate(answerPanel, new Vector2(originalButton.transform.position.x + 0.15f * Screen.width, originalButton.transform.position.y), Quaternion.identity, dialogueScreen.transform);
+        Debug.Log(category);
+        foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
+        {
+            button.interactable = false;
+        }
+
+        if (category == "Topic")
         {
             foreach (string keyword in keywordSet.Topic)
             {
-                GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(0).GetChild(0).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(0).transform);
+                GameObject button = Instantiate(buttonPrefab, panel.transform.position, Quaternion.identity, panel.transform);
                 Button actualButton = button.GetComponent<Button>();
                 button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
 
@@ -116,15 +123,15 @@ public class MainUI : MonoBehaviour
                 }
                 else
                 {
-                    actualButton.onClick.AddListener(delegate { LockKeyword(actualButton, keyword); });
+                    actualButton.onClick.AddListener(delegate { LockKeyword(panel, originalButton, keyword); });
                 }
             }
         }
-        else if (category == 1)
+        else if (category == "Tone")
         {
             foreach (string keyword in keywordSet.Tone)
             {
-                GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(1).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(0).transform);
+                GameObject button = Instantiate(buttonPrefab, panel.transform.position, Quaternion.identity, panel.transform);
                 Button actualButton = button.GetComponent<Button>();
                 button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
 
@@ -134,15 +141,15 @@ public class MainUI : MonoBehaviour
                 }
                 else
                 {
-                    actualButton.onClick.AddListener(delegate { LockKeyword(actualButton, keyword); });
+                    actualButton.onClick.AddListener(delegate { LockKeyword(panel, originalButton, keyword); });
                 }
             }
         }
-        else if (category == 2)
+        else if (category == "Honesty")
         {
             foreach (string keyword in keywordSet.Honesty)
             {
-                GameObject button = Instantiate(togglePrefab, panel.transform.GetChild(2).transform.position, Quaternion.identity, panel.transform.GetChild(0).GetChild(0).transform);
+                GameObject button = Instantiate(buttonPrefab, panel.transform.position, Quaternion.identity, panel.transform);
                 Button actualButton = button.GetComponent<Button>();
                 button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
 
@@ -152,15 +159,14 @@ public class MainUI : MonoBehaviour
                 }
                 else
                 {
-                    actualButton.onClick.AddListener(delegate { LockKeyword(actualButton, keyword); });
+                    actualButton.onClick.AddListener(delegate { LockKeyword(panel, originalButton, keyword); });
                 }
             }
         }
     }
 
-    public void LockKeyword(Button button, string keyword)
+    public void LockKeyword(GameObject panel, GameObject source, string keyword)
     {
-        Debug.Log("Keyword: " + keyword);
         if (!gameManager.ContainsKeyword(keyword))
         {
             gameManager.AddKeyword(keyword);
@@ -169,6 +175,33 @@ public class MainUI : MonoBehaviour
         {
             gameManager.RemoveKeyword(keyword);
         }
+
+        source.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
+
+
+        foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
+        {
+            button.interactable = true;
+        }
+        Destroy(panel);
+    }
+
+    public void ResetKeywords()
+    {
+        keywordPanel.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "Topic";
+        keywordPanel.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = "Tone";
+        keywordPanel.transform.GetChild(2).GetComponentInChildren<TextMeshProUGUI>().text = "";
+        if (gameManager.CheckPersuade())
+        {
+            keywordPanel.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "Honesty";
+        }
+        foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
+        {
+            button.interactable = false;
+            button.onClick.RemoveAllListeners();
+        }
+
+        proscriptionList.Clear();
     }
 
     public void UpdateNotebook()
