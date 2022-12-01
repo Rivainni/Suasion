@@ -96,6 +96,7 @@ public class StoryManager : MonoBehaviour
             }
             current = dialogue.firstNode; // store the dialogue from dialogue trigger
             PrintDialogue(); // Prints out the first line of dialogue
+            mainUI.ResetKeywords();
             gameManager.LockMovement(true);
             dialogueUp = true;
         }

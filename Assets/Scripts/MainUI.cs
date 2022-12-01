@@ -11,6 +11,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject keywordPanel;
     [SerializeField] GameObject targetBox;
     [SerializeField] GameObject mcBox;
+    [SerializeField] GameObject confirmButton;
     [SerializeField] GameObject buttonPrefab;
     [SerializeField] GameObject togglePrefab;
     [SerializeField] HealthBar persuasionBar;
@@ -90,7 +91,7 @@ public class MainUI : MonoBehaviour
 
         foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
         {
-            if (button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text == "" && type == "Intro")
+            if (button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text == "" && gameManager.CheckIntro())
             {
                 break;
             }
@@ -98,6 +99,7 @@ public class MainUI : MonoBehaviour
             string category = button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text;
             button.onClick.AddListener(delegate { SpawnKeywords(keywordSet, button.gameObject, category); });
         }
+        confirmButton.GetComponent<Button>().interactable = true;
     }
 
     public void SpawnKeywords(KeywordSet keywordSet, GameObject originalButton, string category)
@@ -113,54 +115,45 @@ public class MainUI : MonoBehaviour
         {
             foreach (string keyword in keywordSet.Topic)
             {
+                if (proscriptionList.Contains(keyword))
+                {
+                    break;
+                }
+
                 GameObject button = Instantiate(buttonPrefab, panel.transform.position, Quaternion.identity, panel.transform);
                 Button actualButton = button.GetComponent<Button>();
                 button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-
-                if (proscriptionList.Contains(keyword))
-                {
-                    actualButton.interactable = false;
-                }
-                else
-                {
-                    actualButton.onClick.AddListener(delegate { LockKeyword(panel, originalButton, keyword); });
-                }
+                actualButton.onClick.AddListener(delegate { LockKeyword(panel, originalButton, keyword); });
             }
         }
         else if (category == "Tone")
         {
             foreach (string keyword in keywordSet.Tone)
             {
+                if (proscriptionList.Contains(keyword))
+                {
+                    break;
+                }
+
                 GameObject button = Instantiate(buttonPrefab, panel.transform.position, Quaternion.identity, panel.transform);
                 Button actualButton = button.GetComponent<Button>();
                 button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-
-                if (proscriptionList.Contains(keyword))
-                {
-                    actualButton.interactable = false;
-                }
-                else
-                {
-                    actualButton.onClick.AddListener(delegate { LockKeyword(panel, originalButton, keyword); });
-                }
+                actualButton.onClick.AddListener(delegate { LockKeyword(panel, originalButton, keyword); });
             }
         }
         else if (category == "Honesty")
         {
             foreach (string keyword in keywordSet.Honesty)
             {
+                if (proscriptionList.Contains(keyword))
+                {
+                    break;
+                }
+
                 GameObject button = Instantiate(buttonPrefab, panel.transform.position, Quaternion.identity, panel.transform);
                 Button actualButton = button.GetComponent<Button>();
                 button.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-
-                if (proscriptionList.Contains(keyword))
-                {
-                    actualButton.interactable = false;
-                }
-                else
-                {
-                    actualButton.onClick.AddListener(delegate { LockKeyword(panel, originalButton, keyword); });
-                }
+                actualButton.onClick.AddListener(delegate { LockKeyword(panel, originalButton, keyword); });
             }
         }
     }
@@ -177,12 +170,8 @@ public class MainUI : MonoBehaviour
         }
 
         source.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
+        EnableCategories();
 
-
-        foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
-        {
-            button.interactable = true;
-        }
         Destroy(panel);
     }
 
@@ -191,6 +180,8 @@ public class MainUI : MonoBehaviour
         keywordPanel.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "Topic";
         keywordPanel.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = "Tone";
         keywordPanel.transform.GetChild(2).GetComponentInChildren<TextMeshProUGUI>().text = "";
+        confirmButton.GetComponent<Button>().interactable = false;
+
         if (gameManager.CheckPersuade())
         {
             keywordPanel.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "Honesty";
@@ -202,6 +193,18 @@ public class MainUI : MonoBehaviour
         }
 
         proscriptionList.Clear();
+    }
+
+    void EnableCategories()
+    {
+        foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
+        {
+            if (gameManager.CheckIntro() && button.GetComponentInChildren<TextMeshProUGUI>().text == "")
+            {
+                break;
+            }
+            button.interactable = true;
+        }
     }
 
     public void UpdateNotebook()
