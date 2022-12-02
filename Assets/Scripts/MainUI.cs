@@ -12,6 +12,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject targetBox;
     [SerializeField] GameObject mcBox;
     [SerializeField] GameObject confirmButton;
+    [SerializeField] GameObject advanceInnerDialogueButton;
     [SerializeField] GameObject buttonPrefab;
     [SerializeField] GameObject togglePrefab;
     [SerializeField] HealthBar persuasionBar;
@@ -59,6 +60,9 @@ public class MainUI : MonoBehaviour
     public void DisplayKeywords(KeywordSet keywordSet, string type)
     {
 
+        // make sure the player can't advance until they click confirm
+        advanceInnerDialogueButton.GetComponent<Button>().interactable = false;
+
         // for blocking keywords in tutorial
         if (type == "Persuasion" && gameManager.GetLevel() == 0)
         {
@@ -78,14 +82,19 @@ public class MainUI : MonoBehaviour
         }
         else if (type == "Intro" && gameManager.GetLevel() == 0)
         {
+            Debug.Log("IT is now turn " + gameManager.GetTurn());
             if (gameManager.GetTurn() == 1)
             {
-                proscriptionList.Add("state");
+                proscriptionList.Add("game");
                 proscriptionList.Add("weather");
-                proscriptionList.Add("assertive");
-                proscriptionList.Add("cautious");
-                proscriptionList.Add("exaggerate");
-                proscriptionList.Add("downplay");
+                proscriptionList.Add("demanding");
+                proscriptionList.Add("cheerful");
+            }
+            if (gameManager.GetTurn() == 2)
+            {
+                proscriptionList.Add("inside");
+                proscriptionList.Add("inspect");
+                proscriptionList.Add("demanding");
             }
         }
 
@@ -117,7 +126,7 @@ public class MainUI : MonoBehaviour
             {
                 if (proscriptionList.Contains(keyword))
                 {
-                    break;
+                    continue;
                 }
 
                 GameObject button = Instantiate(buttonPrefab, panel.transform.position, Quaternion.identity, panel.transform);
@@ -132,7 +141,7 @@ public class MainUI : MonoBehaviour
             {
                 if (proscriptionList.Contains(keyword))
                 {
-                    break;
+                    continue;
                 }
 
                 GameObject button = Instantiate(buttonPrefab, panel.transform.position, Quaternion.identity, panel.transform);
@@ -147,7 +156,7 @@ public class MainUI : MonoBehaviour
             {
                 if (proscriptionList.Contains(keyword))
                 {
-                    break;
+                    continue;
                 }
 
                 GameObject button = Instantiate(buttonPrefab, panel.transform.position, Quaternion.identity, panel.transform);
@@ -180,7 +189,6 @@ public class MainUI : MonoBehaviour
         keywordPanel.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "Topic";
         keywordPanel.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>().text = "Tone";
         keywordPanel.transform.GetChild(2).GetComponentInChildren<TextMeshProUGUI>().text = "";
-        confirmButton.GetComponent<Button>().interactable = false;
 
         if (gameManager.CheckPersuade())
         {
@@ -191,6 +199,8 @@ public class MainUI : MonoBehaviour
             button.interactable = false;
             button.onClick.RemoveAllListeners();
         }
+
+        confirmButton.GetComponent<Button>().interactable = false;
 
         proscriptionList.Clear();
     }
@@ -205,6 +215,11 @@ public class MainUI : MonoBehaviour
             }
             button.interactable = true;
         }
+    }
+
+    public void EnableAdvance()
+    {
+        advanceInnerDialogueButton.GetComponent<Button>().interactable = true;
     }
 
     public void UpdateNotebook()

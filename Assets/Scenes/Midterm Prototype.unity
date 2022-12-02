@@ -256,6 +256,7 @@ MonoBehaviour:
   targetBox: {fileID: 397450166}
   mcBox: {fileID: 808010771}
   confirmButton: {fileID: 869633077}
+  advanceInnerDialogueButton: {fileID: 632857482}
   buttonPrefab: {fileID: 5164056355585994746, guid: 4b1ddcc95a7eaf143884a37c61a5959e, type: 3}
   togglePrefab: {fileID: 5164056355585994746, guid: dd0f608f67f82436a9365a84adc10991, type: 3}
   persuasionBar: {fileID: 1772126720}
@@ -21844,6 +21845,11 @@ MonoBehaviour:
   type: Clue
   gameManager: {fileID: 1901980257}
   reference: {fileID: 0}
+--- !u!1 &632857482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7574948222779202111, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
+  m_PrefabInstance: {fileID: 1811549257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &646771391
 GameObject:
   m_ObjectHideFlags: 0
@@ -44513,7 +44519,7 @@ MonoBehaviour:
   dialogue: {fileID: 11400000, guid: c463ccbf6ab25462684b3826d9c9e967, type: 2}
   title: Detect Entry
   type: Object
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1901980257}
   reference: {fileID: 0}
 --- !u!1 &1042689359
 GameObject:
@@ -46598,6 +46604,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 138863952359288929, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138863952359288929, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1901980258}
@@ -46606,11 +46616,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1901980258}
     - target: {fileID: 138863952359288929, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1901980255}
+    - target: {fileID: 138863952359288929, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 138863952359288929, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 138863952359288929, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 138863952359288929, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
@@ -46627,6 +46645,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 138863952359288929, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: StoryManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 138863952359288929, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: StoryManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 138863952359288929, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}

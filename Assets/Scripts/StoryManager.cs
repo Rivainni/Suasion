@@ -45,9 +45,8 @@ public class StoryManager : MonoBehaviour
     DialogueNode current;
     bool pause = false;
     int currentTextIndex = 0;
-
-    bool actionTaken = false;
     bool dialogueUp = false;
+    bool actionTaken = false;
 
     // Start is called before the first frame update
     void Start() { }
@@ -108,8 +107,8 @@ public class StoryManager : MonoBehaviour
         {
             if (actionTaken && (gameManager.CheckIntro() || gameManager.CheckPersuade()))
             {
-                mainUI.EndTurn();
                 actionTaken = false;
+                mainUI.EndTurn();
                 current = gameManager.GetNext();
                 gameManager.ResetNext();
             }
@@ -150,7 +149,6 @@ public class StoryManager : MonoBehaviour
                 storyText[currentTextIndex + 1].text = keywordNode.NarrationLine.Text;
             }
 
-            mainUI.ResetKeywords();
             mainUI.DisplayKeywords(keywordNode.Keywords, keywordNode.Type);
             foreach (Combination combination in keywordNode.Combinations)
             {
@@ -180,6 +178,8 @@ public class StoryManager : MonoBehaviour
     public void ConfirmKeywords()
     {
         actionTaken = true;
+        mainUI.EnableAdvance();
+        mainUI.ResetKeywords();
     }
 
     void SetName(InputField input, GameObject toRemove)
