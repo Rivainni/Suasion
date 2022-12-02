@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class StoryElement : MonoBehaviour
 {
@@ -42,14 +43,17 @@ public class StoryElement : MonoBehaviour
         }
         this.enabled = false;
     }
-    
+
     void OnMouseDown()
     {
-        if (reference != null)
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            reference.SetActive(true);
+            if (reference != null)
+            {
+                reference.SetActive(true);
+            }
+            TriggerDialogue();
         }
-        TriggerDialogue();
     }
 
     void OnTriggerEnter2D(Collider2D other)

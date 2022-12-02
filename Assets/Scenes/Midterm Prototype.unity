@@ -43537,7 +43537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &992392088
 Transform:
   m_ObjectHideFlags: 0
@@ -43595,7 +43595,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 9
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.953125, y: 0.3046875, z: 0}
+  m_ChunkCullingBounds: {x: 1.05, y: 0.35833335, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -44527,13 +44527,13 @@ GameObject:
   - component: {fileID: 1042689363}
   - component: {fileID: 1042689362}
   - component: {fileID: 1042689361}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1042689360
 Transform:
   m_ObjectHideFlags: 0

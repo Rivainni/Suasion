@@ -125,7 +125,7 @@ public class StoryManager : MonoBehaviour
             nameText[currentTextIndex].text = current.NarrationLine.Speaker.CharacterName;
 
             // if it's the main character talking
-            if (current.NarrationLine.Speaker.CharacterName == "AMSEL")
+            if (current.NarrationLine.Speaker.CharacterName == "AMSEL" || currentTextIndex == 0)
             {
                 storyText[currentTextIndex].text = basicNode.NarrationLine.Text;
             }
@@ -141,7 +141,7 @@ public class StoryManager : MonoBehaviour
 
             nameText[currentTextIndex].text = current.NarrationLine.Speaker.CharacterName;
             // if it's the main character talking
-            if (current.NarrationLine.Speaker.CharacterName == "AMSEL")
+            if (current.NarrationLine.Speaker.CharacterName == "AMSEL" || currentTextIndex == 0)
             {
                 storyText[currentTextIndex].text = keywordNode.NarrationLine.Text;
             }
