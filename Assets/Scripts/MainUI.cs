@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class MainUI : MonoBehaviour
@@ -26,13 +27,16 @@ public class MainUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        persuasionBar.SetHealth(30);
-        empathyBar.SetHealth(30);
-        ResetKeywords();
-
-        foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
+        if (SceneManager.GetActiveScene().name == "Main Game")
         {
-            button.interactable = false;
+            persuasionBar.SetHealth(30);
+            empathyBar.SetHealth(30);
+            ResetKeywords();
+
+            foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
+            {
+                button.interactable = false;
+            }
         }
     }
 

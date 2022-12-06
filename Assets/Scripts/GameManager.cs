@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -212,13 +213,16 @@ public class GameManager : MonoBehaviour
 
     public void LockMovement(bool status)
     {
-        if (status)
+        if (SceneManager.GetActiveScene().name == "Main Game")
         {
-            playerMovement.LockMovement();
-        }
-        else
-        {
-            playerMovement.UnlockMovement();
+            if (status)
+            {
+                playerMovement.LockMovement();
+            }
+            else
+            {
+                playerMovement.UnlockMovement();
+            }
         }
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public struct Clue
@@ -92,10 +93,10 @@ public class StoryManager : MonoBehaviour
                         gameManager.SetMultiplier(3);
                         break;
                 }
+                mainUI.ResetKeywords();
             }
             current = dialogue.firstNode; // store the dialogue from dialogue trigger
             PrintDialogue(); // Prints out the first line of dialogue
-            mainUI.ResetKeywords();
             gameManager.LockMovement(true);
             dialogueUp = true;
         }
@@ -173,6 +174,11 @@ public class StoryManager : MonoBehaviour
         gameManager.Reset();
         gameManager.LockMovement(false);
         dialogueUp = false;
+
+        if (SceneManager.GetActiveScene().name == "Intro Cutscene")
+        {
+            SceneManager.LoadScene("Main Game");
+        }
     }
 
     public void ConfirmKeywords()
