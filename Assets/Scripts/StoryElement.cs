@@ -11,7 +11,7 @@ public class StoryElement : MonoBehaviour
     [SerializeField] string type;
     [SerializeField] GameManager gameManager; // need to access the player state to determine whether to start dialogue or nah.
     [SerializeField] GameObject reference = null; // the object that the player clicks on to start the dialogue
-
+    [SerializeField] StoryElement chain = null; //do we trigger another dialogue after this one?
     void Start()
     {
         if (title == "Start")
@@ -26,7 +26,14 @@ public class StoryElement : MonoBehaviour
     {
         if (type == "Object" || type == "Start" || type == "Clue")
         {
-            FindObjectOfType<StoryManager>().StartDialogue(dialogue, 0); // Accesses Dialogue Manager and Starts Dialogue
+            if (chain != null)
+            {
+                FindObjectOfType<StoryManager>().StartDialogue(dialogue, 0, chain);
+            }
+            else
+            {
+                FindObjectOfType<StoryManager>().StartDialogue(dialogue, 0);
+            }
             if (type == "Clue")
             {
                 gameManager.AddClue(title, ((BasicDialogueNode)dialogue.firstNode).NextNode.NarrationLine.Text, dialogue.firstNode.NarrationLine.Speaker.CharacterName);

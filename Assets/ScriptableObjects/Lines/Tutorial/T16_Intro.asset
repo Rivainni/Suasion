@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: T16_Intro
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 999ba610686a74f1e8c2c4268b63d1e8, type: 2}
-  m_Text: Stop.
+  m_Text: Stop...

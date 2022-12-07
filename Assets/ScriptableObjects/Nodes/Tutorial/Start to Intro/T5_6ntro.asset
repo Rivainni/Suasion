@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43fa58f7907c74fb49d95e06fde851a2, type: 3}
-  m_Name: T5_Intro
+  m_Script: {fileID: 11500000, guid: b2dc1e7a860824eb79994fe973e0ddfe, type: 3}
+  m_Name: T5_6ntro
   m_EditorClassIdentifier: 
-  m_Speaker: {fileID: 11400000, guid: be5e013d2c5b140c093f578068f925da, type: 2}
-  m_Text: Hoyyy!!! I want to play games! Games!!!
+  m_DialogueLine: {fileID: 11400000, guid: e815536b4b05ace4a82e232e983ac979, type: 2}
+  m_NextNode: {fileID: 0}

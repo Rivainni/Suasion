@@ -49,10 +49,12 @@ public class StoryManager : MonoBehaviour
     bool dialogueUp = false;
     bool actionTaken = false;
 
+    StoryElement chain = null;
+
     // Start is called before the first frame update
     void Start() { }
 
-    public void StartDialogue(Dialogue dialogue, int dialogueType)
+    public void StartDialogue(Dialogue dialogue, int dialogueType, StoryElement opt = null)
     {
         // open the dialogue box
         if (!dialogueUp)
@@ -99,6 +101,11 @@ public class StoryManager : MonoBehaviour
             PrintDialogue(); // Prints out the first line of dialogue
             gameManager.LockMovement(true);
             dialogueUp = true;
+
+            if (opt != null)
+            {
+                chain = opt;
+            }
         }
     }
 
@@ -178,6 +185,12 @@ public class StoryManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Intro Cutscene")
         {
             SceneManager.LoadScene("Main Game");
+        }
+
+        if (chain != null)
+        {
+            chain.TriggerDialogue();
+            chain = null;
         }
     }
 

@@ -22,8 +22,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetInteger("Horizontal", Mathf.RoundToInt(movement.x));
             animator.SetInteger("Vertical", Mathf.RoundToInt(movement.y));
             animator.SetFloat("Speed", movement.sqrMagnitude);
-
-            Debug.Log("X: " + movement.x + ", Y :" + movement.y);
         }
         else
         {

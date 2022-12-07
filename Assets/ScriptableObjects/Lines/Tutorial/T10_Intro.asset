@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: T10_Intro
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: be5e013d2c5b140c093f578068f925da, type: 2}
-  m_Text: You good mate?
+  m_Text: You goods bro?
