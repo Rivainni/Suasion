@@ -19,6 +19,54 @@ public struct Clue
     }
 }
 
+// chosen keywords, the amount of persuasion or empathy, their response, their mood
+public struct Log
+{
+    public List<string> keywords;
+    public string state;
+    public float result;
+    public string response;
+    public string comment;
+
+    public Log(List<string> keywords, string state, float result, string response, string comment)
+    {
+        this.keywords = new List<string>();
+        //this.keywords = keywords;
+        foreach (string keyword in keywords)
+        {
+            this.keywords.Add(keyword);
+        }
+        this.state = state;
+        this.result = result;
+        this.response = response;
+        this.comment = comment;
+    }
+
+    public override string ToString()
+    {
+        string curr = "During: ";
+        curr += state + "\n";
+        curr += "Chosen keywords: ";
+        curr += keywords[0] + ", " + keywords[1] + ", ";
+        if (state == "Introduction")
+        {
+            curr += "\n";
+        }
+        else
+        {
+            curr += keywords[2] + "\n";
+        }
+        curr += "Result: ";
+        curr += result + "\n";
+        curr += "Response: ";
+        curr += response + "\n";
+        curr += "Comment: ";
+        curr += comment + "\n";
+        curr += "\n";
+        return curr;
+    }
+}
+
 public class StoryManager : MonoBehaviour
 {
     [SerializeField]

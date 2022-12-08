@@ -30,10 +30,15 @@ public class GameManager : MonoBehaviour
     bool inPersuade = false;
     bool inIntro = false;
     int level = 0;
+
+    // for the log
+    float currentValue = 0;
+    string response = "";
     DialogueNode next = null;
 
     List<string> keywordList = new List<string>();
     List<Combination> combinationList = new List<Combination>();
+    List<Log> logList = new List<Log>();
     List<Clue> clueList = new List<Clue>();
 
     SaveFile current;
@@ -47,6 +52,7 @@ public class GameManager : MonoBehaviour
         //     Debug.Log(keyword.Category);
         //     Debug.Log(keyword.Correct);
         // }
+        logList.Clear();
     }
 
     // Update is called once per frame
@@ -58,6 +64,14 @@ public class GameManager : MonoBehaviour
     public void EndTurn()
     {
         Calculate();
+        if (inPersuade)
+        {
+            AddLog("Persuasion");
+        }
+        else if (inIntro)
+        {
+            AddLog("Introduction");
+        }
         ClearKeywords();
         AddTurn();
     }
@@ -74,6 +88,7 @@ public class GameManager : MonoBehaviour
                 basePoints += combination.CheckKeywords(keywordList, mood, CheckPersuade());
                 hMult += combination.CheckHonesty();
                 next = combination.NextNode;
+                response = combination.NextNode.NarrationLine.Text;
                 break;
             }
         }
@@ -282,6 +297,16 @@ public class GameManager : MonoBehaviour
     public List<Clue> GetClues()
     {
         return clueList;
+    }
+
+    public void AddLog(string state)
+    {
+        logList.Add(new Log(keywordList, state, currentValue, response, mood));
+    }
+
+    public List<Log> GetLogs()
+    {
+        return logList;
     }
 
     public bool Success()

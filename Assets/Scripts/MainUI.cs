@@ -72,10 +72,11 @@ public class MainUI : MonoBehaviour
         {
             if (gameManager.GetTurn() == 1)
             {
-                proscriptionList.Add("game");
+                proscriptionList.Add("state");
                 proscriptionList.Add("weather");
-                proscriptionList.Add("demanding");
-                proscriptionList.Add("cheerful");
+                proscriptionList.Add("cautious");
+                proscriptionList.Add("exaggerate");
+                proscriptionList.Add("downplay");
             }
             if (gameManager.GetTurn() == 2)
             {
@@ -229,6 +230,16 @@ public class MainUI : MonoBehaviour
     public void UpdateNotebook()
     {
         notebookText.text = "";
+
+        foreach (Log log in gameManager.GetLogs())
+        {
+            notebookText.text += log.ToString();
+        }
+
+        if (gameManager.GetClues().Count > 1)
+        {
+            notebookText.text += "Clues";
+        }
         foreach (Clue clue in gameManager.GetClues())
         {
             notebookText.text += clue.character;
@@ -237,8 +248,19 @@ public class MainUI : MonoBehaviour
         }
     }
 
-    public void CycleNotebook()
+    public void NextPage()
     {
+        if (notebookText.textInfo.pageCount > 1 && notebookText.pageToDisplay < notebookText.textInfo.pageCount - 1)
+        {
+            notebookText.pageToDisplay += 1;
+        }
+    }
 
+    public void PreviousPage()
+    {
+        if (notebookText.textInfo.pageCount > 1 && notebookText.pageToDisplay > 1)
+        {
+            notebookText.pageToDisplay -= 1;
+        }
     }
 }
