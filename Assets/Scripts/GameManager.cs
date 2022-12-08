@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] MainUI mainUI;
     [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] GameObject[] levelObjects;
     // Start is called before the first frame update
 
     public struct SaveFile
@@ -30,6 +31,8 @@ public class GameManager : MonoBehaviour
     bool inPersuade = false;
     bool inIntro = false;
     int level = 0;
+    int score;
+    bool success = false;
 
     // for the log
     float currentValue = 0;
@@ -93,6 +96,7 @@ public class GameManager : MonoBehaviour
             }
         }
         float calc = 0;
+        score += basePoints;
 
         if (inIntro)
         {
@@ -154,10 +158,14 @@ public class GameManager : MonoBehaviour
     {
         ClearCombinations();
         ClearKeywords();
-        persuasion = 30;
-        empathy = 30;
         turn = 1;
         currentCharacter = "";
+    }
+
+    public void ResetEnd()
+    {
+        persuasion = 30;
+        empathy = 30;
     }
 
     // getter/setter methods below
@@ -265,19 +273,16 @@ public class GameManager : MonoBehaviour
 
     public void AddLevel()
     {
-        Reset();
-        ClearClues();
-        level++;
+        mainUI.DisplayCurrentScore();
         playerMovement.gameObject.transform.position = new Vector3(0, 0, 0);
+        Reset();
+        ResetEnd();
+        ClearClues();
 
-        if (level == 0)
-        {
-            GameObject.Find("Tutorial").SetActive(false);
-        }
-        else
-        {
-            GameObject.Find("Level " + level).SetActive(true);
-        }
+        levelObjects[level].SetActive(false);
+        level++;
+        levelObjects[level].SetActive(true);
+
         foreach (GameObject renew in GameObject.FindGameObjectsWithTag("Respawn"))
         {
             renew.SetActive(true);
@@ -309,17 +314,27 @@ public class GameManager : MonoBehaviour
         return logList;
     }
 
-    public bool Success()
+    public bool GetSuccess()
+    {
+        return success;
+    }
+
+    public void RollSuccess()
     {
         // roll a random number between 0 and 100, then check if the random number is less than or equal to persuasion
         int rand = Random.Range(0, 100);
         if (rand <= persuasion)
         {
-            return true;
+            success = true;
         }
         else
         {
-            return false;
+            success = false;
         }
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }

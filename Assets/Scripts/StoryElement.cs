@@ -12,6 +12,8 @@ public class StoryElement : MonoBehaviour
     [SerializeField] GameManager gameManager; // need to access the player state to determine whether to start dialogue or nah.
     [SerializeField] GameObject reference = null; // the object that the player clicks on to start the dialogue
     [SerializeField] StoryElement chain = null; //do we trigger another dialogue after this one?
+    [SerializeField] bool end = false; // does this element trigger the start of the next level?
+    bool clicked = false; // has the player clicked on this element yet?
     void Start()
     {
         if (title == "Start")
@@ -32,7 +34,15 @@ public class StoryElement : MonoBehaviour
             }
             else
             {
-                FindObjectOfType<StoryManager>().StartDialogue(dialogue, 0);
+                if (end)
+                {
+                    Debug.Log("HERE!");
+                    FindObjectOfType<StoryManager>().StartDialogue(dialogue, 0, null, true);
+                }
+                else
+                {
+                    FindObjectOfType<StoryManager>().StartDialogue(dialogue, 0);
+                }
             }
             if (type == "Clue")
             {
@@ -53,12 +63,13 @@ public class StoryElement : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!EventSystem.current.IsPointerOverGameObject())
+        if (!EventSystem.current.IsPointerOverGameObject() && !clicked)
         {
             if (reference != null)
             {
                 reference.SetActive(true);
             }
+            clicked = true;
             TriggerDialogue();
         }
     }
@@ -71,13 +82,13 @@ public class StoryElement : MonoBehaviour
             {
                 if (reference.transform.parent.name == "Tasks")
                 {
-                    if (gameManager.Success())
+                    if (gameManager.GetSuccess())
                     {
                         TriggerDialogue();
                     }
                     else
                     {
-                        Application.Quit();
+                        reference.GetComponent<StoryElement>().TriggerDialogue();
                     }
                 }
             }
@@ -87,5 +98,10 @@ public class StoryElement : MonoBehaviour
             }
             gameObject.SetActive(false);
         }
+    }
+
+    public bool GetClicked()
+    {
+        return clicked;
     }
 }

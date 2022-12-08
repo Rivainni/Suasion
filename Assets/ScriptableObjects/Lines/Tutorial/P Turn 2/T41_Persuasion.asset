@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: T41_Persuasion
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 999ba610686a74f1e8c2c4268b63d1e8, type: 2}
-  m_Text: "Alright. Go fetch me the game, will you? We\u2019ll see about that."
+  m_Text: Fine, you get the game then... since you wanted to play in the first place.

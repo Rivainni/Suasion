@@ -98,11 +98,12 @@ public class StoryManager : MonoBehaviour
     bool actionTaken = false;
 
     StoryElement chain = null;
+    bool end = false;
 
     // Start is called before the first frame update
     void Start() { }
 
-    public void StartDialogue(Dialogue dialogue, int dialogueType, StoryElement opt = null)
+    public void StartDialogue(Dialogue dialogue, int dialogueType, StoryElement opt = null, bool end = false)
     {
         // open the dialogue box
         if (!dialogueUp)
@@ -137,7 +138,7 @@ public class StoryManager : MonoBehaviour
                 switch (gameManager.GetLevel())
                 {
                     case 0:
-                        gameManager.SetMultiplier(3);
+                        gameManager.SetMultiplier(2);
                         break;
                     case 1:
                         gameManager.SetMultiplier(3);
@@ -153,6 +154,11 @@ public class StoryManager : MonoBehaviour
             if (opt != null)
             {
                 chain = opt;
+            }
+
+            if (end)
+            {
+                this.end = end;
             }
         }
     }
@@ -219,6 +225,10 @@ public class StoryManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        if (gameManager.CheckPersuade())
+        {
+            gameManager.RollSuccess();
+        }
         storyText[currentTextIndex].text = "";
         current = null;
         outerDialogue.SetActive(false);
@@ -240,6 +250,14 @@ public class StoryManager : MonoBehaviour
             chain.TriggerDialogue();
             chain = null;
         }
+
+        if (end)
+        {
+            gameManager.AddLevel();
+            gameManager.LockMovement(true);
+            end = false;
+        }
+
     }
 
     public void ConfirmKeywords()

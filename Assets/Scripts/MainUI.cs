@@ -16,6 +16,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject advanceInnerDialogueButton;
     [SerializeField] GameObject buttonPrefab;
     [SerializeField] GameObject togglePrefab;
+    [SerializeField] GameObject scorePanel;
     [SerializeField] HealthBar persuasionBar;
     [SerializeField] HealthBar empathyBar;
     [SerializeField] GameManager gameManager;
@@ -43,7 +44,10 @@ public class MainUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
     }
 
     public void EndTurn()
@@ -75,6 +79,7 @@ public class MainUI : MonoBehaviour
                 proscriptionList.Add("state");
                 proscriptionList.Add("weather");
                 proscriptionList.Add("cautious");
+                proscriptionList.Add("assertive");
                 proscriptionList.Add("exaggerate");
                 proscriptionList.Add("downplay");
             }
@@ -197,7 +202,7 @@ public class MainUI : MonoBehaviour
 
         if (gameManager.CheckPersuade())
         {
-            keywordPanel.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = "Honesty";
+            keywordPanel.transform.GetChild(2).GetComponentInChildren<TextMeshProUGUI>().text = "Honesty";
         }
         foreach (Button button in keywordPanel.GetComponentsInChildren<Button>())
         {
@@ -250,7 +255,7 @@ public class MainUI : MonoBehaviour
 
     public void NextPage()
     {
-        if (notebookText.textInfo.pageCount > 1 && notebookText.pageToDisplay < notebookText.textInfo.pageCount - 1)
+        if (notebookText.textInfo.pageCount > 1 && notebookText.pageToDisplay < notebookText.textInfo.pageCount)
         {
             notebookText.pageToDisplay += 1;
         }
@@ -262,5 +267,14 @@ public class MainUI : MonoBehaviour
         {
             notebookText.pageToDisplay -= 1;
         }
+    }
+
+    public void DisplayCurrentScore()
+    {
+        scorePanel.SetActive(true);
+        scorePanel.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = "Persuaded: " + gameManager.GetSuccess();
+        scorePanel.transform.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Empathy: " + gameManager.GetEmpathy() + "%";
+        scorePanel.transform.GetChild(1).GetChild(2).GetComponent<TextMeshProUGUI>().text = "Persuasion: " + gameManager.GetPersuasion() + "%";
+        scorePanel.transform.GetChild(1).GetChild(3).GetComponent<TextMeshProUGUI>().text = "Score: " + gameManager.GetScore();
     }
 }
