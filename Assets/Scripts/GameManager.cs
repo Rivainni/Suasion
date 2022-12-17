@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour
         int level;
     }
 
-    float currentCorrect;
-    float currentIncorrect;
     float persuasion = 30;
     float empathy = 30;
     float honesty = 0;
@@ -117,6 +115,11 @@ public class GameManager : MonoBehaviour
             else if (mood == "negative")
             {
                 calc *= 10;
+            }
+
+            if (hMult > 0)
+            {
+                honesty += 0.5f;
             }
             persuasion = Mathf.Clamp(persuasion + calc, 0, 100);
         }

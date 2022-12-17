@@ -7,7 +7,6 @@ using UnityEngine.EventSystems;
 public class ButtonGlow : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] Image Rectangle;
-    bool mouse_over = false;
     Button current;
 
     void Start()
@@ -25,7 +24,6 @@ public class ButtonGlow : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (current.interactable)
         {
-            mouse_over = true;
             Color currentColor = GetComponent<Image>().color;
             currentColor.a = 255;
             GetComponent<Image>().color = currentColor;
@@ -36,7 +34,6 @@ public class ButtonGlow : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (current.interactable)
         {
-            mouse_over = false;
             Color currentColor = GetComponent<Image>().color;
             currentColor.a = 0;
             GetComponent<Image>().color = currentColor;
