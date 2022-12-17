@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: T34_Persuasion
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: be5e013d2c5b140c093f578068f925da, type: 2}
-  m_Text: "I noticed your bedsheets weren\u2019t arranged. You\u2019re normally very
-    particular with cleanliness. Is anything wrong? "
+  m_Text: "Your bed isn\u2019t clean, you goods?"

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43fa58f7907c74fb49d95e06fde851a2, type: 3}
   m_Name: T43b_Failure
   m_EditorClassIdentifier: 
-  m_Speaker: {fileID: 11400000, guid: 2c29fb22818034fffbe9e66e60115037, type: 2}
-  m_Text: Uhhh, maybe not.
+  m_Speaker: {fileID: 11400000, guid: 999ba610686a74f1e8c2c4268b63d1e8, type: 2}
+  m_Text: "Yeah\u2026I\u2019m gonna pass."

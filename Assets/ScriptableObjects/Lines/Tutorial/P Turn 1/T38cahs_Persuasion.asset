@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: T38cahs_Persuasion
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 999ba610686a74f1e8c2c4268b63d1e8, type: 2}
-  m_Text: 'Well, you see, there was still some homework. '
+  m_Text: "Well, you see, there was still some homework I haven\u2019t done."

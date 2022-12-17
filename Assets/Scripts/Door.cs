@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Door : MonoBehaviour
 {
@@ -20,21 +21,24 @@ public class Door : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (gameObject.activeSelf)
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            foreach (GameObject link in links)
+            if (gameObject.activeSelf)
             {
-                link.SetActive(false);
+                foreach (GameObject link in links)
+                {
+                    link.SetActive(false);
+                }
+                gameObject.SetActive(false);
             }
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            foreach (GameObject link in links)
+            else
             {
-                link.SetActive(true);
+                foreach (GameObject link in links)
+                {
+                    link.SetActive(true);
+                }
+                gameObject.SetActive(true);
             }
-            gameObject.SetActive(true);
         }
     }
 }

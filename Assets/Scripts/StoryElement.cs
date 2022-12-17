@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class StoryElement : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class StoryElement : MonoBehaviour
     [SerializeField] string type;
     [SerializeField] GameManager gameManager; // need to access the player state to determine whether to start dialogue or nah.
     [SerializeField] GameObject reference = null; // the object that the player clicks on to start the dialogue
-
+    [SerializeField] StoryElement chain = null; //do we trigger another dialogue after this one?
+    [SerializeField] bool end = false; // does this element trigger the start of the next level?
+    bool clicked = false; // has the player clicked on this element yet?
     void Start()
     {
         if (title == "Start")
@@ -25,7 +28,22 @@ public class StoryElement : MonoBehaviour
     {
         if (type == "Object" || type == "Start" || type == "Clue")
         {
-            FindObjectOfType<StoryManager>().StartDialogue(dialogue, 0); // Accesses Dialogue Manager and Starts Dialogue
+            if (chain != null)
+            {
+                FindObjectOfType<StoryManager>().StartDialogue(dialogue, 0, chain);
+            }
+            else
+            {
+                if (end)
+                {
+                    Debug.Log("HERE!");
+                    FindObjectOfType<StoryManager>().StartDialogue(dialogue, 0, null, true);
+                }
+                else
+                {
+                    FindObjectOfType<StoryManager>().StartDialogue(dialogue, 0);
+                }
+            }
             if (type == "Clue")
             {
                 gameManager.AddClue(title, ((BasicDialogueNode)dialogue.firstNode).NextNode.NarrationLine.Text, dialogue.firstNode.NarrationLine.Speaker.CharacterName);
@@ -42,14 +60,18 @@ public class StoryElement : MonoBehaviour
         }
         this.enabled = false;
     }
-    
+
     void OnMouseDown()
     {
-        if (reference != null)
+        if (!EventSystem.current.IsPointerOverGameObject() && !clicked)
         {
-            reference.SetActive(true);
+            if (reference != null)
+            {
+                reference.SetActive(true);
+            }
+            clicked = true;
+            TriggerDialogue();
         }
-        TriggerDialogue();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -60,13 +82,13 @@ public class StoryElement : MonoBehaviour
             {
                 if (reference.transform.parent.name == "Tasks")
                 {
-                    if (gameManager.Success())
+                    if (gameManager.GetSuccess())
                     {
                         TriggerDialogue();
                     }
                     else
                     {
-                        Application.Quit();
+                        reference.GetComponent<StoryElement>().TriggerDialogue();
                     }
                 }
             }
@@ -76,5 +98,10 @@ public class StoryElement : MonoBehaviour
             }
             gameObject.SetActive(false);
         }
+    }
+
+    public bool GetClicked()
+    {
+        return clicked;
     }
 }

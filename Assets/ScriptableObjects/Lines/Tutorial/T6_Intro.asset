@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: T6_Intro
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2c29fb22818034fffbe9e66e60115037, type: 2}
-  m_Text: This is the dialogue screen for the introduction.
+  m_Text: This is the dialogue screen for the introduction. Here you can make small
+    talk to increase your empathy bar, which improves your chances of persuasion
+    later on.

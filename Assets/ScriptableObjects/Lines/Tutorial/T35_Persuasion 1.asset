@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: T35_Persuasion 1
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 999ba610686a74f1e8c2c4268b63d1e8, type: 2}
-  m_Text: I just forgot is all.
+  m_Text: I forgot.

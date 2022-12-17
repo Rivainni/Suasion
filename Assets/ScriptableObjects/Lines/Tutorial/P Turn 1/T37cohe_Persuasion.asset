@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: T37cohe_Persuasion
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: be5e013d2c5b140c093f578068f925da, type: 2}
-  m_Text: " There were a lot of papers. I wonder what those were\u2026  "
+  m_Text: Cramming will kill you.

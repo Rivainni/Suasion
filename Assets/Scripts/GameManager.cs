@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] MainUI mainUI;
     [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] GameObject[] levelObjects;
     // Start is called before the first frame update
 
     public struct SaveFile
@@ -23,15 +25,23 @@ public class GameManager : MonoBehaviour
     float empathy = 30;
     float honesty = 0;
     int turn = 1;
+    int turnMultiplier = 0;
     string currentCharacter = "";
     string mood = "neutral";
     bool inPersuade = false;
     bool inIntro = false;
     int level = 0;
+    int score;
+    bool success = false;
+
+    // for the log
+    float currentValue = 0;
+    string response = "";
     DialogueNode next = null;
 
     List<string> keywordList = new List<string>();
     List<Combination> combinationList = new List<Combination>();
+    List<Log> logList = new List<Log>();
     List<Clue> clueList = new List<Clue>();
 
     SaveFile current;
@@ -45,6 +55,7 @@ public class GameManager : MonoBehaviour
         //     Debug.Log(keyword.Category);
         //     Debug.Log(keyword.Correct);
         // }
+        logList.Clear();
     }
 
     // Update is called once per frame
@@ -56,6 +67,14 @@ public class GameManager : MonoBehaviour
     public void EndTurn()
     {
         Calculate();
+        if (inPersuade)
+        {
+            AddLog("Persuasion");
+        }
+        else if (inIntro)
+        {
+            AddLog("Introduction");
+        }
         ClearKeywords();
         AddTurn();
     }
@@ -72,33 +91,37 @@ public class GameManager : MonoBehaviour
                 basePoints += combination.CheckKeywords(keywordList, mood, CheckPersuade());
                 hMult += combination.CheckHonesty();
                 next = combination.NextNode;
+                response = combination.NextNode.NarrationLine.Text;
                 break;
             }
         }
         float calc = 0;
+        score += basePoints;
 
         if (inIntro)
         {
-            calc = basePoints * (1 - (empathy * 0.01f));
-            empathy += calc;
+            calc = basePoints * turnMultiplier;
+            empathy = Mathf.Clamp(empathy + calc, 0, 100);
         }
         else if (inPersuade)
         {
-            calc = basePoints * (1 - (persuasion * 0.01f)) * (1 + (empathy * 0.01f));
+            calc = basePoints * (1 + (empathy * 0.01f)) * turnMultiplier;
             if (mood == "neutral" && hMult == 0)
             {
-                calc += 0.01f * 5;
+                calc += 5;
             }
             else if (mood == "positive" && hMult == 1)
             {
-                calc *= 0.01f * 15;
+                calc *= 15;
             }
             else if (mood == "negative")
             {
-                calc *= 0.01f * 10;
+                calc *= 10;
             }
-            persuasion += calc;
+            persuasion = Mathf.Clamp(persuasion + calc, 0, 100);
         }
+        Debug.Log("Empathy: " + empathy);
+        Debug.Log("Persuasion ni Bossing: " + persuasion);
     }
 
     public void AddKeyword(string keyword)
@@ -135,10 +158,14 @@ public class GameManager : MonoBehaviour
     {
         ClearCombinations();
         ClearKeywords();
-        persuasion = 30;
-        empathy = 30;
         turn = 1;
         currentCharacter = "";
+    }
+
+    public void ResetEnd()
+    {
+        persuasion = 30;
+        empathy = 30;
     }
 
     // getter/setter methods below
@@ -150,6 +177,11 @@ public class GameManager : MonoBehaviour
     public void AddTurn()
     {
         turn++;
+    }
+
+    public void SetMultiplier(int multiplier)
+    {
+        turnMultiplier = multiplier;
     }
 
     public bool CheckIntro()
@@ -204,13 +236,16 @@ public class GameManager : MonoBehaviour
 
     public void LockMovement(bool status)
     {
-        if (status)
+        if (SceneManager.GetActiveScene().name == "Main Game")
         {
-            playerMovement.LockMovement();
-        }
-        else
-        {
-            playerMovement.UnlockMovement();
+            if (status)
+            {
+                playerMovement.LockMovement();
+            }
+            else
+            {
+                playerMovement.UnlockMovement();
+            }
         }
     }
 
@@ -238,19 +273,16 @@ public class GameManager : MonoBehaviour
 
     public void AddLevel()
     {
-        Reset();
-        ClearClues();
-        level++;
+        mainUI.DisplayCurrentScore();
         playerMovement.gameObject.transform.position = new Vector3(0, 0, 0);
+        Reset();
+        ResetEnd();
+        ClearClues();
 
-        if (level == 0)
-        {
-            GameObject.Find("Tutorial").SetActive(false);
-        }
-        else
-        {
-            GameObject.Find("Level " + level).SetActive(true);
-        }
+        levelObjects[level].SetActive(false);
+        level++;
+        levelObjects[level].SetActive(true);
+
         foreach (GameObject renew in GameObject.FindGameObjectsWithTag("Respawn"))
         {
             renew.SetActive(true);
@@ -272,17 +304,37 @@ public class GameManager : MonoBehaviour
         return clueList;
     }
 
-    public bool Success()
+    public void AddLog(string state)
+    {
+        logList.Add(new Log(keywordList, state, currentValue, response, mood));
+    }
+
+    public List<Log> GetLogs()
+    {
+        return logList;
+    }
+
+    public bool GetSuccess()
+    {
+        return success;
+    }
+
+    public void RollSuccess()
     {
         // roll a random number between 0 and 100, then check if the random number is less than or equal to persuasion
         int rand = Random.Range(0, 100);
         if (rand <= persuasion)
         {
-            return true;
+            success = true;
         }
         else
         {
-            return false;
+            success = false;
         }
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }

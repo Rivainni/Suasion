@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: T37cahs_Persuasion
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: be5e013d2c5b140c093f578068f925da, type: 2}
-  m_Text: ' I did see some papers. What could those have been?'
+  m_Text: I saw some weird academic papers. What were those?

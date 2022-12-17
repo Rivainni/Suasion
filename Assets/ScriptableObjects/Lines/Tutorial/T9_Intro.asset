@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: T9_Intro
   m_EditorClassIdentifier: 
   m_Speaker: {fileID: 11400000, guid: 2c29fb22818034fffbe9e66e60115037, type: 2}
-  m_Text: Choose "health" and "concerned". Then click "choose"!
+  m_Text: Choose "health" and "concerned". Then click "confirm"! Click the right
+    side of the screen to advance after that.
