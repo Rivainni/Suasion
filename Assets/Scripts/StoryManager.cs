@@ -149,6 +149,7 @@ public class StoryManager : MonoBehaviour
             current = dialogue.firstNode; // store the dialogue from dialogue trigger
             PrintDialogue(); // Prints out the first line of dialogue
             gameManager.LockMovement(true);
+            gameManager.PauseTimer(true);
             dialogueUp = true;
 
             if (opt != null)
@@ -238,6 +239,7 @@ public class StoryManager : MonoBehaviour
         gameManager.SetPersuade(false);
         gameManager.Reset();
         gameManager.LockMovement(false);
+        gameManager.PauseTimer(false);
         dialogueUp = false;
 
         if (SceneManager.GetActiveScene().name == "Intro Cutscene")

@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] MainUI mainUI;
     [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] TimeController timeController;
     [SerializeField] GameObject[] levelObjects;
     // Start is called before the first frame update
 
@@ -280,7 +281,7 @@ public class GameManager : MonoBehaviour
         playerMovement.gameObject.transform.position = new Vector3(0, 0, 0);
         Reset();
         ResetEnd();
-        ClearClues();
+        // ClearClues();
 
         levelObjects[level].SetActive(false);
         level++;
@@ -339,5 +340,9 @@ public class GameManager : MonoBehaviour
     public int GetScore()
     {
         return score;
+    }
+    public void PauseTimer(bool toggle)
+    {
+        timeController.SetPause(toggle);
     }
 }
