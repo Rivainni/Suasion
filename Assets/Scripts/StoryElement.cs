@@ -14,6 +14,7 @@ public class StoryElement : MonoBehaviour
     [SerializeField] StoryElement chain = null; //do we trigger another dialogue after this one?
     [SerializeField] bool end = false; // does this element trigger the start of the next level?
     bool clicked = false; // has the player clicked on this element yet?
+    bool inRange = false; // is the player in range of this element?
     void Start()
     {
         if (title == "Start")
@@ -63,12 +64,18 @@ public class StoryElement : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!EventSystem.current.IsPointerOverGameObject() && !clicked)
+        if (!EventSystem.current.IsPointerOverGameObject() && !clicked && inRange)
         {
             if (reference != null)
             {
                 reference.SetActive(true);
             }
+
+            if (gameObject.GetComponent<Door>() != null)
+            {
+                gameObject.GetComponent<Door>().SetLinks(false);
+            }
+
             clicked = true;
             TriggerDialogue();
         }
@@ -91,6 +98,11 @@ public class StoryElement : MonoBehaviour
                         reference.GetComponent<StoryElement>().TriggerDialogue();
                     }
                 }
+                else if (reference.transform.name == "Door Filler")
+                {
+                    reference.SetActive(true);
+                    TriggerDialogue();
+                }
             }
             else
             {
@@ -103,5 +115,10 @@ public class StoryElement : MonoBehaviour
     public bool GetClicked()
     {
         return clicked;
+    }
+
+    public void SetInRange(bool toggle)
+    {
+        inRange = toggle;
     }
 }

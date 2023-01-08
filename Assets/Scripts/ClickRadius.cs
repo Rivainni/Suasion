@@ -22,6 +22,11 @@ public class ClickRadius : MonoBehaviour
         {
             //change the other gameobject color to yellow
             other.gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+            other.gameObject.GetComponent<StoryElement>().SetInRange(true);
+        }
+        else if (other.gameObject.GetComponent<Door>() != null && other.gameObject.GetComponent<StoryElement>() != null && !other.gameObject.GetComponent<StoryElement>().GetClicked())
+        {
+            other.gameObject.GetComponent<StoryElement>().SetInRange(true);
         }
     }
 
@@ -30,6 +35,11 @@ public class ClickRadius : MonoBehaviour
         if (other.gameObject.GetComponent<StoryElement>() != null && other.gameObject.name != "Door")
         {
             other.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            other.gameObject.GetComponent<StoryElement>().SetInRange(false);
+        }
+        else if (other.gameObject.GetComponent<Door>() != null && other.gameObject.GetComponent<StoryElement>() != null)
+        {
+            other.gameObject.GetComponent<StoryElement>().SetInRange(false);
         }
     }
 }

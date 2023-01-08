@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
     [SerializeField] GameObject[] links;
+    [SerializeField] GameObject[] inverseLinks; // stuff that should appear once the door disappears
     // Start is called before the first frame update
     void Start()
     {
@@ -19,26 +20,16 @@ public class Door : MonoBehaviour
 
     }
 
-    void OnMouseDown()
+    public void SetLinks(bool active)
     {
-        if (!EventSystem.current.IsPointerOverGameObject())
+        foreach (GameObject link in links)
         {
-            if (gameObject.activeSelf)
-            {
-                foreach (GameObject link in links)
-                {
-                    link.SetActive(false);
-                }
-                gameObject.SetActive(false);
-            }
-            else
-            {
-                foreach (GameObject link in links)
-                {
-                    link.SetActive(true);
-                }
-                gameObject.SetActive(true);
-            }
+            link.SetActive(active);
         }
+        foreach (GameObject inverseLink in inverseLinks)
+        {
+            inverseLink.SetActive(!active);
+        }
+        gameObject.SetActive(active);
     }
 }
