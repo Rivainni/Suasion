@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!activeLock)
         {
-            rBody.MovePosition(rBody.position + movement * moveSpeed * Time.fixedDeltaTime);
+            rBody.MovePosition(rBody.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
         }
     }
 

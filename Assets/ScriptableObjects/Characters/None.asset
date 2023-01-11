@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: None
   m_EditorClassIdentifier: 
   m_CharacterName: ---
+  m_CharacterImage: {fileID: -2130570143, guid: 4c51eacb7882d6c48aa34b60e936e941, type: 3}

@@ -45,4 +45,9 @@ public class TimeController : MonoBehaviour
     {
         this.pause = pause;
     }
+
+    public void SetHide(bool hide)
+    {
+        gameObject.transform.GetChild(0).gameObject.SetActive(!hide);
+    }
 }

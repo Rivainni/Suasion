@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: MC
   m_EditorClassIdentifier: 
   m_CharacterName: AMSEL
+  m_CharacterImage: {fileID: -247998159, guid: b3d075fa2488f2c4ab8c9ea24f34fc06, type: 3}

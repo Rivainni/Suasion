@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Friend
   m_EditorClassIdentifier: 
   m_CharacterName: SATE
+  m_CharacterImage: {fileID: 1914443014, guid: 00a35c04ba47b2b4cbf5f1e92e26159f, type: 3}

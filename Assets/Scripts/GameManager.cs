@@ -345,4 +345,9 @@ public class GameManager : MonoBehaviour
     {
         timeController.SetPause(toggle);
     }
+
+    public void HideTimer(bool toggle)
+    {
+        timeController.SetHide(toggle);
+    }
 }

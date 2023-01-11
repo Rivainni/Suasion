@@ -10,8 +10,6 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject answerPanel;
     [SerializeField] GameObject dialogueScreen;
     [SerializeField] GameObject keywordPanel;
-    [SerializeField] GameObject targetBox;
-    [SerializeField] GameObject mcBox;
     [SerializeField] GameObject confirmButton;
     [SerializeField] GameObject advanceInnerDialogueButton;
     [SerializeField] GameObject buttonPrefab;

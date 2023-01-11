@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Doctor
   m_EditorClassIdentifier: 
   m_CharacterName: DR. ANTONI
+  m_CharacterImage: {fileID: 1913352772, guid: 4e4ce9614ed80e544bfa8ac9d9d8c666, type: 3}

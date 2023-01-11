@@ -90,7 +90,14 @@ public class StoryManager : MonoBehaviour
     TextMeshProUGUI[] nameText;
     [SerializeField]
     TextMeshProUGUI notebookText;
-
+    [SerializeField]
+    Image targetImage;
+    [SerializeField]
+    Image mcImage;
+    [SerializeField]
+    Image targetGlow;
+    [SerializeField]
+    Image mcGlow;
     DialogueNode current;
     bool pause = false;
     int currentTextIndex = 0;
@@ -113,6 +120,7 @@ public class StoryManager : MonoBehaviour
                 case 0:
                     outerDialogue.SetActive(true);
                     currentTextIndex = 0;
+
                     break;
                 case 1:
                     introDialogue.SetActive(true);
@@ -144,6 +152,9 @@ public class StoryManager : MonoBehaviour
                         gameManager.SetMultiplier(3);
                         break;
                 }
+                storyText[1].text = "";
+                storyText[2].text = "";
+                gameManager.HideTimer(true);
                 mainUI.ResetKeywords();
             }
             current = dialogue.firstNode; // store the dialogue from dialogue trigger
@@ -190,10 +201,15 @@ public class StoryManager : MonoBehaviour
             if (current.NarrationLine.Speaker.CharacterName == "AMSEL" || currentTextIndex == 0)
             {
                 storyText[currentTextIndex].text = basicNode.NarrationLine.Text;
+                targetGlow.enabled = false;
+                mcGlow.enabled = true;
             }
             else if (currentTextIndex > 0)
             {
                 storyText[currentTextIndex + 1].text = basicNode.NarrationLine.Text;
+                targetImage.GetComponent<Image>().sprite = basicNode.NarrationLine.Speaker.CharacterImage;
+                targetGlow.enabled = true;
+                mcGlow.enabled = false;
             }
             current = basicNode.NextNode;
         }
@@ -202,6 +218,7 @@ public class StoryManager : MonoBehaviour
             KeywordNode keywordNode = current as KeywordNode;
 
             nameText[currentTextIndex].text = current.NarrationLine.Speaker.CharacterName;
+
             // if it's the main character talking
             if (current.NarrationLine.Speaker.CharacterName == "AMSEL" || currentTextIndex == 0)
             {
@@ -210,6 +227,7 @@ public class StoryManager : MonoBehaviour
             else if (currentTextIndex > 0)
             {
                 storyText[currentTextIndex + 1].text = keywordNode.NarrationLine.Text;
+                targetImage.GetComponent<Image>().sprite = keywordNode.NarrationLine.Speaker.CharacterImage;
             }
 
             mainUI.DisplayKeywords(keywordNode.Keywords, keywordNode.Type);
@@ -240,6 +258,7 @@ public class StoryManager : MonoBehaviour
         gameManager.Reset();
         gameManager.LockMovement(false);
         gameManager.PauseTimer(false);
+        gameManager.HideTimer(false);
         dialogueUp = false;
 
         if (SceneManager.GetActiveScene().name == "Intro Cutscene")
