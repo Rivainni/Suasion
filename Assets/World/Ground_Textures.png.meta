@@ -708,13 +708,13 @@ TextureImporter:
       name: Ground_Textures_28
       rect:
         serializedVersion: 2
-        x: 334
-        y: 261
-        width: 83
-        height: 103
+        x: 378
+        y: 257
+        width: 39
+        height: 107
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 46, y: 0, z: 0, w: 0}
+      border: {x: 39, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0

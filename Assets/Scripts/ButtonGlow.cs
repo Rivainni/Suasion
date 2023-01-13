@@ -7,11 +7,19 @@ using UnityEngine.EventSystems;
 public class ButtonGlow : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] Image Rectangle;
-    Button current;
+    Selectable current;
 
     void Start()
     {
-        current = gameObject.GetComponent<Button>();
+        if (gameObject.GetComponent<Button>())
+        {
+            current = gameObject.GetComponent<Button>();
+        }
+        else
+        {
+            current = gameObject.GetComponent<Toggle>();
+        }
+
         SetInteractable();
     }
 

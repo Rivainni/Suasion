@@ -350,4 +350,10 @@ public class GameManager : MonoBehaviour
     {
         timeController.SetHide(toggle);
     }
+
+    // I didn't want to reference the story manager directly from the UI, so I made this method to call the story manager's ConfirmKeywords() method
+    public void ConfirmKeywords()
+    {
+        gameObject.GetComponent<StoryManager>().ConfirmKeywords();
+    }
 }
