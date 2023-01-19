@@ -45147,7 +45147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 34.000122, y: 21}
+  m_AnchoredPosition: {x: 34.000183, y: 21}
   m_SizeDelta: {x: 459.671, y: 283.994}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &956093288
@@ -46800,6 +46800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1059788623}
   - component: {fileID: 1059788624}
+  - component: {fileID: 1059788625}
   m_Layer: 0
   m_Name: Doctor
   m_TagString: Untagged
@@ -46874,6 +46875,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1059788625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059788622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 0}
+  title: 
+  type: 
+  gameManager: {fileID: 0}
+  reference: {fileID: 0}
+  chain: {fileID: 0}
+  end: 0
 --- !u!1 &1068479567
 GameObject:
   m_ObjectHideFlags: 0
