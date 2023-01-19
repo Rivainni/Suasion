@@ -207,7 +207,7 @@ public class StoryManager : MonoBehaviour
             else if (currentTextIndex > 0)
             {
                 storyText[currentTextIndex + 1].text = basicNode.NarrationLine.Text;
-                targetImage.GetComponent<Image>().sprite = basicNode.NarrationLine.Speaker.CharacterImage;
+                targetImage.GetComponent<Image>().sprite = basicNode.NarrationLine.Speaker.CharacterIcon;
                 targetGlow.enabled = true;
                 mcGlow.enabled = false;
             }
@@ -227,7 +227,7 @@ public class StoryManager : MonoBehaviour
             else if (currentTextIndex > 0)
             {
                 storyText[currentTextIndex + 1].text = keywordNode.NarrationLine.Text;
-                targetImage.GetComponent<Image>().sprite = keywordNode.NarrationLine.Speaker.CharacterImage;
+                targetImage.GetComponent<Image>().sprite = keywordNode.NarrationLine.Speaker.CharacterIcon;
             }
 
             mainUI.DisplayKeywords(keywordNode.Keywords, keywordNode.Type);

@@ -7,8 +7,11 @@ public class NarrationCharacter : ScriptableObject
     [SerializeField]
     private string m_CharacterName;
     [SerializeField]
-    private Sprite m_CharacterImage;
+    private Sprite m_CharacterIcon;
+    [SerializeField]
+    private Sprite m_CharacterCG;
 
     public string CharacterName => m_CharacterName;
-    public Sprite CharacterImage => m_CharacterImage;
+    public Sprite CharacterIcon => m_CharacterIcon;
+    public Sprite CharacterCG => m_CharacterCG;
 }
