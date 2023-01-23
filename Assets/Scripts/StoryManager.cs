@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Yarn.Unity;
 
 public struct Clue
 {
@@ -98,9 +99,8 @@ public class StoryManager : MonoBehaviour
     Image targetGlow;
     [SerializeField]
     Image mcGlow;
-    DialogueNode current;
+    DialogueRunner dialogueRunner;
     bool pause = false;
-    int currentTextIndex = 0;
     bool dialogueUp = false;
     bool actionTaken = false;
 
@@ -108,177 +108,53 @@ public class StoryManager : MonoBehaviour
     bool end = false;
 
     // Start is called before the first frame update
-    void Start() { }
-
-    public void StartDialogue(Dialogue dialogue, int dialogueType, StoryElement opt = null, bool end = false)
+    void Awake()
     {
-        // open the dialogue box
+        dialogueRunner = GetComponent<DialogueRunner>();
+    }
+
+    public void StartDialogue(string dialogue, int dialogueType)
+    {
         if (!dialogueUp)
         {
             switch (dialogueType)
             {
                 case 0:
                     outerDialogue.SetActive(true);
-                    currentTextIndex = 0;
-
                     break;
                 case 1:
                     introDialogue.SetActive(true);
-                    currentTextIndex = 1;
                     gameManager.SetIntro(true);
                     break;
                 case 2:
                     persuasionDialogue.SetActive(true);
-                    currentTextIndex = 1;
                     gameManager.SetPersuade(true);
                     break;
                 default:
                     break;
             }
-
-            if (dialogueType == 1 || dialogueType == 2)
-            {
-                if (gameManager.GetLevel() > 0)
-                {
-                    gameManager.RandomiseMood();
-                }
-
-                switch (gameManager.GetLevel())
-                {
-                    case 0:
-                        gameManager.SetMultiplier(2);
-                        break;
-                    case 1:
-                        gameManager.SetMultiplier(3);
-                        break;
-                }
-                storyText[1].text = "";
-                storyText[2].text = "";
-                gameManager.HideTimer(true);
-                mainUI.ResetKeywords();
-            }
-            current = dialogue.firstNode; // store the dialogue from dialogue trigger
-            PrintDialogue(); // Prints out the first line of dialogue
+            dialogueRunner.StartDialogue(dialogue);
             gameManager.LockMovement(true);
             gameManager.PauseTimer(true);
-            dialogueUp = true;
-
-            if (opt != null)
-            {
-                chain = opt;
-            }
-
-            if (end)
-            {
-                this.end = end;
-            }
+            gameManager.HideTimer(true);
         }
     }
 
-    public void AdvanceDialogue() // call when a player presses a button in Dialogue Trigger
-    {
-        if (!pause)
-        {
-            if (actionTaken && (gameManager.CheckIntro() || gameManager.CheckPersuade()))
-            {
-                actionTaken = false;
-                mainUI.EndTurn();
-                current = gameManager.GetNext();
-                gameManager.ResetNext();
-            }
-            PrintDialogue();
-        }
-    }
-
-    void PrintDialogue()
-    {
-        if (current is BasicDialogueNode)
-        {
-            BasicDialogueNode basicNode = current as BasicDialogueNode;
-            nameText[currentTextIndex].text = current.NarrationLine.Speaker.CharacterName;
-
-            // if it's the main character talking
-            if (current.NarrationLine.Speaker.CharacterName == "AMSEL" || currentTextIndex == 0)
-            {
-                storyText[currentTextIndex].text = basicNode.NarrationLine.Text;
-                targetGlow.enabled = false;
-                mcGlow.enabled = true;
-            }
-            else if (currentTextIndex > 0)
-            {
-                storyText[currentTextIndex + 1].text = basicNode.NarrationLine.Text;
-                targetImage.GetComponent<Image>().sprite = basicNode.NarrationLine.Speaker.CharacterIcon;
-                targetGlow.enabled = true;
-                mcGlow.enabled = false;
-            }
-            current = basicNode.NextNode;
-        }
-        else if (current is KeywordNode)
-        {
-            KeywordNode keywordNode = current as KeywordNode;
-
-            nameText[currentTextIndex].text = current.NarrationLine.Speaker.CharacterName;
-
-            // if it's the main character talking
-            if (current.NarrationLine.Speaker.CharacterName == "AMSEL" || currentTextIndex == 0)
-            {
-                storyText[currentTextIndex].text = keywordNode.NarrationLine.Text;
-            }
-            else if (currentTextIndex > 0)
-            {
-                storyText[currentTextIndex + 1].text = keywordNode.NarrationLine.Text;
-                targetImage.GetComponent<Image>().sprite = keywordNode.NarrationLine.Speaker.CharacterIcon;
-            }
-
-            mainUI.DisplayKeywords(keywordNode.Keywords, keywordNode.Type);
-            foreach (Combination combination in keywordNode.Combinations)
-            {
-                gameManager.AddCombination(combination);
-            }
-        }
-        else if (current == null)
-        {
-            EndDialogue();
-        }
-    }
-
+    [YarnCommand("enddialogue")]
     public void EndDialogue()
     {
-        if (gameManager.CheckPersuade())
+        if (dialogueUp)
         {
-            gameManager.RollSuccess();
+            dialogueUp = false;
+            outerDialogue.SetActive(false);
+            introDialogue.SetActive(false);
+            persuasionDialogue.SetActive(false);
+            gameManager.SetIntro(false);
+            gameManager.SetPersuade(false);
+            gameManager.LockMovement(false);
+            gameManager.PauseTimer(false);
+            gameManager.HideTimer(false);
         }
-        storyText[currentTextIndex].text = "";
-        current = null;
-        outerDialogue.SetActive(false);
-        introDialogue.SetActive(false);
-        persuasionDialogue.SetActive(false);
-        gameManager.SetIntro(false);
-        gameManager.SetPersuade(false);
-        gameManager.Reset();
-        gameManager.LockMovement(false);
-        gameManager.PauseTimer(false);
-        gameManager.HideTimer(false);
-        dialogueUp = false;
-
-        if (SceneManager.GetActiveScene().name == "Intro Cutscene")
-        {
-            SceneManager.LoadScene("Main Game");
-        }
-
-        if (chain != null)
-        {
-            chain.TriggerDialogue();
-            chain = null;
-        }
-
-        if (end)
-        {
-            gameManager.AddLevel();
-            gameManager.LockMovement(true);
-            end = false;
-        }
-
     }
 
     public void ConfirmKeywords()
@@ -288,11 +164,9 @@ public class StoryManager : MonoBehaviour
         mainUI.ResetKeywords();
     }
 
-    void SetName(InputField input, GameObject toRemove)
+    [YarnCommand("changescene")]
+    public void ChangeScene(string scene)
     {
-        // playerState.SetName(input.text);
-        Destroy(toRemove);
-        pause = false;
-        PrintDialogue();
+        SceneManager.LoadScene(scene);
     }
 }

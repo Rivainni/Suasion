@@ -1,0 +1,20 @@
+﻿title: TutorialStart
+tags: load
+---
+TUTORIAL: Use WASD to move.
+<<enddialogue "Game Manager">>
+===
+title: DetectWASD
+tags: area
+---
+AMSEL: Hmmm...
+AMSEL: Sate doesn’t want to play with me today. I wonder why?
+AMSEL: Let’s go knock and ask!
+<<enddialogue "Game Manager">>
+===
+title: PlayerNear
+tags: area
+---
+AMSEL: This is Amsel-01, stacking up on the main door, HQ am I clear to breach?
+<<enddialogue "Game Manager">>
+===
