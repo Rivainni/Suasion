@@ -1052,27 +1052,23 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7993970748847396169, guid: 0e1d7c471a5f3c1438aadfe92c23e17b, type: 3}
+      propertyPath: onCharacterTyped.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993970748847396169, guid: 0e1d7c471a5f3c1438aadfe92c23e17b, type: 3}
+      propertyPath: onCharacterTyped.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993970748847396169, guid: 0e1d7c471a5f3c1438aadfe92c23e17b, type: 3}
+      propertyPath: onCharacterTyped.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e1d7c471a5f3c1438aadfe92c23e17b, type: 3}
 --- !u!1 &181755761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2758738053218893409, guid: 0e1d7c471a5f3c1438aadfe92c23e17b, type: 3}
-  m_PrefabInstance: {fileID: 181755760}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &181755762 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4513839864367803389, guid: 0e1d7c471a5f3c1438aadfe92c23e17b, type: 3}
-  m_PrefabInstance: {fileID: 181755760}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &181755763 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2758738054055895650, guid: 0e1d7c471a5f3c1438aadfe92c23e17b, type: 3}
   m_PrefabInstance: {fileID: 181755760}
   m_PrefabAsset: {fileID: 0}
 --- !u!225 &181755764
@@ -1087,11 +1083,10 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &181755765
+--- !u!114 &181755765 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7993970748847396169, guid: 0e1d7c471a5f3c1438aadfe92c23e17b, type: 3}
+  m_PrefabInstance: {fileID: 181755760}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181755761}
   m_Enabled: 1
@@ -1099,21 +1094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddcdd604a328c4ab296f048eb7b3a925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 181755764}
-  useFadeEffect: 1
-  fadeInTime: 0.25
-  fadeOutTime: 0.05
-  lineText: {fileID: 181755762}
-  showCharacterNameInLineView: 1
-  characterNameText: {fileID: 550676044}
-  useTypewriterEffect: 1
-  onCharacterTyped:
-    m_PersistentCalls:
-      m_Calls: []
-  typewriterEffectSpeed: 100
-  continueButton: {fileID: 181755763}
-  holdTime: 1
-  autoAdvance: 0
 --- !u!1 &214148641
 GameObject:
   m_ObjectHideFlags: 0
@@ -21327,6 +21307,7 @@ MonoBehaviour:
   title: T_Intro
   type: Intro
   gameManager: {fileID: 1901980257}
+  storyManager: {fileID: 0}
   reference: {fileID: 0}
   end: 0
 --- !u!19719996 &450264334
@@ -21362,17 +21343,6 @@ MonoBehaviour:
   - {fileID: 1358789062}
   - {fileID: 992392087}
   inverseLinks: []
---- !u!114 &550676044 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6893936235428055412, guid: 0e1d7c471a5f3c1438aadfe92c23e17b, type: 3}
-  m_PrefabInstance: {fileID: 181755760}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &646771391
 GameObject:
   m_ObjectHideFlags: 0
@@ -44495,6 +44465,7 @@ MonoBehaviour:
   title: T_Intro
   type: Intro
   gameManager: {fileID: 1901980257}
+  storyManager: {fileID: 0}
   reference: {fileID: 0}
   end: 0
 --- !u!114 &1773447216
@@ -44784,13 +44755,6 @@ MonoBehaviour:
   persuasionDialogue: {fileID: 1831632364}
   mainUI: {fileID: 38622827}
   gameManager: {fileID: 1901980257}
-  storyText:
-  - {fileID: 181755762}
-  - {fileID: 0}
-  - {fileID: 0}
-  nameText:
-  - {fileID: 550676044}
-  - {fileID: 0}
   notebookText: {fileID: 0}
   targetImage: {fileID: 0}
   mcImage: {fileID: 0}
@@ -44811,6 +44775,7 @@ MonoBehaviour:
   title: IntroCutscene
   type: Start
   gameManager: {fileID: 1901980257}
+  storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
   end: 0
 --- !u!114 &1901980260

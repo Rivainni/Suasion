@@ -74,10 +74,11 @@ public class StoryManager : MonoBehaviour
     GameObject outerDialogue;
 
     [SerializeField]
-    GameObject introDialogue;
-
+    GameObject innerDialogue;
     [SerializeField]
-    GameObject persuasionDialogue;
+    GameObject mcDialogue;
+    [SerializeField]
+    GameObject targetDialogue;
 
     [SerializeField]
     MainUI mainUI;
@@ -85,10 +86,6 @@ public class StoryManager : MonoBehaviour
     [SerializeField]
     GameManager gameManager;
 
-    [SerializeField]
-    TextMeshProUGUI[] storyText;
-    [SerializeField]
-    TextMeshProUGUI[] nameText;
     [SerializeField]
     TextMeshProUGUI notebookText;
     [SerializeField]
@@ -106,6 +103,7 @@ public class StoryManager : MonoBehaviour
 
     StoryElement chain = null;
     bool end = false;
+    bool textBoxMode = true;
 
     // Start is called before the first frame update
     void Awake()
@@ -121,39 +119,67 @@ public class StoryManager : MonoBehaviour
             {
                 case 0:
                     outerDialogue.SetActive(true);
+                    if (!textBoxMode)
+                    {
+                        dialogueRunner.SetDialogueViews(new DialogueViewBase[] { outerDialogue.GetComponent<LineView>() });
+                        textBoxMode = true;
+                    }
                     break;
                 case 1:
-                    introDialogue.SetActive(true);
+                    innerDialogue.SetActive(true);
+                    if (textBoxMode)
+                    {
+                        dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<LineView>(), targetDialogue.GetComponent<LineView>() });
+                        textBoxMode = false;
+                    }
                     gameManager.SetIntro(true);
                     break;
                 case 2:
-                    persuasionDialogue.SetActive(true);
+                    innerDialogue.SetActive(true);
+                    if (textBoxMode)
+                    {
+                        dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<LineView>(), targetDialogue.GetComponent<LineView>() });
+                        textBoxMode = false;
+                    }
                     gameManager.SetPersuade(true);
                     break;
                 default:
                     break;
             }
+
             dialogueRunner.StartDialogue(dialogue);
-            gameManager.LockMovement(true);
-            gameManager.PauseTimer(true);
-            gameManager.HideTimer(true);
+            if (!CheckCutscene())
+            {
+                gameManager.LockMovement(true);
+                gameManager.PauseTimer(true);
+                gameManager.HideTimer(true);
+                dialogueUp = true;
+            }
         }
     }
 
     [YarnCommand("enddialogue")]
     public void EndDialogue()
     {
-        if (dialogueUp)
+        if (dialogueUp && !CheckCutscene())
         {
             dialogueUp = false;
             outerDialogue.SetActive(false);
-            introDialogue.SetActive(false);
-            persuasionDialogue.SetActive(false);
+            innerDialogue.SetActive(false);
             gameManager.SetIntro(false);
             gameManager.SetPersuade(false);
             gameManager.LockMovement(false);
             gameManager.PauseTimer(false);
             gameManager.HideTimer(false);
+        }
+    }
+
+    public void Interrupt()
+    {
+        if (dialogueUp)
+        {
+            dialogueRunner.Stop();
+            EndDialogue();
         }
     }
 
@@ -168,5 +194,33 @@ public class StoryManager : MonoBehaviour
     public void ChangeScene(string scene)
     {
         SceneManager.LoadScene(scene);
+    }
+
+    public bool CheckCutscene()
+    {
+        if (SceneManager.GetActiveScene().name == "Intro Cutscene")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public void FocusTarget(bool target)
+    {
+        if (target)
+        {
+            // targetDialogue.GetComponent<LineView>().enabled = true;
+            // mcDialogue.GetComponent<LineView>().enabled = false;
+            dialogueRunner.SetDialogueViews(new DialogueViewBase[] { targetDialogue.GetComponent<LineView>() });
+        }
+        else
+        {
+            // targetDialogue.GetComponent<LineView>().enabled = false;
+            // mcDialogue.GetComponent<LineView>().enabled = true;
+            dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<LineView>() });
+        }
     }
 }

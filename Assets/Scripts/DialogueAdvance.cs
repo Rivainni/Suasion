@@ -16,48 +16,54 @@ public class DialogueAdvance : MonoBehaviour
     [SerializeField] Image targetGlow;
     [SerializeField] Image mcGlow;
     [SerializeField] DialogueViewBase[] dialogueView;
+    [SerializeField] StoryManager storyManager;
     int speakerIndex;
     int activeSpeaker;
 
     void Start()
     {
         speakerIndex = 0;
-        activeSpeaker = 0;
+        activeSpeaker = 1;
     }
 
     // the int value corresponds to the speaker's level + 2 (e.g. Sate = 2, Sate's father = 3)
+    [YarnCommand("settarget")]
     public void SetTargetSpeaker(int speaker)
     {
         speakerImage.sprite = speakerSprites[speaker];
-        speakerIndex = speaker;
+        mcIcon.sprite = normalIcons[1];
     }
 
-    // either mc or target
-    public void SetActiveSpeaker(string speaker)
+    // the int value corresponds to the speaker's level + 2 (e.g. Sate = 2, Sate's father = 3)
+    [YarnCommand("setactive")]
+    public void SetActiveSpeaker(int speaker)
     {
-        if (speaker == "mc")
+        speakerIndex = speaker;
+        targetIcon.sprite = normalIcons[speakerIndex];
+    }
+
+    // changes the active dialogue box and moves the glow
+    [YarnCommand("focustarget")]
+    public void FocusTarget(bool focus)
+    {
+        if (focus)
         {
-            // mcIcon.sprite = glowIcons[1];
-            targetIcon.sprite = normalIcons[speakerIndex];
-            targetGlow.enabled = false;
-            mcGlow.enabled = true;
-            activeSpeaker = 0;
-        }
-        else
-        {
-            mcIcon.sprite = normalIcons[1];
-            // targetIcon.sprite = glowIcons[speakerIndex];
             targetGlow.enabled = true;
             mcGlow.enabled = false;
             activeSpeaker = 1;
+            storyManager.FocusTarget(true);
+        }
+        else
+        {
+            targetGlow.enabled = false;
+            mcGlow.enabled = true;
+            activeSpeaker = 0;
+            storyManager.FocusTarget(false);
         }
     }
 
-    void OnMouseDown()
+    public void Advance()
     {
-        if (!EventSystem.current.IsPointerOverGameObject())
-        {
-            dialogueView[activeSpeaker].UserRequestedViewAdvancement();
-        }
+        dialogueView[activeSpeaker].UserRequestedViewAdvancement();
     }
 }
