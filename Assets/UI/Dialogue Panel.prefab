@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40719661411597081}
   - component: {fileID: 7013339352976267034}
-  - component: {fileID: 5584173033906194015}
+  - component: {fileID: 8873971235100901856}
   m_Layer: 0
   m_Name: MC Dialogue
   m_TagString: Untagged
@@ -124,7 +124,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &5584173033906194015
+--- !u!114 &8873971235100901856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,11 +133,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3379045745394398778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddcdd604a328c4ab296f048eb7b3a925, type: 3}
+  m_Script: {fileID: 11500000, guid: 5284d7a36468a6d4db981213b0ac31e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 7013339352976267034}
-  useFadeEffect: 0
+  useFadeEffect: 1
   fadeInTime: 0.25
   fadeOutTime: 0.05
   lineText: {fileID: 1415072228912277224}
@@ -150,6 +150,7 @@ MonoBehaviour:
   typewriterEffectSpeed: 60
   continueButton: {fileID: 7574948222779202111}
   holdTime: 1
+  isCurrent: 0
   autoAdvance: 0
 --- !u!1 &3427920190194582356
 GameObject:
@@ -472,7 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 232691214071863212}
   - component: {fileID: 6800739582079870991}
-  - component: {fileID: 6463720262484550509}
+  - component: {fileID: 1262150284421957184}
   m_Layer: 0
   m_Name: Target Dialogue
   m_TagString: Untagged
@@ -510,7 +511,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &6463720262484550509
+--- !u!114 &1262150284421957184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -519,11 +520,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5352589262340114485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddcdd604a328c4ab296f048eb7b3a925, type: 3}
+  m_Script: {fileID: 11500000, guid: 5284d7a36468a6d4db981213b0ac31e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 6800739582079870991}
-  useFadeEffect: 0
+  useFadeEffect: 1
   fadeInTime: 0.25
   fadeOutTime: 0.05
   lineText: {fileID: 7331153616436899626}
@@ -536,6 +537,7 @@ MonoBehaviour:
   typewriterEffectSpeed: 60
   continueButton: {fileID: 7574948222779202111}
   holdTime: 1
+  isCurrent: 0
   autoAdvance: 0
 --- !u!1 &6560009353330288673
 GameObject:
@@ -1537,8 +1539,8 @@ MonoBehaviour:
   targetGlow: {fileID: 40352626386354106}
   mcGlow: {fileID: 3752144338379842297}
   dialogueView:
-  - {fileID: 5584173033906194015}
-  - {fileID: 6463720262484550509}
+  - {fileID: 8873971235100901856}
+  - {fileID: 1262150284421957184}
   storyManager: {fileID: 0}
 --- !u!1001 &3589828932746759139
 PrefabInstance:

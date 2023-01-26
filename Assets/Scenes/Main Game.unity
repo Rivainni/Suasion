@@ -1583,6 +1583,10 @@ PrefabInstance:
       value: -25.1785
       objectReference: {fileID: 0}
     - target: {fileID: 7993970748847396169, guid: 0e1d7c471a5f3c1438aadfe92c23e17b, type: 3}
+      propertyPath: autoAdvance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993970748847396169, guid: 0e1d7c471a5f3c1438aadfe92c23e17b, type: 3}
       propertyPath: useTypewriterEffect
       value: 1
       objectReference: {fileID: 0}
@@ -50542,6 +50546,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -35.8285
       objectReference: {fileID: 0}
+    - target: {fileID: 5584173033906194015, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
+      propertyPath: autoAdvance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5756757285360005413, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -50565,6 +50573,10 @@ PrefabInstance:
     - target: {fileID: 6199331623945276350, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -487.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463720262484550509, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
+      propertyPath: autoAdvance
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7331153616436899625, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
       propertyPath: m_AnchorMax.x

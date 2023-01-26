@@ -129,7 +129,7 @@ public class StoryManager : MonoBehaviour
                     innerDialogue.SetActive(true);
                     if (textBoxMode)
                     {
-                        dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<LineView>(), targetDialogue.GetComponent<LineView>() });
+                        dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
                         textBoxMode = false;
                     }
                     gameManager.SetIntro(true);
@@ -138,7 +138,7 @@ public class StoryManager : MonoBehaviour
                     innerDialogue.SetActive(true);
                     if (textBoxMode)
                     {
-                        dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<LineView>(), targetDialogue.GetComponent<LineView>() });
+                        dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
                         textBoxMode = false;
                     }
                     gameManager.SetPersuade(true);
@@ -212,15 +212,15 @@ public class StoryManager : MonoBehaviour
     {
         if (target)
         {
-            // targetDialogue.GetComponent<LineView>().enabled = true;
-            // mcDialogue.GetComponent<LineView>().enabled = false;
-            dialogueRunner.SetDialogueViews(new DialogueViewBase[] { targetDialogue.GetComponent<LineView>() });
+            targetDialogue.GetComponent<DuoView>().SetCurrent(true);
+            mcDialogue.GetComponent<DuoView>().SetCurrent(false);
+            // dialogueRunner.SetDialogueViews(new DialogueViewBase[] { targetDialogue.GetComponent<LineView>() });
         }
         else
         {
-            // targetDialogue.GetComponent<LineView>().enabled = false;
-            // mcDialogue.GetComponent<LineView>().enabled = true;
-            dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<LineView>() });
+            targetDialogue.GetComponent<DuoView>().SetCurrent(false);
+            mcDialogue.GetComponent<DuoView>().SetCurrent(true);
+            // dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<LineView>() });
         }
     }
 }
