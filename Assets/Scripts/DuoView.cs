@@ -261,9 +261,9 @@ namespace Yarn.Unity
             lineText.gameObject.SetActive(true);
             canvasGroup.gameObject.SetActive(true);
 
-            int length;
+            int length = 0;
 
-            if (characterNameText == null)
+            if (characterNameText == null && isCurrent)
             {
                 if (showCharacterNameInLineView)
                 {
@@ -276,7 +276,7 @@ namespace Yarn.Unity
                     length = dialogueLine.TextWithoutCharacterName.Text.Length;
                 }
             }
-            else
+            else if (isCurrent)
             {
                 characterNameText.text = dialogueLine.CharacterName;
                 lineText.text = dialogueLine.TextWithoutCharacterName.Text;
