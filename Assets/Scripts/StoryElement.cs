@@ -13,6 +13,7 @@ public class StoryElement : MonoBehaviour
     [SerializeField] StoryManager storyManager;
     [SerializeField] GameObject reference = null; // the object that the player clicks on to start the dialogue
     [SerializeField] bool end = false; // does this element trigger the start of the next level?
+    [SerializeField] KeywordNode[] keywords; // keywords assigned to this story element if applicable (turn 1 is index 0, etc)
     bool clicked = false; // has the player clicked on this element yet?
     bool inRange = false; // is the player in range of this element?
     void Start()

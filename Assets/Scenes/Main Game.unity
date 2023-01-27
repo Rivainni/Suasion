@@ -1195,6 +1195,7 @@ MonoBehaviour:
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
   end: 0
+  keywords: []
 --- !u!61 &157081827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1325,6 +1326,7 @@ MonoBehaviour:
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
   end: 0
+  keywords: []
 --- !u!61 &179562328
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1723,6 +1725,7 @@ MonoBehaviour:
   storyManager: {fileID: 0}
   reference: {fileID: 0}
   end: 0
+  keywords: []
 --- !u!1 &197506892
 GameObject:
   m_ObjectHideFlags: 0
@@ -22653,6 +22656,7 @@ MonoBehaviour:
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
   end: 0
+  keywords: []
 --- !u!1 &473435054
 GameObject:
   m_ObjectHideFlags: 0
@@ -23440,6 +23444,7 @@ MonoBehaviour:
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
   end: 0
+  keywords: []
 --- !u!1 &632857482 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7574948222779202111, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
@@ -46731,6 +46736,7 @@ MonoBehaviour:
   storyManager: {fileID: 1901980258}
   reference: {fileID: 661800059}
   end: 0
+  keywords: []
 --- !u!1 &1042689359
 GameObject:
   m_ObjectHideFlags: 0
@@ -47032,6 +47038,7 @@ MonoBehaviour:
   storyManager: {fileID: 0}
   reference: {fileID: 0}
   end: 0
+  keywords: []
 --- !u!1 &1068479567
 GameObject:
   m_ObjectHideFlags: 0
@@ -47722,6 +47729,7 @@ MonoBehaviour:
   storyManager: {fileID: 0}
   reference: {fileID: 1620435415}
   end: 0
+  keywords: []
 --- !u!1 &1297644086
 GameObject:
   m_ObjectHideFlags: 0
@@ -48634,6 +48642,7 @@ MonoBehaviour:
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
   end: 0
+  keywords: []
 --- !u!61 &1491287117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48790,6 +48799,7 @@ MonoBehaviour:
   storyManager: {fileID: 0}
   reference: {fileID: 0}
   end: 1
+  keywords: []
 --- !u!212 &1513095945
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49675,6 +49685,7 @@ MonoBehaviour:
   storyManager: {fileID: 0}
   reference: {fileID: 0}
   end: 1
+  keywords: []
 --- !u!212 &1620435419
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -50163,6 +50174,7 @@ MonoBehaviour:
   storyManager: {fileID: 0}
   reference: {fileID: 0}
   end: 0
+  keywords: []
 --- !u!1001 &1811549257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50991,6 +51003,7 @@ MonoBehaviour:
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
   end: 0
+  keywords: []
 --- !u!1 &1949114882
 GameObject:
   m_ObjectHideFlags: 0
@@ -55144,6 +55157,7 @@ MonoBehaviour:
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
   end: 0
+  keywords: []
 --- !u!114 &2044813592 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2738538659774815250, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
@@ -55292,6 +55306,7 @@ MonoBehaviour:
   storyManager: {fileID: 1901980258}
   reference: {fileID: 1264968472}
   end: 0
+  keywords: []
 --- !u!1 &2109133648 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 981988859233067610, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}

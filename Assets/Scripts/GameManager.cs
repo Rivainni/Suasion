@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
     // for the log
     float currentValue = 0;
     string response = "";
-    DialogueNode next = null;
 
     List<string> keywordList = new List<string>();
     List<Combination> combinationList = new List<Combination>();
@@ -89,8 +88,8 @@ public class GameManager : MonoBehaviour
             {
                 basePoints += combination.CheckKeywords(keywordList, mood, CheckPersuade());
                 hMult += combination.CheckHonesty();
-                next = combination.NextNode;
-                response = combination.NextNode.NarrationLine.Text;
+                // next = combination.NextNode;
+                // response = combination.NextNode.NarrationLine.Text;
                 break;
             }
         }
@@ -226,16 +225,6 @@ public class GameManager : MonoBehaviour
     public float GetEmpathy()
     {
         return empathy;
-    }
-
-    public DialogueNode GetNext()
-    {
-        return next;
-    }
-
-    public void ResetNext()
-    {
-        next = null;
     }
 
     public void LockMovement(bool status)

@@ -111,7 +111,7 @@ public class StoryManager : MonoBehaviour
         dialogueRunner = GetComponent<DialogueRunner>();
     }
 
-    public void StartDialogue(string dialogue, int dialogueType)
+    public void StartDialogue(string dialogue, int dialogueType, KeywordSet[] keywordSet = null)
     {
         if (!dialogueUp)
         {
