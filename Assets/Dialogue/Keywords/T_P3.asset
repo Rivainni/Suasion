@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
   m_Name: T_P3
   m_EditorClassIdentifier: 
-  m_DialogueLine: {fileID: 11400000, guid: 1d9562669fc6246d8bd613ca8b80cb36, type: 2}
   m_Keywords:
     m_Topic:
     - game
@@ -24,53 +23,67 @@ MonoBehaviour:
     - straight
     - exaggerate
     - downplay
+    m_Restrictions: []
   m_Combinations:
   - m_Set: game_cheerful_downplay
     m_Mood: neutral
     m_Points: 5
-    m_NextNode: {fileID: 11400000, guid: 0bda1dfe710d245c79b29b353564b197, type: 2}
+    m_Choice: Maybe you want to play a game?
+    m_Response: Hmmm...
   - m_Set: game_cheerful_exaggerate
     m_Mood: neutral
     m_Points: 5
-    m_NextNode: {fileID: 11400000, guid: aad2a2b5e5e3040c6aee03b030537bf3, type: 2}
+    m_Choice: "Let\u2019s play a game!"
+    m_Response: Hmmm...
   - m_Set: game_cheerful_straight
     m_Mood: neutral
     m_Points: 5
-    m_NextNode: {fileID: 11400000, guid: 2bdd0017820b649cd9a8239528642c91, type: 2}
+    m_Choice: Wanna play a game?
+    m_Response: Hmmm...
   - m_Set: game_angry_downplay
     m_Mood: neutral
     m_Points: 6
-    m_NextNode: {fileID: 11400000, guid: cb9a0c809f5f547e1a7222bce4ecf1e0, type: 2}
+    m_Choice: "Tsk. Maybe you should play with me - that\u2019s the least you could
+      do."
+    m_Response: Hmmm...
   - m_Set: game_angry_exaggerate
     m_Mood: neutral
     m_Points: 6
-    m_NextNode: {fileID: 11400000, guid: 2a3cbc79609fc4a4a93aadfe067d32e7, type: 2}
+    m_Choice: WHICH IS WHY YOU SHOULD LISTEN AND PLAY WITH ME OR ELSE.
+    m_Response: Hmmm...
   - m_Set: game_angry_straight
     m_Mood: neutral
     m_Points: 6
-    m_NextNode: {fileID: 11400000, guid: d3e17f7dbf84647c98d0ca78dbeb76f8, type: 2}
+    m_Choice: Which is why you should listen to me and play a game with me.
+    m_Response: Hmmm...
   - m_Set: age_cheerful_downplay
     m_Mood: neutral
     m_Points: 4
-    m_NextNode: {fileID: 11400000, guid: d49098fbc325f473f97745954961ab59, type: 2}
+    m_Choice: "You might grow up faster\u2026"
+    m_Response: Hmmm...
   - m_Set: age_cheerful_exaggerate
     m_Mood: neutral
     m_Points: 4
-    m_NextNode: {fileID: 11400000, guid: 223ab176ba3404ff18014e13cf8ecbbe, type: 2}
+    m_Choice: At this rate, you might just disappear.
+    m_Response: Hmmm...
   - m_Set: age_cheerful_straight
     m_Mood: neutral
     m_Points: 4
-    m_NextNode: {fileID: 11400000, guid: 8feb87cfa354743e192ff4b9f352ee57, type: 2}
+    m_Choice: "You know, if you don\u2019t relax, you might age faster!"
+    m_Response: Hmmm...
   - m_Set: age_angry_downplay
     m_Mood: neutral
     m_Points: 4
-    m_NextNode: {fileID: 11400000, guid: 397445792841a48a89487aaf67bd3d38, type: 2}
+    m_Choice: Okay, boomer.
+    m_Response: Hmmm...
   - m_Set: age_angry_exaggerate
     m_Mood: neutral
     m_Points: 5
-    m_NextNode: {fileID: 11400000, guid: fb3682279d3e840bb97d62f32aa198a1, type: 2}
+    m_Choice: You will die. Faster.
+    m_Response: Hmmm...
   - m_Set: age_angry_straight
     m_Mood: neutral
     m_Points: 5
-    m_NextNode: {fileID: 11400000, guid: 3dce1643cbfe14d7e918b696b3567308, type: 2}
+    m_Choice: You might die early, you know that, right?
+    m_Response: Hmmm...
   m_Type: Persuasion

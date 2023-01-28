@@ -140,7 +140,7 @@ public class MainUI : MonoBehaviour
             Toggle actualButton = button.GetComponent<Toggle>();
             actualButton.group = topic;
             actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-            if (proscriptionList.Contains(keyword))
+            if (proscriptionList.Contains(keyword) || !CheckHasClue(keyword, keywordSet))
             {
                 actualButton.interactable = false;
             }
@@ -158,7 +158,7 @@ public class MainUI : MonoBehaviour
             Toggle actualButton = button.GetComponent<Toggle>();
             actualButton.group = tone;
             actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-            if (proscriptionList.Contains(keyword))
+            if (proscriptionList.Contains(keyword) || !CheckHasClue(keyword, keywordSet))
             {
                 actualButton.interactable = false;
             }
@@ -176,7 +176,7 @@ public class MainUI : MonoBehaviour
             Toggle actualButton = button.GetComponent<Toggle>();
             actualButton.group = honesty;
             actualButton.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
-            if (proscriptionList.Contains(keyword))
+            if (proscriptionList.Contains(keyword) || !CheckHasClue(keyword, keywordSet))
             {
                 actualButton.interactable = false;
             }
@@ -228,6 +228,7 @@ public class MainUI : MonoBehaviour
         }
         gameManager.ConfirmKeywords();
         Destroy(panel);
+        EndTurn();
     }
 
     public void ResetKeywords()
@@ -302,5 +303,30 @@ public class MainUI : MonoBehaviour
         scorePanel.transform.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Empathy: " + gameManager.GetEmpathy() + "%";
         scorePanel.transform.GetChild(1).GetChild(2).GetComponent<TextMeshProUGUI>().text = "Persuasion: " + gameManager.GetPersuasion() + "%";
         scorePanel.transform.GetChild(1).GetChild(3).GetComponent<TextMeshProUGUI>().text = "Score: " + gameManager.GetScore();
+    }
+
+    bool CheckHasClue(string keyword, KeywordSet keywordSet)
+    {
+        bool inList = false;
+        foreach (KeywordRestrictions keywordRestrictions in keywordSet.Restrictions)
+        {
+            if (keywordRestrictions.Keyword == keyword)
+            {
+                inList = true;
+            }
+            if (keywordRestrictions.Keyword == keyword && gameManager.CheckClues(keywordRestrictions.Clue))
+            {
+                return true;
+            }
+        }
+
+        if (inList)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 }

@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
   m_Name: T_Intro1
   m_EditorClassIdentifier: 
-  m_DialogueLine: {fileID: 11400000, guid: 08e87a7528c164fd8987711dc5879723, type: 2}
   m_Keywords:
     m_Topic:
     - game
@@ -27,5 +26,6 @@ MonoBehaviour:
   - m_Set: health_concerned
     m_Mood: neutral
     m_Points: 6
-    m_NextNode: {fileID: 11400000, guid: 38a23dc031c5b4f7bbe9a3d9157272c9, type: 2}
+    m_Choice: You goods bro?
+    m_Response: Fine, just tired.
   m_Type: Intro

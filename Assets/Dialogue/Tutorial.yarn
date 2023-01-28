@@ -33,6 +33,8 @@ AMSEL: Let me in!!!!
 title: TutorialIntro
 tags: intro targetstart
 ---
+<<declare $choice = "" as string>>
+<<declare $response = "" as string>>
 <<settarget "Advance" 2>>
 <<setactive "Advance" 0>>
 <<focustarget "Advance" true>>
@@ -41,4 +43,140 @@ At certain points in the conversation, you can select keywords to formulate a re
 You can select one per category. Each combination will create a different response.
 Click the keywords button, and then...
 Choose "health" and "concerned". Then click "confirm"! Click the right side of the screen to advance after that.
+<<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
+AMSEL: (Hmm...)
+AMSEL: {$choice}
+<<setactive "Advance" 2>>
+<<focustarget "Advance" true>>
+SATE: {$response}
+<<focustarget "Advance" false>>
+AMSEL: Why?
+<<focustarget "Advance" true>>
+SATE:  Don’t want to talk about it.
+<<focustarget "Advance" false>>
+AMSEL: Why?
+<<focustarget "Advance" true>>
+SATE: *Stares*
+<<focustarget "Advance" false>>
+AMSEL: Why?
+<<focustarget "Advance" true>>
+SATE: *Stares*
+<<focustarget "Advance" false>>
+AMSEL: :P
+AMSEL: Haha, alright I'll stop.
+<<callkeywords "Game Manager">>
+AMSEL: You know...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+SATE: {$response}
+SATE: Fine, ask nicely next time.
+<<focustarget "Advance" false>>
+AMSEL: Alright. May I please come in, my dear old friend of mine?
+AMSEL: Want me to sort out your taxes and polish your shoes as well dear Sir?
+<<focustarget "Advance" true>>
+SATE: Stop…
+<<enddialogue "Game Manager">>
+===
+
+title: DetectEntry
+tags: area
+---
+<<set $clueCount = 0>>
+AMSEL: *Whistling*
+AMSEL: Looking around Sate’s stuff, not being a weird stalker at all.
+You can click on certain objects close to you to inspect them. See if they tell you anything.
+Such objects are highlighted for you.
+<<enddialogue "Game Manager">>
+===
+
+title: CrumpledBedsheets
+tags: clue
+---
+<<set $clueCount = $clueCount + 1>>
+<<if $clueCount == 1>>
+    AMSEL: Huh, I think I got something.
+    Clues are added to your notebook. Click it now to open it.
+    Clues are listed here in the order that they were found. These have been classified to certain characters.
+    Note - this will provide you with keywords to use later on. These keywords won’t appear otherwise
+<<endif>>
+
+(Clue found - crumpled bedsheets)
+AMSEL: The bedsheets are crumpled, as if they haven’t been touched since this morning.
+<<addclue "Game Manager" "Crumpled Bedsheets" "The bedsheets are crumpled, as if they haven’t been touched since this morning." "Sate">>
+
+<<if $clueCount == 2>>
+    <<jump ExplorationDone>>
+<<endif>>
+
+<<enddialogue "Game Manager">>
+===
+
+title: SummerHomework
+tags: clue
+---
+<<set $clueCount = $clueCount + 1>>
+<<if $clueCount == 1>>
+    AMSEL: Huh, I think I got something.
+    Clues are added to your notebook. Click it after this dialogue to open it.
+    Clues are listed here in the order that they were found. These have been classified to certain characters.
+    Note - this will provide you with keywords to use later on. These keywords won’t appear otherwise.
+<<endif>>
+
+(Clue found -  summer homework)
+AMSEL: There seems to be some papers on the desk. Wait, isn’t this our summer homework? Sate promised that was already finished.
+<<addclue "Game Manager" "Summer Homework" "There seems to be some papers on the desk. Wait, isn’t this our summer homework? Sate promised that was already finished." "Sate">>
+
+<<if $clueCount == 2>>
+    <<jump ExplorationDone>>
+<<endif>>
+
+<<enddialogue "Game Manager">>
+===
+
+title: ExplorationDone
+tags: event
+---
+AMSEL: Maybe that’s enough. I should go back and talk to Sate.
+<<enabledialogue "Friend">>
+<<enddialogue "Game Manager">>
+===
+
+title: TutorialPersuasion
+tags: persuasion targetstart
+---
+<<settarget "Advance" 2>>
+<<setactive "Advance" 0>>
+<<focustarget "Advance" true>>
+Similar to the previous dialogue, you pick keywords to progress.
+Except here, the goal is to persuade the other party. If you look at the bottom-left of the screen, there is a bar measuring your progress.
+You only have a limited number of 'turns' or tries, which depends on the character.
+<<focustarget "Advance" false>>
+AMSEL: Uhh, Sate...
+<<focustarget "Advance" true>>
+<<setactive "Advance" 2>>
+SATE: Yeah?
+<<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
+AMSEL: (Hmm...)
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+SATE: {$response}
+<<setactive "Advance" 0>>
+This time, you pick.
+<<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
+AMSEL: (Hmm...)
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+<<setactive "Advance" 2>>
+SATE: {$response}
+<<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
+AMSEL: (Hmm...)
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+SATE: {$response}
+SATE: Fine, you get the game then..since you wanted to play in the first place.
+<<enddialogue "Game Manager">>
 ===

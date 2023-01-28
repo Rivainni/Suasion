@@ -97,11 +97,13 @@ public class StoryManager : MonoBehaviour
     [SerializeField]
     Image mcGlow;
     DialogueRunner dialogueRunner;
+    InMemoryVariableStorage variableStorage;
     bool pause = false;
     bool dialogueUp = false;
     bool actionTaken = false;
 
     StoryElement chain = null;
+    KeywordNode[] currentKeywords;
     bool end = false;
     bool textBoxMode = true;
 
@@ -109,9 +111,14 @@ public class StoryManager : MonoBehaviour
     void Awake()
     {
         dialogueRunner = GetComponent<DialogueRunner>();
+        variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+        if (variableStorage == null)
+        {
+            Debug.Log("I can't find the variable storage!");
+        }
     }
 
-    public void StartDialogue(string dialogue, int dialogueType, KeywordSet[] keywordSet = null)
+    public void StartDialogue(string dialogue, int dialogueType, KeywordNode[] keywordSet = null)
     {
         if (!dialogueUp)
         {
@@ -130,6 +137,7 @@ public class StoryManager : MonoBehaviour
                     if (textBoxMode)
                     {
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
+                        currentKeywords = keywordSet;
                         textBoxMode = false;
                     }
                     gameManager.SetIntro(true);
@@ -139,6 +147,7 @@ public class StoryManager : MonoBehaviour
                     if (textBoxMode)
                     {
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
+                        currentKeywords = keywordSet;
                         textBoxMode = false;
                     }
                     gameManager.SetPersuade(true);
@@ -214,13 +223,41 @@ public class StoryManager : MonoBehaviour
         {
             targetDialogue.GetComponent<DuoView>().SetCurrent(true);
             mcDialogue.GetComponent<DuoView>().SetCurrent(false);
-            // dialogueRunner.SetDialogueViews(new DialogueViewBase[] { targetDialogue.GetComponent<LineView>() });
         }
         else
         {
             targetDialogue.GetComponent<DuoView>().SetCurrent(false);
             mcDialogue.GetComponent<DuoView>().SetCurrent(true);
-            // dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<LineView>() });
         }
+    }
+
+    [YarnCommand("callkeywords")]
+    public void CallKeywords()
+    {
+        string type = gameManager.CheckPersuade() ? "Persuasion" : "Intro";
+        mainUI.DisplayKeywords(currentKeywords[gameManager.GetTurn() - 1].Keywords, type);
+
+        foreach (Combination combination in currentKeywords[gameManager.GetTurn() - 1].Combinations)
+        {
+            gameManager.AddCombination(combination);
+        }
+    }
+
+    public void SetChoice(string choice)
+    {
+        variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+        variableStorage.SetValue("$choice", choice);
+    }
+
+    public void SetResponse(string response)
+    {
+        variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+        variableStorage.SetValue("$response", response);
+    }
+
+    [YarnCommand("addclue")]
+    public void AddClue(string name, string description, string character)
+    {
+        gameManager.AddClue(name, description, character);
     }
 }

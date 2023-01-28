@@ -1195,7 +1195,9 @@ MonoBehaviour:
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
   end: 0
-  keywords: []
+  keywords:
+  - {fileID: 11400000, guid: d53581647d1504ec9bc3aa8d18e7df7b, type: 2}
+  - {fileID: 11400000, guid: a669ebcc9727a4acaab986a9b7ad1804, type: 2}
 --- !u!61 &157081827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1978,7 +1980,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.32156864, g: 0.33333334, b: 0.19215688, a: 1}
   m_FlipX: 0
@@ -1998,7 +2000,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235992180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.7294, y: -2.4774, z: 0}
+  m_LocalPosition: {x: -4.739, y: -2.487, z: 0}
   m_LocalScale: {x: 0.51833385, y: 4.5460186, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23438,7 +23440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Crumpled bedsheets
+  title: CrumpledBedsheets
   type: Clue
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
@@ -46633,8 +46635,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015289853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.18, y: -1.6077, z: 0.13112701}
-  m_LocalScale: {x: 4.0319, y: 0.8294169, z: 1}
+  m_LocalPosition: {x: -15.2, y: -1.97, z: 0.13112701}
+  m_LocalScale: {x: 4.0319, y: 0.8674871, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1941777468}
@@ -46731,7 +46733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: DetectEntry
-  type: Object
+  type: Area
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 661800059}
@@ -49990,7 +49992,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.37647063, g: 0.36862746, b: 0.24705884, a: 1}
   m_FlipX: 0
@@ -50883,6 +50885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainUI: {fileID: 38622827}
+  storyManager: {fileID: 1901980258}
   playerMovement: {fileID: 1581847205}
   timeController: {fileID: 1219023111}
   levelObjects:
@@ -55151,7 +55154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Summer homework
+  title: SummerHomework
   type: Clue
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
@@ -55295,18 +55298,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089739100}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Persuasion Tutorial
+  title: TutorialPersuasion
   type: Persuade
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 1264968472}
   end: 0
-  keywords: []
+  keywords:
+  - {fileID: 11400000, guid: da2970f2c93464ecaa1e5b075a522650, type: 2}
+  - {fileID: 11400000, guid: c32270b5c7d0147d796d61b05392b27e, type: 2}
+  - {fileID: 11400000, guid: f311ad5c94dc743ed97afa5c0c551650, type: 2}
 --- !u!1 &2109133648 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 981988859233067610, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}

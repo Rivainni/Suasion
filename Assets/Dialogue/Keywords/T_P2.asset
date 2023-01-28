@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
   m_Name: T_P2
   m_EditorClassIdentifier: 
-  m_DialogueLine: {fileID: 11400000, guid: 1d9562669fc6246d8bd613ca8b80cb36, type: 2}
   m_Keywords:
     m_Topic:
     - homework
@@ -24,41 +23,53 @@ MonoBehaviour:
     - straight
     - exaggerate
     - downplay
+    m_Restrictions:
+    - m_Keyword: homework
+      m_Clue: Summer Homework
   m_Combinations:
   - m_Set: homework_assertive_downplay
     m_Mood: neutral
     m_Points: 6
-    m_NextNode: {fileID: 11400000, guid: 6a2e12c4297604583809d987f135f31f, type: 2}
+    m_Choice: Hmmm, there were a tad too many papers, I think.
+    m_Response: You got me.
   - m_Set: homework_assertive_exaggerate
     m_Mood: neutral
     m_Points: 6
-    m_NextNode: {fileID: 11400000, guid: fe6c914bbcd394529a08c0669ea8cdd6, type: 2}
+    m_Choice: "Bro, I don\u2019t think you even started with the homework."
+    m_Response: You got me.
   - m_Set: homework_assertive_straight
     m_Mood: neutral
     m_Points: 6
-    m_NextNode: {fileID: 11400000, guid: 06d5f0210462949f4b937f043beb1922, type: 2}
+    m_Choice: "Lmao, haven\u2019t finished homework eyy?"
+    m_Response: You got me.
   - m_Set: homework_cautious_downplay
     m_Mood: neutral
     m_Points: 4
-    m_NextNode: {fileID: 11400000, guid: 4e82be23aebba4587977e9346a0167a3, type: 2}
+    m_Choice: Maybe I saw a bunch of papers, any idea what those are?
+    m_Response: "Well, you see, there was still some homework I haven\u2019t done."
   - m_Set: homework_cautious_exaggerate
     m_Mood: neutral
     m_Points: 4
-    m_NextNode: {fileID: 11400000, guid: e1a8a7c7e5e99463a8d07b0f80d3a2ea, type: 2}
+    m_Choice: "There were a lot of papers. I wonder what those were\u2026"
+    m_Response: "Well, you see, there was still some homework I haven\u2019t done."
   - m_Set: homework_cautious_straight
     m_Mood: neutral
     m_Points: 4
-    m_NextNode: {fileID: 11400000, guid: a49432da515304d81a9bb2f634cf0f81, type: 2}
+    m_Choice: I saw some weird academic papers. What were those?
+    m_Response: "Well, you see, there was still some homework I haven\u2019t done."
   - m_Set: homework_concerned_downplay
     m_Mood: neutral
     m_Points: 5
-    m_NextNode: {fileID: 11400000, guid: f633aaa9c30e942ca8d634a496fb331f, type: 2}
+    m_Choice: That might be bad for you, you know?
+    m_Response: Not everyone is responsible like you, mate.
   - m_Set: homework_concerned_exaggerate
     m_Mood: neutral
     m_Points: 5
-    m_NextNode: {fileID: 11400000, guid: 0a46cc3b576d144bd9a2b308d96fa41b, type: 2}
+    m_Choice: Cramming will kill you.
+    m_Response: Not everyone is responsible like you, mate.
   - m_Set: homework_concerned_straight
     m_Mood: neutral
     m_Points: 5
-    m_NextNode: {fileID: 11400000, guid: dbd956f094a704a43bfc0829a1bf6393, type: 2}
+    m_Choice: You know cramming is a very no no thing to do?
+    m_Response: Not everyone is responsible like you, mate.
   m_Type: Persuasion

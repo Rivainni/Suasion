@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
   m_Name: T_Intro2
   m_EditorClassIdentifier: 
-  m_DialogueLine: {fileID: 11400000, guid: b225ca00f74df4be5aa45b409478d861, type: 2}
   m_Keywords:
     m_Topic:
     - house
@@ -22,9 +21,11 @@ MonoBehaviour:
     - cheerful
     - demanding
     m_Honesty: []
+    m_Restrictions: []
   m_Combinations:
   - m_Set: house_cheerful
     m_Mood: neutral
     m_Points: 6
-    m_NextNode: {fileID: 11400000, guid: dc293e1cdf5a54a0b8f1a564f652e2ae, type: 2}
+    m_Choice: "I\u2019m gonna look inside your house."
+    m_Response: "\u2026\u2026\u2026."
   m_Type: Intro

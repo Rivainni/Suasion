@@ -36,12 +36,11 @@ public class StoryElement : MonoBehaviour
         }
         else if (type == "Intro")
         {
-            storyManager.StartDialogue(title, 1); // Accesses Dialogue Manager and Starts Dialogue
+            storyManager.StartDialogue(title, 1, keywords); // Accesses Dialogue Manager and Starts Dialogue
         }
         else if (type == "Persuade")
         {
-            gameObject.SetActive(false);
-            storyManager.StartDialogue(title, 2); // Accesses Dialogue Manager and Starts Dialogue
+            storyManager.StartDialogue(title, 2, keywords); // Accesses Dialogue Manager and Starts Dialogue
         }
         this.enabled = false;
     }
@@ -104,5 +103,11 @@ public class StoryElement : MonoBehaviour
     public void SetInRange(bool toggle)
     {
         inRange = toggle;
+    }
+
+    [YarnCommand("enabledialogue")]
+    public void Enable()
+    {
+        this.enabled = true;
     }
 }

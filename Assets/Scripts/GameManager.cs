@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] MainUI mainUI;
+    [SerializeField] StoryManager storyManager;
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] TimeController timeController;
     [SerializeField] GameObject[] levelObjects;
@@ -88,8 +89,8 @@ public class GameManager : MonoBehaviour
             {
                 basePoints += combination.CheckKeywords(keywordList, mood, CheckPersuade());
                 hMult += combination.CheckHonesty();
-                // next = combination.NextNode;
-                // response = combination.NextNode.NarrationLine.Text;
+                storyManager.SetChoice(combination.Choice);
+                storyManager.SetResponse(combination.Response);
                 break;
             }
         }
@@ -297,6 +298,18 @@ public class GameManager : MonoBehaviour
         return clueList;
     }
 
+    public bool CheckClues(string name)
+    {
+        foreach (Clue clue in clueList)
+        {
+            if (clue.name == name)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void AddLog(string state)
     {
         logList.Add(new Log(keywordList, state, currentValue, response, mood));
@@ -343,6 +356,6 @@ public class GameManager : MonoBehaviour
     // I didn't want to reference the story manager directly from the UI, so I made this method to call the story manager's ConfirmKeywords() method
     public void ConfirmKeywords()
     {
-        gameObject.GetComponent<StoryManager>().ConfirmKeywords();
+        storyManager.ConfirmKeywords();
     }
 }

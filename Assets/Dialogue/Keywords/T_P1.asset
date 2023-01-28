@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
   m_Name: T_P1
   m_EditorClassIdentifier: 
-  m_DialogueLine: {fileID: 11400000, guid: 429b93cd3515442efbe3f9a48ddcbde9, type: 2}
   m_Keywords:
     m_Topic:
     - bedsheets
@@ -26,9 +25,13 @@ MonoBehaviour:
     - straight
     - exaggerate
     - downplay
+    m_Restrictions:
+    - m_Keyword: bedsheets
+      m_Clue: Crumpled Bedsheets
   m_Combinations:
   - m_Set: bedsheets_concerned_straight
     m_Mood: neutral
     m_Points: 6
-    m_NextNode: {fileID: 11400000, guid: e8afd02e56cc04abd91d73aa9846cfc8, type: 2}
+    m_Choice: "Your bed isn\u2019t clean, you goods?"
+    m_Response: I forgot.
   m_Type: Persuasion
