@@ -12,7 +12,6 @@ public class StoryElement : MonoBehaviour
     [SerializeField] GameManager gameManager; // need to access the player state to determine whether to start dialogue or nah.
     [SerializeField] StoryManager storyManager;
     [SerializeField] GameObject reference = null; // the object that the player clicks on to start the dialogue
-    [SerializeField] bool end = false; // does this element trigger the start of the next level?
     [SerializeField] KeywordNode[] keywords; // keywords assigned to this story element if applicable (turn 1 is index 0, etc)
     bool clicked = false; // has the player clicked on this element yet?
     bool inRange = false; // is the player in range of this element?
@@ -70,18 +69,7 @@ public class StoryElement : MonoBehaviour
         {
             if (reference)
             {
-                if (reference.transform.parent.name == "Tasks")
-                {
-                    if (gameManager.GetSuccess())
-                    {
-                        TriggerDialogue();
-                    }
-                    else
-                    {
-                        reference.GetComponent<StoryElement>().TriggerDialogue();
-                    }
-                }
-                else if (reference.transform.name == "Door Filler")
+                if (reference.transform.name == "Door Filler")
                 {
                     reference.SetActive(true);
                     TriggerDialogue();

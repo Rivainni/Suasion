@@ -163,7 +163,6 @@ public class GameManager : MonoBehaviour
         ClearCombinations();
         ClearKeywords();
         turn = 1;
-        currentCharacter = "";
     }
 
     public void ResetEnd()
@@ -268,7 +267,7 @@ public class GameManager : MonoBehaviour
     public void AddLevel()
     {
         mainUI.DisplayCurrentScore();
-        playerMovement.gameObject.transform.position = new Vector3(0, 0, 0);
+        playerMovement.gameObject.transform.position = new Vector3(30.25f, -9.48f, 0);
         Reset();
         ResetEnd();
         // ClearClues();
@@ -325,7 +324,7 @@ public class GameManager : MonoBehaviour
         return success;
     }
 
-    public void RollSuccess()
+    public bool RollSuccess()
     {
         // roll a random number between 0 and 100, then check if the random number is less than or equal to persuasion
         int rand = Random.Range(0, 100);
@@ -337,6 +336,8 @@ public class GameManager : MonoBehaviour
         {
             success = false;
         }
+
+        return success;
     }
 
     public int GetScore()

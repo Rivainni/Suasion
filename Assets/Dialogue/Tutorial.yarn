@@ -177,6 +177,31 @@ AMSEL: (Hmm...)
 AMSEL: {$choice}
 <<focustarget "Advance" true>>
 SATE: {$response}
-SATE: Fine, you get the game then..since you wanted to play in the first place.
+SATE: Fine, you get the game then... since you wanted to play in the first place.
+<<setactive "Advance" 0>>
+Sometimes you can do tasks for characters. They may help in persuasion.
 <<enddialogue "Game Manager">>
+===
+
+title: PickupGame
+tags: task
+---
+AMSEL: Here it is. Let's head back.
+<<enddialogue "Game Manager">>
+===
+
+title: TutorialEnd
+tags: event
+---
+<<set $success to false>>
+<<rollsuccess "Game Manager">>
+
+<<if $success == true>>
+    SATE: Alright, let’s go!
+<<else>>
+    SATE: Yeah…I’m gonna pass.
+<<endif>>
+
+<<enddialogue "Game Manager">>
+<<endlevel "GameManager">>
 ===

@@ -72,6 +72,7 @@ public class MainUI : MonoBehaviour
         // for blocking keywords in tutorial
         if (type == "Persuasion" && gameManager.GetLevel() == 0)
         {
+            Debug.Log("It is now turn " + gameManager.GetTurn());
             if (gameManager.GetTurn() == 1)
             {
                 proscriptionList.Add("state");
@@ -90,7 +91,7 @@ public class MainUI : MonoBehaviour
         }
         else if (type == "Intro" && gameManager.GetLevel() == 0)
         {
-            Debug.Log("IT is now turn " + gameManager.GetTurn());
+            Debug.Log("It is now turn " + gameManager.GetTurn());
             if (gameManager.GetTurn() == 1)
             {
                 proscriptionList.Add("game");
@@ -307,26 +308,20 @@ public class MainUI : MonoBehaviour
 
     bool CheckHasClue(string keyword, KeywordSet keywordSet)
     {
-        bool inList = false;
         foreach (KeywordRestrictions keywordRestrictions in keywordSet.Restrictions)
         {
             if (keywordRestrictions.Keyword == keyword)
             {
-                inList = true;
+                if (gameManager.CheckClues(keywordRestrictions.Clue))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            if (keywordRestrictions.Keyword == keyword && gameManager.CheckClues(keywordRestrictions.Clue))
-            {
-                return true;
-            }
         }
-
-        if (inList)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        return true;
     }
 }

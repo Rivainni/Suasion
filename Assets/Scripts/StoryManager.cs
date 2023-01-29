@@ -104,7 +104,6 @@ public class StoryManager : MonoBehaviour
 
     StoryElement chain = null;
     KeywordNode[] currentKeywords;
-    bool end = false;
     bool textBoxMode = true;
 
     // Start is called before the first frame update
@@ -118,7 +117,7 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(string dialogue, int dialogueType, KeywordNode[] keywordSet = null)
+    public void StartDialogue(string dialogue, int dialogueType, KeywordNode[] keywordSet = null, bool end = false)
     {
         if (!dialogueUp)
         {
@@ -180,6 +179,7 @@ public class StoryManager : MonoBehaviour
             gameManager.LockMovement(false);
             gameManager.PauseTimer(false);
             gameManager.HideTimer(false);
+            gameManager.Reset();
         }
     }
 
@@ -259,5 +259,19 @@ public class StoryManager : MonoBehaviour
     public void AddClue(string name, string description, string character)
     {
         gameManager.AddClue(name, description, character);
+    }
+
+    [YarnCommand("rollsuccess")]
+    public void RollSuccess()
+    {
+        variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+        variableStorage.SetValue("$success", gameManager.RollSuccess());
+    }
+
+    [YarnCommand("endlevel")]
+    public void EndLevel()
+    {
+        gameManager.AddLevel();
+        gameManager.LockMovement(true);
     }
 }
