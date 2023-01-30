@@ -10,4 +10,24 @@ AMSEL: Let's knock on his door.
 title: Level1Intro
 tags: intro targetstart
 ---
+<<settarget "Advance" 3>>
+<<setactive "Advance" 0>>
+<<set $mood to "">>
+<<set $choice to "">>
+<<set $response to "">>
+<<randomisemood "Game Manager">>
+<<if $mood == "positive">>
+    He seems to have a small smile on his face.
+<<elseif $mood == "neutral">>
+    Well, he seems indifferent today.
+<<else>>
+    He is glaring into the wall.
+<<endif>>
+<<setactive "Advance" 3>>
+<<callkeywords>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+DR. ANTONI: {$response}
+<<setactive "Advance" 0>>
+You excuse yourself for a second to talk with your friend.
 ===

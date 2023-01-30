@@ -273,5 +273,14 @@ public class StoryManager : MonoBehaviour
     {
         gameManager.AddLevel();
         gameManager.LockMovement(true);
+
+    }
+
+    [YarnCommand("randomisemood")]
+    public void RandomiseMood()
+    {
+        gameManager.RandomiseMood();
+        variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+        variableStorage.SetValue("$mood", gameManager.GetMood());
     }
 }

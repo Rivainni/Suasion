@@ -86,7 +86,7 @@ public class KeywordRestrictions
     public string Clue => m_Clue;
 }
 
-[CreateAssetMenu(menuName = "ScriptableObjects/Narration/Dialogue/Node/Choice")]
+[CreateAssetMenu(menuName = "ScriptableObjects/Dialogue/Keyword")]
 public class KeywordNode : ScriptableObject
 {
     [SerializeField]
