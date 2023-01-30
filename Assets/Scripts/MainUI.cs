@@ -299,8 +299,9 @@ public class MainUI : MonoBehaviour
 
     public void DisplayCurrentScore()
     {
+        string status = gameManager.GetSuccess() ? "Success" : "Failure";
         scorePanel.SetActive(true);
-        scorePanel.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = "Persuaded: " + gameManager.GetSuccess();
+        scorePanel.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = "Persuaded: " + status;
         scorePanel.transform.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Empathy: " + gameManager.GetEmpathy() + "%";
         scorePanel.transform.GetChild(1).GetChild(2).GetComponent<TextMeshProUGUI>().text = "Persuasion: " + gameManager.GetPersuasion() + "%";
         scorePanel.transform.GetChild(1).GetChild(3).GetComponent<TextMeshProUGUI>().text = "Score: " + gameManager.GetScore();

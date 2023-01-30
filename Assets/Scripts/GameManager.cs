@@ -359,4 +359,25 @@ public class GameManager : MonoBehaviour
     {
         storyManager.ConfirmKeywords();
     }
+
+    public int RollMood()
+    {
+        int val = Random.Range(0, 100);
+        if (val >= 0 && val < 33)
+        {
+            return 0;
+        }
+        else if (val >= 33 && val < 66)
+        {
+            return 1;
+        }
+        else if (val >= 66 && val < 100)
+        {
+            return 2;
+        }
+        else
+        {
+            return 0;
+        }
+    }
 }
