@@ -291,4 +291,10 @@ public class StoryManager : MonoBehaviour
     {
         friend.SetActive(!friend.activeSelf);
     }
+
+    [YarnCommand("setmultiplier")]
+    public void SetMultiplier(int multiplier)
+    {
+        gameManager.SetMultiplier(multiplier);
+    }
 }

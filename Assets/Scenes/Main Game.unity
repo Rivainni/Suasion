@@ -47369,12 +47369,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  type: 
-  gameManager: {fileID: 0}
-  storyManager: {fileID: 0}
+  title: Level1Persuasion
+  type: Persuasion
+  gameManager: {fileID: 1901980257}
+  storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
-  keywords: []
+  keywords:
+  - {fileID: 11400000, guid: 1ccfc5a07f5c2be4498c7f618a62bca9, type: 2}
+  - {fileID: 11400000, guid: ebb6f866bf378d3459a72c9f7446905e, type: 2}
 --- !u!70 &1059788627
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
