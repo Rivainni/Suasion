@@ -59,6 +59,15 @@ public class StoryElement : MonoBehaviour
             }
 
             clicked = true;
+
+            if (gameObject.GetComponent<SpriteRenderer>() != null)
+            {
+                if (gameObject.GetComponent<SpriteRenderer>().color == Color.yellow)
+                {
+                    gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                }
+            }
+
             TriggerDialogue();
         }
     }

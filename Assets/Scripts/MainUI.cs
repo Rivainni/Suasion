@@ -20,6 +20,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameManager gameManager;
     [SerializeField] TextMeshProUGUI notebookText;
     List<string> proscriptionList = new List<string>();
+    Button confirmButton;
 
     GameObject kaboom;
 
@@ -201,6 +202,8 @@ public class MainUI : MonoBehaviour
         foreach (Button confirmButton in confirmPanel)
         {
             confirmButton.onClick.AddListener(delegate { ConfirmKeywords(panel); });
+            confirmButton.interactable = false;
+            this.confirmButton = confirmButton;
         }
 
         kaboom = panel;
@@ -215,6 +218,29 @@ public class MainUI : MonoBehaviour
         else
         {
             gameManager.RemoveKeyword(keyword);
+        }
+
+        if (gameManager.CheckIntro())
+        {
+            if (gameManager.GetKeywordsCount() == 2)
+            {
+                confirmButton.interactable = true;
+            }
+            else
+            {
+                confirmButton.interactable = false;
+            }
+        }
+        else
+        {
+            if (gameManager.GetKeywordsCount() == 3)
+            {
+                confirmButton.interactable = true;
+            }
+            else
+            {
+                confirmButton.interactable = false;
+            }
         }
 
         source.GetComponentInChildren<TextMeshProUGUI>().text = keyword;
@@ -305,6 +331,13 @@ public class MainUI : MonoBehaviour
         scorePanel.transform.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Empathy: " + gameManager.GetEmpathy() + "%";
         scorePanel.transform.GetChild(1).GetChild(2).GetComponent<TextMeshProUGUI>().text = "Persuasion: " + gameManager.GetPersuasion() + "%";
         scorePanel.transform.GetChild(1).GetChild(3).GetComponent<TextMeshProUGUI>().text = "Score: " + gameManager.GetScore();
+        scorePanel.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(delegate { ContinueToNextLevel(); });
+    }
+
+    public void ContinueToNextLevel()
+    {
+        scorePanel.SetActive(false);
+        gameManager.ContinueToNextLevel();
     }
 
     bool CheckHasClue(string keyword, KeywordSet keywordSet)

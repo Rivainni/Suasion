@@ -148,6 +148,11 @@ public class GameManager : MonoBehaviour
         return keywordList.Contains(keyword);
     }
 
+    public int GetKeywordsCount()
+    {
+        return keywordList.Count;
+    }
+
     public void AddCombination(Combination combination)
     {
         combinationList.Add(combination);
@@ -272,7 +277,11 @@ public class GameManager : MonoBehaviour
     public void AddLevel()
     {
         mainUI.DisplayCurrentScore();
-        playerMovement.gameObject.transform.position = new Vector3(30.25f, -9.48f, 0);
+
+    }
+
+    public void ContinueToNextLevel()
+    {
         Reset();
         ResetEnd();
         // ClearClues();
@@ -280,6 +289,15 @@ public class GameManager : MonoBehaviour
         levelObjects[level].SetActive(false);
         level++;
         levelObjects[level].SetActive(true);
+
+        if (level > 1)
+        {
+            playerMovement.gameObject.transform.position = new Vector3(30.25f, -9.48f, 0);
+        }
+        else
+        {
+            playerMovement.gameObject.transform.position = new Vector3(2.6f, -3.62f, 0);
+        }
 
         foreach (GameObject renew in GameObject.FindGameObjectsWithTag("Respawn"))
         {

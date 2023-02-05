@@ -96,6 +96,8 @@ public class StoryManager : MonoBehaviour
     Image targetGlow;
     [SerializeField]
     Image mcGlow;
+    [SerializeField]
+    GameObject friend;
     DialogueRunner dialogueRunner;
     InMemoryVariableStorage variableStorage;
     bool pause = false;
@@ -282,5 +284,11 @@ public class StoryManager : MonoBehaviour
         gameManager.RandomiseMood();
         variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
         variableStorage.SetValue("$mood", gameManager.GetMood());
+    }
+
+    [YarnCommand("togglefriend")]
+    public void ToggleFriend()
+    {
+        friend.SetActive(!friend.activeSelf);
     }
 }

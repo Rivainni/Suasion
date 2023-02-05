@@ -11,6 +11,12 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     bool activeLock = false;
 
+    bool faceLeft = false;
+    bool faceUp = false;
+    bool xStop = false;
+    bool yStop = false;
+    float offset = 1.5f;
+
     // Update is called once per frame
     void Update()
     {
