@@ -25,11 +25,10 @@ public class StoryElement : MonoBehaviour
     }
 
     /* Called when you want to start dialogue */
-    [YarnCommand("jumpstart")]
     public void TriggerDialogue()
     {
         storyManager.Interrupt();
-        if (type == "Object" || type == "Start" || type == "Clue" || type == "Area")
+        if (type != "Intro" && type != "Persuade")
         {
             storyManager.StartDialogue(title, 0);
         }
@@ -46,7 +45,7 @@ public class StoryElement : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!EventSystem.current.IsPointerOverGameObject() && !clicked && inRange && type != "Area")
+        if (!EventSystem.current.IsPointerOverGameObject() && !clicked && inRange && type != "Area" && this.enabled)
         {
             if (reference != null)
             {
@@ -74,7 +73,7 @@ public class StoryElement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.name == "Player" && type == "Area" && this.enabled)
         {
             if (reference)
             {
@@ -103,8 +102,22 @@ public class StoryElement : MonoBehaviour
     }
 
     [YarnCommand("enabledialogue")]
-    public void Enable()
+    public void Enable(string title)
     {
-        this.enabled = true;
+        Debug.Log("bruh1");
+        if (this.title == title)
+        {
+            Debug.Log("bruh2");
+            this.enabled = true;
+        }
+    }
+
+    [YarnCommand("jumpstart")]
+    public void ManualStart(string title)
+    {
+        if (this.title == title)
+        {
+            TriggerDialogue();
+        }
     }
 }

@@ -332,6 +332,9 @@ public class MainUI : MonoBehaviour
         scorePanel.transform.GetChild(1).GetChild(2).GetComponent<TextMeshProUGUI>().text = "Persuasion: " + gameManager.GetPersuasion() + "%";
         scorePanel.transform.GetChild(1).GetChild(3).GetComponent<TextMeshProUGUI>().text = "Score: " + gameManager.GetScore();
         scorePanel.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(delegate { ContinueToNextLevel(); });
+
+        empathyBar.SetHealth(30);
+        persuasionBar.SetHealth(30);
     }
 
     public void ContinueToNextLevel()

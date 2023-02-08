@@ -17,6 +17,7 @@ tags: intro targetstart
 <<set $choice to "">>
 <<set $response to "">>
 <<randomisemood "Game Manager">>
+<<focustarget "Advance" true>>
 <<if $mood == "positive">>
     He seems to have a small smile on his face.
 <<elseif $mood == "neutral">>
@@ -24,20 +25,24 @@ tags: intro targetstart
 <<else>>
     He is glaring into the wall.
 <<endif>>
+<<focustarget "Advance" false>>
 <<setactive "Advance" 3>>
 <<callkeywords "Game Manager">>
 AMSEL: Hmm...
 AMSEL: {$choice}
+<<focustarget "Advance" true>>
 DR. ANTONI: {$response}
 <<setactive "Advance" 0>>
 You excuse yourself for a second to talk with your friend.
-<<enddialogue "Game Manager">>
+<<jumpstart "After Intro" "Level1AfterIntro">>
 ===
 
-title: Level1Afterintro
+title: Level1AfterIntro
 tags: immediate
 ---
-SATE: Father has always been rather serious. If he is asking us for a deeper explanation, then we really should think it over. Maybe looking around can help clear our head, and maybe even give us some clues!
+SATE: Hmmm...
+SATE: Father has always been rather serious. If he is asking us for a deeper explanation, then we really should think it over.
+SATE: Maybe looking around can help clear our head, and maybe even give us some clues!
 <<enddialogue "Game Manager">>
 ===
 
@@ -61,8 +66,8 @@ AMSEL: Scribbled below is a short postscript. “He never listens.”
 title: Level1PersuasionStart
 tags: event
 ---
-You approach Dr. Antoni again after your short recess. 
-<<jumpstart "Level 1 Persuasion">>
+You approach Dr. Antoni again after your short recess.
+<<jumpstart "Persuasion" "Level1Persuasion">>
 ===
 
 title: Level1Persuasion
@@ -72,8 +77,6 @@ tags: persuasion targetstart
 <<set $choice to "">>
 <<set $response to "">>
 <<settarget "Advance" 3>>
-<<setactive "Advance" 0>>
-You approach Dr. Antoni again after your short recess. 
 <<setactive "Advance" 3>>
 <<focustarget "Advance" true>>
 DR. ANTONI: Alright. Your explanation…?

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] TimeController timeController;
     [SerializeField] GameObject[] levelObjects;
+    [SerializeField] int startLevel; //for testing purposes
     // Start is called before the first frame update
 
     public struct SaveFile
@@ -55,6 +56,9 @@ public class GameManager : MonoBehaviour
         //     Debug.Log(keyword.Correct);
         // }
         logList.Clear();
+
+        level = startLevel;
+        levelObjects[level].SetActive(true);
     }
 
     // Update is called once per frame

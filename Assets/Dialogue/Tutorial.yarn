@@ -27,7 +27,7 @@ AMSEL: Breaching!!!!
 AMSEL: *Loud knocking*
 AMSEL: Heyyy!!! I want to play games! Games!!!
 AMSEL: Let me in!!!!
-<<jumpstart "Tutorial Intro">>
+<<jumpstart "Tutorial Intro" "TutorialIntro">>
 ===
 
 title: TutorialIntro
@@ -139,7 +139,7 @@ title: ExplorationDone
 tags: event
 ---
 AMSEL: Maybe that’s enough. I should go back and talk to Sate.
-<<enabledialogue "Friend">>
+<<enabledialogue "Friend" "TutorialPersuasion">>
 <<enddialogue "Game Manager">>
 ===
 

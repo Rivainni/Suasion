@@ -168,23 +168,6 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    [YarnCommand("enddialogue")]
-    public void EndDialogue()
-    {
-        if (dialogueUp && !CheckCutscene())
-        {
-            dialogueUp = false;
-            outerDialogue.SetActive(false);
-            innerDialogue.SetActive(false);
-            gameManager.SetIntro(false);
-            gameManager.SetPersuade(false);
-            gameManager.LockMovement(false);
-            gameManager.PauseTimer(false);
-            gameManager.HideTimer(false);
-            gameManager.Reset();
-        }
-    }
-
     public void Interrupt()
     {
         if (dialogueUp)
@@ -199,12 +182,6 @@ public class StoryManager : MonoBehaviour
         actionTaken = true;
         mainUI.EnableAdvance();
         mainUI.ResetKeywords();
-    }
-
-    [YarnCommand("changescene")]
-    public void ChangeScene(string scene)
-    {
-        SceneManager.LoadScene(scene);
     }
 
     public bool CheckCutscene()
@@ -233,18 +210,6 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    [YarnCommand("callkeywords")]
-    public void CallKeywords()
-    {
-        string type = gameManager.CheckPersuade() ? "Persuasion" : "Intro";
-        mainUI.DisplayKeywords(currentKeywords[gameManager.GetTurn() - 1].Keywords, type);
-
-        foreach (Combination combination in currentKeywords[gameManager.GetTurn() - 1].Combinations)
-        {
-            gameManager.AddCombination(combination);
-        }
-    }
-
     public void SetChoice(string choice)
     {
         variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
@@ -255,6 +220,43 @@ public class StoryManager : MonoBehaviour
     {
         variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
         variableStorage.SetValue("$response", response);
+    }
+
+    // Yarn commands below this point
+
+    [YarnCommand("enddialogue")]
+    public void EndDialogue()
+    {
+        if (dialogueUp && !CheckCutscene())
+        {
+            dialogueUp = false;
+            outerDialogue.SetActive(false);
+            innerDialogue.SetActive(false);
+            gameManager.SetIntro(false);
+            gameManager.SetPersuade(false);
+            gameManager.LockMovement(false);
+            gameManager.PauseTimer(false);
+            gameManager.HideTimer(false);
+            gameManager.Reset();
+        }
+    }
+
+    [YarnCommand("changescene")]
+    public void ChangeScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
+    [YarnCommand("callkeywords")]
+    public void CallKeywords()
+    {
+        string type = gameManager.CheckPersuade() ? "Persuasion" : "Intro";
+        mainUI.DisplayKeywords(currentKeywords[gameManager.GetTurn() - 1].Keywords, type);
+
+        foreach (Combination combination in currentKeywords[gameManager.GetTurn() - 1].Combinations)
+        {
+            gameManager.AddCombination(combination);
+        }
     }
 
     [YarnCommand("addclue")]
