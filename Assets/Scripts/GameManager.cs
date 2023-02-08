@@ -277,7 +277,6 @@ public class GameManager : MonoBehaviour
     public void AddLevel()
     {
         mainUI.DisplayCurrentScore();
-
     }
 
     public void ContinueToNextLevel()
@@ -285,10 +284,17 @@ public class GameManager : MonoBehaviour
         Reset();
         ResetEnd();
         // ClearClues();
+        if (level <= 1)
+        {
+            levelObjects[level].SetActive(false);
+            level++;
+            levelObjects[level].SetActive(true);
+        }
+        else
+        {
+            level++;
+        }
 
-        levelObjects[level].SetActive(false);
-        level++;
-        levelObjects[level].SetActive(true);
 
         if (level > 1)
         {

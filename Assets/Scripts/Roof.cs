@@ -7,18 +7,27 @@ public class Roof : MonoBehaviour
 {
     Collider2D collider;
     Tilemap tilemap;
+    SpriteRenderer sprite;
     Color curr = new Color(255, 255, 255, 255);
     // Start is called before the first frame update
     void Start()
     {
         collider = GetComponent<Collider2D>();
         tilemap = GetComponent<Tilemap>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        tilemap.color = curr;
+        if (tilemap != null)
+        {
+            tilemap.color = curr;
+        }
+        else if (sprite != null)
+        {
+            sprite.color = curr;
+        }
     }
 
     void OnTriggerStay2D(Collider2D other)

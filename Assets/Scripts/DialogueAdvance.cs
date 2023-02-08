@@ -42,6 +42,11 @@ public class DialogueAdvance : MonoBehaviour
         targetIcon.sprite = normalIcons[speakerIndex];
     }
 
+    public void SetMainSpeaker(int speaker)
+    {
+        mcIcon.sprite = normalIcons[speaker];
+    }
+
     // changes the active dialogue box and moves the glow
     [YarnCommand("focustarget")]
     public void FocusTarget(bool focus)

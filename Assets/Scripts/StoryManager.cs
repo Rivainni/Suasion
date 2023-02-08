@@ -297,4 +297,11 @@ public class StoryManager : MonoBehaviour
     {
         gameManager.SetMultiplier(multiplier);
     }
+
+    [YarnCommand("checkpersuasion")]
+    public void CheckPersuasion()
+    {
+        variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+        variableStorage.SetValue("$persuasion", gameManager.GetPersuasion());
+    }
 }

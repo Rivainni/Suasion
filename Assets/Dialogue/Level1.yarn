@@ -31,29 +31,85 @@ AMSEL: {$choice}
 DR. ANTONI: {$response}
 <<setactive "Advance" 0>>
 You excuse yourself for a second to talk with your friend.
+<<enddialogue "Game Manager">>
+===
+
+title: Level1Afterintro
+tags: immediate
+---
+SATE: Father has always been rather serious. If he is asking us for a deeper explanation, then we really should think it over. Maybe looking around can help clear our head, and maybe even give us some clues!
+<<enddialogue "Game Manager">>
+===
+
+title: NeatlyStackedPapers
+tags: clue
+---
+AMSEL: Not a crease to be seen on them, with neat handwriting and consistent ordering.
+<<addclue "Game Manager" "Neatly Stacked Papers" "Not a crease to be seen on them, with neat handwriting and consistent ordering." "DR. ANTONI">>
+<<enddialogue "Game Manager">>
+===
+
+title: StickyNotes
+tags: clue
+---
+AMSEL: “Meet with the mayor to request funding for imports of medicine - again.” 
+AMSEL: Scribbled below is a short postscript. “He never listens.”
+<<addclue "Game Manager" "Sticky Notes" "'Meet with the mayor to request funding for imports of medicine - again.' Scribbled below is a short postscript. 'He never listens.' " "DR. ANTONI">>
+<<enddialogue "Game Manager">>
+===
+
+title: Level1PersuasionStart
+tags: event
+---
+You approach Dr. Antoni again after your short recess. 
+<<jumpstart "Level 1 Persuasion">>
 ===
 
 title: Level1Persuasion
 tags: persuasion targetstart
 ---
-<<settarget "Advance" 3>>
-<<setactive "Advance" 0>>
-<<set $mood to "">>
+<<set $persuasion to 30>>
 <<set $choice to "">>
 <<set $response to "">>
-<<randomisemood "Game Manager">>
-<<if $mood == "positive">>
-    He seems to have a small smile on his face.
-<<elseif $mood == "neutral">>
-    Well, he seems indifferent today.
-<<else>>
-    He is glaring into the wall.
-<<endif>>
+<<settarget "Advance" 3>>
+<<setactive "Advance" 0>>
+You approach Dr. Antoni again after your short recess. 
 <<setactive "Advance" 3>>
+<<focustarget "Advance" true>>
+DR. ANTONI: Alright. Your explanation…?
+<<focustarget "Advance" false>>
 <<callkeywords "Game Manager">>
 AMSEL: Hmm...
 AMSEL: {$choice}
+<<focustarget "Advance" true>>
 DR. ANTONI: {$response}
 <<setactive "Advance" 0>>
-You excuse yourself for a second to talk with your friend.
+<<focustarget "Advance" true>>
+<<if $persuasion >= 50>>
+It seems like he’s growing more and more convinced of the idea, but you can say more.
+<<elseif $persuasion < 50>>
+You see a growing frown on his face, but you can still say more.
+<<endif>>
+<<setactive "Advance" 3>>
+<<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+DR. ANTONI: {$response}
+DR. ANTONI: Errr…
+DR. ANTONI: Child, you understand how important this is?
+SATE: Yes, Father. That is why I still believe in doing this.
+SATE: You know, no matter what you say, I’ll still do it.
+
+<<set $success to false>>
+<<rollsuccess "Game Manager">>
+
+<<if $success == true>>
+    DR. ANTONI: Alright, fine. Just tell me what you need. I’ll go talk to the staff.
+<<else>>
+    DR. ANTONI: You’re on your own. Prove that your cause is worth it.
+<<endif>>
+<<enddialogue "Game Manager">>
+<<endlevel "Game Manager">>
 ===
