@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: Maria_Intro
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - support
+    - people
+    m_Tone:
+    - demanding
+    - polite
+    - direct
+    m_Honesty: []
+    m_Restrictions: []
+  m_Combinations:
+  - m_Set: support_demanding
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: We want you to support our campaign against the current mayor
+    m_Response: My my you're a daring on aren't you?
+  - m_Set: support_demanding
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We want you to support our campaign against the current mayor
+    m_Response: Support!? That's a bit demanding, little one
+  - m_Set: support_demanding
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We want you to support our campaign against the current mayor
+    m_Response: Child, you have no idea what you're getting yourself in to
+  - m_Set: support_polite
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Ok,uhh hello M...Maria, we're here to hopefully talk to you about a
+      certain project the two of us are starting.
+    m_Response: Ohh so it's that kind of chit chat.
+  - m_Set: support_polite
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Ok,uhh hello M...Maria, we're here to hopefully talk to you about a
+      certain project the two of us are starting.
+    m_Response: Of course, I'm all ears for you dear.
+  - m_Set: support_polite
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: Ok,uhh hello M...Maria, we're here to hopefully talk to you about a
+      certain project the two of us are starting.
+    m_Response: I am curious to see how long you're politeness will keep you alive.
+  - m_Set: support_direct
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: Hello Ms. Maria we want to talk to you about the political campaign
+      we want to run
+    m_Response: Straight to the point, I like it.
+  - m_Set: support_direct
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: Hello Ms. Maria we want to talk to you about the political campaign
+      we want to run
+    m_Response: Politics? Not sure why you need me in that conversation dear.
+  - m_Set: support_direct
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: Hello Ms. Maria we want to talk to you about the political campaign
+      we want to run
+    m_Response: Looks like this is going to be a troubled morning
+  - m_Set: people_demanding
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We want you to introduce us and our cause to the people of the town
+    m_Response: Well first you need to tell me about this cause of yours.
+  - m_Set: people_demanding
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We want you to introduce us and our cause to the people of the town
+    m_Response: Ok, but I wonder what will you do after that.
+  - m_Set: people_demanding
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: We want you to introduce us and our cause to the people of the town
+    m_Response: One thing I'll tell you, is that some things aren't meant to be known.
+  - m_Set: people_polite
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: Ok, Maria we would like to know more about the people in this town
+      and if maybe you could introduce us to them.
+    m_Response: Ohh I see you babies want friends, sure I can help you
+  - m_Set: people_polite
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: Ok, Maria we would like to know more about the people in this town
+      and if maybe you could introduce us to them.
+    m_Response: I'll see what I can do little one
+  - m_Set: people_polite
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: Ok, Maria we would like to know more about the people in this town
+      and if maybe you could introduce us to them.
+    m_Response: I know that some people would love to mess with goody two shoes babies
+      like you
+  - m_Set: people_direct
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Ms. Maria, we want to know the ins and outs of the people in this town
+    m_Response: You want some juicy stories about the people here? Sure I can tell
+      you some
+  - m_Set: people_direct
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Ms. Maria, we want to know the ins and outs of the people in this town
+    m_Response: Well just promise me you'll buy something later and I'll tell you
+      what you want to know
+  - m_Set: people_direct
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Ms. Maria, we want to know the ins and outs of the people in this town
+    m_Response: Hahahahaha, you're going to need more than just asking to get that
+      kind of information baby.
+  m_Type: Intro

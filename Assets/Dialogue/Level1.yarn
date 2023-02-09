@@ -4,6 +4,7 @@ tags: load
 5 years later...
 Amsel and Sate have finished their education. Sate works in their father's hospital and Amsel works in the primary wheat farm of the town.
 The day ends, along with Amsel's shift. The two of you approach his father to ask him a favor...
+(Note - you don't have to do this. You can go out and explore!)
 AMSEL: Let's knock on his door.
 <<enddialogue "Game Manager">>
 ===
@@ -41,9 +42,11 @@ You excuse yourself for a second to talk with your friend.
 title: Level1AfterIntro
 tags: immediate
 ---
+<<togglefriend "Game Manager">>
 SATE: Hmmm...
 SATE: Father has always been rather serious. If he is asking us for a deeper explanation, then we really should think it over.
 SATE: Maybe looking around can help clear our head, and maybe even give us some clues!
+<<togglefriend "Game Manager">>
 <<enddialogue "Game Manager">>
 ===
 
@@ -62,13 +65,6 @@ AMSEL: “Meet with the mayor to request funding for imports of medicine - again
 AMSEL: Scribbled below is a short postscript. “He never listens.”
 <<addclue "Game Manager" "Sticky Notes" "'Meet with the mayor to request funding for imports of medicine - again.' Scribbled below is a short postscript. 'He never listens.' " "DR. ANTONI">>
 <<enddialogue "Game Manager">>
-===
-
-title: Level1PersuasionStart
-tags: event
----
-You approach Dr. Antoni again after your short recess.
-<<jumpstart "Persuasion" "Level1Persuasion">>
 ===
 
 title: Level1Persuasion

@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] MainUI mainUI;
     [SerializeField] StoryManager storyManager;
+    [SerializeField] AudioManager audioManager;
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] TimeController timeController;
     [SerializeField] GameObject[] levelObjects;
@@ -397,5 +398,10 @@ public class GameManager : MonoBehaviour
     public void ConfirmKeywords()
     {
         storyManager.ConfirmKeywords();
+    }
+
+    public AudioManager GetAudioManager()
+    {
+        return audioManager;
     }
 }

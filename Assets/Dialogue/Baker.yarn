@@ -1,0 +1,85 @@
+﻿title: BakerNear
+tags: Area
+---
+<<togglefriend "Game Manager">>
+AMSEL: Here's the bakery.
+SATE: I never liked going here, some kind of ominous aura on it.
+AMSEL: Come on! It'll be fine, everyone buys their bread here. Pretty sure that's mostly because she's the only baker in town.
+SATE: Well if it's for the cause, fine.
+AMSEL: Eyyyyy! That's the spirit.
+<<togglefriend "Game Manager">>
+<<enddialogue "Game Manager">>
+===
+
+title: BakerIntro
+tags: Intro
+---
+<<setmultiplier "Game Manager" 1>>
+<<set $choice to "">>
+<<set $response to "">>
+<<settarget "Advance" 4>>
+<<setactive "Advance" 4>>
+<<focustarget "Advance" true>>
+MARIA: Ohh my if it isn't Amsel and their little friend Sate
+MARIA: What can I do for you little babies today?
+MARIA: If you're here to buy our bestseller Pan de Regla, it'll still be 10 minutes before we can take it out the oven.
+MARIA: If you want a made to order cake, it'll be a minimum of 5 days before you can pick it up.
+MARIA: But if you babies just want to chit chat, then Momma Maria can give you 5 minutes of her time, plus 5 more if you actually buy something.
+<<focustarget "Advance" false>>
+AMSEL: Hello Ms...
+<<focustarget "Advance" true>>
+MARIA: Please dear Amsel, Maria is fine enough.
+<<callkeywords "Game Manager">>
+<<focustarget "Advance" false>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MARIA: {$response}
+MARIA: Well, let me just take the bread out of the ovens before we talk.
+MARIA: Feel free to take a look around the store for now. Just don't peek into the kitchen little cutties or mommy is gonna be very angry.
+<<enddialogue "Game Manager">>
+===
+
+title: BakerAfterIntro
+tags: Event
+---
+MARIA: Well, let me just take the bread out of the ovens before we talk.
+MARIA: Feel free to take a look around the store for now. Just don't peek into the kitchen little cutties or mommy is gonna be very angry.
+<<enddialogue "Game Manager">>
+===
+
+title: Cashier
+tags: Clue
+---
+AMSEL: The cashier has a ton of locks on it, I know people want their money secured but this is just over the top.
+<<addclue "Game Manager" "Cashier" "The cashier has a ton of locks on it, I know people want their money secured but this is just over the top." "MARIA">>
+<<enddialogue "Game Manager">>
+===
+
+title: BreadTrays
+tags: Clue
+---
+AMSEL: These are the trays Maria uses to place the bread she sells.
+AMSEL: Each of them are labeled by a little card with the name.
+<<addclue "Game Manager" "Bread Trays" "These are the trays Maria uses to place the bread she sells. Each of them are labeled by a little card with the name." "MARIA">>
+<<enddialogue "Game Manager">>
+===
+
+title: IndoorPlants
+tags: Clue
+---
+AMSEL: All of the plants are fake, except for one pink flower on the counter. 
+AMSEL: It has some unnatural red marks on it and it looks well taken care of.
+<<addclue "Game Manager" "Indoor Plants" "All of the plants are fake, except for one pink flower on the counter. It has some unnatural red marks on it and it looks well taken care of." "MARIA">>
+<<enddialogue "Game Manager">>
+===
+
+title: KitchenDoor
+tags: Clue
+---
+AMSEL: The door is metal with a single window on top covered with black paint. 
+AMSEL: I could barely see and hear what is in there. 
+AMSEL: Red marks are all over the door, similar to the ones the flower has.
+<<addclue "Game Manager" "Kitchen Door" "The door is metal with a single window on top covered with black paint. I could barely see and hear what is in there. Red marks are all over the door, similar to the ones the flower has." "MARIA">>
+<<enddialogue "Game Manager">>
+===

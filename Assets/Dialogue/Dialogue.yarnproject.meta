@@ -12,6 +12,7 @@ ScriptedImporter:
   - {fileID: 6391573757903218779, guid: 8f6265fd75246634eac38d711880f1d7, type: 3}
   - {fileID: 6391573757903218779, guid: f38efa078a81d854694e1e90c5c48046, type: 3}
   - {fileID: 6391573757903218779, guid: 1968162837234d14c80f5ad38695ce75, type: 3}
+  - {fileID: 6391573757903218779, guid: 35dbc6d26c1810b4e81b701a53d0112a, type: 3}
   compileErrors: []
   serializedDeclarations:
   - name: $choice
@@ -46,6 +47,22 @@ ScriptedImporter:
     description: Implicitly declared in Tutorial.yarn, node TutorialEnd
     isImplicit: 1
     sourceYarnAsset: {fileID: 6391573757903218779, guid: f38efa078a81d854694e1e90c5c48046, type: 3}
+  - name: $mood
+    typeName: String
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Level1.yarn, node Level1Intro
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 1968162837234d14c80f5ad38695ce75, type: 3}
+  - name: $persuasion
+    typeName: Number
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Level1.yarn, node Level1Persuasion
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 1968162837234d14c80f5ad38695ce75, type: 3}
   defaultLanguage: en-PH
   languagesToSourceAssets: []
   useAddressableAssets: 0
