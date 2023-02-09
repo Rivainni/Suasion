@@ -253,6 +253,7 @@ public class GameManager : MonoBehaviour
 
     public void RandomiseMood()
     {
+        Random.seed = System.DateTime.Now.Millisecond;
         int rand = Random.Range(0, 3);
         if (rand == 0)
         {
@@ -288,7 +289,7 @@ public class GameManager : MonoBehaviour
         Reset();
         ResetEnd();
         // ClearClues();
-        if (level <= 1)
+        if (level < 1)
         {
             levelObjects[level].SetActive(false);
             level++;
@@ -297,6 +298,11 @@ public class GameManager : MonoBehaviour
         else
         {
             level++;
+        }
+
+        if (level > 2)
+        {
+
         }
 
 

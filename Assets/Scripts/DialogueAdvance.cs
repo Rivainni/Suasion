@@ -42,6 +42,7 @@ public class DialogueAdvance : MonoBehaviour
         targetIcon.sprite = normalIcons[speakerIndex];
     }
 
+    [YarnCommand("setmainspeaker")]
     public void SetMainSpeaker(int speaker)
     {
         mcIcon.sprite = normalIcons[speaker];

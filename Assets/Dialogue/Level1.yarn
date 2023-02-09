@@ -11,6 +11,7 @@ AMSEL: Let's knock on his door.
 title: Level1Intro
 tags: intro targetstart
 ---
+<<setmultiplier "Game Manager" 1>>
 <<settarget "Advance" 3>>
 <<setactive "Advance" 0>>
 <<set $mood to "">>
@@ -73,6 +74,7 @@ You approach Dr. Antoni again after your short recess.
 title: Level1Persuasion
 tags: persuasion targetstart
 ---
+<<setmultiplier "Game Manager" 2>>
 <<set $persuasion to 30>>
 <<set $choice to "">>
 <<set $response to "">>
@@ -102,6 +104,7 @@ AMSEL: {$choice}
 DR. ANTONI: {$response}
 DR. ANTONI: Errr…
 DR. ANTONI: Child, you understand how important this is?
+<<setmainspeaker "Advance" 2>>
 SATE: Yes, Father. That is why I still believe in doing this.
 SATE: You know, no matter what you say, I’ll still do it.
 
@@ -113,6 +116,7 @@ SATE: You know, no matter what you say, I’ll still do it.
 <<else>>
     DR. ANTONI: You’re on your own. Prove that your cause is worth it.
 <<endif>>
+<<setmainspeaker "Advance" 1>>
 <<enddialogue "Game Manager">>
 <<endlevel "Game Manager">>
 ===

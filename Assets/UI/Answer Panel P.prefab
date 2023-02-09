@@ -1165,7 +1165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5164056355585994746, guid: 4b1ddcc95a7eaf143884a37c61a5959e, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: Confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164056355585994751, guid: 4b1ddcc95a7eaf143884a37c61a5959e, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5995727419878445161, guid: 4b1ddcc95a7eaf143884a37c61a5959e, type: 3}
       propertyPath: m_text
@@ -1177,7 +1181,7 @@ PrefabInstance:
       objectReference: {fileID: 7516290579924724215, guid: fe3923f3d61054145a2fb82652740d67, type: 2}
     - target: {fileID: 7012644357156127968, guid: 4b1ddcc95a7eaf143884a37c61a5959e, type: 3}
       propertyPath: m_Color.a
-      value: 0.49019608
+      value: 0.57254905
       objectReference: {fileID: 0}
     - target: {fileID: 7012644357156127968, guid: 4b1ddcc95a7eaf143884a37c61a5959e, type: 3}
       propertyPath: m_Color.b
@@ -1203,7 +1207,7 @@ PrefabInstance:
     - target: {fileID: 3450225709061246900, guid: 4eb92328a24a0e14ca6c9e7830a8f23c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2061062597, guid: 5f4f22e800d7849e181f11cf2c1a8aa8, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3450225709061246902, guid: 4eb92328a24a0e14ca6c9e7830a8f23c, type: 3}
       propertyPath: m_Name
       value: Panel

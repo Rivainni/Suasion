@@ -186,7 +186,7 @@ public class StoryManager : MonoBehaviour
 
     public bool CheckCutscene()
     {
-        if (SceneManager.GetActiveScene().name == "Intro Cutscene")
+        if (SceneManager.GetActiveScene().name == "Intro Cutscene" || SceneManager.GetActiveScene().name == "End Cutscene")
         {
             return true;
         }
