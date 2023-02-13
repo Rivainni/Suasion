@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Player" ID="{4F59668F-25A8-404F-B6A6-86E1F64620E1}" ShortID="128609246">
+					<ChildrenList>
+						<Event Name="Player_Footsteps" ID="{02EF8030-063D-4691-A502-8CCBBDAC7C0A}">
+							<ChildrenList>
+								<Action Name="" ID="{5B8FF1A5-5F71-4C38-BACA-6582364BBCF1}" ShortID="982029158">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footsteps" ID="{EC48948A-8C24-4F07-B140-4B6EB26C8A3C}" WorkUnitID="{5B69E31F-4406-40B6-8BAA-95451560C92B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{C7E5772B-761F-4223-AB29-39DE54D92022}" ShortID="237159178">
+					<ChildrenList>
+						<Event Name="Enter_Introduction" ID="{4AB8DAB0-945E-4DBB-8507-D7BD8E18F060}">
+							<ChildrenList>
+								<Action Name="" ID="{6C1A9437-D1D3-4BF3-A6F4-90BAC8253A4B}" ShortID="468704941">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Introduction" ID="{FD067361-D29E-49CE-8207-3B2B6505B6FA}" WorkUnitID="{5B69E31F-4406-40B6-8BAA-95451560C92B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Enter_Title" ID="{BC053389-3395-4E3E-82EF-EB5EBA0221C1}">
+							<ChildrenList>
+								<Action Name="" ID="{B73D470F-2516-493A-AFA6-7DB8F7F05C31}" ShortID="297888708">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Title" ID="{92F983DA-AEFF-4A84-97F5-35D7B2CD1895}" WorkUnitID="{5B69E31F-4406-40B6-8BAA-95451560C92B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Enter_Persuasion" ID="{EA1B3407-2800-4748-A880-9E2A9CD9E90C}">
+							<ChildrenList>
+								<Action Name="" ID="{79090C43-9946-4380-BC9F-6FDD0331986D}" ShortID="1050892783">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Persuasion" ID="{F1248C70-D62A-4172-A106-DDB7A2360432}" WorkUnitID="{5B69E31F-4406-40B6-8BAA-95451560C92B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Enter_Map" ID="{9D31AC6B-6FCC-4EA2-9757-403F78ED8D78}">
+							<ChildrenList>
+								<Action Name="" ID="{6C7336B5-574B-49EB-B1B1-36C5A0F9F527}" ShortID="447749607">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Exploration" ID="{ECE5AC7B-66B2-4AB5-9EAB-C525D61280B6}" WorkUnitID="{5B69E31F-4406-40B6-8BAA-95451560C92B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

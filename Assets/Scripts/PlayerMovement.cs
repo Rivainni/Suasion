@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Animator animator;
 
     Vector2 movement;
+    bool isPlaying = false;
     bool activeLock = false;
 
     // Update is called once per frame
@@ -19,6 +20,17 @@ public class PlayerMovement : MonoBehaviour
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
 
+            if ((movement.x != 0 || movement.y != 0) && !isPlaying)
+            {
+                PlayFootsteps();
+                isPlaying = true;
+            }
+            else if (isPlaying && (movement.x == 0 && movement.y == 0))
+            {
+                PauseFootsteps();
+                isPlaying = false;
+            }
+
             animator.SetInteger("Horizontal", Mathf.RoundToInt(movement.x));
             animator.SetInteger("Vertical", Mathf.RoundToInt(movement.y));
             animator.SetFloat("Speed", movement.sqrMagnitude);
@@ -28,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetInteger("Horizontal", 0);
             animator.SetInteger("Vertical", 0);
             animator.SetFloat("Speed", 0);
+            PauseFootsteps();
+            isPlaying = false;
         }
     }
 
@@ -47,5 +61,15 @@ public class PlayerMovement : MonoBehaviour
     public void UnlockMovement()
     {
         activeLock = false;
+    }
+
+    void PlayFootsteps()
+    {
+        AkSoundEngine.PostEvent("Player_Footsteps", gameObject);
+    }
+
+    void PauseFootsteps()
+    {
+        AkSoundEngine.ExecuteActionOnEvent("Player_Footsteps", AkActionOnEventType.AkActionOnEventType_Pause, gameObject);
     }
 }

@@ -140,8 +140,6 @@ public class StoryManager : MonoBehaviour
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
                         currentKeywords = keywordSet;
                         textBoxMode = false;
-                        gameManager.GetAudioManager().Stop("Exploration");
-                        gameManager.GetAudioManager().Play("Introduction", 0);
                     }
                     gameManager.SetIntro(true);
                     break;
@@ -152,8 +150,6 @@ public class StoryManager : MonoBehaviour
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
                         currentKeywords = keywordSet;
                         textBoxMode = false;
-                        gameManager.GetAudioManager().Stop("Exploration");
-                        gameManager.GetAudioManager().Play("Persuasion", 0);
                     }
                     gameManager.SetPersuade(true);
                     break;
@@ -242,9 +238,6 @@ public class StoryManager : MonoBehaviour
             gameManager.PauseTimer(false);
             gameManager.HideTimer(false);
             gameManager.Reset();
-            gameManager.GetAudioManager().Stop("Introduction");
-            gameManager.GetAudioManager().Stop("Persuasion");
-            gameManager.GetAudioManager().Play("Exploration", 0);
         }
     }
 

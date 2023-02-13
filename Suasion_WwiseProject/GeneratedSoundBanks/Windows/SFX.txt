@@ -1,0 +1,14 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1730208058	Player_Footsteps			\Default Work Unit\Player\Player_Footsteps	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+
+Switch	ID	Name	Switch Group			Notes
+	712897245	Mud	Footsteps			
+	2058049674	Wood	Footsteps			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	95421314	Footsteps - Wood	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Footsteps - Wood_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Wood		1192032
+	640376649	Footsteps - Mud	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Footsteps - Mud_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Mud		6381664
+

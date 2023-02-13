@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A2DEBC72-0C72-4AD8-8CE2-3BAE522388F9}" SchemaVersion="110">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{A2DEBC72-0C72-4AD8-8CE2-3BAE522388F9}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A2DEBC72-0C72-4AD8-8CE2-3BAE522388F9}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Music" ID="{101D9A83-2EB0-4FA1-8196-D2D233D6F4B3}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Enter_Persuasion" ID="{EA1B3407-2800-4748-A880-9E2A9CD9E90C}" WorkUnitID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enter_Introduction" ID="{4AB8DAB0-945E-4DBB-8507-D7BD8E18F060}" WorkUnitID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enter_Title" ID="{BC053389-3395-4E3E-82EF-EB5EBA0221C1}" WorkUnitID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enter_Map" ID="{9D31AC6B-6FCC-4EA2-9757-403F78ED8D78}" WorkUnitID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="SFX" ID="{35B9DDAA-282F-4097-8839-EF95D8071956}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Player_Footsteps" ID="{02EF8030-063D-4691-A502-8CCBBDAC7C0A}" WorkUnitID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>
