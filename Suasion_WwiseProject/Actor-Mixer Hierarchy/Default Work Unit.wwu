@@ -33,9 +33,7 @@
 							<ChildrenList>
 								<AudioFileSource Name="Ambient" ID="{3CAB6EFD-CBA8-4CDE-822C-F186A80C5774}">
 									<PropertyList>
-										<Property Name="FadeOutDuration" Type="Real64" Value="2.05881100588383"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="94.0190359353624"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Ambient.wav</AudioFile>

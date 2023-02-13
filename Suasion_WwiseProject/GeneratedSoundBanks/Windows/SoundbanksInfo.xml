@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{5BD53F96-2248-575F-ADBE-9BCD57307590}">
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{88D6412F-FB35-F5C9-7880-956343802952}">
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
@@ -31,7 +31,7 @@
 				</File>
 				<File Id="665351442" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambient.wav</ShortName>
-					<CachePath>SFX/Ambient_59A9A24A.wem</CachePath>
+					<CachePath>SFX/Ambient_C5579977.wem</CachePath>
 				</File>
 				<File Id="866666796" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>click-10.wav</ShortName>
@@ -156,5 +156,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EEC31B6C-5C15-2F00-8FCA-0F7B8BCB3CD1}</FileHash>
+	<FileHash>{CE3A8D9E-546F-5128-D949-4F9A77B06725}</FileHash>
 </SoundBanksInfo>
