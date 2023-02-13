@@ -13,11 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ADVANCE = 994769541U;
+        static const AkUniqueID CONFIRM = 1517537939U;
         static const AkUniqueID ENTER_INTRODUCTION = 1951716408U;
         static const AkUniqueID ENTER_MAP = 3861180278U;
         static const AkUniqueID ENTER_PERSUASION = 2986574805U;
         static const AkUniqueID ENTER_TITLE = 3301048702U;
+        static const AkUniqueID PLAY_AMBIENT = 1562304622U;
         static const AkUniqueID PLAYER_FOOTSTEPS = 1730208058U;
+        static const AkUniqueID RETURN = 3859834159U;
     } // namespace EVENTS
 
     namespace SWITCHES

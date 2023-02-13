@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 72bcdea2720cd84a8ce23bae522388f9
     GuidInternal: 
-    m_lastTime: -8585253384905674450
+    m_lastTime: -8585253070412453312
     List:
     - name: Music
       guid: 839a1d10b02ea14f8196d2d233d6f4b3
@@ -108,8 +108,65 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: bd481fadf27fdd47b6b4b9559955e9b7
     GuidInternal: 
-    m_lastTime: -8585253385056451734
+    m_lastTime: -8585253070578424384
     List:
+    - name: Advance
+      guid: cbe86f54418ffa4a8516dce39a64047c
+      id: 994769541
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bd481fadf27fdd47b6b4b9559955e9b7
+      - ElementName: UI
+        ObjectType: 4
+        guid: 0af8e4d53edf5049a5314ad12bbfaed1
+      - ElementName: Advance
+        ObjectType: 3
+        guid: cbe86f54418ffa4a8516dce39a64047c
+      Path: Events\Default Work Unit\UI\Advance
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ambient
+      guid: 39af4c3069f3444b81648765ba28dd87
+      id: 77978275
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bd481fadf27fdd47b6b4b9559955e9b7
+      - ElementName: Ambient
+        ObjectType: 4
+        guid: 39af4c3069f3444b81648765ba28dd87
+      Path: Events\Default Work Unit\Ambient
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Confirm
+      guid: 20347368cbb0ed43bdc8a842aa288caf
+      id: 1517537939
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bd481fadf27fdd47b6b4b9559955e9b7
+      - ElementName: UI
+        ObjectType: 4
+        guid: 0af8e4d53edf5049a5314ad12bbfaed1
+      - ElementName: Confirm
+        ObjectType: 3
+        guid: 20347368cbb0ed43bdc8a842aa288caf
+      Path: Events\Default Work Unit\UI\Confirm
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Enter_Introduction
       guid: b0dab84a5e94bb4d8507d7bd8e18f060
       id: 1951716408
@@ -207,6 +264,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Ambient
+      guid: b75762c8df3438468eb3150d25eaf19d
+      id: 1562304622
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bd481fadf27fdd47b6b4b9559955e9b7
+      - ElementName: Ambient
+        ObjectType: 4
+        guid: 39af4c3069f3444b81648765ba28dd87
+      - ElementName: Play_Ambient
+        ObjectType: 3
+        guid: b75762c8df3438468eb3150d25eaf19d
+      Path: Events\Default Work Unit\Ambient\Play_Ambient
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Player
       guid: 8f66594fa8254f40b6a686e1f64620e1
       id: 1069431850
@@ -241,6 +318,43 @@ MonoBehaviour:
         ObjectType: 3
         guid: 3080ef023d069146a5028ccbbdac7c0a
       Path: Events\Default Work Unit\Player\Player_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Return
+      guid: 16b05d37337bdb4ba2f70ccb5d5cac3c
+      id: 3859834159
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bd481fadf27fdd47b6b4b9559955e9b7
+      - ElementName: UI
+        ObjectType: 4
+        guid: 0af8e4d53edf5049a5314ad12bbfaed1
+      - ElementName: Return
+        ObjectType: 3
+        guid: 16b05d37337bdb4ba2f70ccb5d5cac3c
+      Path: Events\Default Work Unit\UI\Return
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI
+      guid: 0af8e4d53edf5049a5314ad12bbfaed1
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: bd481fadf27fdd47b6b4b9559955e9b7
+      - ElementName: UI
+        ObjectType: 4
+        guid: 0af8e4d53edf5049a5314ad12bbfaed1
+      Path: Events\Default Work Unit\UI
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

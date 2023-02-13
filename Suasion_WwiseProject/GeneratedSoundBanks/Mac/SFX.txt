@@ -1,5 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
+	994769541	Advance			\Default Work Unit\UI\Advance	
+	1517537939	Confirm			\Default Work Unit\UI\Confirm	
+	1562304622	Play_Ambient			\Default Work Unit\Ambient\Play_Ambient	
 	1730208058	Player_Footsteps			\Default Work Unit\Player\Player_Footsteps	
+	3859834159	Return			\Default Work Unit\UI\Return	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	2385628198	Footsteps			\Default Work Unit\Footsteps	
@@ -9,6 +13,11 @@ Switch	ID	Name	Switch Group			Notes
 	2058049674	Wood	Footsteps			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	95421314	Footsteps - Wood	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Mac\SFX\Footsteps - Wood_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Wood		1192032
-	640376649	Footsteps - Mud	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Mac\SFX\Footsteps - Mud_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Mud		6381664
+	12014692	click-4	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Mac\SFX\click-4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\click-4		106080
+	63845907	Engine	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Mac\SFX\Engine_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient FX\Engine		7462752
+	95421314	Footsteps - Wood	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Mac\SFX\Footsteps - Wood_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Wood		1192032
+	640376649	Footsteps - Mud	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Mac\SFX\Footsteps - Mud_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Mud		6381664
+	665351442	Ambient	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Mac\SFX\Ambient_59A9A24A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient FX\Ambient		16585060
+	866666796	click-10	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Mac\SFX\click-10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\click-10		106080
+	917550683	click-2	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Mac\SFX\click-2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\click-2		106080
 

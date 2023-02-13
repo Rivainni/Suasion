@@ -14,6 +14,14 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Ambient" ID="{A18E889D-6F55-40A1-ABCB-BD2A503FB795}" ShortID="245429319">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1E1F6B94-8594-4C36-83C1-EE9478466E23}"/>
@@ -24,6 +32,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Ambient" ID="{3CAB6EFD-CBA8-4CDE-822C-F186A80C5774}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.05881100588383"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="94.0190359353624"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Ambient.wav</AudioFile>
 									<MediaIDList>
@@ -36,6 +49,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Engine" ID="{75FF5B7A-46E4-4F0C-8206-A5CB2184D15B}" ShortID="715464087">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-22</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1E1F6B94-8594-4C36-83C1-EE9478466E23}"/>
@@ -60,6 +80,24 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Music" ID="{16AED278-EC7B-4742-A643-C165E67BEEDE}" ShortID="839640601">
+					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1E1F6B94-8594-4C36-83C1-EE9478466E23}"/>
@@ -70,6 +108,14 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Exploration" ID="{ECE5AC7B-66B2-4AB5-9EAB-C525D61280B6}" ShortID="761521096">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1E1F6B94-8594-4C36-83C1-EE9478466E23}"/>
@@ -92,6 +138,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Introduction" ID="{FD067361-D29E-49CE-8207-3B2B6505B6FA}" ShortID="661424465">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1E1F6B94-8594-4C36-83C1-EE9478466E23}"/>
@@ -114,6 +163,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Persuasion" ID="{F1248C70-D62A-4172-A106-DDB7A2360432}" ShortID="950503975">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1E1F6B94-8594-4C36-83C1-EE9478466E23}"/>
@@ -136,6 +188,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Title" ID="{92F983DA-AEFF-4A84-97F5-35D7B2CD1895}" ShortID="613525830">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1E1F6B94-8594-4C36-83C1-EE9478466E23}"/>
@@ -327,6 +382,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Footsteps - Wood" ID="{439BBAB1-0CBA-4BA0-B2BE-328CD1BA5FBA}" ShortID="686151801">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1E1F6B94-8594-4C36-83C1-EE9478466E23}"/>
@@ -349,6 +407,9 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Footsteps - Mud" ID="{A16D9DE4-6D47-4CD7-8C98-6FCB746683C8}" ShortID="702295224">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1E1F6B94-8594-4C36-83C1-EE9478466E23}"/>

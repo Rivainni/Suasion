@@ -15,7 +15,11 @@
 				</SoundBank>
 				<SoundBank Name="SFX" ID="{35B9DDAA-282F-4097-8839-EF95D8071956}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Confirm" ID="{68733420-B0CB-43ED-BDC8-A842AA288CAF}" WorkUnitID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambient" ID="{C86257B7-34DF-4638-8EB3-150D25EAF19D}" WorkUnitID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Footsteps" ID="{02EF8030-063D-4691-A502-8CCBBDAC7C0A}" WorkUnitID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Advance" ID="{546FE8CB-8F41-4AFA-8516-DCE39A64047C}" WorkUnitID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Return" ID="{375DB016-7B33-4BDB-A2F7-0CCB5D5CAC3C}" WorkUnitID="{AD1F48BD-7FF2-47DD-B6B4-B9559955E9B7}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

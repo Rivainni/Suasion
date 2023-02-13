@@ -119,6 +119,19 @@ public class StoryManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "Main Menu")
+        {
+            PlayMusic("Title");
+        }
+        else
+        {
+            PlayAmbient();
+            PlayMusic("Map");
+        }
+    }
+
     public void StartDialogue(string dialogue, int dialogueType, KeywordNode[] keywordSet = null, bool end = false)
     {
         if (!dialogueUp)
@@ -141,6 +154,8 @@ public class StoryManager : MonoBehaviour
                         currentKeywords = keywordSet;
                         textBoxMode = false;
                     }
+                    PauseAmbient();
+                    PlayMusic("Introduction");
                     gameManager.SetIntro(true);
                     break;
                 case 2:
@@ -151,6 +166,8 @@ public class StoryManager : MonoBehaviour
                         currentKeywords = keywordSet;
                         textBoxMode = false;
                     }
+                    PauseAmbient();
+                    PlayMusic("Persuasion");
                     gameManager.SetPersuade(true);
                     break;
                 default:
@@ -222,6 +239,27 @@ public class StoryManager : MonoBehaviour
         variableStorage.SetValue("$response", response);
     }
 
+    // Audio Commands
+    void PlayMusic(string music)
+    {
+        AkSoundEngine.PostEvent("Enter_" + music, gameObject);
+    }
+
+    void PlayAmbient()
+    {
+        AkSoundEngine.PostEvent("Play_Ambient", gameObject);
+    }
+
+    void PauseAmbient()
+    {
+        AkSoundEngine.ExecuteActionOnEvent("Play_Ambient", AkActionOnEventType.AkActionOnEventType_Pause, gameObject, 0);
+    }
+
+    void ResumeAmbient()
+    {
+        AkSoundEngine.ExecuteActionOnEvent("Play_Ambient", AkActionOnEventType.AkActionOnEventType_Resume, gameObject, 0);
+    }
+
     // Yarn commands below this point
 
     [YarnCommand("enddialogue")]
@@ -238,6 +276,8 @@ public class StoryManager : MonoBehaviour
             gameManager.PauseTimer(false);
             gameManager.HideTimer(false);
             gameManager.Reset();
+            PlayMusic("Map");
+            ResumeAmbient();
         }
     }
 

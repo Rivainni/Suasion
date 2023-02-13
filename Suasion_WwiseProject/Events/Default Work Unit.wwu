@@ -66,6 +66,68 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Ambient" ID="{304CAF39-F369-4B44-8164-8765BA28DD87}" ShortID="532315744">
+					<ChildrenList>
+						<Event Name="Play_Ambient" ID="{C86257B7-34DF-4638-8EB3-150D25EAF19D}">
+							<ChildrenList>
+								<Action Name="" ID="{CEA94ADC-88DD-4BEA-942D-B024D7C96350}" ShortID="697878404">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambient" ID="{A18E889D-6F55-40A1-ABCB-BD2A503FB795}" WorkUnitID="{5B69E31F-4406-40B6-8BAA-95451560C92B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{56EB12D8-790A-43EB-8101-AFCA3E244963}" ShortID="144209290">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Engine" ID="{75FF5B7A-46E4-4F0C-8206-A5CB2184D15B}" WorkUnitID="{5B69E31F-4406-40B6-8BAA-95451560C92B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{D5E4F80A-DF3E-4950-A531-4AD12BBFAED1}" ShortID="370502265">
+					<ChildrenList>
+						<Event Name="Advance" ID="{546FE8CB-8F41-4AFA-8516-DCE39A64047C}">
+							<ChildrenList>
+								<Action Name="" ID="{26F8C412-E0D2-4600-9C2F-4C550BFE3445}" ShortID="649567249">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="click-2" ID="{4ED026A5-71FC-4A46-8129-57F8612AC5A5}" WorkUnitID="{5B69E31F-4406-40B6-8BAA-95451560C92B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Return" ID="{375DB016-7B33-4BDB-A2F7-0CCB5D5CAC3C}">
+							<ChildrenList>
+								<Action Name="" ID="{1B89022A-F183-4664-A7F9-7F2676891C71}" ShortID="918467946">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="click-4" ID="{563BD80A-3E07-4AAD-9A3A-0AF357972387}" WorkUnitID="{5B69E31F-4406-40B6-8BAA-95451560C92B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Confirm" ID="{68733420-B0CB-43ED-BDC8-A842AA288CAF}">
+							<ChildrenList>
+								<Action Name="" ID="{A1027B59-B32A-4EA5-BA3C-7D7ECF8500BC}" ShortID="899114587">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="click-10" ID="{4942BCE8-8835-405E-A79B-6C7DAC847034}" WorkUnitID="{5B69E31F-4406-40B6-8BAA-95451560C92B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

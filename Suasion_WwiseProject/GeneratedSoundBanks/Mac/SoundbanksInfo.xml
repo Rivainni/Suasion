@@ -9,21 +9,57 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{2A32C39B-ADE0-E89B-DCDD-89C700E3A03A}">
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{5BD53F96-2248-575F-ADBE-9BCD57307590}">
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
+				<File Id="12014692" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>click-4.wav</ShortName>
+					<CachePath>SFX/click-4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="63845907" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Engine.wav</ShortName>
+					<CachePath>SFX/Engine_10C4C929.wem</CachePath>
+				</File>
 				<File Id="95421314" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps - Wood.wav</ShortName>
-					<CachePath>SFX/Footsteps - Wood_10C4C929.wem</CachePath>
+					<CachePath>SFX/Footsteps - Wood_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="640376649" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps - Mud.wav</ShortName>
-					<CachePath>SFX/Footsteps - Mud_10C4C929.wem</CachePath>
+					<CachePath>SFX/Footsteps - Mud_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="665351442" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambient.wav</ShortName>
+					<CachePath>SFX/Ambient_59A9A24A.wem</CachePath>
+				</File>
+				<File Id="866666796" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>click-10.wav</ShortName>
+					<CachePath>SFX/click-10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="917550683" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>click-2.wav</ShortName>
+					<CachePath>SFX/click-2_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1730208058" Name="Player_Footsteps" DurationType="OneShot" DurationMin="6.7570066" DurationMax="36.17669">
+				<Event Id="994769541" Name="Advance" DurationType="OneShot" DurationMin="0.552" DurationMax="0.552">
+					<MediaRefs>
+						<MediaRef Id="917550683"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1517537939" Name="Confirm" DurationType="OneShot" DurationMin="0.552" DurationMax="0.552">
+					<MediaRefs>
+						<MediaRef Id="866666796"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1562304622" Name="Play_Ambient" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="63845907"/>
+						<MediaRef Id="665351442"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1730208058" Name="Player_Footsteps" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="2058049674"/>
@@ -38,6 +74,11 @@
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="3859834159" Name="Return" DurationType="OneShot" DurationMin="0.552" DurationMax="0.552">
+					<MediaRefs>
+						<MediaRef Id="12014692"/>
+					</MediaRefs>
 				</Event>
 			</Events>
 			<SwitchGroups>
@@ -70,44 +111,44 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{40723882-C8E9-18F0-D765-B4BF3EAED6EA}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{7849FD7C-1356-3B90-7555-3EB6877620FE}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
 				<File Id="96749168" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Persuasion.wav</ShortName>
-					<CachePath>SFX/Persuasion_10C4C929.wem</CachePath>
+					<CachePath>SFX/Persuasion_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="155587295" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Exploration.wav</ShortName>
-					<CachePath>SFX/Exploration_10C4C929.wem</CachePath>
+					<CachePath>SFX/Exploration_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="625330621" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Introduction.wav</ShortName>
-					<CachePath>SFX/Introduction_10C4C929.wem</CachePath>
+					<CachePath>SFX/Introduction_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="715936892" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Title.wav</ShortName>
-					<CachePath>SFX/Title_10C4C929.wem</CachePath>
+					<CachePath>SFX/Title_D79FB2B7.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1951716408" Name="Enter_Introduction" DurationType="OneShot" DurationMin="149.81514" DurationMax="149.81514">
+				<Event Id="1951716408" Name="Enter_Introduction" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="625330621"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3861180278" Name="Enter_Map" DurationType="OneShot" DurationMin="148.056" DurationMax="148.056">
+				<Event Id="3861180278" Name="Enter_Map" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="155587295"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2986574805" Name="Enter_Persuasion" DurationType="OneShot" DurationMin="98.533875" DurationMax="98.533875">
+				<Event Id="2986574805" Name="Enter_Persuasion" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="96749168"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3301048702" Name="Enter_Title" DurationType="OneShot" DurationMin="128.2206" DurationMax="128.2206">
+				<Event Id="3301048702" Name="Enter_Title" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="715936892"/>
 					</MediaRefs>
@@ -115,5 +156,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1661875F-02E4-6156-CE41-2524F1ABC79A}</FileHash>
+	<FileHash>{D1FDF023-963D-7599-53A6-C45299BC7FFA}</FileHash>
 </SoundBanksInfo>
