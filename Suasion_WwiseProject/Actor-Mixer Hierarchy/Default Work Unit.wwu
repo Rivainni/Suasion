@@ -138,6 +138,11 @@
 						<Sound Name="Introduction" ID="{FD067361-D29E-49CE-8207-3B2B6505B6FA}" ShortID="661424465">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -149,6 +154,10 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Introduction" ID="{96B72711-7BB6-4B74-980D-AE4213CEDFBA}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="26.6011645151888"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Introduction.wav</AudioFile>
 									<MediaIDList>
@@ -199,6 +208,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Title" ID="{7EA24EF9-5A4C-4354-AF15-5CDB61C57D58}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="3.21249843147136"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.21249843147136"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Title.wav</AudioFile>
 									<MediaIDList>
@@ -382,6 +396,32 @@
 								<Sound Name="Footsteps - Wood" ID="{439BBAB1-0CBA-4BA0-B2BE-328CD1BA5FBA}" ShortID="686151801">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E24D813C-2DF5-45B1-BF88-1FF710895E5C}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-250"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{BEEA0F65-9D4E-43A4-965F-C0C6372AC1BE}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="2"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -407,6 +447,32 @@
 								<Sound Name="Footsteps - Mud" ID="{A16D9DE4-6D47-4CD7-8C98-6FCB746683C8}" ShortID="702295224">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E135C145-3B36-4C70-B6BD-6C3B46C2D0F2}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-250"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E7F37298-A130-4E6D-85DF-3A08C895435B}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="2"/>
+															<Property Name="Min" Type="Real64" Value="-2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">

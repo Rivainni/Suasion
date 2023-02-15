@@ -14,7 +14,6 @@ Switch	ID	Name	Switch Group			Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	12014692	click-4	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\click-4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\click-4		106080
-	63845907	Engine	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Engine_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient FX\Engine		7462752
 	95421314	Footsteps - Wood	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Footsteps - Wood_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Wood		1192032
 	640376649	Footsteps - Mud	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Footsteps - Mud_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Mud		6381664
 	665351442	Ambient	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Ambient_C5579977.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient FX\Ambient		7437216

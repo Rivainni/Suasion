@@ -121,15 +121,8 @@ public class StoryManager : MonoBehaviour
 
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Main Menu")
-        {
-            PlayMusic("Title");
-        }
-        else
-        {
-            PlayAmbient();
-            PlayMusic("Map");
-        }
+        PlayAmbient();
+        PlayMusic("Map");
     }
 
     public void StartDialogue(string dialogue, int dialogueType, KeywordNode[] keywordSet = null, bool end = false)

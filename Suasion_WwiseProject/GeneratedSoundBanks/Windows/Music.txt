@@ -7,6 +7,6 @@ Event	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	96749168	Persuasion	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Persuasion_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Persuasion		17381472
 	155587295	Exploration	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Exploration_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Exploration		28426848
-	625330621	Introduction	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Introduction_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Introduction		26427488
-	715936892	Title	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Title_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Title		22618208
+	625330621	Introduction	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Introduction_479576CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Introduction		21735044
+	715936892	Title	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Title_04232D4F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Title		22051524
 

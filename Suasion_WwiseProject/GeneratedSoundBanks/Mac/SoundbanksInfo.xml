@@ -9,17 +9,13 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{88D6412F-FB35-F5C9-7880-956343802952}">
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{45F5FDA8-4C88-AA40-0712-8EEA5BFB0A58}">
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
 				<File Id="12014692" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>click-4.wav</ShortName>
 					<CachePath>SFX/click-4_10C4C929.wem</CachePath>
-				</File>
-				<File Id="63845907" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Engine.wav</ShortName>
-					<CachePath>SFX/Engine_10C4C929.wem</CachePath>
 				</File>
 				<File Id="95421314" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps - Wood.wav</ShortName>
@@ -55,7 +51,6 @@
 				</Event>
 				<Event Id="1562304622" Name="Play_Ambient" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="63845907"/>
 						<MediaRef Id="665351442"/>
 					</MediaRefs>
 				</Event>
@@ -111,7 +106,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{7849FD7C-1356-3B90-7555-3EB6877620FE}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{E10B114A-F121-AD5B-AE7D-95E13EFCD19B}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
@@ -125,11 +120,11 @@
 				</File>
 				<File Id="625330621" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Introduction.wav</ShortName>
-					<CachePath>SFX/Introduction_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Introduction_479576CA.wem</CachePath>
 				</File>
 				<File Id="715936892" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Title.wav</ShortName>
-					<CachePath>SFX/Title_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Title_04232D4F.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -156,5 +151,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0D73FBD5-7546-EB31-5283-09028563E268}</FileHash>
+	<FileHash>{A38BBB2E-1454-0B4D-D3B6-8A5228AC415A}</FileHash>
 </SoundBanksInfo>
