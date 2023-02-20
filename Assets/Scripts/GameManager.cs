@@ -93,6 +93,8 @@ public class GameManager : MonoBehaviour
             {
                 basePoints += combination.CheckKeywords(keywordList, mood, CheckPersuade());
                 hMult += combination.CheckHonesty();
+                currentValue = basePoints * hMult;
+                response = combination.Response;
                 storyManager.SetChoice(combination.Choice);
                 storyManager.SetResponse(combination.Response);
                 break;
@@ -298,11 +300,6 @@ public class GameManager : MonoBehaviour
         else
         {
             level++;
-        }
-
-        if (level > 2)
-        {
-
         }
 
 
