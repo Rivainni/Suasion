@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00a35c04ba47b2b4cbf5f1e92e26159f
+guid: b3d075fa2488f2c4ab8c9ea24f34fc06
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 708, y: 261, z: 649, w: 348}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -121,9 +121,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 717
-        y: 281
-        width: 1017
-        height: 1033
+        y: 278
+        width: 1021
+        height: 1036
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8905eb91db339843ab0b3697a2d64ab
-      internalID: 1914443014
+      spriteID: 589818c4203ad1a4893ae9e62c10c992
+      internalID: -247998159
       vertices: []
       indices: 
       edges: []
@@ -141,14 +141,14 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sate_icon_0: 1914443014
+      sate_icon_0: -247998159
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1520,8 +1520,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a08e7dd992fb34ac8b3eda4e3c2eb1d1, type: 3}
   normalIcons:
   - {fileID: -2130570143, guid: 4c51eacb7882d6c48aa34b60e936e941, type: 3}
-  - {fileID: -247998159, guid: b3d075fa2488f2c4ab8c9ea24f34fc06, type: 3}
   - {fileID: 1914443014, guid: 00a35c04ba47b2b4cbf5f1e92e26159f, type: 3}
+  - {fileID: -247998159, guid: b3d075fa2488f2c4ab8c9ea24f34fc06, type: 3}
   - {fileID: 1913352772, guid: 4e4ce9614ed80e544bfa8ac9d9d8c666, type: 3}
   glowIcons:
   - {fileID: 0}

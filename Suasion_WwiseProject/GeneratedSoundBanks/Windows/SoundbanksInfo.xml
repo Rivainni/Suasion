@@ -106,25 +106,25 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{E10B114A-F121-AD5B-AE7D-95E13EFCD19B}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{FD36C4F7-97F4-FE1F-FF8A-655497E30A9B}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
 				<File Id="96749168" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Persuasion.wav</ShortName>
-					<CachePath>SFX/Persuasion_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Persuasion_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="155587295" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Exploration.wav</ShortName>
-					<CachePath>SFX/Exploration_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Exploration_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="625330621" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Introduction.wav</ShortName>
-					<CachePath>SFX/Introduction_479576CA.wem</CachePath>
+					<CachePath>SFX/Introduction_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="715936892" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Title.wav</ShortName>
-					<CachePath>SFX/Title_04232D4F.wem</CachePath>
+					<CachePath>SFX/Title_6AEC82DB.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -151,5 +151,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{02535965-9DE7-93D6-AE3B-701B7F27740D}</FileHash>
+	<FileHash>{BDC57050-E808-03C1-EA1B-7299F6FED279}</FileHash>
 </SoundBanksInfo>

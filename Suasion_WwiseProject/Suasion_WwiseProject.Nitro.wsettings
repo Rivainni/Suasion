@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{CDA38757-D5BA-448F-9904-A11E476036F1}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\Nitro\Desktop\Misc\Reaper Projects\Suasion\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\Downloads\Music\"/>
 				<Property Name="Event Action List\{02EF8030-063D-4691-A502-8CCBBDAC7C0A}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{375DB016-7B33-4BDB-A2F7-0CCB5D5CAC3C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{49437722-7784-45B0-B4B7-2388413D9E37}\x64_Expand States" Type="string" Value=""/>
@@ -38,7 +38,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="fltIWx9TUkK3qLliOGQzWJC5Kd98Is5KpSSoFCSBui4="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="g5odELAuoU+BltLSM9b0s6rduTUvKJdAiDnvldgHGVY="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups_v2" Type="string" Value="22Q69QNftE2Yw4sjNxMWhQEADxt/AAAAwKQ0nvt/AAA4xlz19wEAAAAAAAD3AQAAwKQ0nvt/AAAEkrKe+38AAOBK84H3AQAAAAAAAPcBAAAIAAAA9wEAAMjlDxt/AAAAAADHnvt/AAAfAcee+38AAAAAx577fwAAwKQ0nvt/AADApDSe+38AADjGXPX3AQAAAQAAAOkqDD3mUcpJjfo1T1FaM3QBAA8bfwAAAMCkNJ77fwAAOMZc9fcBAAAAAAAA9wEAAMCkNJ77fwAABJKynvt/AADgSvOB9wEAAAAAAAD3AQAACAAAAPcBAADI5Q8bfwAAAAAAx577fwAAHwHHnvt/AAAAAMee+38AAMCkNJ77fwAAwKQ0nvt/AAA4xlz19wEAAAEAAAA="/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups_v2" Type="string" Value="22Q69QNftE2Yw4sjNxMWhQEA93R8AAAAwKQa/vh/AAAYfDfhrAEAAAAAAACsAQAAwKQa/vh/AAAEkqz++H8AACDb6POsAQAAAAAAAKwBAAAIAAAArAEAAEjj93R8AAAAAADB/vh/AAAfAcH++H8AAAAAwf74fwAAwKQa/vh/AADApBr++H8AABh8N+GsAQAAAQAAAOkqDD3mUcpJjfo1T1FaM3QBAPd0fAAAAMCkGv74fwAAGHw34awBAAAAAAAArAEAAMCkGv74fwAABJKs/vh/AAAg2+jzrAEAAAAAAACsAQAACAAAAKwBAABI4/d0fAAAAAAAwf74fwAAHwHB/vh/AAAAAMH++H8AAMCkGv74fwAAwKQa/vh/AAAYfDfhrAEAAAEAAAA="/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>
