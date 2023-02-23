@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b3d075fa2488f2c4ab8c9ea24f34fc06
+guid: 9fc83b16cfbf4e948b7fed474504cf1f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,19 +120,19 @@ TextureImporter:
       name: sate_icon_0
       rect:
         serializedVersion: 2
-        x: 717
-        y: 278
-        width: 1021
-        height: 1036
+        x: 718
+        y: 280
+        width: 1016
+        height: 1034
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 589818c4203ad1a4893ae9e62c10c992
-      internalID: -247998159
+      spriteID: 13a7ea097a837fa4ab12eb0afb3b3d3d
+      internalID: 210384055
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sate_icon_0: -247998159
+      sate_icon_0: 210384055
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
