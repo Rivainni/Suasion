@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{45F5FDA8-4C88-AA40-0712-8EEA5BFB0A58}">
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{52FFDAB7-BF46-40D8-6641-B08E3CCF05E0}">
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
@@ -38,6 +38,11 @@
 					<CachePath>SFX/click-2_10C4C929.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="3604890626" Name="High_Pass_60Hz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="994769541" Name="Advance" DurationType="OneShot" DurationMin="0.552" DurationMax="0.552">
 					<MediaRefs>
@@ -53,6 +58,11 @@
 					<MediaRefs>
 						<MediaRef Id="665351442"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3604890626"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="1730208058" Name="Player_Footsteps" DurationType="Infinite">
 					<SwitchContainers>
@@ -85,7 +95,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{986487A9-2683-E47A-8688-3D0FE6FDB954}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4B35675E-A660-276F-5A47-E7E26E92F585}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -106,7 +116,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{FD36C4F7-97F4-FE1F-FF8A-655497E30A9B}">
+		<SoundBank Id="3991942870" Type="User" Language="SFX" Hash="{DB6F59BA-79F3-9CA8-F1DC-86068B8C4D09}">
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<Media>
@@ -151,5 +161,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BDC57050-E808-03C1-EA1B-7299F6FED279}</FileHash>
+	<FileHash>{CEED1AC5-E98D-9F9A-09CB-B8A3EBE32263}</FileHash>
 </SoundBanksInfo>

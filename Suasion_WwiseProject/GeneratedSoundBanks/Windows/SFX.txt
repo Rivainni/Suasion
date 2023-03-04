@@ -12,6 +12,9 @@ Switch	ID	Name	Switch Group			Notes
 	712897245	Mud	Footsteps			
 	2058049674	Wood	Footsteps			
 
+Effect plug-ins	ID	Name	Type				Notes
+	3604890626	High_Pass_60Hz	Wwise Parametric EQ			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	12014692	click-4	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\click-4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\click-4		106080
 	95421314	Footsteps - Wood	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Footsteps - Wood_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Wood		1192032

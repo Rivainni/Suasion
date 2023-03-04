@@ -16,15 +16,19 @@
 						<Sound Name="Ambient" ID="{A18E889D-6F55-40A1-ABCB-BD2A503FB795}" ShortID="245429319">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-15</Value>
+										<Value>-18</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1E1F6B94-8594-4C36-83C1-EE9478466E23}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<ObjectRef Name="High_Pass_60Hz" ID="{F9627628-0B10-4272-BC30-D4C20423CB38}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{70D8445B-62DE-48C4-BA70-9CC95F1651B6}"/>
@@ -110,7 +114,7 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-2</Value>
+										<Value>-12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -123,7 +127,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Exploration" ID="{BBA17EE6-6988-4DA4-928D-C1B6A7AC1D8D}">
+								<AudioFileSource Name="Exploration" ID="{43B7259C-2B0D-4A43-B124-1E46D831C037}">
 									<Language>SFX</Language>
 									<AudioFile>Exploration.wav</AudioFile>
 									<MediaIDList>
@@ -132,7 +136,7 @@
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="Exploration" ID="{BBA17EE6-6988-4DA4-928D-C1B6A7AC1D8D}" Platform="Linked"/>
+								<ActiveSource Name="Exploration" ID="{43B7259C-2B0D-4A43-B124-1E46D831C037}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Introduction" ID="{FD067361-D29E-49CE-8207-3B2B6505B6FA}" ShortID="661424465">

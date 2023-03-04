@@ -148,6 +148,7 @@ public class StoryManager : MonoBehaviour
                         textBoxMode = false;
                     }
                     PauseAmbient();
+                    PauseMusic("Map");
                     PlayMusic("Introduction");
                     gameManager.SetIntro(true);
                     break;
@@ -160,6 +161,7 @@ public class StoryManager : MonoBehaviour
                         textBoxMode = false;
                     }
                     PauseAmbient();
+                    PauseMusic("Map");
                     PlayMusic("Persuasion");
                     gameManager.SetPersuade(true);
                     break;
@@ -238,6 +240,16 @@ public class StoryManager : MonoBehaviour
         AkSoundEngine.PostEvent("Enter_" + music, gameObject);
     }
 
+    void PauseMusic(string music)
+    {
+        AkSoundEngine.ExecuteActionOnEvent("Enter_" + music, AkActionOnEventType.AkActionOnEventType_Pause, gameObject, 0);
+    }
+
+    void ResumeMusic(string music)
+    {
+        AkSoundEngine.ExecuteActionOnEvent("Enter_" + music, AkActionOnEventType.AkActionOnEventType_Resume, gameObject, 1);
+    }
+
     void PlayAmbient()
     {
         AkSoundEngine.PostEvent("Play_Ambient", gameObject);
@@ -250,7 +262,7 @@ public class StoryManager : MonoBehaviour
 
     void ResumeAmbient()
     {
-        AkSoundEngine.ExecuteActionOnEvent("Play_Ambient", AkActionOnEventType.AkActionOnEventType_Resume, gameObject, 0);
+        AkSoundEngine.ExecuteActionOnEvent("Play_Ambient", AkActionOnEventType.AkActionOnEventType_Resume, gameObject, 1);
     }
 
     // Yarn commands below this point
@@ -269,7 +281,9 @@ public class StoryManager : MonoBehaviour
             gameManager.PauseTimer(false);
             gameManager.HideTimer(false);
             gameManager.Reset();
-            PlayMusic("Map");
+            ResumeMusic("Map");
+            PauseMusic("Introduction");
+            PauseMusic("Persuasion");
             ResumeAmbient();
         }
     }

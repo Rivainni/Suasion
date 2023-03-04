@@ -83,3 +83,20 @@ AMSEL: Red marks are all over the door, similar to the ones the flower has.
 <<addclue "Game Manager" "Kitchen Door" "The door is metal with a single window on top covered with black paint. I could barely see and hear what is in there. Red marks are all over the door, similar to the ones the flower has." "MARIA">>
 <<enddialogue "Game Manager">>
 ===
+
+title: BakerPersuasion
+tags: persuasion targetstart
+---
+<<setmultiplier "Game Manager" 2>>
+<<set $persuasion to 30>>
+<<set $choice to "">>
+<<set $response to "">>
+<<settarget "Advance" 4>>
+<<setactive "Advance" 4>>
+<<focustarget "Advance" true>>
+MARIA: I'm back, let me just stock the trays first before we talk about your little escapade.
+<<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
+AMSEL: Okay...
+AMSEL: {$choice}
+===

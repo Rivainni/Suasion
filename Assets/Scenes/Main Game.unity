@@ -2704,6 +2704,8 @@ Transform:
   - {fileID: 1352273348}
   - {fileID: 786554356}
   - {fileID: 862522727}
+  - {fileID: 1095550540}
+  - {fileID: 1319066692}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46200,7 +46202,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -46221,6 +46223,7 @@ PolygonCollider2D:
       - {x: 20.03125, y: 11.34375}
       - {x: 20, y: 10.1875}
       - {x: 19.5, y: 9.28125}
+      - {x: 16.96632, y: 9.3010435}
       - {x: 15.5, y: 9.3125}
       - {x: 15.4375, y: 9.25}
       - {x: 15.34375, y: 6.78125}
@@ -46469,7 +46472,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.8571186, y: 9.119764}
@@ -47422,7 +47425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &992392088
 Transform:
   m_ObjectHideFlags: 0
@@ -49267,6 +49270,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1095550539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1095550540}
+  - component: {fileID: 1095550542}
+  - component: {fileID: 1095550541}
+  m_Layer: 0
+  m_Name: Cashier
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1095550540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095550539}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.19, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 305208846}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1095550541
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095550539}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 5.9938526, y: 7.4261503}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.60894394, y: 0.71081686}
+  m_EdgeRadius: 0
+--- !u!114 &1095550542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095550539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Cashier
+  type: Clue
+  gameManager: {fileID: 1901980257}
+  storyManager: {fileID: 1901980258}
+  reference: {fileID: 0}
+  keywords: []
 --- !u!1 &1097182103
 GameObject:
   m_ObjectHideFlags: 0
@@ -49389,7 +49469,7 @@ GameObject:
   - component: {fileID: 1104300772}
   - component: {fileID: 1104300773}
   - component: {fileID: 1104300774}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Baker_House_Furniture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49451,8 +49531,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: dfc97c81ad2c808458f5e4191ab435e3, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 7f0d99747d0e141488c0a06d1b0d1b8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -50185,7 +50265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1297644087
 Transform:
   m_ObjectHideFlags: 0
@@ -50606,6 +50686,83 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1319066691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1319066692}
+  - component: {fileID: 1319066694}
+  - component: {fileID: 1319066693}
+  m_Layer: 0
+  m_Name: Bread Trays
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1319066692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319066691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.19, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 305208846}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1319066693
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319066691}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 3.0386314, y: 3.5380924}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.5044632, y: 1.2033553}
+  m_EdgeRadius: 0
+--- !u!114 &1319066694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319066691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: BreadTrays
+  type: Clue
+  gameManager: {fileID: 1901980257}
+  storyManager: {fileID: 1901980258}
+  reference: {fileID: 0}
+  keywords: []
 --- !u!114 &1319825866 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4179151759465852811, guid: 4f1f74b945f5943d184e2793ee766977, type: 3}
@@ -58565,8 +58722,13 @@ PolygonCollider2D:
       - {x: 15.53125, y: 6.65625}
       - {x: 15.59375, y: 6.59375}
       - {x: 16.125, y: 6.53125}
-      - {x: 16.625, y: 7.375}
-      - {x: 21.0625, y: 7.3125}
+      - {x: 16.131763, y: 7.4792047}
+      - {x: 16.163391, y: 8.328024}
+      - {x: 17.047838, y: 8.281147}
+      - {x: 17.082825, y: 8.019384}
+      - {x: 19.904947, y: 7.9000926}
+      - {x: 19.873606, y: 7.432064}
+      - {x: 22.119448, y: 7.3708587}
       - {x: 22.0625, y: 6.25}
       - {x: 22.0625, y: 4.03125}
       - {x: 22.1875, y: 3.875}
