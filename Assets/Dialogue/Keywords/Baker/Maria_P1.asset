@@ -29,34 +29,34 @@ MonoBehaviour:
   m_Combinations:
   - m_Set: campaign_earnest_straight
     m_Mood: positive
-    m_Points: 5
+    m_Points: 3
     m_Choice: We are starting a campaign to go against our current Mayor in the elections
-    m_Response: Not a good idea baby
+    m_Response: Not a good idea, baby.
   - m_Set: campaign_earnest_exaggerate
     m_Mood: positive
-    m_Points: 5
+    m_Points: 3
     m_Choice: We need to banish the poisonous Mayor that's killing our town, and
       we have a plan
     m_Response: Not a good idea baby.
   - m_Set: campaign_earnest_downplay
     m_Mood: positive
-    m_Points: 5
+    m_Points: 3
     m_Choice: We're trying to fix a problem concerning our homes and its politics
     m_Response: Not a good idea baby.
   - m_Set: campaign_earnest_straight
     m_Mood: neutral
-    m_Points: 5
+    m_Points: 3
     m_Choice: We are starting a campaign to go against our current Mayor in the elections
     m_Response: I don't like politics, they bore me.
   - m_Set: campaign_earnest_exaggerate
     m_Mood: neutral
-    m_Points: 5
+    m_Points: 3
     m_Choice: We need to banish the poisonous Mayor that's killing our town, and
       we have a plan
     m_Response: I don't like politics, they bore me.
   - m_Set: campaign_earnest_downplay
     m_Mood: neutral
-    m_Points: 5
+    m_Points: 3
     m_Choice: We're trying to fix a problem concerning our homes and its politics
     m_Response: I don't like politics, they bore me.
   - m_Set: campaign_earnest_straight
@@ -64,162 +64,162 @@ MonoBehaviour:
     m_Points: 4
     m_Choice: We are starting a campaign to go against our current Mayor in the elections
     m_Response: Not a promising cause there, but I am interested to see how it turns
-      out
+      out.
   - m_Set: campaign_earnest_exaggerate
     m_Mood: negative
     m_Points: 4
     m_Choice: We need to banish the poisonous Mayor that's killing our town, and
       we have a plan
     m_Response: Not a promising cause there, but I am interested to see how it turns
-      out
+      out.
   - m_Set: campaign_earnest_downplay
     m_Mood: negative
     m_Points: 4
     m_Choice: We're trying to fix a problem concerning our homes and its politics
     m_Response: Not a promising cause there, but I am interested to see how it turns
-      out
+      out.
   - m_Set: support_earnest_straight
     m_Mood: positive
-    m_Points: 0
+    m_Points: 4
     m_Choice: We need support to succeed in our cause.
     m_Response: Ohh dear, the poor people. Yes, of course I will help you little
       ones.
   - m_Set: support_earnest_exaggerate
     m_Mood: positive
-    m_Points: 0
+    m_Points: 4
     m_Choice: We can't do it without your help, and you know a lot of people that
       could help us too.
     m_Response: Ohh dear, the poor people. Yes, of course I will help you little
       ones
   - m_Set: support_earnest_downplay
     m_Mood: positive
-    m_Points: 0
+    m_Points: 4
     m_Choice: We want to help people but we can't do it alone.
     m_Response: Ohh dear, the poor people. Yes, of course I will help you little
       ones
   - m_Set: support_earnest_straight
     m_Mood: neutral
-    m_Points: 0
+    m_Points: 2
     m_Choice: We need support to succeed in our cause.
     m_Response: You gotta give me more than that little baby.
   - m_Set: support_earnest_exaggerate
     m_Mood: neutral
-    m_Points: 0
+    m_Points: 2
     m_Choice: We can't do it without your help, and you know a lot of people that
       could help us too.
     m_Response: You gotta give me more than that little baby.
   - m_Set: support_earnest_downplay
     m_Mood: neutral
-    m_Points: 0
+    m_Points: 2
     m_Choice: We want to help people but we can't do it alone.
     m_Response: You gotta give me more than that little baby.
   - m_Set: support_earnest_straight
     m_Mood: negative
-    m_Points: 0
+    m_Points: 3
     m_Choice: We need support to succeed in our cause.
     m_Response: You haven't even told me about what your cause is.
   - m_Set: support_earnest_exaggerate
     m_Mood: negative
-    m_Points: 0
+    m_Points: 3
     m_Choice: We can't do it without your help, and you know a lot of people that
       could help us too.
     m_Response: You haven't even told me about what your cause is.
   - m_Set: support_earnest_downplay
     m_Mood: negative
-    m_Points: 0
+    m_Points: 3
     m_Choice: We want to help people but we can't do it alone.
     m_Response: You haven't even told me about what your cause is.
   - m_Set: gossip_earnest_straight
     m_Mood: positive
-    m_Points: 0
+    m_Points: 5
     m_Choice: Helping someone is of no use, unless you know their true problems
     m_Response: Well first you'll need to get them to talk in the first place.
   - m_Set: gossip_earnest_exaggerate
-    m_Mood: positive
+    m_Mood: 5
     m_Points: 0
     m_Choice: To truly help someone, we need to know them first.
     m_Response: Well first you'll need to get them to talk in the first place.
   - m_Set: gossip_earnest_downplay
     m_Mood: positive
-    m_Points: 0
+    m_Points: 5
     m_Choice: We want to know more about our neighbors, but we're too shy to ask
       them directly.
     m_Response: Well first you'll need to get them to talk in the first place.
   - m_Set: gossip_earnest_straight
     m_Mood: neutral
-    m_Points: 0
+    m_Points: 4
     m_Choice: Helping someone is of no use, unless you know their true problems.
     m_Response: Well who are you to advocate such a philosophy?
   - m_Set: gossip_earnest_exaggerate
     m_Mood: neutral
-    m_Points: 0
+    m_Points: 4
     m_Choice: To truly help someone, we need to know them first.
     m_Response: Well who are you to advocate such a philosophy?
   - m_Set: gossip_earnest_downplay
     m_Mood: neutral
-    m_Points: 0
+    m_Points: 4
     m_Choice: We want to know more about our neighbors, but we're too shy to ask
       them directly.
     m_Response: Well who are you to advocate such a philosophy?
   - m_Set: gossip_earnest_straight
     m_Mood: negative
-    m_Points: 0
+    m_Points: 5
     m_Choice: Helping someone is of no use, unless you know their true problems.
     m_Response: Cut to the chase, these prerequisites are boring me.
   - m_Set: gossip_earnest_exaggerate
     m_Mood: negative
-    m_Points: 0
+    m_Points: 5
     m_Choice: To truly help someone, we need to know them first.
     m_Response: Cut to the chase, these prerequisites are boring me.
   - m_Set: gossip_earnest_downplay
     m_Mood: negative
-    m_Points: 0
+    m_Points: 5
     m_Choice: We want to know more about our neighbors, but we're too shy to ask
       them directly.
     m_Response: Cut to the chase, these prerequisites are boring me.
   - m_Set: campaign_cautious_straight
     m_Mood: positive
-    m_Points: 0
+    m_Points: 4
     m_Choice: There's a problem we have in this town and our campaign can fix it
     m_Response: I'm listening...
   - m_Set: campaign_cautious_exaggerate
     m_Mood: positive
-    m_Points: 0
+    m_Points: 4
     m_Choice: We have a huge problem happening in this town and we're all affected!
     m_Response: I'm listening...
   - m_Set: campaign_cautious_downplay
     m_Mood: positive
-    m_Points: 0
+    m_Points: 4
     m_Choice: There's a slight concern in the current state of our town.
     m_Response: I'm listening...
   - m_Set: campaign_cautious_straight
     m_Mood: neutral
-    m_Points: 0
+    m_Points: 5
     m_Choice: There's a problem we have in this town and our campaign can fix it
     m_Response: I'm interested to see what you can do to fix it, little baby.
   - m_Set: campaign_cautious_exaggerate
     m_Mood: neutral
-    m_Points: 0
+    m_Points: 5
     m_Choice: We have a huge problem happening in this town and we're all affected!
     m_Response: I'm interested to see what you can do to fix it, little baby.
   - m_Set: campaign_cautious_downplay
     m_Mood: neutral
-    m_Points: 0
+    m_Points: 5
     m_Choice: There's a slight concern in the current state of our town.
     m_Response: I'm interested to see what you can do to fix it, little baby.
   - m_Set: campaign_cautious_straight
     m_Mood: negative
-    m_Points: 0
+    m_Points: 4
     m_Choice: There's a problem we have in this town and our campaign can fix it
     m_Response: Well, you have a long road ahead of you and your friend, then.
   - m_Set: campaign_cautious_exaggerate
     m_Mood: negative
-    m_Points: 0
+    m_Points: 4
     m_Choice: We have a huge problem happening in this town and we're all affected!
     m_Response: Well, you have a long road ahead of you and your friend, then.
   - m_Set: campaign_cautious_downplay
     m_Mood: negative
-    m_Points: 0
+    m_Points: 4
     m_Choice: There's a slight concern in the current state of our town.
     m_Response: Well, you have a long road ahead of you and your friend, then.
   - m_Set: support_cautious_straight
