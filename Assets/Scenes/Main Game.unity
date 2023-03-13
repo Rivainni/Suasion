@@ -49712,9 +49712,9 @@ PolygonCollider2D:
       - {x: 16.959572, y: 4.159943}
       - {x: 17.003693, y: 4.1856823}
       - {x: 17.15625, y: 4.15625}
-      - {x: 17.053268, y: 4.6020317}
-      - {x: 18.677608, y: 4.589957}
-      - {x: 19.682941, y: 4.5331545}
+      - {x: 17.08303, y: 4.1853566}
+      - {x: 18.692492, y: 4.098875}
+      - {x: 19.682941, y: 4.086716}
       - {x: 19.6746, y: 4.024815}
       - {x: 19.874563, y: 4.119974}
       - {x: 20, y: 5.65625}
@@ -51219,12 +51219,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  type: 
-  gameManager: {fileID: 0}
-  storyManager: {fileID: 0}
+  title: BakerPersuasion
+  type: Persuade
+  gameManager: {fileID: 1901980257}
+  storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
-  keywords: []
+  keywords:
+  - {fileID: 11400000, guid: 096b608f38ce5c24aa617540fa524b6a, type: 2}
+  - {fileID: 11400000, guid: 096b608f38ce5c24aa617540fa524b6a, type: 2}
 --- !u!1 &1358789062
 GameObject:
   m_ObjectHideFlags: 0

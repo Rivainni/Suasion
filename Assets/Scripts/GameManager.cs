@@ -316,6 +316,8 @@ public class GameManager : MonoBehaviour
         {
             renew.SetActive(true);
         }
+
+        LockMovement(false);
     }
 
     public void AddClue(string name, string description, string character)

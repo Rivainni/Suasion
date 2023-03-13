@@ -99,4 +99,28 @@ MARIA: I'm back, let me just stock the trays first before we talk about your lit
 <<callkeywords "Game Manager">>
 AMSEL: Okay...
 AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MARIA: {$response}
+<<if $persuasion >= 50>>
+It seems like she’s growing more and more convinced of the idea, but you can say more.
+<<elseif $persuasion < 50>>
+You see a growing frown on her face, but you can still say more.
+<<endif>>
+<<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
+AMSEL: Hmmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MARIA: {$response}
+<<set $success to false>>
+<<rollsuccess "Game Manager">>
+
+<<if $success == true>>
+    MARIA: Yes
+<<else>>
+    MARIA: No
+<<endif>>
+<<setmainspeaker "Advance" 0>>
+<<enddialogue "Game Manager">>
+<<endlevel "Game Manager">>
 ===
