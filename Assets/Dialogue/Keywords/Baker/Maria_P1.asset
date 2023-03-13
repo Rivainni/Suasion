@@ -324,4 +324,152 @@ MonoBehaviour:
       them?
     m_Response: Want to have more people to mess with, cause I love to mess with
       people!
+  - m_Set: campaign_blunt_straight
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: The Mayor is destroying our town and we want to stop it.
+    m_Response: Keep squawking like that and you'll be dead by tomorrow.
+  - m_Set: campaign_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: Our Mayor and their political dynasty has been destroying this town
+      for generations.
+    m_Response: Keep squawking like that and you'll be dead by tomorrow.
+  - m_Set: campaign_blunt_downplay
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: The Mayor's policies are not enough to fix the problems of our town,
+      so we want to propose an alternative
+    m_Response: Keep squawking like that and you'll be dead by tomorrow.
+  - m_Set: campaign_blunt_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: The Mayor is destroying our town and we want to stop it.
+    m_Response: Intrusive thoughts getting a hold of you?
+  - m_Set: campaign_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Our Mayor and their political dynasty has been destroying this town
+      for generations.
+    m_Response: Intrusive thoughts getting a hold of you?
+  - m_Set: campaign_blunt_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: The Mayor's policies are not enough to fix the problems of our town,
+      so we want to propose an alternative.
+    m_Response: Intrusive thoughts getting a hold of you?
+  - m_Set: campaign_blunt_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: The Mayor's policies are not enough to fix the problems of our town,
+      so we want to propose an alternative.
+    m_Response: A lost cause little baby, it'll be better if you crawl back to your
+      crib and shut the heck up.
+  - m_Set: campaign_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Our Mayor and their political dynasty has been destroying this town
+      for generations.
+    m_Response: A lost cause little baby, it'll be better if you crawl back to your
+      crib and shut the heck up.
+  - m_Set: campaign_blunt_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: The Mayor's policies are not enough to fix the problems of our town,
+      so we want to propose an alternative.
+    m_Response: A lost cause little baby, it'll be better if you crawl back to your
+      crib and shut the heck up.
+  - m_Set: support_blunt_straight
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: If we don't help them, then who will?
+    m_Response: Well then, why don't you ask your gods for help?
+  - m_Set: support_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: If we do help them, they won't suffer under extreme poverty anymore.
+    m_Response: Well then, why don't you ask your gods for help?
+  - m_Set: support_blunt_downplay
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: They can't fix their problems on their own.
+    m_Response: Well then, why don't you ask your gods for help?
+  - m_Set: support_blunt_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: If we don't help them, then who will?
+    m_Response: Then just ask the Mayor for help, he loves to "help" those in need.
+  - m_Set: support_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: If we do help them, they won't suffer under extreme poverty anymore.
+    m_Response: Then just ask the Mayor for help, he loves to "help" those in need.
+  - m_Set: support_blunt_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: They can't fix their problems on their own.
+    m_Response: Then just ask the Mayor for help, he loves to "help" those in need.
+  - m_Set: support_blunt_straight
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: If we don't help them, then who will?
+    m_Response: How is that my problem? All I care is my own profit from such exchanges
+      baby.
+  - m_Set: support_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: If we do help them, they won't suffer under extreme poverty anymore.
+    m_Response: How is that my problem? All I care is my own profit from such exchanges
+      baby.
+  - m_Set: support_blunt_downplay
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: They can't fix their problems on their own.
+    m_Response: How is that my problem? All I care is my own profit from such exchanges
+      baby.
+  - m_Set: gossip_blunt_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We need information about our townsfolk.
+    m_Response: Everything has a price little one, even information.
+  - m_Set: gossip_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Information is key to a successful operation.
+    m_Response: Everything has a price little one, even information.
+  - m_Set: gossip_blunt_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We need info so that we can truly help the people of our town.
+    m_Response: Everything has a price little one, even information.
+  - m_Set: gossip_blunt_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We need info so that we can truly help the people of our town.
+    m_Response: I can divulge such, for a price of course.
+  - m_Set: gossip_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Information is key to a successful operation.
+    m_Response: I can divulge such, for a price of course.
+  - m_Set: gossip_blunt_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We need info so that we can truly help the people of our town.
+    m_Response: I can divulge such, for a price of course.
+  - m_Set: gossip_blunt_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We need information about our townsfolk.
+    m_Response: What are you, a stalker?
+  - m_Set: gossip_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Information is key to a successful operation.
+    m_Response: What are you, a stalker?
+  - m_Set: gossip_blunt_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We need info so that we can truly help the people of our town.
+    m_Response: What are you, a stalker?
   m_Type: Persuasion
