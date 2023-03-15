@@ -1,0 +1,17 @@
+﻿title: BakerTransition
+tags: transition
+---
+AMSEL: Okay, new day, new things to do.
+AMSEL: Hmm, now that we have Sate's dad to support us...we will have to look on to getting more people to support our cause.
+AMSEL: I know that Mari, the town's one and only baker, knows a lot about everyone and everything that happens here.
+AMSEL: If we want to gather supporters, we will need to talk to her.
+AMSEL: We could also go talk to Manuel the farmer, he's a quiet one but the entire agriculturist sector of the town is under him.
+AMSEL: Then there's the Priestess, if we would want to get a powerful supporter, we have to persuade her to our side.
+AMSEL: She's going to be the hardest to persuade.
+<<togglefriend "Game Manager">>
+AMSEL: Knock knock, anyone awake here?
+AMSEL: Sate! Just in time, let's go!
+SATE: Go where?
+SATE: To get some cake!
+<<togglefriend "Game Manager">>
+===

@@ -353,4 +353,10 @@ public class StoryManager : MonoBehaviour
         variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
         variableStorage.SetValue("$persuasion", gameManager.GetPersuasion());
     }
+
+    [YarnCommand("setcharacter")]
+    public void SetCharacter(string character)
+    {
+        gameManager.SetCharacter(character);
+    }
 }

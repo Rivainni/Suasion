@@ -13,6 +13,7 @@ ScriptedImporter:
   - {fileID: 6391573757903218779, guid: f38efa078a81d854694e1e90c5c48046, type: 3}
   - {fileID: 6391573757903218779, guid: 1968162837234d14c80f5ad38695ce75, type: 3}
   - {fileID: 6391573757903218779, guid: 35dbc6d26c1810b4e81b701a53d0112a, type: 3}
+  - {fileID: 6391573757903218779, guid: e8b094fe828d64746ae2bea904c9f558, type: 3}
   compileErrors: []
   serializedDeclarations:
   - name: $choice

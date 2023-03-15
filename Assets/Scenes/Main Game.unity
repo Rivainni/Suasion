@@ -270,6 +270,56 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   links: []
   inverseLinks: []
+--- !u!1 &12249727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 12249728}
+  - component: {fileID: 12249729}
+  m_Layer: 0
+  m_Name: Transition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &12249728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12249727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1297644087}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &12249729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12249727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: BakerTransition
+  type: Transition
+  gameManager: {fileID: 1901980257}
+  storyManager: {fileID: 1901980258}
+  reference: {fileID: 0}
+  keywords: []
 --- !u!1 &16377428
 GameObject:
   m_ObjectHideFlags: 0
@@ -50394,6 +50444,7 @@ Transform:
   - {fileID: 1361487223}
   - {fileID: 208964617}
   - {fileID: 1020366621}
+  - {fileID: 12249728}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
