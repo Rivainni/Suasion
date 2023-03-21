@@ -1,0 +1,12 @@
+[ResolutionW]
+1920
+[ResolutionH]
+1080
+[Fullscreen]
+1
+[MasterVolume]
+100
+[MusicVolume]
+100
+[EffectsVolume]
+100

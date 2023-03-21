@@ -28,6 +28,11 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void Settings()
+    {
+
+    }
+
     void PlayMusic(string music)
     {
         AkSoundEngine.PostEvent("Enter_" + music, gameObject);
