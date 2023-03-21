@@ -8,6 +8,7 @@ using TMPro;
 
 public class Settings : MonoBehaviour
 {
+    public Button settingsButton;
     [SerializeField]
     Slider masterVolume;
     [SerializeField]
@@ -25,6 +26,7 @@ public class Settings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        settingsButton.interactable = false;
         resolutions = Screen.resolutions;
         ReadSettings();
         UpdateSettings();
@@ -168,13 +170,16 @@ public class Settings : MonoBehaviour
     {
         ReadSettings();
         UpdateSettings();
+        settingsButton.interactable = true;
         Destroy(gameObject);
     }
+
     public void Save()
     {
         Screen.fullScreen = currentSettings[2] == 1;
         Screen.SetResolution(currentSettings[0], currentSettings[1], Screen.fullScreen);
         WriteSettings(currentSettings[0], currentSettings[1], currentSettings[2], currentSettings[3], currentSettings[4], currentSettings[5]);
+        settingsButton.interactable = true;
         Destroy(gameObject);
     }
 }
