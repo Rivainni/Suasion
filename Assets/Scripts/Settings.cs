@@ -29,10 +29,10 @@ public class Settings : MonoBehaviour
         settingsButton.interactable = false;
         resolutions = Screen.resolutions;
         ReadSettings();
-        UpdateSettings();
+        DisplaySettings();
     }
 
-    void UpdateSettings()
+    void DisplaySettings()
     {
         resolutionDropdown.ClearOptions();
 
@@ -60,15 +60,28 @@ public class Settings : MonoBehaviour
         effectsVolume.value = currentSettings[5];
     }
 
-    public void SetResolution(int resolutionIndex)
+    void UpdateSettings()
     {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        currentSettings[0] = resolutions[resolutionDropdown.value].width;
+        currentSettings[1] = resolutions[resolutionDropdown.value].height;
+        currentSettings[2] = Convert.ToInt32(fullscreenToggle.isOn);
+        currentSettings[3] = (int)masterVolume.value;
+        currentSettings[4] = (int)musicVolume.value;
+        currentSettings[5] = (int)effectsVolume.value;
     }
 
-    public void SetFullscreen(bool isFullscreen)
+    void RevertSettings()
     {
-        Screen.fullScreen = isFullscreen;
+        resolutionDropdown.value = currentSettings[0];
+        fullscreenToggle.isOn = Convert.ToBoolean(currentSettings[2]);
+        masterVolume.value = currentSettings[3];
+        musicVolume.value = currentSettings[4];
+        effectsVolume.value = currentSettings[5];
+    }
+
+    void SetResolution()
+    {
+        Screen.SetResolution(currentSettings[0], currentSettings[1], Convert.ToBoolean(currentSettings[2]));
     }
 
     // IO
@@ -169,15 +182,15 @@ public class Settings : MonoBehaviour
     public void Cancel()
     {
         ReadSettings();
-        UpdateSettings();
+        RevertSettings();
         settingsButton.interactable = true;
         Destroy(gameObject);
     }
 
     public void Save()
     {
-        Screen.fullScreen = currentSettings[2] == 1;
-        Screen.SetResolution(currentSettings[0], currentSettings[1], Screen.fullScreen);
+        UpdateSettings();
+        SetResolution();
         WriteSettings(currentSettings[0], currentSettings[1], currentSettings[2], currentSettings[3], currentSettings[4], currentSettings[5]);
         settingsButton.interactable = true;
         Destroy(gameObject);
