@@ -15,6 +15,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject buttonPrefab;
     [SerializeField] GameObject togglePrefab;
     [SerializeField] GameObject scorePanel;
+    [SerializeField] GameObject inGameMenu;
     [SerializeField] HealthBar persuasionBar;
     [SerializeField] HealthBar empathyBar;
     [SerializeField] GameManager gameManager;
@@ -45,7 +46,9 @@ public class MainUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("Main Menu");
+            inGameMenu.SetActive(true);
+            gameManager.PauseTimer(true);
+            gameManager.LockMovement(true);
         }
     }
 
@@ -297,13 +300,13 @@ public class MainUI : MonoBehaviour
 
         if (gameManager.GetClues().Count > 1)
         {
-            notebookText.text += "Clues";
+            notebookText.text += "Clues " + "\n";
         }
         foreach (Clue clue in gameManager.GetClues())
         {
-            notebookText.text += clue.character;
+            notebookText.text += "\n" + clue.character;
             notebookText.text += "\n" + clue.name;
-            notebookText.text += "\n" + clue.description;
+            notebookText.text += "\n" + clue.description + "\n";
         }
     }
 

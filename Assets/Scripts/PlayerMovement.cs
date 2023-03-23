@@ -53,16 +53,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void LockMovement()
-    {
-        activeLock = true;
-    }
-
-    public void UnlockMovement()
-    {
-        activeLock = false;
-    }
-
     void PlayFootsteps()
     {
         AkSoundEngine.PostEvent("Player_Footsteps", gameObject);
@@ -71,5 +61,15 @@ public class PlayerMovement : MonoBehaviour
     void PauseFootsteps()
     {
         AkSoundEngine.ExecuteActionOnEvent("Player_Footsteps", AkActionOnEventType.AkActionOnEventType_Pause, gameObject);
+    }
+
+    public void LockMovement()
+    {
+        activeLock = true;
+    }
+
+    public void UnlockMovement()
+    {
+        activeLock = false;
     }
 }

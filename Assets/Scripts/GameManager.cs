@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour, IDataPersistence
 {
     [SerializeField] MainUI mainUI;
     [SerializeField] StoryManager storyManager;
@@ -13,13 +13,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] int startLevel; //for testing purposes
     // Start is called before the first frame update
 
+    [System.Serializable]
     public struct SaveFile
     {
-        bool inPersuade;
-        bool inIntro;
-        float lastPValue;
-        float lastMultiplier;
-        int level;
+        public float positionX;
+        public float positionY;
+        public float persuasion;
+        public float empathy;
+        public string finished;
+        public string currentCharacter;
+        public string progress;
+        public int level;
+        public int totalScore;
     }
 
     float persuasion = 30;
@@ -33,6 +38,7 @@ public class GameManager : MonoBehaviour
     bool inIntro = false;
     int level = 0;
     int score;
+    int totalScore;
     bool success = false;
 
     // for the log
@@ -47,14 +53,6 @@ public class GameManager : MonoBehaviour
     SaveFile current;
     void Start()
     {
-        current = new SaveFile();
-        // TextRW.SetKeywords(keywordsFile);
-        // foreach (TextRW.Keyword keyword in TextRW.GetKeywords())
-        // {
-        //     Debug.Log(keyword.Word);
-        //     Debug.Log(keyword.Category);
-        //     Debug.Log(keyword.Correct);
-        // }
         logList.Clear();
 
         level = startLevel;
@@ -318,6 +316,10 @@ public class GameManager : MonoBehaviour
         }
 
         LockMovement(false);
+
+        totalScore += score;
+        score = 0;
+
     }
 
     public void AddClue(string name, string description, string character)
@@ -396,5 +398,25 @@ public class GameManager : MonoBehaviour
     public void ConfirmKeywords()
     {
         storyManager.ConfirmKeywords();
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        gameData.persuasion = persuasion;
+        gameData.empathy = empathy;
+        gameData.level = level;
+        gameData.totalScore = totalScore;
+        gameData.currentCharacter = currentCharacter;
+        gameData.mood = mood;
+    }
+
+    public void LoadData(GameData gameData)
+    {
+
     }
 }
