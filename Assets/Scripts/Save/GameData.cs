@@ -13,10 +13,13 @@ public class GameData
     public string currentCharacter;
     public string progress;
 
-    // Serialize clues and logs
+    public List<Clue> clues;
+    public List<Log> logs;
+    public int[] finishedCharacters;
     public string mood;
 
-    // 
+    // Player
+    public Vector2 playerPosition;
 
     public GameData()
     {
@@ -31,5 +34,6 @@ public class GameData
         totalScore = 0;
         currentCharacter = "";
         mood = "neutral";
+        playerPosition = new Vector2(0, 0);
     }
 }

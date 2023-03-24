@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
     [SerializeField] float moveSpeed;
     [SerializeField] Rigidbody2D rBody;
@@ -71,5 +71,15 @@ public class PlayerMovement : MonoBehaviour
     public void UnlockMovement()
     {
         activeLock = false;
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        gameData.playerPosition = rBody.position;
+    }
+
+    public void LoadData(GameData gameData)
+    {
+        rBody.position = gameData.playerPosition;
     }
 }

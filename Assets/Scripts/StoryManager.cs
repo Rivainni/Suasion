@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using Yarn.Unity;
 
+[System.Serializable]
 public struct Clue
 {
     public string name;
@@ -21,6 +22,7 @@ public struct Clue
 }
 
 // chosen keywords, the amount of persuasion or empathy, their response, their mood
+[System.Serializable]
 public struct Log
 {
     public List<string> keywords;

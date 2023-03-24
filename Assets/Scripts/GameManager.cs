@@ -13,20 +13,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
     [SerializeField] int startLevel; //for testing purposes
     // Start is called before the first frame update
 
-    [System.Serializable]
-    public struct SaveFile
-    {
-        public float positionX;
-        public float positionY;
-        public float persuasion;
-        public float empathy;
-        public string finished;
-        public string currentCharacter;
-        public string progress;
-        public int level;
-        public int totalScore;
-    }
-
     float persuasion = 30;
     float empathy = 30;
     float honesty = 0;
@@ -49,12 +35,10 @@ public class GameManager : MonoBehaviour, IDataPersistence
     List<Combination> combinationList = new List<Combination>();
     List<Log> logList = new List<Log>();
     List<Clue> clueList = new List<Clue>();
+    int[] finishedCharacters = new int[5];
 
-    SaveFile current;
     void Start()
     {
-        logList.Clear();
-
         level = startLevel;
         levelObjects[level].SetActive(true);
     }
@@ -288,7 +272,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     {
         Reset();
         ResetEnd();
-        // ClearClues();
+        finishedCharacters[level] = 1;
         if (level < 1)
         {
             levelObjects[level].SetActive(false);
@@ -319,7 +303,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
         totalScore += score;
         score = 0;
-
     }
 
     public void AddClue(string name, string description, string character)
@@ -412,11 +395,49 @@ public class GameManager : MonoBehaviour, IDataPersistence
         gameData.level = level;
         gameData.totalScore = totalScore;
         gameData.currentCharacter = currentCharacter;
+        if (inPersuade)
+        {
+            gameData.progress = "persuasion start";
+        }
+        else if (inIntro)
+        {
+            gameData.progress = "intro start";
+        }
+        else
+        {
+            gameData.progress = "exploration";
+        }
+
+        gameData.clues = clueList;
+        gameData.logs = logList;
+        gameData.finishedCharacters = finishedCharacters;
         gameData.mood = mood;
     }
 
     public void LoadData(GameData gameData)
     {
+        persuasion = gameData.persuasion;
+        empathy = gameData.empathy;
+        level = gameData.level;
+        totalScore = gameData.totalScore;
+        currentCharacter = gameData.currentCharacter;
+        if (gameData.progress == "persuasion start")
+        {
+            inPersuade = true;
+        }
+        else if (gameData.progress == "intro start")
+        {
+            inIntro = true;
+        }
+        else
+        {
+            inPersuade = false;
+            inIntro = false;
+        }
 
+        clueList = gameData.clues;
+        logList = gameData.logs;
+        finishedCharacters = gameData.finishedCharacters;
+        mood = gameData.mood;
     }
 }
