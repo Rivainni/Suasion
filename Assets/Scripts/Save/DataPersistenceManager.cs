@@ -91,4 +91,9 @@ public class DataPersistenceManager : MonoBehaviour
     {
         return gameData;
     }
+
+    public bool SaveExists()
+    {
+        return dataHandler.SaveExists();
+    }
 }

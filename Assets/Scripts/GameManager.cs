@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] TimeController timeController;
     [SerializeField] GameObject[] levelObjects;
-    [SerializeField] int startLevel; //for testing purposes
     // Start is called before the first frame update
 
     float persuasion = 30;
@@ -39,8 +38,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     void Start()
     {
-        level = startLevel;
-        levelObjects[level].SetActive(true);
+
     }
 
     // Update is called once per frame
@@ -397,21 +395,25 @@ public class GameManager : MonoBehaviour, IDataPersistence
         gameData.currentCharacter = currentCharacter;
         if (inPersuade)
         {
-            gameData.progress = "persuasion start";
+            gameData.inDialogue = "persuasion";
         }
         else if (inIntro)
         {
-            gameData.progress = "intro start";
+            gameData.inDialogue = "intro";
         }
         else
         {
-            gameData.progress = "exploration";
+            gameData.inDialogue = "exploration";
         }
 
         gameData.clues = clueList;
         gameData.logs = logList;
-        gameData.finishedCharacters = finishedCharacters;
         gameData.mood = mood;
+
+        for (int i = 0; i < levelObjects.Length; i++)
+        {
+            gameData.gameProgress[i] = levelObjects[i].activeSelf;
+        }
     }
 
     public void LoadData(GameData gameData)
@@ -421,11 +423,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
         level = gameData.level;
         totalScore = gameData.totalScore;
         currentCharacter = gameData.currentCharacter;
-        if (gameData.progress == "persuasion start")
+        if (gameData.inDialogue == "persuasion start")
         {
             inPersuade = true;
         }
-        else if (gameData.progress == "intro start")
+        else if (gameData.inDialogue == "intro start")
         {
             inIntro = true;
         }
@@ -437,7 +439,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
         clueList = gameData.clues;
         logList = gameData.logs;
-        finishedCharacters = gameData.finishedCharacters;
         mood = gameData.mood;
+
+        for (int i = 0; i < levelObjects.Length; i++)
+        {
+            levelObjects[i].SetActive(gameData.gameProgress[i]);
+        }
     }
 }

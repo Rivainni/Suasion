@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class TimeController : MonoBehaviour
+public class TimeController : MonoBehaviour, IDataPersistence
 {
     [SerializeField] float timeMultiplier;
     [SerializeField] float startHour;
@@ -49,5 +49,16 @@ public class TimeController : MonoBehaviour
     public void SetHide(bool hide)
     {
         gameObject.transform.GetChild(0).gameObject.SetActive(!hide);
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        gameData.time = currentTime.ToString("HH:mm");
+    }
+
+    public void LoadData(GameData gameData)
+    {
+        currentTime = DateTime.Parse(gameData.time);
+        timeIndicator.text = currentTime.ToString("HH:mm");
     }
 }

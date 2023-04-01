@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,15 +12,19 @@ public class GameData
     public int level;
     public int totalScore;
     public string currentCharacter;
-    public string progress;
+    public string inDialogue;
 
     public List<Clue> clues;
     public List<Log> logs;
-    public int[] finishedCharacters;
     public string mood;
+
+    public bool[] gameProgress;
 
     // Player
     public Vector2 playerPosition;
+
+    // Time
+    public string time;
 
     public GameData()
     {
@@ -34,6 +39,10 @@ public class GameData
         totalScore = 0;
         currentCharacter = "";
         mood = "neutral";
-        playerPosition = new Vector2(0, 0);
+        playerPosition = new Vector2(2.6f, -9.48f);
+        inDialogue = "exploration";
+        gameProgress = new bool[5];
+        gameProgress[0] = true;
+        time = "09:00";
     }
 }

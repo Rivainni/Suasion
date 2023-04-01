@@ -11,8 +11,20 @@ public class MainMenu : MonoBehaviour
     GameObject settingsMenu;
     [SerializeField]
     Button settingsButton;
+    [SerializeField]
+    Button continueButton;
+    [SerializeField]
+    DataPersistenceManager dataPersistenceManager;
     void Start()
     {
+        if (dataPersistenceManager.SaveExists())
+        {
+            continueButton.interactable = true;
+        }
+        else
+        {
+            continueButton.interactable = false;
+        }
         PlayMusic("Title");
     }
 
@@ -25,7 +37,13 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+        dataPersistenceManager.NewGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void ContinueGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
     public void ExitGame()
