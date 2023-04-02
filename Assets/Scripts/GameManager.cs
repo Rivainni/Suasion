@@ -386,6 +386,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
         Application.Quit();
     }
 
+    public void ExitToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void SaveData(ref GameData gameData)
     {
         gameData.persuasion = persuasion;

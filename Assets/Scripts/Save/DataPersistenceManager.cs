@@ -21,6 +21,7 @@ public class DataPersistenceManager : MonoBehaviour
             Debug.LogError("Found more than one Data Persistence Manager in the scene.");
         }
         instance = this;
+
         SceneManager.activeSceneChanged += OnSceneWasSwitched;
     }
 
@@ -28,12 +29,11 @@ public class DataPersistenceManager : MonoBehaviour
     {
         dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
         dataPersistenceObjects = FindAllDataPersistenceObjects();
-        LoadGame();
     }
 
     void OnSceneWasSwitched(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.Scene currentScene)
     {
-        if (currentScene.name != "Main Menu")
+        if (currentScene.name == "Main Game")
         {
             dataPersistenceObjects = FindAllDataPersistenceObjects();
             LoadGame();

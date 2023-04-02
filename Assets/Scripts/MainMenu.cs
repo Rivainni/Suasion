@@ -43,6 +43,7 @@ public class MainMenu : MonoBehaviour
 
     public void ContinueGame()
     {
+        dataPersistenceManager.LoadGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 

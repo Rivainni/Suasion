@@ -32,6 +32,11 @@ public class InGameMenu : MonoBehaviour
         settingsScript.settingsButton = settingsButton;
     }
 
+    public void ExitToMainMenu()
+    {
+        gameManager.ExitToMainMenu();
+    }
+
     public void Exit()
     {
         gameManager.ExitGame();
