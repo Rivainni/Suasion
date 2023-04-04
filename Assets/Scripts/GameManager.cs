@@ -38,7 +38,10 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     void Start()
     {
-
+        if (SceneManager.GetActiveScene().name == "Main Game")
+        {
+            levelObjects[level].SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -379,16 +382,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void ConfirmKeywords()
     {
         storyManager.ConfirmKeywords();
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
-
-    public void ExitToMainMenu()
-    {
-        SceneManager.LoadScene("Main Menu");
     }
 
     public void SaveData(ref GameData gameData)

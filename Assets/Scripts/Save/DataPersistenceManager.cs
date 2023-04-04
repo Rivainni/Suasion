@@ -18,9 +18,13 @@ public class DataPersistenceManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         if (instance != null)
         {
-            Debug.LogError("Found more than one Data Persistence Manager in the scene.");
+            Debug.LogWarning("Found more than one Data Persistence Manager in the scene.");
+            Destroy(gameObject);
         }
-        instance = this;
+        else
+        {
+            instance = this;
+        }
 
         SceneManager.activeSceneChanged += OnSceneWasSwitched;
     }
@@ -44,6 +48,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         gameData = new GameData();
         gameData.ResetAll();
+        SaveGame();
     }
 
     public void LoadGame()

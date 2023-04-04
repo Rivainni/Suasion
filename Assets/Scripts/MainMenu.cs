@@ -14,9 +14,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     Button continueButton;
     [SerializeField]
+    LevelLoader levelLoader;
     DataPersistenceManager dataPersistenceManager;
     void Start()
     {
+        dataPersistenceManager = FindObjectOfType<DataPersistenceManager>();
         if (dataPersistenceManager.SaveExists())
         {
             continueButton.interactable = true;
@@ -38,13 +40,12 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         dataPersistenceManager.NewGame();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        levelLoader.LoadLevel("Intro Cutscene");
     }
 
     public void ContinueGame()
     {
-        dataPersistenceManager.LoadGame();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        levelLoader.LoadLevel("Main Game");
     }
 
     public void ExitGame()

@@ -11,6 +11,8 @@ public class InGameMenu : MonoBehaviour
     Button settingsButton;
     [SerializeField]
     GameManager gameManager;
+    [SerializeField]
+    LevelLoader levelLoader;
 
     // Start is called before the first frame update
     void Start()
@@ -34,11 +36,11 @@ public class InGameMenu : MonoBehaviour
 
     public void ExitToMainMenu()
     {
-        gameManager.ExitToMainMenu();
+        levelLoader.LoadLevel("Main Menu");
     }
 
     public void Exit()
     {
-        gameManager.ExitGame();
+        Application.Quit();
     }
 }

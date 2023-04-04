@@ -19,6 +19,7 @@ public class GameData
     public string mood;
 
     public bool[] gameProgress;
+    public List<bool> currentCharacterProgress;
 
     // Player
     public Vector2 playerPosition;
@@ -43,6 +44,7 @@ public class GameData
         inDialogue = "exploration";
         gameProgress = new bool[5];
         gameProgress[0] = true;
+        currentCharacterProgress = new List<bool>();
         time = "09:00";
     }
 }
