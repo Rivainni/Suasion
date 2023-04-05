@@ -70,6 +70,26 @@ public struct Log
     }
 }
 
+[System.Serializable]
+public struct PromoMaterial
+{
+    public string name;
+    public float bonus;
+    public int quantity;
+
+    public PromoMaterial(string name, float bonus, int quantity)
+    {
+        this.name = name;
+        this.bonus = bonus;
+        this.quantity = quantity;
+    }
+
+    public void UseItem()
+    {
+        quantity--;
+    }
+}
+
 public class StoryManager : MonoBehaviour
 {
     [SerializeField]
@@ -308,6 +328,12 @@ public class StoryManager : MonoBehaviour
         }
     }
 
+    [YarnCommand("callitems")]
+    public void CallItems()
+    {
+        mainUI.DisplayItems();
+    }
+
     [YarnCommand("addclue")]
     public void AddClue(string name, string description, string character)
     {
@@ -360,5 +386,11 @@ public class StoryManager : MonoBehaviour
     public void SetCharacter(string character)
     {
         gameManager.SetCharacter(character);
+    }
+
+    [YarnCommand("unlockitems")]
+    public void UnlockItems()
+    {
+        gameManager.GenerateItems();
     }
 }

@@ -110,6 +110,14 @@ SATE: You know, no matter what you say, I’ll still do it.
 
 <<if $success == true>>
     DR. ANTONI: Alright, fine. Just tell me what you need. I’ll go talk to the staff.
+    <<unlockitems "Game Manager">>
+    <<setactive "Advance" 0>>
+    You have unlocked 'promotional items'.
+    Click them at the end of a dialogue to give them to your target.
+    There are three types - pamphlets, posters, and assorted items.
+    These give a 5, 10, and 15% bonus to your persuasion score respectively.
+    You can give more than one item if you wish.
+    Please note, however, that you only get a limited number of each type.
 <<else>>
     DR. ANTONI: You’re on your own. Prove that your cause is worth it.
 <<endif>>

@@ -479,6 +479,7 @@ MonoBehaviour:
   answerPanelP: {fileID: 7389482088217681592, guid: 782a1e27d384710459afbcda23de854e, type: 3}
   dialogueScreen: {fileID: 2066467923}
   keywordPanel: {fileID: 2109133648}
+  itemsPanel: {fileID: 1811549260}
   advanceInnerDialogueButton: {fileID: 632857482}
   buttonPrefab: {fileID: 5164056355585994746, guid: 4b1ddcc95a7eaf143884a37c61a5959e, type: 3}
   togglePrefab: {fileID: 5164056355585994746, guid: dd0f608f67f82436a9365a84adc10991, type: 3}
@@ -55509,6 +55510,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1811549260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2151088451307602848, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
+  m_PrefabInstance: {fileID: 1811549257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1847490633
 GameObject:
   m_ObjectHideFlags: 0

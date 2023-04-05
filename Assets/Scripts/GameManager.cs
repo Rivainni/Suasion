@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     int score;
     int totalScore;
     bool success = false;
+    bool itemUnlocked = false;
 
     // for the log
     float currentValue = 0;
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     List<Combination> combinationList = new List<Combination>();
     List<Log> logList = new List<Log>();
     List<Clue> clueList = new List<Clue>();
+    List<PromoMaterial> itemList = new List<PromoMaterial>();
     int[] finishedCharacters = new int[5];
 
     void Start()
@@ -83,6 +85,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
                 break;
             }
         }
+
         float calc = 0;
         score += basePoints;
 
@@ -343,6 +346,42 @@ public class GameManager : MonoBehaviour, IDataPersistence
         return logList;
     }
 
+    public void GenerateItems()
+    {
+        int rand = Random.Range(0, 4);
+
+        itemUnlocked = true;
+
+        if (rand == 1)
+        {
+            itemList.Add(new PromoMaterial("Pamphlet", 5, 3));
+            itemList.Add(new PromoMaterial("Poster", 10, 0));
+            itemList.Add(new PromoMaterial("Assorted", 15, 0));
+        }
+        else if (rand == 2)
+        {
+            itemList.Add(new PromoMaterial("Pamphlet", 5, 3));
+            itemList.Add(new PromoMaterial("Poster", 10, 2));
+            itemList.Add(new PromoMaterial("Assorted", 15, 0));
+        }
+        else if (rand == 3)
+        {
+            itemList.Add(new PromoMaterial("Pamphlet", 5, 3));
+            itemList.Add(new PromoMaterial("Poster", 10, 2));
+            itemList.Add(new PromoMaterial("Assorted", 15, 1));
+        }
+    }
+
+    public void UseItem(float effect)
+    {
+        persuasion += persuasion * effect;
+    }
+
+    public List<PromoMaterial> GetItems()
+    {
+        return itemList;
+    }
+
     public bool GetSuccess()
     {
         return success;
@@ -406,6 +445,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
         gameData.clues = clueList;
         gameData.logs = logList;
+        gameData.items = itemList;
         gameData.mood = mood;
 
         for (int i = 0; i < levelObjects.Length; i++)
@@ -437,6 +477,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
         clueList = gameData.clues;
         logList = gameData.logs;
+        itemList = gameData.items;
         mood = gameData.mood;
 
         for (int i = 0; i < levelObjects.Length; i++)

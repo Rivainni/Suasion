@@ -11,6 +11,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject answerPanelP;
     [SerializeField] GameObject dialogueScreen;
     [SerializeField] GameObject keywordPanel;
+    [SerializeField] GameObject itemsPanel;
     [SerializeField] GameObject advanceInnerDialogueButton;
     [SerializeField] GameObject buttonPrefab;
     [SerializeField] GameObject togglePrefab;
@@ -287,6 +288,17 @@ public class MainUI : MonoBehaviour
     public void EnableAdvance()
     {
         advanceInnerDialogueButton.GetComponent<Button>().interactable = true;
+    }
+
+    public void DisplayItems()
+    {
+        itemsPanel.SetActive(true);
+        itemsPanel.GetComponent<Items>().DisplayItems();
+    }
+
+    public void HideItems()
+    {
+        itemsPanel.SetActive(false);
     }
 
     public void UpdateNotebook()

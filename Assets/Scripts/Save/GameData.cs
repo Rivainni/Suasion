@@ -16,6 +16,7 @@ public class GameData
 
     public List<Clue> clues;
     public List<Log> logs;
+    public List<PromoMaterial> items;
     public string mood;
 
     public bool[] gameProgress;
@@ -46,5 +47,8 @@ public class GameData
         gameProgress[0] = true;
         currentCharacterProgress = new List<bool>();
         time = "09:00";
+        clues = new List<Clue>();
+        logs = new List<Log>();
+        items = new List<PromoMaterial>();
     }
 }
