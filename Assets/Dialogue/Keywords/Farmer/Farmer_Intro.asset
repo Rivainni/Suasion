@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: Farmer_Intro
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - day
+    - farm
+    m_Tone:
+    - polite
+    - direct
+    m_Honesty: []
+    m_Restrictions: []
+  m_Combinations:
+  - m_Set: polite_day
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Lovely weather we're having.
+    m_Response: Yes, it really is.
+  - m_Set: polite_day
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Lovely weather we're having.
+    m_Response: Luck is with us today.
+  - m_Set: polite_day
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Lovely weather we're having.
+    m_Response: Sure.
+  - m_Set: polite_farm
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: I heard that there was a lot of harvest this season. You must be really
+      glad about it.
+    m_Response: Yes I am, very much so.
+  - m_Set: polite_farm
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: I heard that there was a lot of harvest this season. You must be really
+      glad about it.
+    m_Response: Yes.
+  - m_Set: polite_farm
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: I heard that there was a lot of harvest this season. You must be really
+      glad about it.
+    m_Response: If you say so.
+  - m_Set: direct_day
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: How's your day sir?
+    m_Response: Peachy.
+  - m_Set: direct_day
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: How's your day sir?
+    m_Response: The day has been good to me.
+  - m_Set: direct_day
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: How's your day sir?
+    m_Response: ...
+  - m_Set: direct_farm
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: How's your farm doing sir?
+    m_Response: Could've been better.
+  - m_Set: direct_farm
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: How's your farm doing sir?
+    m_Response: Okay.
+  - m_Set: direct_farm
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: How's your farm doing sir?
+    m_Response: ...
+  m_Type: Intro

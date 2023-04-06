@@ -382,6 +382,13 @@ public class StoryManager : MonoBehaviour
         variableStorage.SetValue("$persuasion", gameManager.GetPersuasion());
     }
 
+    [YarnCommand("checkempathy")]
+    public void CheckEmpathy()
+    {
+        variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+        variableStorage.SetValue("$empathy", gameManager.GetEmpathy());
+    }
+
     [YarnCommand("setcharacter")]
     public void SetCharacter(string character)
     {

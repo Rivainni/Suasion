@@ -87,10 +87,11 @@ AMSEL: {$choice}
 DR. ANTONI: {$response}
 <<setactive "Advance" 0>>
 <<focustarget "Advance" true>>
+<<checkpersuasion "Game Manager">>
 <<if $persuasion >= 50>>
-It seems like he’s growing more and more convinced of the idea, but you can say more.
+    It seems like he’s growing more and more convinced of the idea, but you can say more.
 <<elseif $persuasion < 50>>
-You see a growing frown on his face, but you can still say more.
+    You see a growing frown on his face, but you can still say more.
 <<endif>>
 <<setactive "Advance" 3>>
 <<focustarget "Advance" false>>

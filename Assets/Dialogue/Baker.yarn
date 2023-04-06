@@ -14,7 +14,7 @@ AMSEL: Eyyyyy! That's the spirit.
 title: BakerIntro
 tags: Intro
 ---
-<<setcharacter "Baker">>
+<<setcharacter "Game Manager" "Baker">>
 <<setmultiplier "Game Manager" 1>>
 <<set $choice to "">>
 <<set $response to "">>
@@ -102,10 +102,11 @@ AMSEL: Okay...
 AMSEL: {$choice}
 <<focustarget "Advance" true>>
 MARIA: {$response}
+<<checkpersuasion "Game Manager">>
 <<if $persuasion >= 50>>
-She's looking more interested in our conversation.
+    She's looking more interested in our conversation.
 <<elseif $persuasion < 50>>
-Her smile is growing....she looks auminous.
+    Her smile is growing....she looks auminous.
 <<endif>>
 <<focustarget "Advance" false>>
 <<callkeywords "Game Manager">>

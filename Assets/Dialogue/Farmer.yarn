@@ -1,0 +1,70 @@
+﻿title: FarmerNear
+tags: Area
+---
+<<togglefriend "Game Manager">>
+AMSEL: Ewww, what's that smell?
+SATE: I think that's fertilizer...
+SATE: And fruits?
+AMSEL: Hmm.
+AMSEL: Anyway, let's go!
+SATE: [nomarkup]:([/nomarkup]
+<<togglefriend "Game Manager">>
+<<enddialogue "Game Manager">>
+===
+
+title: FarmerIntro
+tags: Intro
+---
+<<setcharacter "Game Manager" "Farmer">>
+<<setmultiplier "Game Manager" 1>>
+<<set $choice to "">>
+<<set $response to "">>
+<<set $empathy to 30>>
+<<settarget "Advance" 5>>
+<<setactive "Advance" 5>>
+<<focustarget "Advance" false>>
+AMSEL: Hello?
+<<focustarget "Advance" true>>
+MANUEL: What do you want child?
+<<callkeywords "Game Manager">>
+<<focustarget "Advance" false>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MANUEL: {$response}
+<<checkempathy "Game Manager">>
+<<if $empathy >= 50>>
+    His mood has not changed at all, at least this means he will still listen.
+<<elseif $empathy < 50>>
+    He really doesn't want to talk to you.
+<<endif>>
+<<focustarget "Advance" false>>
+AMSEL: I'll just take a look around your farm, if that's ok?
+<<focustarget "Advance" true>>
+MANUEL: ...
+<<focustarget "Advance" false>>
+AMSEL: I assume that's a yes.
+<<focustarget "Advance" true>>
+MANUEL: Just be careful, kid.
+<<enddialogue "Game Manager">>
+===
+
+title: FarmerBed
+tags: Clue
+---
+AMSEL: Is this really where he sleeps? It's covered with dirt and mud.
+===
+
+title: FarmerHayStacks
+tags: Clue
+---
+AMSEL: A lot of hay stacks, but no animals to feed it to.
+AMSEL: Was he forced to sell all of them?
+===
+
+title: FarmerMetalTub
+tags: Clue
+---
+AMSEL: A metal tub with red liquid on it. 
+AMSEL: It looks like the same liquid he uses on his breathing mask.
+===
