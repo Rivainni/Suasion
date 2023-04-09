@@ -9,33 +9,33 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{8EBC25CF-1B78-24E8-64C6-CF610B6FCE85}">
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{F3B0D152-9669-8690-F180-C21AC2E1752E}">
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
 				<File Id="12014692" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>click-4.wav</ShortName>
-					<CachePath>SFX/click-4_10C4C929.wem</CachePath>
+					<CachePath>SFX/click-4_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="95421314" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps - Wood.wav</ShortName>
-					<CachePath>SFX/Footsteps - Wood_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Footsteps - Wood_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="640376649" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps - Mud.wav</ShortName>
-					<CachePath>SFX/Footsteps - Mud_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Footsteps - Mud_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="665351442" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambient.wav</ShortName>
-					<CachePath>SFX/Ambient_C5579977.wem</CachePath>
+					<CachePath>SFX/Ambient_18A59087.wem</CachePath>
 				</File>
 				<File Id="866666796" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>click-10.wav</ShortName>
-					<CachePath>SFX/click-10_10C4C929.wem</CachePath>
+					<CachePath>SFX/click-10_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="917550683" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>click-2.wav</ShortName>
-					<CachePath>SFX/click-2_10C4C929.wem</CachePath>
+					<CachePath>SFX/click-2_3F75BDB9.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -168,5 +168,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3F18997A-E409-3E97-AC4D-44EE68D42A79}</FileHash>
+	<FileHash>{63427D66-191B-31F6-A341-304D7B797214}</FileHash>
 </SoundBanksInfo>

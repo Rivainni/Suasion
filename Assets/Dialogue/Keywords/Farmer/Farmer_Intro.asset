@@ -16,6 +16,7 @@ MonoBehaviour:
     m_Topic:
     - day
     - farm
+    - campaign
     m_Tone:
     - polite
     - direct
@@ -84,5 +85,35 @@ MonoBehaviour:
     m_Mood: negative
     m_Points: 2
     m_Choice: How's your farm doing sir?
+    m_Response: ...
+  - m_Set: polite_campaign
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: Hello, I'm Amsel and this is Sate, we just want to talk to you.
+    m_Response: Okay.
+  - m_Set: polite_campaign
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: Hello, I'm Amsel and this is Sate, we just want to talk to you.
+    m_Response: Sure.
+  - m_Set: polite_campaign
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: Hello, I'm Amsel and this is Sate, we just want to talk to you.
+    m_Response: ...
+  - m_Set: direct_campaign
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: Hello, I'm Amsel and this is Sate, we just want to talk to you.
+    m_Response: Mhm.
+  - m_Set: direct_campaign
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Hello, I'm Amsel and this is Sate, we just want to talk to you.
+    m_Response: Okay.
+  - m_Set: direct_campaign
+    m_Mood: negative
+    m_Points: 0
+    m_Choice: Hello, I'm Amsel and this is Sate, we just want to talk to you.
     m_Response: ...
   m_Type: Intro

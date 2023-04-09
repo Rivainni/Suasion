@@ -16,10 +16,10 @@ Effect plug-ins	ID	Name	Type				Notes
 	3604890626	High_Pass_60Hz	Wwise Parametric EQ			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	12014692	click-4	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\click-4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\click-4		106080
-	95421314	Footsteps - Wood	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Footsteps - Wood_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Wood		1192032
-	640376649	Footsteps - Mud	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Footsteps - Mud_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Mud		6381664
-	665351442	Ambient	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Ambient_C5579977.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient FX\Ambient		7437216
-	866666796	click-10	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\click-10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\click-10		106080
-	917550683	click-2	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\click-2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\click-2		106080
+	12014692	click-4	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\click-4_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\click-4		2557
+	95421314	Footsteps - Wood	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Footsteps - Wood_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Wood		62286
+	640376649	Footsteps - Mud	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Footsteps - Mud_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps - Mud		441375
+	665351442	Ambient	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\Ambient_18A59087.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient FX\Ambient		618911
+	866666796	click-10	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\click-10_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\click-10		4210
+	917550683	click-2	C:\Users\Nitro\Desktop\Misc\Unity\Suasion\Suasion_WwiseProject\.cache\Windows\SFX\click-2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\click-2		4467
 
