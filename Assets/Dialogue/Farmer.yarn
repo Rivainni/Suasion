@@ -68,3 +68,37 @@ tags: Clue
 AMSEL: A metal tub with red liquid on it. 
 AMSEL: It looks like the same liquid he uses on his breathing mask.
 ===
+
+title: FarmerPersuasion
+tags: persuasion
+---
+<<setmultiplier "Game Manager" 1>>
+<<set $choice to "">>
+<<set $response to "">>
+<<set $persuasion to 30>>
+<<settarget "Advance" 5>>
+<<setactive "Advance" 5>>
+<<focustarget "Advance" false>>
+AMSEL: Hello?
+<<focustarget "Advance" true>>
+MANUEL: What do you want child?
+<<callkeywords "Game Manager">>
+<<focustarget "Advance" false>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MANUEL: {$response}
+<<checkpersuasion "Game Manager">>
+<<if $persuasion >= 50>>
+    He looks indifferent, at least that's not negative right?
+<<elseif $persuasion< 50>>
+    He's getting a bit pissed.
+<<endif>>
+<<callkeywords "Game Manager">>
+<<focustarget "Advance" false>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MANUEL: {$response}
+<<enddialogue "Game Manager">>
+===

@@ -55871,7 +55871,9 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
-  keywords: []
+  keywords:
+  - {fileID: 11400000, guid: b0f9b17bd19307c4f8e222425f3b7ccc, type: 2}
+  - {fileID: 11400000, guid: e2eea2efa917e1749a2d7f11c6305c0a, type: 2}
 --- !u!1 &1880889214
 GameObject:
   m_ObjectHideFlags: 0
