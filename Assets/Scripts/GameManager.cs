@@ -299,11 +299,17 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
         if (level > 1)
         {
-            playerMovement.gameObject.transform.position = new Vector3(30.25f, -9.48f, 0);
+
+            Teleport("Spawn");
+        }
+        else if (level > 3)
+        {
+            levelObjects[level].SetActive(true);
+            Teleport("Boss");
         }
         else
         {
-            playerMovement.gameObject.transform.position = new Vector3(2.6f, -3.62f, 0);
+            Teleport("Level 1");
         }
 
         foreach (GameObject renew in GameObject.FindGameObjectsWithTag("Respawn"))
@@ -438,6 +444,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void Teleport(string position)
     {
         GameObject wp = waypoints.transform.Find(position).gameObject;
+
+        mainUI.Fade();
 
         if (wp != null)
         {

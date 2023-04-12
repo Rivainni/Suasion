@@ -401,6 +401,12 @@ public class StoryManager : MonoBehaviour
         gameManager.GenerateItems();
     }
 
+    [YarnCommand("transition")]
+    public void Transition()
+    {
+        mainUI.Fade();
+    }
+
     [YarnCommand("teleport")]
     public void Teleport(string location)
     {

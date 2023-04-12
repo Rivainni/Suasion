@@ -21,6 +21,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] HealthBar empathyBar;
     [SerializeField] GameManager gameManager;
     [SerializeField] TextMeshProUGUI notebookText;
+    [SerializeField] GameObject transition;
     List<string> proscriptionList = new List<string>();
     Button confirmButton;
 
@@ -356,6 +357,11 @@ public class MainUI : MonoBehaviour
     {
         scorePanel.SetActive(false);
         gameManager.ContinueToNextLevel();
+    }
+
+    public void Fade()
+    {
+        transition.SetActive(true);
     }
 
     bool CheckHasClue(string keyword, KeywordSet keywordSet)
