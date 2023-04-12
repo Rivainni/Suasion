@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour, IDataPersistence
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] TimeController timeController;
     [SerializeField] GameObject[] levelObjects;
+    [SerializeField] GameObject waypoints;
+
+    Dictionary<string, int> levelObjectMapping = new Dictionary<string, int>();
     // Start is called before the first frame update
 
     float persuasion = 30;
@@ -43,6 +46,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
         if (SceneManager.GetActiveScene().name == "Main Game")
         {
             levelObjects[level].SetActive(true);
+
+            for (int i = 0; i < levelObjects.Length; i++)
+            {
+                levelObjectMapping.Add(levelObjects[i].name, i);
+            }
         }
     }
 
@@ -415,6 +423,26 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void HideTimer(bool toggle)
     {
         timeController.SetHide(toggle);
+    }
+
+    public void DisableCharacters()
+    {
+
+    }
+
+    public void EnableCharacters()
+    {
+
+    }
+
+    public void Teleport(string position)
+    {
+        GameObject wp = waypoints.transform.Find(position).gameObject;
+
+        if (wp != null)
+        {
+            playerMovement.gameObject.transform.position = wp.transform.position;
+        }
     }
 
     // I didn't want to reference the story manager directly from the UI, so I made this method to call the story manager's ConfirmKeywords() method

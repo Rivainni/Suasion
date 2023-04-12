@@ -400,4 +400,10 @@ public class StoryManager : MonoBehaviour
     {
         gameManager.GenerateItems();
     }
+
+    [YarnCommand("teleport")]
+    public void Teleport(string location)
+    {
+        gameManager.Teleport(location);
+    }
 }

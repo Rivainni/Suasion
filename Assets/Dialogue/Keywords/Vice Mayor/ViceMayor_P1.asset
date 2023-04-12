@@ -1,0 +1,435 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: ViceMayor_P1
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - legal
+    - wrong
+    - reason
+    m_Tone:
+    - earnest
+    - cautious
+    - blunt
+    m_Honesty:
+    - straight
+    - exaggerate
+    - downplay
+    m_Restrictions: []
+  m_Combinations:
+  - m_Set: legal_earnest_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We did our best to follow all relevant laws.
+    m_Response: Go on.
+  - m_Set: legal_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We did our very best to follow any and all laws.
+    m_Response: Go on.
+  - m_Set: legal_earnest_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We tried hard to follow the law.
+    m_Response: Go on.
+  - m_Set: legal_earnest_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We did our best to follow all relevant laws.
+    m_Response: I know.
+  - m_Set: legal_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We did our very best to follow any and all laws.
+    m_Response: I know.
+  - m_Set: legal_earnest_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We tried hard to follow the law.
+    m_Response: I know.
+  - m_Set: legal_earnest_straight
+    m_Mood: negative
+    m_Points: 0
+    m_Choice: We did our best to follow all relevant laws.
+    m_Response: That's not what I'm asking, you imbecile.
+  - m_Set: legal_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 0
+    m_Choice: We did our best to follow all relevant laws.
+    m_Response: We did our very best to follow any and all laws.
+  - m_Set: legal_earnest_downplay
+    m_Mood: negative
+    m_Points: 0
+    m_Choice: We did our best to follow all relevant laws.
+    m_Response: We tried hard to follow the law.
+  - m_Set: wrong_earnest_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We did nothing wrong!
+    m_Response: Wait, but he called you here...
+  - m_Set: wrong_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We did absolutely nothing wrong!
+    m_Response: Wait, but he called you here...
+  - m_Set: wrong_earnest_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We did no wrong.
+    m_Response: Wait, but he called you here...
+  - m_Set: wrong_earnest_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We did nothing wrong!
+    m_Response: Why, then, are you here? Hmm?
+  - m_Set: wrong_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We did absolutely nothing wrong!
+    m_Response: Why, then, are you here? Hmm?
+  - m_Set: wrong_earnest_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We did no wrong.
+    m_Response: Why, then, are you here? Hmm?
+  - m_Set: wrong_earnest_straight
+    m_Mood: negative
+    m_Points: 1
+    m_Choice: We did nothing wrong!
+    m_Response: Ugh. But you're here.
+  - m_Set: wrong_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 1
+    m_Choice: We did absolutely nothing wrong!
+    m_Response: Ugh. But you're here.
+  - m_Set: wrong_earnest_downplay
+    m_Mood: negative
+    m_Points: 1
+    m_Choice: We did no wrong.
+    m_Response: Ugh. But you're here.
+  - m_Set: reason_earnest_straight
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: What we did was right and just.
+    m_Response: Truly?
+  - m_Set: reason_earnest_straight
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: All we did was right and just.
+    m_Response: Truly?
+  - m_Set: reason_earnest_straight
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: What we did was right.
+    m_Response: Truly?
+  - m_Set: reason_earnest_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: What we did was right.
+    m_Response: We'll see.
+  - m_Set: reason_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: What we did was right.
+    m_Response: We'll see.
+  - m_Set: reason_earnest_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: What we did was right.
+    m_Response: We'll see.
+  - m_Set: reason_earnest_straight
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: What we did was right and just.
+    m_Response: Really?
+  - m_Set: reason_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: All we did was right and just.
+    m_Response: Really?
+  - m_Set: reason_earnest_downplay
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: What we did was right.
+    m_Response: Really?
+  - m_Set: legal_cautious_straight
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We stuck to the law.
+    m_Response: I know.
+  - m_Set: legal_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We made sure to stick to the law, every word.
+    m_Response: I know.
+  - m_Set: legal_cautious_downplay
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: So far, we have stuck to the law.
+    m_Response: I know.
+  - m_Set: legal_cautious_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We stuck to the law.
+    m_Response: I know.
+  - m_Set: legal_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We made sure to stick to the law, every word.
+    m_Response: I know.
+  - m_Set: legal_cautious_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: So far, we have stuck to the law.
+    m_Response: I know.
+  - m_Set: legal_cautious_straight
+    m_Mood: negative
+    m_Points: 0
+    m_Choice: We stuck to the law.
+    m_Response: Try again.
+  - m_Set: legal_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 0
+    m_Choice: We made sure to stick to the law, every word.
+    m_Response: Try again.
+  - m_Set: legal_cautious_downplay
+    m_Mood: negative
+    m_Points: 0
+    m_Choice: So far, we have stuck to the law.
+    m_Response: Try again.
+  - m_Set: wrong_cautious_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Did we do anything wrong?
+    m_Response: You must have.
+  - m_Set: wrong_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Did we do *anything* wrong?
+    m_Response: You must have.
+  - m_Set: wrong_cautious_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Did we do something wrong?
+    m_Response: You must have.
+  - m_Set: wrong_cautious_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Did we do something wrong?
+    m_Response: You don't know?
+  - m_Set: wrong_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Did we do *anything* wrong?
+    m_Response: You don't know?
+  - m_Set: wrong_cautious_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Did we do something wrong?
+    m_Response: You don't know?
+  - m_Set: wrong_cautious_straight
+    m_Mood: negative
+    m_Points: 1
+    m_Choice: Did we do anything wrong?
+    m_Response: You should know.
+  - m_Set: wrong_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 1
+    m_Choice: Did we do *anything* wrong?
+    m_Response: You should know.
+  - m_Set: wrong_cautious_downplay
+    m_Mood: negative
+    m_Points: 1
+    m_Choice: Did we do something wrong?
+    m_Response: You should know.
+  - m_Set: reason_cautious_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We have good reason.
+    m_Response: Hmm...
+  - m_Set: reason_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We have a very good reason.
+    m_Response: Hmm...
+  - m_Set: reason_cautious_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We have reasons.
+    m_Response: Hmm...
+  - m_Set: reason_cautious_straight
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: We have good reason.
+    m_Response: Then let me see your reason.
+  - m_Set: reason_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: We have a very good reason.
+    m_Response: Then let me see your reason.
+  - m_Set: reason_cautious_downplay
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: We have reasons.
+    m_Response: Then let me see your reason.
+  - m_Set: reason_cautious_straight
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: We have good reason.
+    m_Response: And that is?
+  - m_Set: reason_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: We have a very good reason.
+    m_Response: And that is?
+  - m_Set: reason_cautious_downplay
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: We have reasons.
+    m_Response: And that is?
+  - m_Set: legal_blunt_straight
+    m_Mood: positive
+    m_Points: 1
+    m_Choice: Legally, we were well within our rights to campaign.
+    m_Response: Don't you think I know that?
+  - m_Set: legal_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 1
+    m_Choice: Legally, we had the right to campaign. The right.
+    m_Response: Don't you think I know that?
+  - m_Set: legal_blunt_downplay
+    m_Mood: positive
+    m_Points: 1
+    m_Choice: The campaign was lawful.
+    m_Response: Don't you think I know that?
+  - m_Set: legal_blunt_straight
+    m_Mood: neutral
+    m_Points: 1
+    m_Choice: The campaign was lawful.
+    m_Response: Don't you think I know that?
+  - m_Set: legal_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 1
+    m_Choice: Legally, we had the right to campaign. The right.
+    m_Response: Don't you think I know that?
+  - m_Set: legal_blunt_downplay
+    m_Mood: neutral
+    m_Points: 1
+    m_Choice: The campaign was lawful.
+    m_Response: Don't you think I know that?
+  - m_Set: legal_blunt_straight
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: Legally, we were well within our rights to campaign.
+    m_Response: Stop wasting my time.
+  - m_Set: legal_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: Legally, we had the right to campaign. The right.
+    m_Response: Stop wasting my time.
+  - m_Set: legal_blunt_downplay
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: The campaign was lawful.
+    m_Response: Stop wasting my time.
+  - m_Set: wrong_blunt_straight
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: I don't even see why we were summoned here..
+    m_Response: You don't know?
+  - m_Set: wrong_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: We were summoned here. But we did nothing wrong.
+    m_Response: You don't know?
+  - m_Set: wrong_blunt_downplay
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: Why were we summoned here?
+    m_Response: You don't know?
+  - m_Set: wrong_blunt_straight
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: I don't even see why we were summoned here..
+    m_Response: You should know.
+  - m_Set: wrong_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: We were summoned here. But we did nothing wrong.
+    m_Response: You should know.
+  - m_Set: wrong_blunt_downplay
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: Why were we summoned here?
+    m_Response: You should know.
+  - m_Set: wrong_blunt_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: I don't even see why we were summoned here..
+    m_Response: You don't know?
+  - m_Set: wrong_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: We were summoned here. But we did nothing wrong.
+    m_Response: You don't know?
+  - m_Set: wrong_blunt_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Why were we summoned here?
+    m_Response: You don't know?
+  - m_Set: reason_blunt_straight
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: The Mayor has been there long enough. We have our reasons.
+    m_Response: WHAT?
+  - m_Set: reason_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: The Mayor needs to go.
+    m_Response: WHAT?
+  - m_Set: reason_blunt_downplay
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: Ask around. There are reasons why the Mayor needs to go.
+    m_Response: WHAT?
+  - m_Set: reason_blunt_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: The Mayor has been there long enough. We have our reasons.
+    m_Response: Outrageous!
+  - m_Set: reason_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: The Mayor needs to go.
+    m_Response: Outrageous!
+  - m_Set: reason_blunt_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: Ask around. There are reasons why the Mayor needs to go.
+    m_Response: Outrageous!
+  - m_Set: reason_blunt_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: The Mayor has been there long enough. We have our reasons.
+    m_Response: Reasons...
+  - m_Set: reason_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: The Mayor has been there long enough. We have our reasons.
+    m_Response: Reasons...
+  - m_Set: reason_blunt_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: The Mayor has been there long enough. We have our reasons.
+    m_Response: Reasons...
+  m_Type: Persuasion

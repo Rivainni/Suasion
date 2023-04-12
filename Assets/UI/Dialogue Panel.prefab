@@ -1988,6 +1988,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a08e7dd992fb34ac8b3eda4e3c2eb1d1, type: 3}
   - {fileID: 21300000, guid: e0a2cdc3d611f064d8e39e93f82e596d, type: 3}
   - {fileID: 21300000, guid: 387a58937e998bc49b4172d37828c916, type: 3}
+  - {fileID: 21300000, guid: b2aea76f991a3ac4b8ac14c66f733787, type: 3}
   normalIcons:
   - {fileID: -2130570143, guid: 4c51eacb7882d6c48aa34b60e936e941, type: 3}
   - {fileID: 1914443014, guid: 00a35c04ba47b2b4cbf5f1e92e26159f, type: 3}
@@ -1995,6 +1996,7 @@ MonoBehaviour:
   - {fileID: 1913352772, guid: 4e4ce9614ed80e544bfa8ac9d9d8c666, type: 3}
   - {fileID: 1694781462, guid: 3bbdea2d538c9934887b21a6e7a4f188, type: 3}
   - {fileID: 1495848516, guid: 9191049e495dbee4e8f6352f22ef8c6a, type: 3}
+  - {fileID: 977730107, guid: ffdaff1f6cb6df049bc2cebf30f851c6, type: 3}
   glowIcons:
   - {fileID: 0}
   - {fileID: 0}

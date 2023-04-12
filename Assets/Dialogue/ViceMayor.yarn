@@ -1,0 +1,82 @@
+﻿title: ViceMayorTP
+tags: Area
+---
+<<togglefriend "Game Manager">>
+Having talked to much of the town, the pair are suddenly invited by government officials...
+...to have a 'discernment' talk.
+AMSEL: Well, looks like we'll just have to talk to her.
+SATE: ...
+<<togglefriend "Game Manager">>
+<<enddialogue "Game Manager">>
+===
+
+title: ViceMayorIntro
+tags: Intro
+---
+<<setcharacter "Game Manager" "Vice Mayor">>
+<<setmultiplier "Game Manager" 1>>
+<<set $choice to "">>
+<<set $response to "">>
+<<set $empathy to 30>>
+<<settarget "Advance" 5>>
+<<setactive "Advance" 5>>
+<<focustarget "Advance" false>>
+AMSEL: Hello?
+<<focustarget "Advance" true>>
+MANUEL: What do you want child?
+<<callkeywords "Game Manager">>
+<<focustarget "Advance" false>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MANUEL: {$response}
+<<checkempathy "Game Manager">>
+<<if $empathy >= 50>>
+    His mood has not changed at all, at least this means he will still listen.
+<<elseif $empathy < 50>>
+    He really doesn't want to talk to you.
+<<endif>>
+<<focustarget "Advance" false>>
+AMSEL: I'll just take a look around your farm, if that's ok?
+<<focustarget "Advance" true>>
+MANUEL: ...
+<<focustarget "Advance" false>>
+AMSEL: I assume that's a yes.
+<<focustarget "Advance" true>>
+MANUEL: Just be careful, kid.
+<<enddialogue "Game Manager">>
+===
+
+title: ViceMayorPersuasion
+tags: persuasion
+---
+<<setmultiplier "Game Manager" 1>>
+<<set $choice to "">>
+<<set $response to "">>
+<<set $persuasion to 30>>
+<<settarget "Advance" 5>>
+<<setactive "Advance" 5>>
+<<focustarget "Advance" false>>
+AMSEL: Hello?
+<<focustarget "Advance" true>>
+MANUEL: What do you want child?
+<<callkeywords "Game Manager">>
+<<focustarget "Advance" false>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MANUEL: {$response}
+<<checkpersuasion "Game Manager">>
+<<if $persuasion >= 50>>
+    He looks indifferent, at least that's not negative right?
+<<elseif $persuasion< 50>>
+    He's getting a bit pissed.
+<<endif>>
+<<callkeywords "Game Manager">>
+<<focustarget "Advance" false>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MANUEL: {$response}
+<<enddialogue "Game Manager">>
+===
