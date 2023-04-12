@@ -16,6 +16,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameObject buttonPrefab;
     [SerializeField] GameObject togglePrefab;
     [SerializeField] GameObject scorePanel;
+    [SerializeField] GameObject endPanel;
     [SerializeField] GameObject inGameMenu;
     [SerializeField] HealthBar persuasionBar;
     [SerializeField] HealthBar empathyBar;
@@ -359,9 +360,25 @@ public class MainUI : MonoBehaviour
         gameManager.ContinueToNextLevel();
     }
 
+    public void Leave()
+    {
+        endPanel.SetActive(false);
+        Application.Quit();
+    }
+
     public void Fade()
     {
         transition.SetActive(true);
+    }
+
+    public void DisplayFinalScore()
+    {
+        string status = gameManager.GetElectionStatus() ? "Victory" : "Defeat";
+        endPanel.SetActive(true);
+        endPanel.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = status;
+        endPanel.transform.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Votes " + gameManager.GetPlayerVotes() + "/" + gameManager.GetTotalVotes(); ;
+        endPanel.transform.GetChild(1).GetChild(2).GetComponent<TextMeshProUGUI>().text = "Score: " + gameManager.GetScore();
+        endPanel.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(delegate { Leave(); });
     }
 
     bool CheckHasClue(string keyword, KeywordSet keywordSet)

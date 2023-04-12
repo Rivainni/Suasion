@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
     int level = 0;
     int score;
     int totalScore;
+    int finalPlayerVotes = 0;
+    int finalTotalVotes = 0;
     bool success = false;
     bool itemUnlocked = false;
 
@@ -429,6 +431,12 @@ public class GameManager : MonoBehaviour, IDataPersistence
     {
         return score;
     }
+
+    public int GetTotalScore()
+    {
+        return totalScore;
+    }
+
     public void PauseTimer(bool toggle)
     {
         timeController.SetPause(toggle);
@@ -467,7 +475,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
         storyManager.ConfirmKeywords();
     }
 
-    public void RolllVotes()
+    public void RollVotes()
     {
         Random.seed = System.DateTime.Now.Millisecond;
 
@@ -502,6 +510,31 @@ public class GameManager : MonoBehaviour, IDataPersistence
             playerVotes += 5;
             totalVotes += 5;
         }
+
+        finalPlayerVotes = playerVotes;
+        finalTotalVotes = totalVotes;
+    }
+
+    public bool GetElectionStatus()
+    {
+        if (finalPlayerVotes > finalTotalVotes / 2)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public int GetPlayerVotes()
+    {
+        return finalPlayerVotes;
+    }
+
+    public int GetTotalVotes()
+    {
+        return finalTotalVotes;
     }
 
     public void SaveData(ref GameData gameData)
@@ -529,9 +562,9 @@ public class GameManager : MonoBehaviour, IDataPersistence
         gameData.items = itemList;
         gameData.mood = mood;
 
-        for (int i = 0; i < levelObjects.Length; i++)
+        for (int i = 0; i < finishedCharacters.Length; i++)
         {
-            gameData.gameProgress[i] = levelObjects[i].activeSelf;
+            gameData.gameProgress[i] = finishedCharacters[i];
         }
     }
 
@@ -563,7 +596,15 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
         for (int i = 0; i < levelObjects.Length; i++)
         {
-            levelObjects[i].SetActive(gameData.gameProgress[i]);
+            finishedCharacters[i] = gameData.gameProgress[i];
+            if (gameData.gameProgress[i] == 0 || gameData.gameProgress[i] == 1)
+            {
+                levelObjects[i].SetActive(true);
+            }
+            else
+            {
+                levelObjects[i].SetActive(false);
+            }
         }
     }
 }
