@@ -19,8 +19,8 @@ public class GameData
     public List<PromoMaterial> items;
     public string mood;
 
-    public bool[] gameProgress;
-    public List<bool> currentCharacterProgress;
+    public int[] gameProgress;
+    public List<int> currentCharacterProgress;
 
     // Player
     public Vector2 playerPosition;
@@ -43,9 +43,9 @@ public class GameData
         mood = "neutral";
         playerPosition = new Vector2(2.6f, -9.48f);
         inDialogue = "exploration";
-        gameProgress = new bool[5];
-        gameProgress[0] = true;
-        currentCharacterProgress = new List<bool>();
+        gameProgress = new int[5];
+        gameProgress[0] = 1;
+        currentCharacterProgress = new List<int>();
         time = "09:00";
         clues = new List<Clue>();
         logs = new List<Log>();

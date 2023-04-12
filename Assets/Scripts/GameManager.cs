@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
     List<Log> logList = new List<Log>();
     List<Clue> clueList = new List<Clue>();
     List<PromoMaterial> itemList = new List<PromoMaterial>();
+
+    // 0 = not yet attempted
+    // 1 = attempting
+    // 2 = failed
+    // 3 = succeeded
     int[] finishedCharacters = new int[5];
 
     void Start()
@@ -403,15 +408,18 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     public bool RollSuccess()
     {
+        Random.seed = System.DateTime.Now.Millisecond;
         // roll a random number between 0 and 100, then check if the random number is less than or equal to persuasion
         int rand = Random.Range(0, 100);
         if (rand <= persuasion)
         {
             success = true;
+            finishedCharacters[levelObjectMapping[currentCharacter]] = 3;
         }
         else
         {
             success = false;
+            finishedCharacters[levelObjectMapping[currentCharacter]] = 2;
         }
 
         return success;
@@ -457,6 +465,43 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void ConfirmKeywords()
     {
         storyManager.ConfirmKeywords();
+    }
+
+    public void RolllVotes()
+    {
+        Random.seed = System.DateTime.Now.Millisecond;
+
+        int playerVotes = 0;
+        int totalVotes = 0;
+        int currentVotes = 0;
+
+        foreach (int status in finishedCharacters)
+        {
+            currentVotes = Random.Range(4, 6);
+            totalVotes += currentVotes;
+
+            if (status == 3)
+            {
+                playerVotes += totalVotes;
+            }
+            else if (status == 2)
+            {
+                playerVotes += Random.Range(0, 2);
+            }
+        }
+
+        // Religion votes will depend on how many of the other groups you persuaded
+
+        if (levelObjectMapping["Farmer"] == 3)
+        {
+            playerVotes += 5;
+            totalVotes += 5;
+        }
+        if (levelObjectMapping["Vice Mayor"] == 3)
+        {
+            playerVotes += 5;
+            totalVotes += 5;
+        }
     }
 
     public void SaveData(ref GameData gameData)

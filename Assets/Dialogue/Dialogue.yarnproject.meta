@@ -15,6 +15,8 @@ ScriptedImporter:
   - {fileID: 6391573757903218779, guid: 35dbc6d26c1810b4e81b701a53d0112a, type: 3}
   - {fileID: 6391573757903218779, guid: e8b094fe828d64746ae2bea904c9f558, type: 3}
   - {fileID: 6391573757903218779, guid: aae89cf52a62689428b6985f3d767753, type: 3}
+  - {fileID: 6391573757903218779, guid: e47a616658680ab47b18aba979b46e0f, type: 3}
+  - {fileID: 6391573757903218779, guid: b5a7bc3ad49bfdf439dc568e950eee82, type: 3}
   compileErrors: []
   serializedDeclarations:
   - name: $choice
@@ -65,6 +67,14 @@ ScriptedImporter:
     description: Implicitly declared in Level1.yarn, node Level1Persuasion
     isImplicit: 1
     sourceYarnAsset: {fileID: 6391573757903218779, guid: 1968162837234d14c80f5ad38695ce75, type: 3}
+  - name: $empathy
+    typeName: Number
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Farmer.yarn, node FarmerIntro
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: aae89cf52a62689428b6985f3d767753, type: 3}
   defaultLanguage: en-PH
   languagesToSourceAssets: []
   useAddressableAssets: 0
