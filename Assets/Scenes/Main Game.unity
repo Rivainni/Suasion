@@ -268,9 +268,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1901980257}
-  links: []
-  inverseLinks:
+  links:
   - {fileID: 1468894659}
+  inverseLinks: []
 --- !u!1 &12249727
 GameObject:
   m_ObjectHideFlags: 0
@@ -46402,9 +46402,9 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   links:
   - {fileID: 1358789062}
+  - {fileID: 737262881}
   inverseLinks:
   - {fileID: 197506892}
-  - {fileID: 737262881}
 --- !u!19719996 &709759976
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -46717,7 +46717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &737262882
 Transform:
   m_ObjectHideFlags: 0
@@ -54552,9 +54552,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1901980257}
-  links: []
-  inverseLinks:
+  links:
   - {fileID: 1403008902}
+  inverseLinks: []
 --- !u!114 &1579507142 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5982003286928407758, guid: 4f1f74b945f5943d184e2793ee766977, type: 3}
@@ -57221,7 +57221,7 @@ GameObject:
   - component: {fileID: 1941777468}
   - component: {fileID: 1941777469}
   m_Layer: 0
-  m_Name: Tutorial
+  m_Name: Friend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61461,7 +61461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2021357888
 Transform:
   m_ObjectHideFlags: 0

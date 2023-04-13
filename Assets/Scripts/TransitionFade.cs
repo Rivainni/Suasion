@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TransitionFade : MonoBehaviour
 {
@@ -31,9 +32,9 @@ public class TransitionFade : MonoBehaviour
 
     void FadeIn()
     {
-        if (gameObject.GetComponent<SpriteRenderer>().color.a < 1)
+        if (gameObject.GetComponent<Image>().color.a < 1)
         {
-            gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, gameObject.GetComponent<SpriteRenderer>().color.a + 0.01f);
+            gameObject.GetComponent<Image>().color = new Color(0, 0, 0, gameObject.GetComponent<Image>().color.a + 0.01f);
         }
         else
         {
@@ -44,9 +45,9 @@ public class TransitionFade : MonoBehaviour
 
     void FadeOut()
     {
-        if (gameObject.GetComponent<SpriteRenderer>().color.a > 0)
+        if (gameObject.GetComponent<Image>().color.a > 0)
         {
-            gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, gameObject.GetComponent<SpriteRenderer>().color.a - 0.01f);
+            gameObject.GetComponent<Image>().color = new Color(0, 0, 0, gameObject.GetComponent<Image>().color.a - 0.01f);
         }
         else
         {

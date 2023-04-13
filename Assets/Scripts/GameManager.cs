@@ -287,6 +287,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
         mainUI.DisplayCurrentScore();
     }
 
+    public void EndGame()
+    {
+        mainUI.DisplayFinalScore();
+    }
+
     public void ContinueToNextLevel()
     {
         Reset();
@@ -309,7 +314,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
             Teleport("Spawn");
         }
-        else if (level > 3)
+        else if (level == 4)
         {
             levelObjects[level].SetActive(true);
             Teleport("Boss");
@@ -317,6 +322,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
         else
         {
             Teleport("Level 1");
+        }
+
+        if (level > 4)
+        {
+            EndGame();
         }
 
         foreach (GameObject renew in GameObject.FindGameObjectsWithTag("Respawn"))

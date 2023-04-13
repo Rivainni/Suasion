@@ -21,29 +21,21 @@ tags: Intro
 <<settarget "Advance" 5>>
 <<setactive "Advance" 5>>
 <<focustarget "Advance" false>>
-AMSEL: Hello?
+AMSEL: Hello.
 <<focustarget "Advance" true>>
-MANUEL: What do you want child?
+PETRA: Do you know what you two have done?
 <<callkeywords "Game Manager">>
 <<focustarget "Advance" false>>
 AMSEL: Hmm...
 AMSEL: {$choice}
 <<focustarget "Advance" true>>
 MANUEL: {$response}
-<<checkempathy "Game Manager">>
-<<if $empathy >= 50>>
-    His mood has not changed at all, at least this means he will still listen.
-<<elseif $empathy < 50>>
-    He really doesn't want to talk to you.
-<<endif>>
-<<focustarget "Advance" false>>
-AMSEL: I'll just take a look around your farm, if that's ok?
 <<focustarget "Advance" true>>
-MANUEL: ...
+PETRA: But I need more than that.
 <<focustarget "Advance" false>>
-AMSEL: I assume that's a yes.
-<<focustarget "Advance" true>>
-MANUEL: Just be careful, kid.
+AMSEL: (We should take a second)
+SATE: *nod*
+AMSEL: Sorry, excuse us for a second.
 <<enddialogue "Game Manager">>
 ===
 
@@ -56,27 +48,20 @@ tags: persuasion
 <<set $persuasion to 30>>
 <<settarget "Advance" 5>>
 <<setactive "Advance" 5>>
-<<focustarget "Advance" false>>
-AMSEL: Hello?
 <<focustarget "Advance" true>>
-MANUEL: What do you want child?
-<<callkeywords "Game Manager">>
+PETRA: Well?
 <<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
 AMSEL: Hmm...
 AMSEL: {$choice}
 <<focustarget "Advance" true>>
-MANUEL: {$response}
+PETRA: {$response}
 <<checkpersuasion "Game Manager">>
 <<if $persuasion >= 50>>
-    He looks indifferent, at least that's not negative right?
+    Maybe you can carry on...
 <<elseif $persuasion< 50>>
-    He's getting a bit pissed.
+    She does not look impressed.
 <<endif>>
-<<callkeywords "Game Manager">>
-<<focustarget "Advance" false>>
-AMSEL: Hmm...
-AMSEL: {$choice}
-<<focustarget "Advance" true>>
-MANUEL: {$response}
+
 <<enddialogue "Game Manager">>
 ===

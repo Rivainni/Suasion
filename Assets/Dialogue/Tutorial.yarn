@@ -36,6 +36,7 @@ tags: intro targetstart
 <<declare $choice = "" as string>>
 <<declare $response = "" as string>>
 <<setmultiplier "Game Manager" 2>>
+<<setcharacter "Game Manager" "Friend">>
 <<settarget "Advance" 2>>
 <<setactive "Advance" 0>>
 <<focustarget "Advance" true>>

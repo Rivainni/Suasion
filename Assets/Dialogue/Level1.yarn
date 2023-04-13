@@ -12,7 +12,7 @@ AMSEL: Let's knock on his door.
 title: Level1Intro
 tags: intro targetstart
 ---
-<<setcharacter "Baker">>
+<<setcharacter "Game Manager" "Doctor">>
 <<setmultiplier "Game Manager" 1>>
 <<settarget "Advance" 3>>
 <<setactive "Advance" 0>>
