@@ -53,6 +53,8 @@ title: FarmerBed
 tags: Clue
 ---
 AMSEL: Is this really where he sleeps? It's covered with dirt and mud.
+<<addclue "Game Manager" "Farmer Bed" "Is this really where he sleeps? It's covered with dirt and mud." "Manuel">>
+<<enddialogue "Game Manager">>
 ===
 
 title: FarmerHayStacks
@@ -60,6 +62,8 @@ tags: Clue
 ---
 AMSEL: A lot of hay stacks, but no animals to feed it to.
 AMSEL: Was he forced to sell all of them?
+<<addclue "Game Manager" "Farmer Hay Stacks" "A lot of hay stacks, but no animals to feed it to. Was he forced to sell all of them?" "Manuel">>
+<<enddialogue "Game Manager">>
 ===
 
 title: FarmerMetalTub
@@ -67,6 +71,8 @@ tags: Clue
 ---
 AMSEL: A metal tub with red liquid on it. 
 AMSEL: It looks like the same liquid he uses on his breathing mask.
+<<addclue "Game Manager" "Farmer Metal Tub" "A lot of hay stacks, but no animals to feed it to. Was he forced to sell all of them?" "Manuel">>
+<<enddialogue "Game Manager">>
 ===
 
 title: FarmerPersuasion
@@ -101,4 +107,5 @@ AMSEL: {$choice}
 <<focustarget "Advance" true>>
 MANUEL: {$response}
 <<enddialogue "Game Manager">>
+<<endlevel "Game Manager">>
 ===

@@ -18,8 +18,8 @@ tags: Intro
 <<set $choice to "">>
 <<set $response to "">>
 <<set $empathy to 30>>
-<<settarget "Advance" 5>>
-<<setactive "Advance" 5>>
+<<settarget "Advance" 6>>
+<<setactive "Advance" 6>>
 <<focustarget "Advance" false>>
 AMSEL: Hello.
 <<focustarget "Advance" true>>
@@ -46,8 +46,8 @@ tags: persuasion
 <<set $choice to "">>
 <<set $response to "">>
 <<set $persuasion to 30>>
-<<settarget "Advance" 5>>
-<<setactive "Advance" 5>>
+<<settarget "Advance" 6>>
+<<setactive "Advance" 6>>
 <<focustarget "Advance" true>>
 PETRA: Well?
 <<focustarget "Advance" false>>
@@ -64,4 +64,5 @@ PETRA: {$response}
 <<endif>>
 
 <<enddialogue "Game Manager">>
+<<endlevel "Game Manager">>
 ===

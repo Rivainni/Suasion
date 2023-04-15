@@ -377,7 +377,7 @@ public class MainUI : MonoBehaviour
         endPanel.SetActive(true);
         endPanel.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = status;
         endPanel.transform.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Votes " + gameManager.GetPlayerVotes() + "/" + gameManager.GetTotalVotes(); ;
-        endPanel.transform.GetChild(1).GetChild(2).GetComponent<TextMeshProUGUI>().text = "Score: " + gameManager.GetScore();
+        endPanel.transform.GetChild(1).GetChild(2).GetComponent<TextMeshProUGUI>().text = "Score: " + gameManager.GetTotalScore();
         endPanel.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(delegate { Leave(); });
     }
 

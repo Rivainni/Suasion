@@ -163,6 +163,7 @@ public class StoryManager : MonoBehaviour
                     break;
                 case 1:
                     innerDialogue.SetActive(true);
+                    mainUI.Fade();
                     if (textBoxMode)
                     {
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
@@ -176,6 +177,7 @@ public class StoryManager : MonoBehaviour
                     break;
                 case 2:
                     innerDialogue.SetActive(true);
+                    mainUI.Fade();
                     if (textBoxMode)
                     {
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
@@ -329,9 +331,12 @@ public class StoryManager : MonoBehaviour
     }
 
     [YarnCommand("callitems")]
-    public void CallItems()
+    public void CallItems(string character)
     {
-        mainUI.DisplayItems();
+        if (gameManager.CheckFinished(character))
+        {
+            mainUI.DisplayItems();
+        }
     }
 
     [YarnCommand("addclue")]

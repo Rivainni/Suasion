@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     [SerializeField] TimeController timeController;
     [SerializeField] GameObject[] levelObjects;
     [SerializeField] GameObject waypoints;
+    [SerializeField] GameObject bossGate;
 
     Dictionary<string, int> levelObjectMapping = new Dictionary<string, int>();
     // Start is called before the first frame update
@@ -296,7 +297,9 @@ public class GameManager : MonoBehaviour, IDataPersistence
     {
         Reset();
         ResetEnd();
-        finishedCharacters[level] = 1;
+
+        Debug.Log("Print 1: Level " + level);
+
         if (level < 1)
         {
             levelObjects[level].SetActive(false);
@@ -308,15 +311,17 @@ public class GameManager : MonoBehaviour, IDataPersistence
             level++;
         }
 
+        Debug.Log("Print 2: Level " + level);
+
 
         if (level > 1)
         {
-
             Teleport("Spawn");
         }
-        else if (level == 4)
+        else if (CheckAllCharactersDone())
         {
-            levelObjects[level].SetActive(true);
+            levelObjects[4].SetActive(true);
+            bossGate.GetComponent<StoryElement>().enabled = true;
             Teleport("Boss");
         }
         else
@@ -324,8 +329,9 @@ public class GameManager : MonoBehaviour, IDataPersistence
             Teleport("Level 1");
         }
 
-        if (level > 4)
+        if (currentCharacter == "Vice Mayor" || level > 5)
         {
+            RollVotes();
             EndGame();
         }
 
@@ -465,6 +471,33 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void EnableCharacters()
     {
 
+    }
+
+    public bool CheckAllCharactersDone()
+    {
+        bool allDone = true;
+        foreach (int status in finishedCharacters)
+        {
+            if (status < 2)
+            {
+                allDone = false;
+                break;
+            }
+        }
+
+        return allDone;
+    }
+
+    public bool CheckFinished(string character)
+    {
+        if (finishedCharacters[levelObjectMapping[character]] > 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void Teleport(string position)
@@ -607,13 +640,28 @@ public class GameManager : MonoBehaviour, IDataPersistence
         for (int i = 0; i < levelObjects.Length; i++)
         {
             finishedCharacters[i] = gameData.gameProgress[i];
-            if (gameData.gameProgress[i] == 0 || gameData.gameProgress[i] == 1)
+
+            if (level == 0)
             {
-                levelObjects[i].SetActive(true);
+                if (gameData.gameProgress[i] == 1)
+                {
+                    levelObjects[i].SetActive(true);
+                }
+                else
+                {
+                    levelObjects[i].SetActive(false);
+                }
             }
             else
             {
-                levelObjects[i].SetActive(false);
+                if (gameData.gameProgress[i] == 0 || gameData.gameProgress[i] == 1)
+                {
+                    levelObjects[i].SetActive(true);
+                }
+                else
+                {
+                    levelObjects[i].SetActive(false);
+                }
             }
         }
     }

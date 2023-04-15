@@ -35,7 +35,7 @@ public class TimeController : MonoBehaviour, IDataPersistence
         }
     }
 
-    void ResetTime()
+    public void ResetTime()
     {
         currentTime = DateTime.Now.Date + TimeSpan.FromHours(startHour);
         timeIndicator.text = currentTime.ToString("HH:mm");
