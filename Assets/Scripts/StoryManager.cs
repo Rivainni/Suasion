@@ -163,7 +163,6 @@ public class StoryManager : MonoBehaviour
                     break;
                 case 1:
                     innerDialogue.SetActive(true);
-                    mainUI.Fade();
                     if (textBoxMode)
                     {
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
@@ -177,7 +176,6 @@ public class StoryManager : MonoBehaviour
                     break;
                 case 2:
                     innerDialogue.SetActive(true);
-                    mainUI.Fade();
                     if (textBoxMode)
                     {
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
@@ -305,6 +303,8 @@ public class StoryManager : MonoBehaviour
             gameManager.PauseTimer(false);
             gameManager.HideTimer(false);
             gameManager.Reset();
+            mainUI.HideItems();
+            mainUI.ResetBars();
             ResumeMusic("Map");
             PauseMusic("Introduction");
             PauseMusic("Persuasion");
@@ -331,12 +331,9 @@ public class StoryManager : MonoBehaviour
     }
 
     [YarnCommand("callitems")]
-    public void CallItems(string character)
+    public void CallItems()
     {
-        if (gameManager.CheckFinished(character))
-        {
-            mainUI.DisplayItems();
-        }
+        mainUI.DisplayItems();
     }
 
     [YarnCommand("addclue")]
@@ -404,6 +401,13 @@ public class StoryManager : MonoBehaviour
     public void UnlockItems()
     {
         gameManager.GenerateItems();
+        mainUI.DisplayItems(true);
+    }
+
+    [YarnCommand("checkitemunlock")]
+    public bool CheckItemUnlock()
+    {
+        return gameManager.CheckItemUnlock();
     }
 
     [YarnCommand("transition")]
@@ -416,5 +420,11 @@ public class StoryManager : MonoBehaviour
     public void Teleport(string location)
     {
         gameManager.Teleport(location);
+    }
+
+    [YarnCommand("quit")]
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

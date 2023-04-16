@@ -56,12 +56,18 @@ AMSEL: Hmm...
 AMSEL: {$choice}
 <<focustarget "Advance" true>>
 PETRA: {$response}
+<<setactive "Advance" 0>>
 <<checkpersuasion "Game Manager">>
 <<if $persuasion >= 50>>
     Maybe you can carry on...
 <<elseif $persuasion< 50>>
     She does not look impressed.
 <<endif>>
+
+<<callitems "Game Manager">>
+This is as much content as we have right now for the final boss.
+The game will now show the end screen.
+Thank you for playing the game!
 
 <<enddialogue "Game Manager">>
 <<endlevel "Game Manager">>

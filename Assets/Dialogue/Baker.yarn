@@ -114,13 +114,14 @@ AMSEL: Hmmm...
 AMSEL: {$choice}
 <<focustarget "Advance" true>>
 MARIA: {$response}
+<<callitems "Game Manager">>
 <<set $success to false>>
 <<rollsuccess "Game Manager">>
 
 <<if $success == true>>
-    MARIA: Yes
+    MARIA: Hmm... I'll see who I can talk to.
 <<else>>
-    MARIA: No
+    MARIA: Nuh uh. It's time for you to go, my dears.
 <<endif>>
 <<setmainspeaker "Advance" 0>>
 <<enddialogue "Game Manager">>

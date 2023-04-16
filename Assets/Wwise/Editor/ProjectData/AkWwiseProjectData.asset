@@ -474,7 +474,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 2e1758cc7ada1a44b83239d603c418f2
     GuidInternal: 
-    m_lastTime: -8585253435103991190
+    m_lastTime: -8585199405058292277
     List:
     - name: Footsteps
       guid: 2f0f59c62b39d04fbb926c571c9a3375
@@ -491,6 +491,22 @@ MonoBehaviour:
         guid: 2f0f59c62b39d04fbb926c571c9a3375
       Path: Switches\Default Work Unit\Footsteps
       values:
+      - name: Grass
+        guid: 95210e0e0b637b4ab36462c07f811b9e
+        id: 4248645337
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 2e1758cc7ada1a44b83239d603c418f2
+        - ElementName: Footsteps
+          ObjectType: 11
+          guid: 2f0f59c62b39d04fbb926c571c9a3375
+        - ElementName: Grass
+          ObjectType: 10
+          guid: 95210e0e0b637b4ab36462c07f811b9e
       - name: Mud
         guid: 98dc68b91d2b1f4d9e70fb41a5a61efb
         id: 712897245
@@ -541,7 +557,7 @@ MonoBehaviour:
     m_lastTime: -8585256902598027044
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000b0000000c0000000d0000000e0000000f00000010000000110000006c852500
+  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000b0000000c0000000d0000000e0000000f0000001000000011000000d6000000d7000000d80000006c852500
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -1,0 +1,29 @@
+﻿title: Mar
+tags: Clue
+---
+MAR: If you smell something strange from the bakery... just keep quiet, yeah?
+<<enddialogue "Game Manager">>
+===
+
+title: Hin
+tags: Clue
+---
+MAR: Waved in a few tanks recently. Tanks. What need would we have for tanks?
+<<enddialogue "Game Manager">>
+===
+
+title: Tomas
+tags: Clue
+---
+TOMAS: Hi.
+The man looks around shiftily, practically begging for you to ignore him.
+You spy a police badge poking out of a coat pocket.
+<<enddialogue "Game Manager">>
+===
+
+title: Henry
+tags: Clue
+---
+HENRY: Pssst. That mansion has been busy, lately.
+<<enddialogue "Game Manager">>
+===

@@ -15,11 +15,11 @@ public class Items : MonoBehaviour
         DisplayItems();
     }
 
-    public void DisplayItems()
+    public void DisplayItems(bool playerLock = false)
     {
         for (int i = 0; i < gameManager.GetItems().Count; i++)
         {
-            if (gameManager.GetItems()[i].quantity > 0)
+            if (gameManager.GetItems()[i].quantity > 0 || playerLock)
             {
                 items[i].GetComponent<Button>().interactable = true;
             }

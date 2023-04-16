@@ -292,10 +292,10 @@ public class MainUI : MonoBehaviour
         advanceInnerDialogueButton.GetComponent<Button>().interactable = true;
     }
 
-    public void DisplayItems()
+    public void DisplayItems(bool playerLock = false)
     {
         itemsPanel.SetActive(true);
-        itemsPanel.GetComponent<Items>().DisplayItems();
+        itemsPanel.GetComponent<Items>().DisplayItems(playerLock);
     }
 
     public void HideItems()
@@ -352,6 +352,7 @@ public class MainUI : MonoBehaviour
 
         empathyBar.SetHealth(30);
         persuasionBar.SetHealth(30);
+        gameManager.PauseTimer(true);
     }
 
     public void ContinueToNextLevel()
@@ -363,12 +364,19 @@ public class MainUI : MonoBehaviour
     public void Leave()
     {
         endPanel.SetActive(false);
+        gameManager.Leave();
         Application.Quit();
     }
 
     public void Fade()
     {
         transition.SetActive(true);
+    }
+
+    public void ResetBars()
+    {
+        empathyBar.SetHealth(30);
+        persuasionBar.SetHealth(30);
     }
 
     public void DisplayFinalScore()

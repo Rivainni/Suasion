@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{F3B0D152-9669-8690-F180-C21AC2E1752E}">
+		<SoundBank Id="393239870" Type="User" Language="SFX" Hash="{0248E6FF-7485-2DBD-889C-489BB37C6735}">
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
@@ -20,6 +20,10 @@
 				<File Id="95421314" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps - Wood.wav</ShortName>
 					<CachePath>SFX/Footsteps - Wood_9EDFC787.wem</CachePath>
+				</File>
+				<File Id="248765926" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Footsteps - Grass.wav</ShortName>
+					<CachePath>SFX/Footsteps - Grass_3F75BDB9.wem</CachePath>
 				</File>
 				<File Id="640376649" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Footsteps - Mud.wav</ShortName>
@@ -64,7 +68,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1730208058" Name="Player_Footsteps" DurationType="Infinite">
+				<Event Id="1730208058" Name="Player_Footsteps" DurationType="Mixed" DurationMin="18.216063" DurationMax="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="2058049674"/>
@@ -73,7 +77,13 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="712897245" Default="true"/>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="4248645337" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="248765926"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2385628198" Id="712897245"/>
 							<MediaRefs>
 								<MediaRef Id="640376649"/>
 							</MediaRefs>
@@ -91,6 +101,7 @@
 					<Switches>
 						<Switch Id="712897245" Name="Mud"/>
 						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="4248645337" Name="Grass"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
@@ -119,6 +130,7 @@
 					<Switches>
 						<Switch Id="712897245" Name="Mud"/>
 						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="4248645337" Name="Grass"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
@@ -168,5 +180,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{63427D66-191B-31F6-A341-304D7B797214}</FileHash>
+	<FileHash>{7DE56EC4-B47E-E994-D4C4-B2FB415DB8C8}</FileHash>
 </SoundBanksInfo>

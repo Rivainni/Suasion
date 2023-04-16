@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     [SerializeField] GameObject[] levelObjects;
     [SerializeField] GameObject waypoints;
     [SerializeField] GameObject bossGate;
+    [SerializeField] GameObject endingDialogue;
 
     Dictionary<string, int> levelObjectMapping = new Dictionary<string, int>();
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     float honesty = 0;
     int turn = 1;
     int turnMultiplier = 0;
-    string currentCharacter = "";
+    string currentCharacter = "Friend";
     string mood = "neutral";
     bool inPersuade = false;
     bool inIntro = false;
@@ -48,17 +49,21 @@ public class GameManager : MonoBehaviour, IDataPersistence
     // 2 = failed
     // 3 = succeeded
     int[] finishedCharacters = new int[5];
+    int[] levelScores = new int[5];
+    int[] empathyScores = new int[5];
+    int[] persuasionScores = new int[5];
+    string[] characterOrder = new string[5];
 
-    void Start()
+    void Awake()
     {
         if (SceneManager.GetActiveScene().name == "Main Game")
         {
-            levelObjects[level].SetActive(true);
-
+            Debug.Log("aaa");
             for (int i = 0; i < levelObjects.Length; i++)
             {
                 levelObjectMapping.Add(levelObjects[i].name, i);
             }
+            levelObjects[GetCharacterIndex(currentCharacter)].SetActive(true);
         }
     }
 
@@ -109,6 +114,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
         {
             calc = basePoints * turnMultiplier;
             empathy = Mathf.Clamp(empathy + calc, 0, 100);
+            empathyScores[GetCharacterIndex(currentCharacter)] += basePoints;
         }
         else if (inPersuade)
         {
@@ -131,6 +137,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
                 honesty += 0.5f;
             }
             persuasion = Mathf.Clamp(persuasion + calc, 0, 100);
+            persuasionScores[GetCharacterIndex(currentCharacter)] += basePoints;
         }
         Debug.Log("Empathy: " + empathy);
         Debug.Log("Persuasion ni Bossing: " + persuasion);
@@ -228,6 +235,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void SetCharacter(string character)
     {
         currentCharacter = character;
+        characterOrder[GetCharacterIndex(currentCharacter)] = currentCharacter;
     }
 
     public float GetPersuasion()
@@ -298,9 +306,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
         Reset();
         ResetEnd();
 
-        Debug.Log("Print 1: Level " + level);
-
-        if (level < 1)
+        if (currentCharacter == "Friend")
         {
             levelObjects[level].SetActive(false);
             level++;
@@ -310,8 +316,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
         {
             level++;
         }
-
-        Debug.Log("Print 2: Level " + level);
 
 
         if (level > 1)
@@ -329,7 +333,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
             Teleport("Level 1");
         }
 
-        if (currentCharacter == "Vice Mayor" || level > 5)
+        if (currentCharacter == "Vice Mayor")
         {
             RollVotes();
             EndGame();
@@ -341,7 +345,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
         }
 
         LockMovement(false);
-
+        PauseTimer(false);
+        timeController.ResetTime();
         totalScore += score;
         score = 0;
     }
@@ -419,6 +424,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
         return itemList;
     }
 
+    public bool CheckItemUnlock()
+    {
+        return itemUnlocked;
+    }
+
     public bool GetSuccess()
     {
         return success;
@@ -432,12 +442,12 @@ public class GameManager : MonoBehaviour, IDataPersistence
         if (rand <= persuasion)
         {
             success = true;
-            finishedCharacters[levelObjectMapping[currentCharacter]] = 3;
+            finishedCharacters[GetCharacterIndex(currentCharacter)] = 3;
         }
         else
         {
             success = false;
-            finishedCharacters[levelObjectMapping[currentCharacter]] = 2;
+            finishedCharacters[GetCharacterIndex(currentCharacter)] = 2;
         }
 
         return success;
@@ -486,6 +496,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
         }
 
         return allDone;
+    }
+
+    public int GetCharacterIndex(string character)
+    {
+        return levelObjectMapping[character];
     }
 
     public bool CheckFinished(string character)
@@ -580,20 +595,38 @@ public class GameManager : MonoBehaviour, IDataPersistence
         return finalTotalVotes;
     }
 
+    public void Leave()
+    {
+        switch (GetElectionStatus())
+        {
+            case true:
+                endingDialogue.transform.GetChild(0).gameObject.GetComponent<StoryElement>().TriggerDialogue();
+                break;
+            case false:
+                endingDialogue.transform.GetChild(1).gameObject.GetComponent<StoryElement>().TriggerDialogue();
+                break;
+        }
+    }
+
     public void SaveData(ref GameData gameData)
     {
         gameData.persuasion = persuasion;
         gameData.empathy = empathy;
+        gameData.itemUnlocked = itemUnlocked;
         gameData.level = level;
         gameData.totalScore = totalScore;
+        levelScores = gameData.levelScores;
+        empathyScores = gameData.empathyScores;
+        persuasionScores = gameData.persuasionScores;
         gameData.currentCharacter = currentCharacter;
+        gameData.characterOrder = characterOrder;
         if (inPersuade)
         {
-            gameData.inDialogue = "persuasion";
+            gameData.inDialogue = "persuasion start";
         }
         else if (inIntro)
         {
-            gameData.inDialogue = "intro";
+            gameData.inDialogue = "intro start";
         }
         else
         {
@@ -615,9 +648,14 @@ public class GameManager : MonoBehaviour, IDataPersistence
     {
         persuasion = gameData.persuasion;
         empathy = gameData.empathy;
+        itemUnlocked = gameData.itemUnlocked;
         level = gameData.level;
         totalScore = gameData.totalScore;
+        levelScores = gameData.levelScores;
+        empathyScores = gameData.empathyScores;
+        persuasionScores = gameData.persuasionScores;
         currentCharacter = gameData.currentCharacter;
+        characterOrder = gameData.characterOrder;
         if (gameData.inDialogue == "persuasion start")
         {
             inPersuade = true;
@@ -641,9 +679,24 @@ public class GameManager : MonoBehaviour, IDataPersistence
         {
             finishedCharacters[i] = gameData.gameProgress[i];
 
-            if (level == 0)
+            // if friend character
+            // else if vice mayor
+            // else
+
+            if (currentCharacter == "Friend")
             {
-                if (gameData.gameProgress[i] == 1)
+                if (i == GetCharacterIndex("Doctor") || i == GetCharacterIndex("Vice Mayor"))
+                {
+                    levelObjects[i].SetActive(false);
+                }
+                else if (gameData.gameProgress[i] == 0 || gameData.gameProgress[i] == 1)
+                {
+                    levelObjects[i].SetActive(true);
+                }
+            }
+            else if (currentCharacter == "Vice Mayor")
+            {
+                if (gameData.gameProgress[i] == 0 || gameData.gameProgress[i] == 1)
                 {
                     levelObjects[i].SetActive(true);
                 }
@@ -654,7 +707,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
             }
             else
             {
-                if (gameData.gameProgress[i] == 0 || gameData.gameProgress[i] == 1)
+                if ((gameData.gameProgress[i] == 0 || gameData.gameProgress[i] == 1) && i != GetCharacterIndex("Vice Mayor"))
                 {
                     levelObjects[i].SetActive(true);
                 }

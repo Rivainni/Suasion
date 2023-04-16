@@ -106,6 +106,16 @@ AMSEL: Hmm...
 AMSEL: {$choice}
 <<focustarget "Advance" true>>
 MANUEL: {$response}
+<<callitems "Game Manager">>
+<<set $success to false>>
+<<rollsuccess "Game Manager">>
+
+<<if $success == true>>
+    MANUEL: Fine.
+<<else>>
+    MANUEL: I'll think about it.
+<<endif>>
+
 <<enddialogue "Game Manager">>
 <<endlevel "Game Manager">>
 ===

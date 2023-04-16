@@ -113,6 +113,7 @@ SATE: You know, no matter what you say, I’ll still do it.
     DR. ANTONI: Alright, fine. Just tell me what you need. I’ll go talk to the staff.
     <<unlockitems "Game Manager">>
     <<setactive "Advance" 0>>
+    <<unlockitems "Game Manager">>
     You have unlocked 'promotional items'.
     Click them at the end of a dialogue to give them to your target.
     There are three types - pamphlets, posters, and assorted items.
