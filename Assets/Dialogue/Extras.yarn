@@ -21,9 +21,17 @@ You spy a police badge poking out of a coat pocket.
 <<enddialogue "Game Manager">>
 ===
 
-title: Henry
+title: Holly
 tags: Clue
 ---
-HENRY: Pssst. That mansion has been busy, lately.
+HOLLY: Pssst. That mansion has been busy, lately.
+<<enddialogue "Game Manager">>
+===
+
+title: CptRex
+tags: Clue
+---
+CPT. REX: Move along kid, the Mayor doesn't want people like you around their house.
+CPT. REX: <i>The soldier has multiple rank markings on his coat, that might be the ruthless Captain you heard rumours about. </i>
 <<enddialogue "Game Manager">>
 ===

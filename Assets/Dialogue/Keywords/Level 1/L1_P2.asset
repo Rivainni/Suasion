@@ -27,7 +27,7 @@ MonoBehaviour:
     - downplay
     m_Restrictions:
     - m_Keyword: shortage
-      m_Clue: Sticky notes
+      m_Clue: Sticky Notes
   m_Combinations:
   - m_Set: shortage_earnest_straight
     m_Mood: positive

@@ -22,8 +22,15 @@ tags: Intro
 <<setactive "Advance" 6>>
 <<focustarget "Advance" false>>
 AMSEL: Hello.
+<<randomisemood "Game Manager">>
 <<focustarget "Advance" true>>
-PETRA: Do you know what you two have done?
+<<if $mood == "positive">>
+    PETRA: Welcome. So...?
+<<elseif $mood == "neutral">>
+    PETRA: Do you know what you two have done?
+<<else>>
+    PETRA: You two...
+<<endif>>
 <<callkeywords "Game Manager">>
 <<focustarget "Advance" false>>
 AMSEL: Hmm...
@@ -39,13 +46,24 @@ AMSEL: Sorry, excuse us for a second.
 <<enddialogue "Game Manager">>
 ===
 
+title: Fountain
+tags: clue
+---
+(Clue found - fountain)
+AMSEL: Is that a fountain?
+AMSEL: Just how?
+<<enddialogue "Game Manager">>
+===
+
 title: ViceMayorPersuasion
 tags: persuasion
 ---
 <<setmultiplier "Game Manager" 1>>
+<<modmultiplier "Game Manager">>
 <<set $choice to "">>
 <<set $response to "">>
 <<set $persuasion to 30>>
+<<set $itemon to false>>
 <<settarget "Advance" 6>>
 <<setactive "Advance" 6>>
 <<focustarget "Advance" true>>
@@ -64,7 +82,11 @@ PETRA: {$response}
     She does not look impressed.
 <<endif>>
 
-<<callitems "Game Manager">>
+<<checkitemunlock "Game Manager">>
+<<if $itemon == true>>
+    Use items? Click one of the buttons below.
+    <<callitems "Game Manager">>
+<<endif>>
 This is as much content as we have right now for the final boss.
 The game will now show the end screen.
 Thank you for playing the game!

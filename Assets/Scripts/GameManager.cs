@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     float empathy = 30;
     float honesty = 0;
     int turn = 1;
-    int turnMultiplier = 0;
+    float turnMultiplier = 0;
     string currentCharacter = "Friend";
     string mood = "neutral";
     bool inPersuade = false;
@@ -125,11 +125,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
             }
             else if (mood == "positive" && hMult == 1)
             {
-                calc *= 15;
+                calc += 6;
             }
             else if (mood == "negative")
             {
-                calc *= 10;
+                calc += 3;
             }
 
             if (hMult > 0)
@@ -202,9 +202,38 @@ public class GameManager : MonoBehaviour, IDataPersistence
         turn++;
     }
 
-    public void SetMultiplier(int multiplier)
+    public void SetMultiplier(float multiplier)
     {
         turnMultiplier = multiplier;
+    }
+
+    public void ModMultiplier()
+    {
+        float mult = 0;
+        if (currentCharacter == "Baker")
+        {
+            if (CheckPersuaded("Farmer"))
+            {
+                mult += 0.5f;
+            }
+        }
+        if (currentCharacter == "Vice Mayor")
+        {
+            if (CheckPersuaded("Baker"))
+            {
+                mult += 0.5f;
+            }
+            if (CheckPersuaded("Farmer"))
+            {
+                mult += 0.15f;
+            }
+            if (CheckPersuaded("Doctor"))
+            {
+                mult += 0.25f;
+            }
+        }
+
+        SetMultiplier(turnMultiplier + (turnMultiplier * mult));
     }
 
     public bool CheckIntro()
@@ -318,15 +347,15 @@ public class GameManager : MonoBehaviour, IDataPersistence
         }
 
 
-        if (level > 1)
-        {
-            Teleport("Spawn");
-        }
-        else if (CheckAllCharactersDone())
+        if (CheckAllCharactersDone())
         {
             levelObjects[4].SetActive(true);
             bossGate.GetComponent<StoryElement>().enabled = true;
             Teleport("Boss");
+        }
+        else if (level > 1)
+        {
+            Teleport("Spawn");
         }
         else
         {
@@ -390,7 +419,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     public void GenerateItems()
     {
-        int rand = Random.Range(0, 4);
+        int rand = Random.Range(1, 4);
 
         itemUnlocked = true;
 
@@ -399,18 +428,21 @@ public class GameManager : MonoBehaviour, IDataPersistence
             itemList.Add(new PromoMaterial("Pamphlet", 5, 3));
             itemList.Add(new PromoMaterial("Poster", 10, 0));
             itemList.Add(new PromoMaterial("Assorted", 15, 0));
+            Debug.Log("Type 1");
         }
         else if (rand == 2)
         {
             itemList.Add(new PromoMaterial("Pamphlet", 5, 3));
             itemList.Add(new PromoMaterial("Poster", 10, 2));
             itemList.Add(new PromoMaterial("Assorted", 15, 0));
+            Debug.Log("Type 2");
         }
         else if (rand == 3)
         {
             itemList.Add(new PromoMaterial("Pamphlet", 5, 3));
             itemList.Add(new PromoMaterial("Poster", 10, 2));
             itemList.Add(new PromoMaterial("Assorted", 15, 1));
+            Debug.Log("Type 3");
         }
     }
 
@@ -486,9 +518,10 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public bool CheckAllCharactersDone()
     {
         bool allDone = true;
-        foreach (int status in finishedCharacters)
+
+        for (int i = 0; i < finishedCharacters.Length; i++)
         {
-            if (status < 2)
+            if (finishedCharacters[i] < 2 && i != 4)
             {
                 allDone = false;
                 break;
@@ -503,9 +536,9 @@ public class GameManager : MonoBehaviour, IDataPersistence
         return levelObjectMapping[character];
     }
 
-    public bool CheckFinished(string character)
+    public bool CheckPersuaded(string character)
     {
-        if (finishedCharacters[levelObjectMapping[character]] > 1)
+        if (finishedCharacters[GetCharacterIndex(character)] == 3)
         {
             return true;
         }
@@ -548,7 +581,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
             if (status == 3)
             {
-                playerVotes += totalVotes;
+                playerVotes += currentVotes;
             }
             else if (status == 2)
             {

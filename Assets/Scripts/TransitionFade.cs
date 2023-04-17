@@ -34,7 +34,7 @@ public class TransitionFade : MonoBehaviour
     {
         if (gameObject.GetComponent<Image>().color.a < 1)
         {
-            gameObject.GetComponent<Image>().color = new Color(0, 0, 0, gameObject.GetComponent<Image>().color.a + 0.01f);
+            gameObject.GetComponent<Image>().color = new Color(0, 0, 0, gameObject.GetComponent<Image>().color.a + 0.10f);
         }
         else
         {

@@ -495,7 +495,7 @@
 										<ActiveSource Name="Footsteps - Mud" ID="{6344FF37-6EC8-42AD-865C-2E7AD6C0A19C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Footsteps - Grass" ID="{295A20BF-318D-429A-B1E5-3157AC9F8B1C}" ShortID="485263699">
+								<RandomSequenceContainer Name="Footsteps - Grass" ID="{ADF6D6CF-1823-450F-B0F8-7C4235CD9016}" ShortID="967431159">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1E1F6B94-8594-4C36-83C1-EE9478466E23}"/>
@@ -505,18 +505,35 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Footsteps - Grass" ID="{4AF3444E-1C79-4C8A-B9F8-830640D558FE}">
-											<Language>SFX</Language>
-											<AudioFile>Footsteps - Grass.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="248765926"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="Grass1" ID="{295A20BF-318D-429A-B1E5-3157AC9F8B1C}" ShortID="485263699">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="SFX" ID="{C22D1EEC-CD7F-41D8-9F9B-899442F4D7D4}" WorkUnitID="{1E1F6B94-8594-4C36-83C1-EE9478466E23}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{75368B9D-3E20-4AEB-963A-22731B9E9929}" WorkUnitID="{70D8445B-62DE-48C4-BA70-9CC95F1651B6}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps - Grass" ID="{4AF3444E-1C79-4C8A-B9F8-830640D558FE}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.88714590097403"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Footsteps - Grass.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="248765926"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps - Grass" ID="{4AF3444E-1C79-4C8A-B9F8-830640D558FE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Footsteps - Grass" ID="{4AF3444E-1C79-4C8A-B9F8-830640D558FE}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupingBehaviorList>
@@ -524,7 +541,7 @@
 										<ItemRef Name="Footsteps - Wood" ID="{439BBAB1-0CBA-4BA0-B2BE-328CD1BA5FBA}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="Footsteps - Grass" ID="{295A20BF-318D-429A-B1E5-3157AC9F8B1C}"/>
+										<ItemRef Name="Footsteps - Grass" ID="{ADF6D6CF-1823-450F-B0F8-7C4235CD9016}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Footsteps - Mud" ID="{A16D9DE4-6D47-4CD7-8C98-6FCB746683C8}"/>
@@ -535,12 +552,6 @@
 										<SwitchRef Name="Wood" ID="{9BF78660-01F7-4AC8-A3C1-19385DCDBD97}"/>
 										<ItemList>
 											<ItemRef Name="Footsteps - Wood" ID="{439BBAB1-0CBA-4BA0-B2BE-328CD1BA5FBA}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Grass" ID="{0E0E2195-630B-4A7B-B364-62C07F811B9E}"/>
-										<ItemList>
-											<ItemRef Name="Footsteps - Grass" ID="{295A20BF-318D-429A-B1E5-3157AC9F8B1C}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>

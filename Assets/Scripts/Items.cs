@@ -12,14 +12,22 @@ public class Items : MonoBehaviour
 
     void Start()
     {
-        DisplayItems();
+        GenerateItems();
+    }
+
+    public void GenerateItems()
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            items[i].GetComponent<Button>().onClick.AddListener(() => UseItem(i));
+        }
     }
 
     public void DisplayItems(bool playerLock = false)
     {
-        for (int i = 0; i < gameManager.GetItems().Count; i++)
+        for (int i = 0; i < items.Length; i++)
         {
-            if (gameManager.GetItems()[i].quantity > 0 || playerLock)
+            if (gameManager.GetItems()[i].quantity > 0 && !playerLock)
             {
                 items[i].GetComponent<Button>().interactable = true;
             }
@@ -29,17 +37,18 @@ public class Items : MonoBehaviour
             }
 
             items[i].GetComponentInChildren<TextMeshProUGUI>().text = "x" + gameManager.GetItems()[i].quantity;
-
-            items[i].GetComponent<Button>().onClick.AddListener(() => UseItem(i));
         }
     }
 
     public void UseItem(int index)
     {
-        if (items[index].activeSelf)
+        Debug.Log("index");
+        if (items[index].GetComponent<Button>().interactable)
         {
             items[index].GetComponent<Button>().interactable = false;
             gameManager.GetItems()[index].UseItem();
+            gameManager.UseItem(gameManager.GetItems()[index].bonus);
+            items[index].GetComponentInChildren<TextMeshProUGUI>().text = "x" + gameManager.GetItems()[index].quantity;
         }
     }
 }

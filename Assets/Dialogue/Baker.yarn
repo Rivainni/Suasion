@@ -20,8 +20,15 @@ tags: Intro
 <<set $response to "">>
 <<settarget "Advance" 4>>
 <<setactive "Advance" 4>>
+<<randomisemood "Game Manager">>
 <<focustarget "Advance" true>>
-MARIA: Ohh my if it isn't Amsel and their little friend Sate
+<<if $mood == "positive">>
+    MARIA: Ohh my. If it isn't Amsel and their little friend Sate.
+<<elseif $mood == "neutral">>
+    MARIA: Ohh dear, it's Amsel and Sate!
+<<else>>
+    MARIA: Amsel and Sate... hehehe.
+<<endif>>
 MARIA: What can I do for you little babies today?
 MARIA: If you're here to buy our bestseller Pan de Regla, it'll still be 10 minutes before we can take it out the oven.
 MARIA: If you want a made to order cake, it'll be a minimum of 5 days before you can pick it up.
@@ -60,6 +67,7 @@ AMSEL: The cashier has a ton of locks on it, I know people want their money secu
 title: BreadTrays
 tags: Clue
 ---
+(Clue found - bread trays)
 AMSEL: These are the trays Maria uses to place the bread she sells.
 AMSEL: Each of them are labeled by a little card with the name.
 <<addclue "Game Manager" "Bread Trays" "These are the trays Maria uses to place the bread she sells. Each of them are labeled by a little card with the name." "MARIA">>
@@ -69,6 +77,7 @@ AMSEL: Each of them are labeled by a little card with the name.
 title: IndoorPlants
 tags: Clue
 ---
+(Clue found - indoor plants)
 AMSEL: All of the plants are fake, except for one pink flower on the counter. 
 AMSEL: It has some unnatural red marks on it and it looks well taken care of.
 <<addclue "Game Manager" "Indoor Plants" "All of the plants are fake, except for one pink flower on the counter. It has some unnatural red marks on it and it looks well taken care of." "MARIA">>
@@ -78,6 +87,7 @@ AMSEL: It has some unnatural red marks on it and it looks well taken care of.
 title: KitchenDoor
 tags: Clue
 ---
+(Clue found - kitchen door)
 AMSEL: The door is metal with a single window on top covered with black paint. 
 AMSEL: I could barely see and hear what is in there. 
 AMSEL: Red marks are all over the door, similar to the ones the flower has.
@@ -89,7 +99,9 @@ title: BakerPersuasion
 tags: persuasion targetstart
 ---
 <<setmultiplier "Game Manager" 2>>
+<<modmultiplier "Game Manager">>
 <<set $persuasion to 30>>
+<<set $itemon to false>>
 <<set $choice to "">>
 <<set $response to "">>
 <<settarget "Advance" 4>>
@@ -106,7 +118,7 @@ MARIA: {$response}
 <<if $persuasion >= 50>>
     She's looking more interested in our conversation.
 <<elseif $persuasion < 50>>
-    Her smile is growing....she looks auminous.
+    Her smile is growing....she looks ominous.
 <<endif>>
 <<focustarget "Advance" false>>
 <<callkeywords "Game Manager">>
@@ -114,7 +126,11 @@ AMSEL: Hmmm...
 AMSEL: {$choice}
 <<focustarget "Advance" true>>
 MARIA: {$response}
-<<callitems "Game Manager">>
+<<checkitemunlock "Game Manager">>
+<<if $itemon == true>>
+    Use items? Click one of the buttons below.
+    <<callitems "Game Manager">>
+<<endif>>
 <<set $success to false>>
 <<rollsuccess "Game Manager">>
 

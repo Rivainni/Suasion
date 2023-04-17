@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     Vector2 movement;
     bool isPlaying = false;
     bool activeLock = false;
+    float oldX;
+    float oldY;
 
     // Update is called once per frame
     void Update()
@@ -31,15 +33,28 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
                 isPlaying = false;
             }
 
-            animator.SetInteger("Horizontal", Mathf.RoundToInt(movement.x));
-            animator.SetInteger("Vertical", Mathf.RoundToInt(movement.y));
+            animator.SetFloat("Horizontal", movement.x);
+            animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
+
+            if (movement.x == 0 && movement.y == 0)
+            {
+                animator.SetFloat("OldH", oldX);
+                animator.SetFloat("OldV", oldY);
+            }
+            else
+            {
+                oldX = movement.x;
+                oldY = movement.y;
+            }
         }
         else
         {
-            animator.SetInteger("Horizontal", 0);
-            animator.SetInteger("Vertical", 0);
+            animator.SetFloat("Horizontal", 0);
+            animator.SetFloat("Vertical", 0);
             animator.SetFloat("Speed", 0);
+            animator.SetFloat("OldH", oldX);
+            animator.SetFloat("OldV", oldY);
             PauseFootsteps();
             isPlaying = false;
         }

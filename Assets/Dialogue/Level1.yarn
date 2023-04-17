@@ -54,6 +54,7 @@ SATE: Maybe looking around can help clear our head, and maybe even give us some 
 title: NeatlyStackedPapers
 tags: clue
 ---
+(Clue found - neatly stacked papers)
 AMSEL: Not a crease to be seen on them, with neat handwriting and consistent ordering.
 <<addclue "Game Manager" "Neatly Stacked Papers" "Not a crease to be seen on them, with neat handwriting and consistent ordering." "DR. ANTONI">>
 <<enddialogue "Game Manager">>
@@ -62,6 +63,7 @@ AMSEL: Not a crease to be seen on them, with neat handwriting and consistent ord
 title: StickyNotes
 tags: clue
 ---
+(Clue found - sticky notes)
 AMSEL: “Meet with the mayor to request funding for imports of medicine - again.” 
 AMSEL: Scribbled below is a short postscript. “He never listens.”
 <<addclue "Game Manager" "Sticky Notes" "'Meet with the mayor to request funding for imports of medicine - again.' Scribbled below is a short postscript. 'He never listens.' " "DR. ANTONI">>
@@ -113,7 +115,6 @@ SATE: You know, no matter what you say, I’ll still do it.
     DR. ANTONI: Alright, fine. Just tell me what you need. I’ll go talk to the staff.
     <<unlockitems "Game Manager">>
     <<setactive "Advance" 0>>
-    <<unlockitems "Game Manager">>
     You have unlocked 'promotional items'.
     Click them at the end of a dialogue to give them to your target.
     There are three types - pamphlets, posters, and assorted items.

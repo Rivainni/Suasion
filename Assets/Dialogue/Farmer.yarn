@@ -20,12 +20,20 @@ tags: Intro
 <<set $choice to "">>
 <<set $response to "">>
 <<set $empathy to 30>>
+<<set $mood to "">>
 <<settarget "Advance" 5>>
 <<setactive "Advance" 5>>
 <<focustarget "Advance" false>>
 AMSEL: Hello?
+<<randomisemood "Game Manager">>
 <<focustarget "Advance" true>>
-MANUEL: What do you want child?
+<<if $mood == "positive">>
+    MANUEL: Good day, kid.
+<<elseif $mood == "neutral">>
+    MANUEL: What do you want, kid?
+<<else>>
+    MANUEL: Hmph.
+<<endif>>
 <<callkeywords "Game Manager">>
 <<focustarget "Advance" false>>
 AMSEL: Hmm...
@@ -79,9 +87,11 @@ title: FarmerPersuasion
 tags: persuasion
 ---
 <<setmultiplier "Game Manager" 1>>
+<<modmultiplier "Game Manager">>
 <<set $choice to "">>
 <<set $response to "">>
 <<set $persuasion to 30>>
+<<set $itemon to false>>
 <<settarget "Advance" 5>>
 <<setactive "Advance" 5>>
 <<focustarget "Advance" false>>
@@ -106,7 +116,11 @@ AMSEL: Hmm...
 AMSEL: {$choice}
 <<focustarget "Advance" true>>
 MANUEL: {$response}
-<<callitems "Game Manager">>
+<<checkitemunlock "Game Manager">>
+<<if $itemon == true>>
+    Use items? Click one of the buttons below.
+    <<callitems "Game Manager">>
+<<endif>>
 <<set $success to false>>
 <<rollsuccess "Game Manager">>
 

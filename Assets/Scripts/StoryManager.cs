@@ -305,6 +305,7 @@ public class StoryManager : MonoBehaviour
             gameManager.Reset();
             mainUI.HideItems();
             mainUI.ResetBars();
+            mainUI.BlockClicks();
             ResumeMusic("Map");
             PauseMusic("Introduction");
             PauseMusic("Persuasion");
@@ -377,6 +378,12 @@ public class StoryManager : MonoBehaviour
         gameManager.SetMultiplier(multiplier);
     }
 
+    [YarnCommand("modmultiplier")]
+    public void ModMultiplier()
+    {
+        gameManager.ModMultiplier();
+    }
+
     [YarnCommand("checkpersuasion")]
     public void CheckPersuasion()
     {
@@ -405,9 +412,17 @@ public class StoryManager : MonoBehaviour
     }
 
     [YarnCommand("checkitemunlock")]
-    public bool CheckItemUnlock()
+    public void CheckItemUnlock()
     {
-        return gameManager.CheckItemUnlock();
+        variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+        variableStorage.SetValue("$itemon", gameManager.CheckItemUnlock());
+    }
+
+    [YarnCommand("checkpersuaded")]
+    public void CheckPersuaded(string character)
+    {
+        variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
+        variableStorage.SetValue("$req", gameManager.CheckPersuaded(character));
     }
 
     [YarnCommand("transition")]

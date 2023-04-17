@@ -23,6 +23,7 @@ public class MainUI : MonoBehaviour
     [SerializeField] GameManager gameManager;
     [SerializeField] TextMeshProUGUI notebookText;
     [SerializeField] GameObject transition;
+    [SerializeField] GameObject clickBlocker;
     List<string> proscriptionList = new List<string>();
     Button confirmButton;
 
@@ -77,7 +78,7 @@ public class MainUI : MonoBehaviour
         advanceInnerDialogueButton.GetComponent<Button>().interactable = false;
 
         // for blocking keywords in tutorial
-        if (type == "Persuasion" && gameManager.GetLevel() == 0)
+        if (type == "Persuade" && gameManager.GetCharacter() == "Friend")
         {
             Debug.Log("It is now turn " + gameManager.GetTurn());
             if (gameManager.GetTurn() == 1)
@@ -96,7 +97,7 @@ public class MainUI : MonoBehaviour
                 proscriptionList.Add("demanding");
             }
         }
-        else if (type == "Intro" && gameManager.GetLevel() == 0)
+        else if (type == "Intro" && gameManager.GetCharacter() == "Friend")
         {
             Debug.Log("It is now turn " + gameManager.GetTurn());
             if (gameManager.GetTurn() == 1)
@@ -303,6 +304,11 @@ public class MainUI : MonoBehaviour
         itemsPanel.SetActive(false);
     }
 
+    public void BlockClicks()
+    {
+        clickBlocker.SetActive(true);
+    }
+
     public void UpdateNotebook()
     {
         notebookText.text = "";
@@ -391,17 +397,20 @@ public class MainUI : MonoBehaviour
 
     bool CheckHasClue(string keyword, KeywordSet keywordSet)
     {
-        foreach (KeywordRestrictions keywordRestrictions in keywordSet.Restrictions)
+        if (keywordSet.Restrictions != null)
         {
-            if (keywordRestrictions.Keyword == keyword)
+            foreach (KeywordRestrictions keywordRestrictions in keywordSet.Restrictions)
             {
-                if (gameManager.CheckClues(keywordRestrictions.Clue))
+                if (keywordRestrictions.Keyword == keyword)
                 {
-                    return true;
-                }
-                else
-                {
-                    return false;
+                    if (gameManager.CheckClues(keywordRestrictions.Clue))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
         }
