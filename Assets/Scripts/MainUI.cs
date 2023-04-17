@@ -78,11 +78,13 @@ public class MainUI : MonoBehaviour
         advanceInnerDialogueButton.GetComponent<Button>().interactable = false;
 
         // for blocking keywords in tutorial
-        if (type == "Persuade" && gameManager.GetCharacter() == "Friend")
+        Debug.Log(gameManager.GetCharacter());
+        if (type == "Persuasion" && gameManager.GetCharacter() == "Friend")
         {
             Debug.Log("It is now turn " + gameManager.GetTurn());
             if (gameManager.GetTurn() == 1)
             {
+                Debug.Log("fix me");
                 proscriptionList.Add("state");
                 proscriptionList.Add("weather");
                 proscriptionList.Add("cautious");
