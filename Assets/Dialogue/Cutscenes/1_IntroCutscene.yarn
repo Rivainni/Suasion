@@ -1,0 +1,11 @@
+﻿title: IntroCutscene
+tags: cutscene
+---
+<<setcspeaker "CutsceneAdvance" 0>>
+Some time ago, in a town called Hinterland. There lived a kid named Amsel and their friend, Sate.
+They spend their days, lounging and playing around the small town.
+The carelessness of childhood drowns their judgement.
+Blinds them to the horrors that reside under the dirt.
+Today, the children start their day by playing a game.
+<<changescene "LevelLoader" "Main Game">>
+===

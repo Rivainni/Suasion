@@ -1,0 +1,24 @@
+﻿title: Farmer_Baker
+tags: cutscene
+---
+<<transition "Game Manager">>
+<<setcspeaker "CutsceneAdvance" 0>>
+The next day...
+<<setcspeaker "CutsceneAdvance" 1>>
+AMSEL: I know that Mari, the town's one and only baker, knows a lot about everyone and everything that happens here.
+AMSEL: If we want to gather supporters, we will need to talk to her.
+AMSEL: We could also go talk to Manuel the farmer, he's a quiet one but the entire agriculturist sector of the town is under him.
+AMSEL: Then there's the Priestess, if we would want to get a powerful supporter, we have to persuade her to our side.
+AMSEL: She's going to be the hardest to persuade than Mari and Manuel.
+<<setcspeaker "CutsceneAdvance" 2>>
+SATE: Knock knock, anyone awake here?
+<<setcspeaker "CutsceneAdvance" 1>>
+AMSEL: Sate! Just in time, let's go!
+<<setcspeaker "CutsceneAdvance" 2>>
+SATE: Go where?
+<<setcspeaker "CutsceneAdvance" 1>>
+AMSEL: To get some cake!
+<<setcspeaker "CutsceneAdvance" 2>>
+<<transition "Game Manager">>
+<<enddialogue "Game Manager">>
+===

@@ -101,6 +101,8 @@ public class StoryManager : MonoBehaviour
     GameObject mcDialogue;
     [SerializeField]
     GameObject targetDialogue;
+    [SerializeField]
+    GameObject cutsceneDialogue;
 
     [SerializeField]
     MainUI mainUI;
@@ -130,6 +132,9 @@ public class StoryManager : MonoBehaviour
     KeywordNode[] currentKeywords;
     bool textBoxMode = true;
 
+    [SerializeField]
+    StoryElement[] cutscenes;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -143,7 +148,11 @@ public class StoryManager : MonoBehaviour
 
     void Start()
     {
-        PlayAmbient();
+        // if scene is main game play ambient
+        if (SceneManager.GetActiveScene().name == "Main Game")
+        {
+            PlayAmbient();
+        }
         PlayMusic("Map");
     }
 
@@ -186,6 +195,16 @@ public class StoryManager : MonoBehaviour
                     PauseMusic("Map");
                     PlayMusic("Persuasion");
                     gameManager.SetPersuade(true);
+                    break;
+                case 3:
+                    cutsceneDialogue.SetActive(true);
+                    if (textBoxMode)
+                    {
+                        dialogueRunner.SetDialogueViews(new DialogueViewBase[] { cutsceneDialogue.GetComponent<LineView>() });
+                        currentKeywords = keywordSet;
+                        textBoxMode = true;
+                    }
+                    PauseAmbient();
                     break;
                 default:
                     break;
@@ -287,6 +306,30 @@ public class StoryManager : MonoBehaviour
         AkSoundEngine.ExecuteActionOnEvent("Play_Ambient", AkActionOnEventType.AkActionOnEventType_Resume, gameObject, 1);
     }
 
+    public void TriggerCutscene()
+    {
+        if (gameManager.GetCharacter() == "Friend")
+        {
+            cutscenes[0].TriggerDialogue();
+        }
+        else if (gameManager.GetCharacter() == "Doctor")
+        {
+            cutscenes[1].TriggerDialogue();
+        }
+        else if (gameManager.CheckAllCharactersDone())
+        {
+            cutscenes[4].TriggerDialogue();
+        }
+        else if (gameManager.GetCharacter() == "Farmer")
+        {
+            cutscenes[2].TriggerDialogue();
+        }
+        else if (gameManager.GetCharacter() == "Baker")
+        {
+            cutscenes[3].TriggerDialogue();
+        }
+    }
+
     // Yarn commands below this point
 
     [YarnCommand("enddialogue")]
@@ -297,6 +340,7 @@ public class StoryManager : MonoBehaviour
             dialogueUp = false;
             outerDialogue.SetActive(false);
             innerDialogue.SetActive(false);
+            cutsceneDialogue.SetActive(false);
             gameManager.SetIntro(false);
             gameManager.SetPersuade(false);
             gameManager.LockMovement(false);
@@ -311,12 +355,6 @@ public class StoryManager : MonoBehaviour
             PauseMusic("Persuasion");
             ResumeAmbient();
         }
-    }
-
-    [YarnCommand("changescene")]
-    public void ChangeScene(string scene)
-    {
-        SceneManager.LoadScene(scene);
     }
 
     [YarnCommand("callkeywords")]

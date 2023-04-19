@@ -1,6 +1,7 @@
 ﻿title: TutorialStart
 tags: load
 ---
+<<transition "Game Manager">>
 TUTORIAL: Use WASD to move.
 <<enddialogue "Game Manager">>
 ===
@@ -10,6 +11,8 @@ tags: area
 AMSEL: Hmmm...
 AMSEL: Sate doesn’t want to play with me today. I wonder why?
 AMSEL: Let’s go knock and ask!
+Use the left mouse button to interact with objects.
+Such as the door in front of you!
 <<enddialogue "Game Manager">>
 ===
 title: PlayerNear
@@ -43,8 +46,9 @@ tags: intro targetstart
 Here you can make small talk to increase your empathy bar, which improves your chances of persuasion later on.
 At certain points in the conversation, you can select keywords to formulate a response.
 You can select one per category. Each combination will create a different response.
-Click the keywords button, and then...
-Choose "health" and "concerned". Then click "confirm"! Click the right side of the screen to advance after that.
+Click the keywords button onm the left side of the screen, and then...
+From the menu that pops out, choose keywords "health" and "concerned". 
+Then click "confirm"! Click the right side of the screen to advance after that.
 <<focustarget "Advance" false>>
 <<callkeywords "Game Manager">>
 AMSEL: (Hmm...)

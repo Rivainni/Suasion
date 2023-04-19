@@ -1,0 +1,10 @@
+﻿title: All_ViceMayor
+tags:
+---
+<<transition "Game Manager">>
+<<setcspeaker "CutsceneAdvance" 1>>
+Having talked to much of the town, the pair are suddenly invited by government officials...
+...to have a 'discernment' talk.
+<<transition "Game Manager">>
+<<enddialogue "Game Manager">>
+===

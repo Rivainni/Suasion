@@ -1,15 +1,4 @@
-﻿title: Level1Start
-tags: load
----
-5 years later...
-Amsel and Sate have finished their education. Sate works in their father's hospital and Amsel works in the primary wheat farm of the town.
-The day ends, along with Amsel's shift. The two of you approach his father to ask him a favor...
-(Note - you don't have to do this. You can go out and explore!)
-AMSEL: Let's knock on his door.
-<<enddialogue "Game Manager">>
-===
-
-title: Level1Intro
+﻿title: Level1Intro
 tags: intro targetstart
 ---
 <<setcharacter "Game Manager" "Doctor">>

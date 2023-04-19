@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using Yarn.Unity;
 
 public class LevelLoader : MonoBehaviour
 {
@@ -16,8 +17,10 @@ public class LevelLoader : MonoBehaviour
     void Awake()
     {
         dataPersistenceManager = FindObjectOfType<DataPersistenceManager>();
+        DontDestroyOnLoad(gameObject);
     }
 
+    [YarnCommand("changescene")]
     public void LoadLevel(string name)
     {
         if (name == "Main Menu")

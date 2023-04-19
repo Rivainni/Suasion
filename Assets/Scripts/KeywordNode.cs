@@ -100,3 +100,14 @@ public class KeywordNode : ScriptableObject
     private string m_Type;
     public string Type => m_Type;
 }
+
+[CreateAssetMenu(menuName = "ScriptableObjects/Dialogue/HonestyEffects")]
+public class HonestyEffects : ScriptableObject
+{
+    [SerializeField]
+    private string m_characterName;
+    public string characterName => m_characterName;
+    [SerializeField]
+    private Dictionary<string, float> m_honestyMultiplier;
+    public Dictionary<string, float> honestyMultiplier;
+}

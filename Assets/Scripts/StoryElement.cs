@@ -17,7 +17,7 @@ public class StoryElement : MonoBehaviour
     bool inRange = false; // is the player in range of this element?
     void Start()
     {
-        if (type == "Start")
+        if (title == "IntroCutscene" || type == "Start")
         {
             TriggerDialogue();
             gameObject.SetActive(true);
@@ -28,7 +28,7 @@ public class StoryElement : MonoBehaviour
     public void TriggerDialogue()
     {
         storyManager.Interrupt();
-        if (type != "Intro" && type != "Persuade")
+        if (type != "Intro" && type != "Persuade" && type != "Cutscene")
         {
             storyManager.StartDialogue(title, 0);
         }
@@ -39,6 +39,10 @@ public class StoryElement : MonoBehaviour
         else if (type == "Persuade")
         {
             storyManager.StartDialogue(title, 2, keywords); // Accesses Dialogue Manager and Starts Dialogue
+        }
+        else if (type == "Cutscene")
+        {
+            storyManager.StartDialogue(title, 3, keywords);
         }
         this.enabled = false;
     }
@@ -104,10 +108,8 @@ public class StoryElement : MonoBehaviour
     [YarnCommand("enabledialogue")]
     public void Enable(string title)
     {
-        Debug.Log("bruh1");
         if (this.title == title)
         {
-            Debug.Log("bruh2");
             this.enabled = true;
         }
     }

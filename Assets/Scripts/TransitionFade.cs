@@ -15,11 +15,6 @@ public class TransitionFade : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            gameObject.SetActive(false);
-        }
-
         if (startFadeIn)
         {
             FadeIn();
@@ -34,13 +29,20 @@ public class TransitionFade : MonoBehaviour
     {
         if (gameObject.GetComponent<Image>().color.a < 1)
         {
-            gameObject.GetComponent<Image>().color = new Color(0, 0, 0, gameObject.GetComponent<Image>().color.a + 0.10f);
+            gameObject.GetComponent<Image>().color = new Color(0, 0, 0, gameObject.GetComponent<Image>().color.a + 0.01f);
         }
         else
         {
             startFadeIn = false;
-            startFadeOut = true;
+            startFadeOut = false;
+            StartCoroutine(WaitForHold());
         }
+    }
+
+    IEnumerator WaitForHold()
+    {
+        yield return new WaitForSeconds(2);
+        startFadeOut = true;
     }
 
     void FadeOut()
@@ -51,6 +53,7 @@ public class TransitionFade : MonoBehaviour
         }
         else
         {
+            startFadeIn = false;
             startFadeOut = false;
             gameObject.SetActive(false);
         }
