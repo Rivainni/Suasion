@@ -71,6 +71,18 @@ public class MainUI : MonoBehaviour
         }
     }
 
+    public void UpdateBarOnly()
+    {
+        if (gameManager.CheckIntro())
+        {
+            empathyBar.SetHealth(gameManager.GetEmpathy());
+        }
+        else if (gameManager.CheckPersuade())
+        {
+            persuasionBar.SetHealth(gameManager.GetPersuasion());
+        }
+    }
+
     public void DisplayKeywords(KeywordSet keywordSet, string type)
     {
 
@@ -326,7 +338,7 @@ public class MainUI : MonoBehaviour
         }
         foreach (Clue clue in gameManager.GetClues())
         {
-            notebookText.text += "\n" + clue.character;
+            notebookText.text += "\n<b>" + clue.character + "</b>";
             notebookText.text += "\n" + clue.name;
             notebookText.text += "\n" + clue.description + "\n";
         }

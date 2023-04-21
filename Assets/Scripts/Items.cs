@@ -19,7 +19,8 @@ public class Items : MonoBehaviour
     {
         for (int i = 0; i < items.Length; i++)
         {
-            items[i].GetComponent<Button>().onClick.AddListener(() => UseItem(i));
+            int index = i;
+            items[i].GetComponent<Button>().onClick.AddListener(() => UseItem(index));
         }
     }
 
@@ -42,7 +43,7 @@ public class Items : MonoBehaviour
 
     public void UseItem(int index)
     {
-        Debug.Log("index");
+        Debug.Log("index " + index);
         Debug.Log(gameManager.GetItems().Count);
         if (items[index].GetComponent<Button>().interactable)
         {
@@ -50,6 +51,7 @@ public class Items : MonoBehaviour
             gameManager.GetItems()[index].UseItem();
             gameManager.UseItem(gameManager.GetItems()[index].bonus);
             items[index].GetComponentInChildren<TextMeshProUGUI>().text = "x" + gameManager.GetItems()[index].quantity;
+            DisplayItems();
         }
     }
 }

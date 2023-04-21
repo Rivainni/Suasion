@@ -45,7 +45,8 @@ tags: clue
 ---
 (Clue found - neatly stacked papers)
 AMSEL: Not a crease to be seen on them, with neat handwriting and consistent ordering.
-<<addclue "Game Manager" "Neatly Stacked Papers" "Not a crease to be seen on them, with neat handwriting and consistent ordering." "DR. ANTONI">>
+AMSEL: He must be a straightforward and orderly man.
+<<addclue "Game Manager" "Neatly Stacked Papers" "Not a crease to be seen on them, with neat handwriting and consistent ordering. He must be a straightforward and orderly man." "DR. ANTONI">>
 <<enddialogue "Game Manager">>
 ===
 
@@ -55,7 +56,8 @@ tags: clue
 (Clue found - sticky notes)
 AMSEL: “Meet with the mayor to request funding for imports of medicine - again.” 
 AMSEL: Scribbled below is a short postscript. “He never listens.”
-<<addclue "Game Manager" "Sticky Notes" "'Meet with the mayor to request funding for imports of medicine - again.' Scribbled below is a short postscript. 'He never listens.' " "DR. ANTONI">>
+AMSEL: I guess he also has beef with the Mayor.
+<<addclue "Game Manager" "Sticky Notes" "'Meet with the mayor to request funding for imports of medicine - again.' Scribbled below is a short postscript. 'He never listens.' I guess he also has beef with the Mayor." "DR. ANTONI">>
 <<enddialogue "Game Manager">>
 ===
 

@@ -39,19 +39,19 @@ public class Combination
         }
     }
 
-    public int CheckHonesty()
+    public string CheckHonesty()
     {
         if (Set.Contains("straight"))
         {
-            return 0;
+            return "straight";
         }
         else if (Set.Contains("exaggerate"))
         {
-            return 1;
+            return "exaggerate";
         }
         else
         {
-            return 2;
+            return "downplay";
         }
     }
 }
@@ -99,31 +99,4 @@ public class KeywordNode : ScriptableObject
     [SerializeField]
     private string m_Type;
     public string Type => m_Type;
-}
-
-[CreateAssetMenu(menuName = "ScriptableObjects/Dialogue/HonestyEffects")]
-public class HonestyEffects : ScriptableObject
-{
-    [SerializeField]
-    private string m_characterName;
-    [SerializeField]
-    private string m_Mood;
-    [SerializeField]
-    private Honesty[] m_HWords;
-
-    public string characterName => m_characterName;
-    public string Mood => m_Mood;
-    public Honesty[] HWords => m_HWords;
-}
-
-[Serializable]
-public class Honesty
-{
-    [SerializeField]
-    private string m_Keyword;
-    [SerializeField]
-    private float m_Multiplier;
-
-    public string Keyword => m_Keyword;
-    public float Multiplier => m_Multiplier;
 }

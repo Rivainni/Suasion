@@ -60181,6 +60181,12 @@ MonoBehaviour:
   - {fileID: 305208845}
   - {fileID: 1624492491}
   - {fileID: 1352428980}
+  characterProperties:
+  - {fileID: 11400000, guid: 2cd7b81e23f462a48a7ed4891444a072, type: 2}
+  - {fileID: 11400000, guid: 62ed746a1b9c9bf4483984661e87cb60, type: 2}
+  - {fileID: 11400000, guid: a103f30350ea0f54787e1b3341fa67aa, type: 2}
+  - {fileID: 11400000, guid: 5869abdb02e320a4fad0a61a6746f20c, type: 2}
+  - {fileID: 11400000, guid: d6a3b4305ceb6a34d9b24cd6ccb32d81, type: 2}
   waypoints: {fileID: 1046251687}
   bossGate: {fileID: 1472657375}
   endingDialogue: {fileID: 2002581523}

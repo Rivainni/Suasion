@@ -26,12 +26,16 @@ public struct Clue
 public struct Log
 {
     public List<string> keywords;
+    public string character;
     public string state;
     public float result;
+    public float maxResult;
+    public string honesty;
+    public int honestyMult;
     public string response;
     public string comment;
 
-    public Log(List<string> keywords, string state, float result, string response, string comment)
+    public Log(List<string> keywords, string character, string state, float result, float maxResult, string honesty, int honestyMult, string response, string comment)
     {
         this.keywords = new List<string>();
         //this.keywords = keywords;
@@ -40,7 +44,11 @@ public struct Log
             this.keywords.Add(keyword);
         }
         this.state = state;
+        this.character = character;
         this.result = result;
+        this.maxResult = maxResult;
+        this.honesty = honesty;
+        this.honestyMult = honestyMult;
         this.response = response;
         this.comment = comment;
     }
@@ -48,19 +56,23 @@ public struct Log
     public override string ToString()
     {
         string curr = "During: ";
-        curr += state + "\n";
+        curr += "<b>" + character + "'s</b> " + state + "\n";
         curr += "Chosen keywords: ";
         curr += keywords[0] + ", " + keywords[1] + ", ";
         if (state == "Introduction")
         {
             curr += "\n";
+            curr += "Result: ";
+            curr += result + " out of " + maxResult + "\n";
         }
         else
         {
             curr += keywords[2] + "\n";
+            curr += "Result: ";
+            curr += result + "out of " + maxResult + "\n";
+            curr += "You matched the mood " + comment + " with " + honesty + " honesty, multiplying your result by " + honestyMult + "%.\n";
         }
-        curr += "Result: ";
-        curr += result + "\n";
+
         curr += "Response: ";
         curr += response + "\n";
         curr += "Comment: ";

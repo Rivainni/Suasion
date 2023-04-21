@@ -118,8 +118,9 @@ AMSEL: {$choice}
 MANUEL: {$response}
 <<checkitemunlock "Game Manager">>
 <<if $itemon == true>>
-    Use items? Click one of the buttons below.
     <<callitems "Game Manager">>
+    You may use items now.
+    If desired, please click one of the items below *before advancing*.
 <<endif>>
 <<set $success to false>>
 <<rollsuccess "Game Manager">>

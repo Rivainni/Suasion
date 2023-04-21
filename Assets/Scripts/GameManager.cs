@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] TimeController timeController;
     [SerializeField] GameObject[] levelObjects;
+    [SerializeField] PCharacter[] characterProperties;
     [SerializeField] GameObject waypoints;
     [SerializeField] GameObject bossGate;
     [SerializeField] GameObject endingDialogue;
@@ -19,9 +20,9 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     float persuasion = 30;
     float empathy = 30;
-    float honesty = 0;
     int turn = 1;
     float turnMultiplier = 0;
+    float honestyMultiplier = 0.15f;
     string currentCharacter = "Friend";
     string mood = "neutral";
     bool inPersuade = false;
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     // for the log
     float currentValue = 0;
     string response = "";
+    string currentHonesty;
 
     List<string> keywordList = new List<string>();
     List<Combination> combinationList = new List<Combination>();
@@ -91,15 +93,15 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void Calculate()
     {
         int basePoints = 0;
-        int hMult = 0;
+        string honesty = "";
+        float hMult = 0;
         Debug.Log("You have " + keywordList.Count + " keywords");
         foreach (Combination combination in combinationList)
         {
             if (combination.CheckKeywords(keywordList, mood, CheckPersuade()) > 0)
             {
                 basePoints += combination.CheckKeywords(keywordList, mood, CheckPersuade());
-                hMult += combination.CheckHonesty();
-                currentValue = basePoints * hMult;
+                honesty += combination.CheckHonesty();
                 response = combination.Response;
                 storyManager.SetChoice(combination.Choice);
                 storyManager.SetResponse(combination.Response);
@@ -113,29 +115,19 @@ public class GameManager : MonoBehaviour, IDataPersistence
         if (inIntro)
         {
             calc = basePoints * turnMultiplier;
+            currentValue = basePoints;
             empathy = Mathf.Clamp(empathy + calc, 0, 100);
             empathyScores[GetCharacterIndex(currentCharacter)] += basePoints;
         }
         else if (inPersuade)
         {
             calc = basePoints * (1 + (empathy * 0.01f)) * turnMultiplier;
-            if (mood == "neutral" && hMult == 0)
-            {
-                calc += 5;
-            }
-            else if (mood == "positive" && hMult == 1)
-            {
-                calc += 6;
-            }
-            else if (mood == "negative")
-            {
-                calc += 3;
-            }
+            currentValue = basePoints;
+            currentHonesty = honesty;
 
-            if (hMult > 0)
-            {
-                honesty += 0.5f;
-            }
+            hMult = characterProperties[GetCharacterIndex(currentCharacter)].GetMultiplier(honesty, mood) * honestyMultiplier;
+
+            calc += calc * hMult;
             persuasion = Mathf.Clamp(persuasion + calc, 0, 100);
             persuasionScores[GetCharacterIndex(currentCharacter)] += basePoints;
         }
@@ -377,6 +369,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
         PauseTimer(false);
         timeController.ResetTime();
         totalScore += score;
+        levelScores[GetCharacterIndex(GetCharacter())] = score;
         score = 0;
     }
 
@@ -409,7 +402,15 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     public void AddLog(string state)
     {
-        logList.Add(new Log(keywordList, state, currentValue, response, mood));
+        string comment = "They were in a <b>" + mood + "</b> mood.";
+        if (state == "Persuasion")
+        {
+            logList.Add(new Log(keywordList, currentCharacter, state, currentValue, characterProperties[GetCharacterIndex(currentCharacter)].maxPersuasionScore, currentHonesty, response, comment));
+        }
+        else if (state == "Empathy")
+        {
+            logList.Add(new Log(keywordList, currentCharacter, state, currentValue, characterProperties[GetCharacterIndex(currentCharacter)].maxEmpathyScore, currentHonesty, response, comment));
+        }
     }
 
     public List<Log> GetLogs()
@@ -425,23 +426,23 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
         if (rand == 1)
         {
-            itemList.Add(new PromoMaterial("Pamphlet", 5, 3));
-            itemList.Add(new PromoMaterial("Poster", 10, 0));
-            itemList.Add(new PromoMaterial("Assorted", 15, 0));
+            itemList.Add(new PromoMaterial("Pamphlet", 0.05f, 3));
+            itemList.Add(new PromoMaterial("Poster", 0.10f, 0));
+            itemList.Add(new PromoMaterial("Assorted", 0.15f, 0));
             Debug.Log("Type 1");
         }
         else if (rand == 2)
         {
-            itemList.Add(new PromoMaterial("Pamphlet", 5, 3));
-            itemList.Add(new PromoMaterial("Poster", 10, 2));
-            itemList.Add(new PromoMaterial("Assorted", 15, 0));
+            itemList.Add(new PromoMaterial("Pamphlet", 0.05f, 3));
+            itemList.Add(new PromoMaterial("Poster", 0.10f, 2));
+            itemList.Add(new PromoMaterial("Assorted", 0.15f, 0));
             Debug.Log("Type 2");
         }
         else if (rand == 3)
         {
-            itemList.Add(new PromoMaterial("Pamphlet", 5, 3));
-            itemList.Add(new PromoMaterial("Poster", 10, 2));
-            itemList.Add(new PromoMaterial("Assorted", 15, 1));
+            itemList.Add(new PromoMaterial("Pamphlet", 0.05f, 3));
+            itemList.Add(new PromoMaterial("Poster", 0.10f, 2));
+            itemList.Add(new PromoMaterial("Assorted", 0.15f, 1));
             Debug.Log("Type 3");
         }
     }
@@ -449,6 +450,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void UseItem(float effect)
     {
         persuasion += persuasion * effect;
+        mainUI.UpdateBarOnly();
     }
 
     public List<PromoMaterial> GetItems()
