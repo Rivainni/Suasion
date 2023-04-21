@@ -56,7 +56,7 @@ public struct Log
     public override string ToString()
     {
         string curr = "During: ";
-        curr += "<b>" + character + "'s</b> " + state + "\n";
+        curr += "<b>" + character + "'s</b>" + state + "\n";
         curr += "Chosen keywords: ";
         curr += keywords[0] + ", " + keywords[1] + ", ";
         if (state == "Introduction")
@@ -78,27 +78,8 @@ public struct Log
         curr += "Comment: ";
         curr += comment + "\n";
         curr += "\n";
+        Debug.Log(curr);
         return curr;
-    }
-}
-
-[System.Serializable]
-public struct PromoMaterial
-{
-    public string name;
-    public float bonus;
-    public int quantity;
-
-    public PromoMaterial(string name, float bonus, int quantity)
-    {
-        this.name = name;
-        this.bonus = bonus;
-        this.quantity = quantity;
-    }
-
-    public void UseItem()
-    {
-        quantity--;
     }
 }
 

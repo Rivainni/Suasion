@@ -23,6 +23,7 @@ ScriptedImporter:
   - {fileID: 6391573757903218779, guid: 6e98a619d03ebb245a74b709051c986c, type: 3}
   - {fileID: 6391573757903218779, guid: 5465c36779cd71b4999791a6f2a1a741, type: 3}
   - {fileID: 6391573757903218779, guid: 0bee56fee6c325348ba823589a86bd58, type: 3}
+  - {fileID: 6391573757903218779, guid: c35882e05c619bf41ad2f5dc08aa8533, type: 3}
   compileErrors: []
   serializedDeclarations:
   - name: $choice
@@ -89,6 +90,22 @@ ScriptedImporter:
     description: Implicitly declared in Farmer.yarn, node FarmerIntro
     isImplicit: 1
     sourceYarnAsset: {fileID: 6391573757903218779, guid: aae89cf52a62689428b6985f3d767753, type: 3}
+  - name: $reqBaker
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in All_ViceMayor.yarn, node All_ViceMayor
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 6e98a619d03ebb245a74b709051c986c, type: 3}
+  - name: $reqFarmer
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in All_ViceMayor.yarn, node All_ViceMayor
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 6e98a619d03ebb245a74b709051c986c, type: 3}
   defaultLanguage: en-PH
   languagesToSourceAssets: []
   useAddressableAssets: 0

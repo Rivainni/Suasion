@@ -60,7 +60,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
     {
         if (SceneManager.GetActiveScene().name == "Main Game")
         {
-            Debug.Log("aaa");
             for (int i = 0; i < levelObjects.Length; i++)
             {
                 levelObjectMapping.Add(levelObjects[i].name, i);
@@ -402,15 +401,16 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     public void AddLog(string state)
     {
-        string comment = "They were in a <b>" + mood + "</b> mood.";
+        string comment = "They were in a " + mood + " mood.";
         if (state == "Persuasion")
         {
-            logList.Add(new Log(keywordList, currentCharacter, state, currentValue, characterProperties[GetCharacterIndex(currentCharacter)].maxPersuasionScore, currentHonesty, response, comment));
+            logList.Add(new Log(keywordList, currentCharacter, state, currentValue, characterProperties[GetCharacterIndex(currentCharacter)].maxPersuasionScore, currentHonesty, (int)characterProperties[GetCharacterIndex(currentCharacter)].GetMultiplier(currentHonesty, mood), response, comment));
         }
-        else if (state == "Empathy")
+        else if (state == "Introduction")
         {
-            logList.Add(new Log(keywordList, currentCharacter, state, currentValue, characterProperties[GetCharacterIndex(currentCharacter)].maxEmpathyScore, currentHonesty, response, comment));
+            logList.Add(new Log(keywordList, currentCharacter, state, currentValue, characterProperties[GetCharacterIndex(currentCharacter)].maxEmpathyScore, "", 0, response, comment));
         }
+
     }
 
     public List<Log> GetLogs()
