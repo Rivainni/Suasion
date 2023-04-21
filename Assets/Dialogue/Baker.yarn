@@ -60,7 +60,8 @@ title: Cashier
 tags: Clue
 ---
 AMSEL: The cashier has a ton of locks on it, I know people want their money secured but this is just over the top.
-<<addclue "Game Manager" "Cashier" "The cashier has a ton of locks on it, I know people want their money secured but this is just over the top." "MARIA">>
+AMSEL: I guess she's possessive when it comes to control and security.
+<<addclue "Game Manager" "Cashier" "The cashier has a ton of locks on it, I know people want their money secured but this is just over the top. I guess she's possessive when it comes to control and security." "MARIA">>
 <<enddialogue "Game Manager">>
 ===
 
@@ -70,7 +71,8 @@ tags: Clue
 (Clue found - bread trays)
 AMSEL: These are the trays Maria uses to place the bread she sells.
 AMSEL: Each of them are labeled by a little card with the name.
-<<addclue "Game Manager" "Bread Trays" "These are the trays Maria uses to place the bread she sells. Each of them are labeled by a little card with the name." "MARIA">>
+AMSEL: Hmmm, looks like she's organized.
+<<addclue "Game Manager" "Bread Trays" "These are the trays Maria uses to place the bread she sells. Each of them are labeled by a little card with the name. Hmmm, looks like she's organized." "MARIA">>
 <<enddialogue "Game Manager">>
 ===
 
@@ -80,7 +82,8 @@ tags: Clue
 (Clue found - indoor plants)
 AMSEL: All of the plants are fake, except for one pink flower on the counter. 
 AMSEL: It has some unnatural red marks on it and it looks well taken care of.
-<<addclue "Game Manager" "Indoor Plants" "All of the plants are fake, except for one pink flower on the counter. It has some unnatural red marks on it and it looks well taken care of." "MARIA">>
+AMSEL: The red marks look like blood, is this some kind of sick joke she set up!?
+<<addclue "Game Manager" "Indoor Plants" "All of the plants are fake, except for one pink flower on the counter. It has some unnatural red marks on it and it looks well taken care of. The red marks look like blood, is this some kind of sick joke she set up!?" "MARIA">>
 <<enddialogue "Game Manager">>
 ===
 
@@ -91,7 +94,8 @@ tags: Clue
 AMSEL: The door is metal with a single window on top covered with black paint. 
 AMSEL: I could barely see and hear what is in there. 
 AMSEL: Red marks are all over the door, similar to the ones the flower has.
-<<addclue "Game Manager" "Kitchen Door" "The door is metal with a single window on top covered with black paint. I could barely see and hear what is in there. Red marks are all over the door, similar to the ones the flower has." "MARIA">>
+AMSEL: I'm getting really dangerous vibes from this woman. I should be cautious when talking to her.
+<<addclue "Game Manager" "Kitchen Door" "The door is metal with a single window on top covered with black paint. I could barely see and hear what is in there. Red marks are all over the door, similar to the ones the flower has. I'm getting really dangerous vibes from this woman. I should be cautious when talking to her." "MARIA">>
 <<enddialogue "Game Manager">>
 ===
 

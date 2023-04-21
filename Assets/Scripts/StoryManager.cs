@@ -207,7 +207,6 @@ public class StoryManager : MonoBehaviour
                     break;
             }
 
-            dialogueRunner.StartDialogue(dialogue);
             if (!CheckCutscene())
             {
                 gameManager.LockMovement(true);
@@ -215,6 +214,7 @@ public class StoryManager : MonoBehaviour
                 gameManager.HideTimer(true);
                 dialogueUp = true;
             }
+            dialogueRunner.StartDialogue(dialogue);
         }
     }
 
