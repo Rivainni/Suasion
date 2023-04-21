@@ -42,7 +42,7 @@ public class StoryElement : MonoBehaviour
         }
         else if (type == "Cutscene")
         {
-            storyManager.StartDialogue(title, 3, keywords);
+            storyManager.StartDialogue(title, 3);
         }
         this.enabled = false;
     }

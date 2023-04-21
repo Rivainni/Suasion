@@ -6,7 +6,7 @@ Over the years, Sate has been becoming more aware of the unjust corruption happe
 Sate wants to run for Mayor, and Amsel, being the good friend they are, wants to help.
 Now, the problem is knowing where to start.
 They decide to approach Sate's father Dr. Antoni for help, support, and permission.
-(Note - you don't have to do this. You can go out and explore (at your own risk!)
+Note - you don't have to do this. You can go out and explore (at your own risk!)
 <<setcspeaker "CutsceneAdvance" 2>>
 AMSEL: Let's knock on his door.
 <<transition "Game Manager">>

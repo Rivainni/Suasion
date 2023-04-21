@@ -144,7 +144,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
+  title: ViceMayorTP
+  type: Cutscene
+  gameManager: {fileID: 0}
+  storyManager: {fileID: 0}
+  reference: {fileID: 0}
+  keywords: []
+--- !u!1 &2450735374426154770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8286979014742035444}
+  - component: {fileID: 5075753639284675553}
+  m_Layer: 0
+  m_Name: Defeat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8286979014742035444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450735374426154770}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 72.4364, y: 71.58145, z: -1.5483165}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5111761952912574781}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5075753639284675553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450735374426154770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Defeat
   type: Cutscene
   gameManager: {fileID: 0}
   storyManager: {fileID: 0}
@@ -386,6 +436,8 @@ Transform:
   - {fileID: 8919625307950518145}
   - {fileID: 4818584929944666238}
   - {fileID: 6170031909499857844}
+  - {fileID: 7705654403103914453}
+  - {fileID: 8286979014742035444}
   m_Father: {fileID: 4809935391406929760}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -590,6 +642,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: Baker_Farmer
+  type: Cutscene
+  gameManager: {fileID: 0}
+  storyManager: {fileID: 0}
+  reference: {fileID: 0}
+  keywords: []
+--- !u!1 &6858587802676311572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7705654403103914453}
+  - component: {fileID: 6458630763186671299}
+  m_Layer: 0
+  m_Name: Victory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7705654403103914453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858587802676311572}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 72.4364, y: 71.58145, z: -1.5483165}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5111761952912574781}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6458630763186671299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858587802676311572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Victory
   type: Cutscene
   gameManager: {fileID: 0}
   storyManager: {fileID: 0}
@@ -1126,6 +1228,7 @@ MonoBehaviour:
   - {fileID: 1694781462, guid: 3bbdea2d538c9934887b21a6e7a4f188, type: 3}
   - {fileID: 1495848516, guid: 9191049e495dbee4e8f6352f22ef8c6a, type: 3}
   - {fileID: 977730107, guid: ffdaff1f6cb6df049bc2cebf30f851c6, type: 3}
+  - {fileID: 1512038208, guid: 92d04139edbab9c4bbe83d3646aabfd7, type: 3}
   dialogueIcon: {fileID: 2738538659774815250}
 --- !u!1001 &3794817800970425436
 PrefabInstance:

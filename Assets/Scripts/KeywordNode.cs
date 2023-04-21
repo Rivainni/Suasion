@@ -106,8 +106,24 @@ public class HonestyEffects : ScriptableObject
 {
     [SerializeField]
     private string m_characterName;
-    public string characterName => m_characterName;
     [SerializeField]
-    private Dictionary<string, float> m_honestyMultiplier;
-    public Dictionary<string, float> honestyMultiplier;
+    private string m_Mood;
+    [SerializeField]
+    private Honesty[] m_HWords;
+
+    public string characterName => m_characterName;
+    public string Mood => m_Mood;
+    public Honesty[] HWords => m_HWords;
+}
+
+[Serializable]
+public class Honesty
+{
+    [SerializeField]
+    private string m_Keyword;
+    [SerializeField]
+    private float m_Multiplier;
+
+    public string Keyword => m_Keyword;
+    public float Multiplier => m_Multiplier;
 }

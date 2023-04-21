@@ -2,23 +2,58 @@
 tags: cutscene
 ---
 <<transition "Game Manager">>
-<<setcspeaker "CutsceneAdvance" 0>>
-The next day...
-<<setcspeaker "CutsceneAdvance" 1>>
-AMSEL: I know that Mari, the town's one and only baker, knows a lot about everyone and everything that happens here.
-AMSEL: If we want to gather supporters, we will need to talk to her.
-AMSEL: We could also go talk to Manuel the farmer, he's a quiet one but the entire agriculturist sector of the town is under him.
-AMSEL: Then there's the Priestess, if we would want to get a powerful supporter, we have to persuade her to our side.
-AMSEL: She's going to be the hardest to persuade than Mari and Manuel.
-<<setcspeaker "CutsceneAdvance" 2>>
-SATE: Knock knock, anyone awake here?
-<<setcspeaker "CutsceneAdvance" 1>>
-AMSEL: Sate! Just in time, let's go!
-<<setcspeaker "CutsceneAdvance" 2>>
-SATE: Go where?
-<<setcspeaker "CutsceneAdvance" 1>>
-AMSEL: To get some cake!
-<<setcspeaker "CutsceneAdvance" 2>>
+<<set $reqFarmer to false>>
+<<checkpersuaded "Game Manager" "Farmer">>
+<<if $reqFarmer == true>>
+    <<setcspeaker "CutsceneAdvance" 5>>
+    MANUEL: ....
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: Uhhhh....
+    <<setcspeaker "CutsceneAdvance" 2>>
+    SATE: Should we be saying something?
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: No idea.
+    <<setcspeaker "CutsceneAdvance" 5>>
+    MANUEL: I'll help you.
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: Gottem!
+    <<setcspeaker "CutsceneAdvance" 2>>
+    SATE: Thank you!
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: Ok. Now we need to talk to Maria
+    <<setcspeaker "CutsceneAdvance" 2>>
+    SATE: I don't like that woman.
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: I know, but we need her on our side if we have any chance of winning this.
+    AMSEL: She does hold the most influence in the town, with her being a gossip queen and all.
+    <<setcspeaker "CutsceneAdvance" 2>>
+    SATE: I guess so.
+<<else>>
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: Will you join and help us?
+    <<setcspeaker "CutsceneAdvance" 5>>
+    MANUEL: No.
+    MANUEL: Stop wasting my time and get out of my home.
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: Ok. We're sorry for disturbing you.
+    <<setcspeaker "CutsceneAdvance" 2>>
+    SATE: Sorry..
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: ...
+    <<setcspeaker "CutsceneAdvance" 2>>
+    SATE: ...
+    SATE: Now what?
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: I don't know.
+    <<setcspeaker "CutsceneAdvance" 2>>
+    SATE: We need to keep going, though.
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: Ok we still have 1 more person we can persuade and it's the Baker.
+    AMSEL: We need to not mess this up if we ever have a chance of still winning.
+    <<setcspeaker "CutsceneAdvance" 2>>
+    SATE: Ok, ok.
+<<endif>>
+
 <<transition "Game Manager">>
 <<enddialogue "Game Manager">>
 ===

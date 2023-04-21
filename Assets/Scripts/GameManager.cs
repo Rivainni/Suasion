@@ -471,7 +471,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
         Random.seed = System.DateTime.Now.Millisecond;
         // roll a random number between 0 and 100, then check if the random number is less than or equal to persuasion
         int rand = Random.Range(0, 100);
-        if (rand <= persuasion)
+        if (rand <= persuasion || currentCharacter == "Doctor")
         {
             success = true;
             finishedCharacters[GetCharacterIndex(currentCharacter)] = 3;
@@ -630,15 +630,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     public void Leave()
     {
-        switch (GetElectionStatus())
-        {
-            case true:
-                endingDialogue.transform.GetChild(0).gameObject.GetComponent<StoryElement>().TriggerDialogue();
-                break;
-            case false:
-                endingDialogue.transform.GetChild(1).gameObject.GetComponent<StoryElement>().TriggerDialogue();
-                break;
-        }
+        storyManager.TriggerCutscene();
     }
 
     public void SaveData(ref GameData gameData)

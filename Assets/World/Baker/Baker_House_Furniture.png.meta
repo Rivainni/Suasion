@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Baker_House_Furniture_0
+      rect:
+        serializedVersion: 2
+        x: 4811
+        y: 2280
+        width: 87
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4101eeb608360b446bed05474055c212
+      internalID: -700804066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baker_House_Furniture_1
+      rect:
+        serializedVersion: 2
+        x: 4902
+        y: 2242
+        width: 106
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76e634666682e142acf6c371eedf5b9
+      internalID: 1435265377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baker_House_Furniture_2
+      rect:
+        serializedVersion: 2
+        x: 5083
+        y: 2245
+        width: 106
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fc9cd15d246d0479ec5b2dd9bdf3c2
+      internalID: -1876475023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baker_House_Furniture_3
+      rect:
+        serializedVersion: 2
+        x: 5321
+        y: 2372
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5502f46f9143d834994c2fb7e7bef5ce
+      internalID: -2018535421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baker_House_Furniture_4
+      rect:
+        serializedVersion: 2
+        x: 5323
+        y: 2267
+        width: 94
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365faf660b7ce3940aea693212659f43
+      internalID: 953051726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baker_House_Furniture_5
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 2353
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53363f221b436b44b996932d33c7a0b0
+      internalID: 2086431724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baker_House_Furniture_6
+      rect:
+        serializedVersion: 2
+        x: 4880
+        y: 2005
+        width: 318
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b8f42a24bcb1042b193f6e6984099c
+      internalID: 867554217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baker_House_Furniture_7
+      rect:
+        serializedVersion: 2
+        x: 5258
+        y: 1923
+        width: 72
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd77516a51de02b45b8fa427fcc56c61
+      internalID: 688831327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baker_House_Furniture_8
+      rect:
+        serializedVersion: 2
+        x: 5386
+        y: 2105
+        width: 31
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ccd071f5ba6314b9e3b141760175fa
+      internalID: 115041911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baker_House_Furniture_9
+      rect:
+        serializedVersion: 2
+        x: 5408
+        y: 1658
+        width: 447
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cfe0d46fe381b45ba8aa5a596b4766
+      internalID: 1030408739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baker_House_Furniture_11
+      rect:
+        serializedVersion: 2
+        x: 4892
+        y: 1823
+        width: 122
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c36cda0f480134387f539056970cee
+      internalID: -954239991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baker_House_Furniture_12
+      rect:
+        serializedVersion: 2
+        x: 5070
+        y: 1820
+        width: 128
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1bc0e77f6276a479df9aef1e5349d1
+      internalID: 181574707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +378,33 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Baker_House_Furniture_18: 415452150
+      Baker_House_Furniture_19: -1528587468
+      Baker_House_Furniture_10: -765818696
+      Baker_House_Furniture_1: 1435265377
+      Baker_House_Furniture_23: -1162660137
+      Baker_House_Furniture_24: 1634974120
+      Baker_House_Furniture_8: 115041911
+      Baker_House_Furniture_22: -1955819375
+      Baker_House_Furniture_14: -2115995274
+      Baker_House_Furniture_7: 688831327
+      Baker_House_Furniture_12: 181574707
+      Baker_House_Furniture_25: -871617842
+      Baker_House_Furniture_2: -1876475023
+      Baker_House_Furniture_17: 948989506
+      Baker_House_Furniture_15: -458835646
+      Baker_House_Furniture_16: 424985186
+      Baker_House_Furniture_3: -2018535421
+      Baker_House_Furniture_6: 867554217
+      Baker_House_Furniture_20: 1902421026
+      Baker_House_Furniture_11: -954239991
+      Baker_House_Furniture_21: 1079239289
+      Baker_House_Furniture_9: 1030408739
+      Baker_House_Furniture_4: 953051726
+      Baker_House_Furniture_5: 2086431724
+      Baker_House_Furniture_13: -145581943
+      Baker_House_Furniture_0: -700804066
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

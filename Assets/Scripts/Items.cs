@@ -43,6 +43,7 @@ public class Items : MonoBehaviour
     public void UseItem(int index)
     {
         Debug.Log("index");
+        Debug.Log(gameManager.GetItems().Count);
         if (items[index].GetComponent<Button>().interactable)
         {
             items[index].GetComponent<Button>().interactable = false;

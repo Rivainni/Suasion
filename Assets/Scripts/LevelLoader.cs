@@ -17,7 +17,6 @@ public class LevelLoader : MonoBehaviour
     void Awake()
     {
         dataPersistenceManager = FindObjectOfType<DataPersistenceManager>();
-        DontDestroyOnLoad(gameObject);
     }
 
     [YarnCommand("changescene")]

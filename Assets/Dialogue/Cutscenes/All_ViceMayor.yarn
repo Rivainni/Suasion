@@ -1,10 +1,94 @@
 ﻿title: All_ViceMayor
-tags:
+tags: cutscene
 ---
 <<transition "Game Manager">>
-<<setcspeaker "CutsceneAdvance" 1>>
-Having talked to much of the town, the pair are suddenly invited by government officials...
-...to have a 'discernment' talk.
+<<set $reqBaker to false>>
+<<set $reqFarmer to false>>
+<<checkpersuaded "Game Manager" "Baker">>
+<<checkpersuaded "Game Manager" "Farmer">>
+
+<<if $reqBaker == true && $reqFarmer == true>>
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Sir what are we gonna do about those two?
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR: They're just kids, they're nothing.
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Those kids convinced the Doctor, the Baker and the Farmer.
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR: Wait....Maria joined them!?
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Unfortunately yes.
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR: Manuel is no threat and the Doctor is a nobody but Maria is a serious problem.
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Yes.
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR: Get them here and take care of them now!
+    MAYOR: Give them the old 'discernment' talk.
+    MAYOR: Let's see if they'll still be squawking then.
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Affirmative sir.
+<<elseif $reqBaker == true>>
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Sir what are we gonna do about those two?
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR: They're just kids, they're nothing.
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Those kids convinced the Doctor and the Baker.
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR: Wait....Maria joined them!?
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Unfortunately yes.
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR:Get them here and take care of them now!
+    MAYOR: Give them the old 'discernment' talk
+    MAYOR: Let's see if they'll still be squawking then.
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Affirmative sir.
+<<elseif $reqFarmer == true>>
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Sir what are we gonna do about those two?
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR:They're just kids, they're nothing.
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Those kids convinced the Doctor and the Farmer.
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR: Wait....that stanky old farmer!?
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Yes.
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR: They're no threat to us, why should we be worried?
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Manuel is a highly respected individual by the townspeole, he's the symbol of the hardworking man in the town's eyes.
+    VICE MAYOR: And with his vote, the people will see just how rightous the kids are....damn them.
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR:Get them here and take care of them now!
+    MAYOR:Give them the old 'discernment' talk
+    MAYOR: Let's see if they'll still be squawking then.
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Affirmative sir.
+<<else>>
+<<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Sir what are we gonna do about those two?
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR: They're just kids, they're nothing.
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Those kids convinced the Doctor.
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR:What the nobody?
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: That nobody is Dr. Antoni.
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR: Ohhh...
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Yeah.
+    <<setcspeaker "CutsceneAdvance" 7>>
+    MAYOR:Get them here and take care of them now!
+    MAYOR: Give them the old 'discernment' talk
+    MAYOR:Let's see if they'll still be squawking then.
+    <<setcspeaker "CutsceneAdvance" 6>>
+    VICE MAYOR: Affirmative sir.
+<<endif>>
 <<transition "Game Manager">>
 <<enddialogue "Game Manager">>
 ===

@@ -130,10 +130,12 @@ public class StoryManager : MonoBehaviour
 
     StoryElement chain = null;
     KeywordNode[] currentKeywords;
-    bool textBoxMode = true;
+    int previousType = 0;
 
     [SerializeField]
     StoryElement[] cutscenes;
+    [SerializeField]
+    TMP_Text[] dialogueTexts;
 
     // Start is called before the first frame update
     void Awake()
@@ -164,19 +166,20 @@ public class StoryManager : MonoBehaviour
             {
                 case 0:
                     outerDialogue.SetActive(true);
-                    if (!textBoxMode)
+                    if (previousType != dialogueType)
                     {
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { outerDialogue.GetComponent<LineView>() });
-                        textBoxMode = true;
+                        previousType = dialogueType;
                     }
                     break;
                 case 1:
                     innerDialogue.SetActive(true);
-                    if (textBoxMode)
+                    // mainUI.Fade();
+                    if (previousType != dialogueType)
                     {
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
                         currentKeywords = keywordSet;
-                        textBoxMode = false;
+                        previousType = dialogueType;
                     }
                     PauseAmbient();
                     PauseMusic("Map");
@@ -185,11 +188,12 @@ public class StoryManager : MonoBehaviour
                     break;
                 case 2:
                     innerDialogue.SetActive(true);
-                    if (textBoxMode)
+                    // mainUI.Fade();
+                    if (previousType != dialogueType)
                     {
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
                         currentKeywords = keywordSet;
-                        textBoxMode = false;
+                        previousType = dialogueType;
                     }
                     PauseAmbient();
                     PauseMusic("Map");
@@ -198,12 +202,12 @@ public class StoryManager : MonoBehaviour
                     break;
                 case 3:
                     cutsceneDialogue.SetActive(true);
-                    if (textBoxMode)
+                    if (previousType != dialogueType)
                     {
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { cutsceneDialogue.GetComponent<LineView>() });
-                        currentKeywords = keywordSet;
-                        textBoxMode = true;
+                        previousType = dialogueType;
                     }
+
                     PauseAmbient();
                     break;
                 default:
@@ -315,6 +319,17 @@ public class StoryManager : MonoBehaviour
         else if (gameManager.GetCharacter() == "Doctor")
         {
             cutscenes[1].TriggerDialogue();
+        }
+        else if (gameManager.GetCharacter() == "Vice Mayor")
+        {
+            if (gameManager.GetElectionStatus())
+            {
+                cutscenes[5].TriggerDialogue();
+            }
+            else
+            {
+                cutscenes[6].TriggerDialogue();
+            }
         }
         else if (gameManager.CheckAllCharactersDone())
         {
@@ -460,7 +475,7 @@ public class StoryManager : MonoBehaviour
     public void CheckPersuaded(string character)
     {
         variableStorage = GameObject.FindObjectOfType<InMemoryVariableStorage>();
-        variableStorage.SetValue("$req", gameManager.CheckPersuaded(character));
+        variableStorage.SetValue("$req" + character, gameManager.CheckPersuaded(character));
     }
 
     [YarnCommand("transition")]

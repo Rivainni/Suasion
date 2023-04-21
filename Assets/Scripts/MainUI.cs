@@ -373,7 +373,6 @@ public class MainUI : MonoBehaviour
     {
         endPanel.SetActive(false);
         gameManager.Leave();
-        Application.Quit();
     }
 
     public void Fade()
