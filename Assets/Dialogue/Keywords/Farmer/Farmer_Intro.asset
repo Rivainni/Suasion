@@ -14,104 +14,104 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Keywords:
     m_Topic:
-    - day
-    - farm
-    - campaign
+    - today's weather
+    - the farm
+    - mayoral campaign
     m_Tone:
     - polite
     - direct
     m_Honesty: []
     m_Restrictions: []
   m_Combinations:
-  - m_Set: polite_day
+  - m_Set: polite_today's weather
     m_Mood: positive
     m_Points: 4
     m_Choice: Lovely weather we're having.
     m_Response: Yes, it really is.
-  - m_Set: polite_day
+  - m_Set: polite_today's weather
     m_Mood: neutral
     m_Points: 4
     m_Choice: Lovely weather we're having.
     m_Response: Luck is with us today.
-  - m_Set: polite_day
+  - m_Set: polite_today's weather
     m_Mood: negative
     m_Points: 3
     m_Choice: Lovely weather we're having.
     m_Response: Sure.
-  - m_Set: polite_farm
+  - m_Set: polite_the farm
     m_Mood: positive
     m_Points: 5
     m_Choice: I heard that there was a lot of harvest this season. You must be really
       glad about it.
     m_Response: Yes I am, very much so.
-  - m_Set: polite_farm
+  - m_Set: polite_the farm
     m_Mood: neutral
     m_Points: 3
     m_Choice: I heard that there was a lot of harvest this season. You must be really
       glad about it.
     m_Response: Yes.
-  - m_Set: polite_farm
+  - m_Set: polite_the farm
     m_Mood: negative
     m_Points: 3
     m_Choice: I heard that there was a lot of harvest this season. You must be really
       glad about it.
     m_Response: If you say so.
-  - m_Set: direct_day
+  - m_Set: direct_today's weather
     m_Mood: positive
     m_Points: 3
     m_Choice: How's your day sir?
     m_Response: Peachy.
-  - m_Set: direct_day
+  - m_Set: direct_today's weather
     m_Mood: neutral
     m_Points: 4
     m_Choice: How's your day sir?
     m_Response: The day has been good to me.
-  - m_Set: direct_day
+  - m_Set: direct_today's weather
     m_Mood: negative
     m_Points: 2
     m_Choice: How's your day sir?
     m_Response: ...
-  - m_Set: direct_farm
+  - m_Set: direct_the farm
     m_Mood: positive
     m_Points: 4
     m_Choice: How's your farm doing sir?
     m_Response: Could've been better.
-  - m_Set: direct_farm
+  - m_Set: direct_the farm
     m_Mood: neutral
     m_Points: 3
     m_Choice: How's your farm doing sir?
     m_Response: Okay.
-  - m_Set: direct_farm
+  - m_Set: direct_the farm
     m_Mood: negative
     m_Points: 2
     m_Choice: How's your farm doing sir?
     m_Response: ...
-  - m_Set: polite_campaign
+  - m_Set: polite_mayoral campaign
     m_Mood: positive
     m_Points: 6
     m_Choice: Hello, I'm Amsel and this is Sate, we just want to talk to you.
     m_Response: Okay.
-  - m_Set: polite_campaign
+  - m_Set: polite_mayoral campaign
     m_Mood: neutral
     m_Points: 6
     m_Choice: Hello, I'm Amsel and this is Sate, we just want to talk to you.
     m_Response: Sure.
-  - m_Set: polite_campaign
+  - m_Set: polite_mayoral campaign
     m_Mood: negative
     m_Points: 6
     m_Choice: Hello, I'm Amsel and this is Sate, we just want to talk to you.
     m_Response: ...
-  - m_Set: direct_campaign
+  - m_Set: direct_mayoral campaign
     m_Mood: positive
     m_Points: 5
     m_Choice: Hello, I'm Amsel and this is Sate, we just want to talk to you.
     m_Response: Mhm.
-  - m_Set: direct_campaign
+  - m_Set: direct_mayoral campaign
     m_Mood: neutral
     m_Points: 4
     m_Choice: Hello, I'm Amsel and this is Sate, we just want to talk to you.
     m_Response: Okay.
-  - m_Set: direct_campaign
+  - m_Set: direct_mayoral campaign
     m_Mood: negative
     m_Points: 0
     m_Choice: Hello, I'm Amsel and this is Sate, we just want to talk to you.

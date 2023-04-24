@@ -253,6 +253,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords:
   - {fileID: 11400000, guid: 30f0b58058d8c874384fd225eb0e268f, type: 2}
 --- !u!114 &4473813
@@ -810,7 +811,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &71881694
 GameObject:
@@ -970,7 +971,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 7
   m_Sprite: {fileID: -1068008373, guid: 43f54158d2ed50c48abffae101e1e549, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -999,6 +1000,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!70 &90123492
 CapsuleCollider2D:
@@ -1145,6 +1147,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &94553743
 GameObject:
@@ -2141,6 +2144,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords:
   - {fileID: 11400000, guid: d53581647d1504ec9bc3aa8d18e7df7b, type: 2}
   - {fileID: 11400000, guid: a669ebcc9727a4acaab986a9b7ad1804, type: 2}
@@ -2273,6 +2277,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!61 &179562328
 BoxCollider2D:
@@ -2676,6 +2681,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!61 &188618676
 BoxCollider2D:
@@ -3233,6 +3239,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &235992180
 GameObject:
@@ -3316,7 +3323,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &268797393
 GameObject:
@@ -3939,7 +3946,7 @@ Transform:
   - {fileID: 1919526098}
   - {fileID: 120961745}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &360793421
 GameObject:
@@ -4070,6 +4077,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &372909881
 GameObject:
@@ -4461,6 +4469,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!61 &389855544
 BoxCollider2D:
@@ -4617,6 +4626,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &421163798
 GameObject:
@@ -24479,7 +24489,7 @@ Transform:
   m_Children:
   - {fileID: 16377429}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &435454869
 GameObject:
@@ -24729,7 +24739,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 7
   m_Sprite: {fileID: -652869008, guid: 43f54158d2ed50c48abffae101e1e549, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -24758,6 +24768,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!70 &472141232
 CapsuleCollider2D:
@@ -25719,7 +25730,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &521061259
 MonoBehaviour:
@@ -26153,6 +26164,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &632857482 stripped
 GameObject:
@@ -47694,6 +47706,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!70 &666856199
 CapsuleCollider2D:
@@ -47957,6 +47970,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!114 &709759975
 MonoBehaviour:
@@ -48985,6 +48999,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &835414271
 GameObject:
@@ -49457,6 +49472,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &910510115
 GameObject:
@@ -49525,6 +49541,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!212 &910510119
 SpriteRenderer:
@@ -50018,56 +50035,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3795395, y: 12.44072}
   m_EdgeRadius: 0
---- !u!1 &940132302
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 940132303}
-  - component: {fileID: 940132304}
-  m_Layer: 0
-  m_Name: Victory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &940132303
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940132302}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2002581524}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &940132304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940132302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Victory
-  type: End
-  gameManager: {fileID: 1901980257}
-  storyManager: {fileID: 1901980258}
-  reference: {fileID: 0}
-  keywords: []
 --- !u!1 &940186796
 GameObject:
   m_ObjectHideFlags: 0
@@ -50525,6 +50492,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -146.94879
       objectReference: {fileID: 0}
+    - target: {fileID: 8653086764363205063, guid: 6bd42f573b6312c4a8f68b510b051b4a, type: 3}
+      propertyPath: storyManager
+      value: 
+      objectReference: {fileID: 1901980258}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bd42f573b6312c4a8f68b510b051b4a, type: 3}
 --- !u!224 &961187731 stripped
@@ -51107,7 +51078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &981586946
 Transform:
   m_ObjectHideFlags: 0
@@ -52296,6 +52267,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 661800059}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &1020366620
 GameObject:
@@ -52347,6 +52319,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 981586945}
   keywords:
   - {fileID: 11400000, guid: 1ccfc5a07f5c2be4498c7f618a62bca9, type: 2}
   - {fileID: 11400000, guid: ebb6f866bf378d3459a72c9f7446905e, type: 2}
@@ -52522,7 +52495,7 @@ Transform:
   - {fileID: 1221450288}
   - {fileID: 1451656992}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1047335020
 GameObject:
@@ -53196,6 +53169,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 1020366620}
+  referenceDisable: {fileID: 0}
   keywords:
   - {fileID: 11400000, guid: 15ecc3f04cbd44f4880db9fcfde84bd9, type: 2}
 --- !u!70 &1059788627
@@ -53411,7 +53385,7 @@ Transform:
   - {fileID: 1453320067}
   - {fileID: 910510116}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1088114558
 GameObject:
@@ -53819,6 +53793,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &1218768159
 GameObject:
@@ -54476,6 +54451,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 1620435415}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &1279152179
 GameObject:
@@ -54722,56 +54698,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1310415794
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1310415795}
-  - component: {fileID: 1310415796}
-  m_Layer: 0
-  m_Name: Defeat
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1310415795
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310415794}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2002581524}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1310415796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310415794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Defeat
-  type: End
-  gameManager: {fileID: 1901980257}
-  storyManager: {fileID: 1901980258}
-  reference: {fileID: 0}
-  keywords: []
 --- !u!1 &1317594408
 GameObject:
   m_ObjectHideFlags: 0
@@ -55426,6 +55352,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords:
   - {fileID: 11400000, guid: 096b608f38ce5c24aa617540fa524b6a, type: 2}
   - {fileID: 11400000, guid: 78ef19505fa9c3b4eb8da2ab5c7c9684, type: 2}
@@ -55987,7 +55914,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 7
   m_Sprite: {fileID: -1845452673, guid: 43f54158d2ed50c48abffae101e1e549, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -56016,6 +55943,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!70 &1453320070
 CapsuleCollider2D:
@@ -56211,6 +56139,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords:
   - {fileID: 11400000, guid: 0bee553d28bfbc44d9cb4a92a5be4ab9, type: 2}
 --- !u!61 &1472657380
@@ -56516,6 +56445,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &1491287114
 GameObject:
@@ -56568,6 +56498,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!61 &1491287117
 BoxCollider2D:
@@ -56843,6 +56774,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!61 &1527338723
 BoxCollider2D:
@@ -57341,6 +57273,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords:
   - {fileID: 11400000, guid: 7b475f6fbf4217843bb7980ebbdbe4d1, type: 2}
 --- !u!114 &1553236194
@@ -58049,6 +57982,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!212 &1620435419
 SpriteRenderer:
@@ -58231,6 +58165,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &1624492491
 GameObject:
@@ -58937,7 +58872,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1753026129
 GameObject:
@@ -59208,6 +59143,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!61 &1787453301
 BoxCollider2D:
@@ -60038,6 +59974,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords:
   - {fileID: 11400000, guid: b0f9b17bd19307c4f8e222425f3b7ccc, type: 2}
   - {fileID: 11400000, guid: e2eea2efa917e1749a2d7f11c6305c0a, type: 2}
@@ -60189,7 +60126,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d6a3b4305ceb6a34d9b24cd6ccb32d81, type: 2}
   waypoints: {fileID: 1046251687}
   bossGate: {fileID: 1472657375}
-  endingDialogue: {fileID: 2002581523}
+  endingDialogue: {fileID: 0}
 --- !u!114 &1901980258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60383,6 +60320,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &1949114882
 GameObject:
@@ -64350,39 +64288,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5352589262340114485, guid: 61c7bc890c1b48149a25787068151aa0, type: 3}
   m_PrefabInstance: {fileID: 1811549257}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2002581523
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2002581524}
-  m_Layer: 0
-  m_Name: Ending
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2002581524
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2002581523}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 940132303}
-  - {fileID: 1310415795}
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2021357887
 GameObject:
   m_ObjectHideFlags: 0
@@ -64818,6 +64723,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!114 &2044813592 stripped
 MonoBehaviour:
@@ -65243,6 +65149,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords: []
 --- !u!1 &2089739100
 GameObject:
@@ -65363,6 +65270,7 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 1264968472}
+  referenceDisable: {fileID: 0}
   keywords:
   - {fileID: 11400000, guid: da2970f2c93464ecaa1e5b075a522650, type: 2}
   - {fileID: 11400000, guid: c32270b5c7d0147d796d61b05392b27e, type: 2}
@@ -65476,6 +65384,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 38622826}
     m_Modifications:
+    - target: {fileID: 276690740417879096, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 276690740417879096, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 276690740417879096, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 276690740417879096, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1098977604503419682, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -65755,5 +65679,6 @@ MonoBehaviour:
   gameManager: {fileID: 1901980257}
   storyManager: {fileID: 1901980258}
   reference: {fileID: 0}
+  referenceDisable: {fileID: 0}
   keywords:
   - {fileID: 11400000, guid: 850ac8a478bca9040b4a8cd066a92d46, type: 2}

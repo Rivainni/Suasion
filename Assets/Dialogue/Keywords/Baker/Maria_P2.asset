@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Keywords:
     m_Topic:
-    - corruption
-    - justice
-    - help
+    - mayor's corruption
+    - injustice in town
+    - help us
     m_Tone:
     - earnest
     - cautious
@@ -27,452 +27,452 @@ MonoBehaviour:
     - downplay
     m_Restrictions: []
   m_Combinations:
-  - m_Set: corruption_earnest_straight
+  - m_Set: mayor's corruption_earnest_straight
     m_Mood: positive
     m_Points: 4
     m_Choice: The town is suffering economically, even though we're supposed to be
       a major trading hub.
     m_Response: Doesn't concern me, my business runs fine with or without government
       help.
-  - m_Set: corruption_earnest_exaggerate
+  - m_Set: mayor's corruption_earnest_exaggerate
     m_Mood: positive
     m_Points: 4
     m_Choice: Everyone should be getting financial support from the government, since
       we are a trading hub. But I can't see where the money is going to.
     m_Response: Doesn't concern me, my business runs fine with or without government
       help.
-  - m_Set: corruption_earnest_downplay
+  - m_Set: mayor's corruption_earnest_downplay
     m_Mood: positive
     m_Points: 4
     m_Choice: Why are the people here still poor, even if the town is a trade hub?
     m_Response: Doesn't concern me, my business runs fine with or without government
       help.
-  - m_Set: corruption_earnest_straight
+  - m_Set: mayor's corruption_earnest_straight
     m_Mood: neutral
     m_Points: 5
     m_Choice: The town is suffering economically, even though we're supposed to be
       a major trading hub.
     m_Response: Which is why having a source of income is important.
-  - m_Set: corruption_earnest_exaggerate
+  - m_Set: mayor's corruption_earnest_exaggerate
     m_Mood: neutral
     m_Points: 5
     m_Choice: Everyone should be getting financial support from the government, since
       we are a trading hub. But I can't see where the money is going to.
     m_Response: Which is why having a source of income is important.
-  - m_Set: corruption_earnest_downplay
+  - m_Set: mayor's corruption_earnest_downplay
     m_Mood: neutral
     m_Points: 5
     m_Choice: Why are the people here still poor, even if the town is a trade hub?
     m_Response: Which is why having a source of income is important.
-  - m_Set: corruption_earnest_straight
+  - m_Set: mayor's corruption_earnest_straight
     m_Mood: negative
     m_Points: 5
     m_Choice: The town is suffering economically, even though we're supposed to be
       a major trading hub.
     m_Response: Ever seen the Mayor's house? That alone should tell you why.
-  - m_Set: corruption_earnest_exaggerate
+  - m_Set: mayor's corruption_earnest_exaggerate
     m_Mood: negative
     m_Points: 5
     m_Choice: Everyone should be getting financial support from the government, since
       we are a trading hub. But I can't see where the money is going to.
     m_Response: Ever seen the Mayor's house? That alone should tell you why.
-  - m_Set: corruption_earnest_downplay
+  - m_Set: mayor's corruption_earnest_downplay
     m_Mood: negative
     m_Points: 5
     m_Choice: Why are the people here still poor, even if the town is a trade hub?
     m_Response: Ever seen the Mayor's house? That alone should tell you why.
-  - m_Set: justice_earnest_straight
+  - m_Set: injustice in town_earnest_straight
     m_Mood: positive
     m_Points: 5
     m_Choice: I've seen people get sanctions from the Mayor even though they've done
       nothing.
     m_Response: Some people just deserve a good beating.
-  - m_Set: justice_earnest_exaggerate
+  - m_Set: injustice in town_earnest_exaggerate
     m_Mood: positive
     m_Points: 5
     m_Choice: I saw the Mayor punishing innocent people, we need to do something
       about that.
     m_Response: Some people just deserve a good beating.
-  - m_Set: justice_earnest_downplay
+  - m_Set: injustice in town_earnest_downplay
     m_Mood: positive
     m_Points: 5
     m_Choice: Have you heard of news regarding the Mayor's treatment of some people?
     m_Response: Some people just deserve a good beating.
-  - m_Set: justice_earnest_straight
+  - m_Set: injustice in town_earnest_straight
     m_Mood: neutral
     m_Points: 6
     m_Choice: I've seen people get sanctions from the Mayor even though they've done
       nothing.
     m_Response: He's beating up my customers' money!? I want those!
-  - m_Set: justice_earnest_exaggerate
+  - m_Set: injustice in town_earnest_exaggerate
     m_Mood: neutral
     m_Points: 6
     m_Choice: I saw the Mayor punishing innocent people, we need to do something
       about that.
     m_Response: He's beating up my customers' money!? I want those!
-  - m_Set: justice_earnest_downplay
+  - m_Set: injustice in town_earnest_downplay
     m_Mood: neutral
     m_Points: 6
     m_Choice: Have you heard of news regarding the Mayor's treatment of some people?
     m_Response: He's beating up my customers' money!? I want those!
-  - m_Set: justice_earnest_straight
+  - m_Set: injustice in town_earnest_straight
     m_Mood: negative
     m_Points: 3
     m_Choice: I've seen people get sanctions from the Mayor even though they've done
       nothing.
     m_Response: I would love to see how they react to those.
-  - m_Set: justice_earnest_exaggerate
+  - m_Set: injustice in town_earnest_exaggerate
     m_Mood: negative
     m_Points: 3
     m_Choice: I saw the Mayor punishing innocent people, we need to do something
       about that.
     m_Response: I would love to see how they react to those.
-  - m_Set: justice_earnest_downplay
+  - m_Set: injustice in town_earnest_downplay
     m_Mood: negative
     m_Points: 3
     m_Choice: Have you heard of news regarding the Mayor's treatment of some people?
     m_Response: I would love to see how they react to those.
-  - m_Set: help_earnest_straight
+  - m_Set: help us_earnest_straight
     m_Mood: positive
     m_Points: 6
     m_Choice: Can you help us with your vast knowledge of social relations?
     m_Response: Ohh so you've heard of my expertise, eyy?
-  - m_Set: help_earnest_exaggerate
+  - m_Set: help us_earnest_exaggerate
     m_Mood: positive
     m_Points: 6
     m_Choice: Helping us with getting more people on our side will make us win for
       sure.
     m_Response: Ohh so you've heard of my expertise, eyy?
-  - m_Set: help_earnest_downplay
+  - m_Set: help us_earnest_downplay
     m_Mood: positive
     m_Points: 6
     m_Choice: Do you know any good tips on how to talk to people?
     m_Response: Ohh so you've heard of my expertise, eyy?
-  - m_Set: help_earnest_straight
+  - m_Set: help us_earnest_straight
     m_Mood: neutral
     m_Points: 4
     m_Choice: Can you help us with your vast knowledge of social relations?
     m_Response: Ok, well what's in it for me?
-  - m_Set: help_earnest_exaggerate
+  - m_Set: help us_earnest_exaggerate
     m_Mood: neutral
     m_Points: 4
     m_Choice: Helping us with getting more people on our side will make us win for
       sure.
     m_Response: Ok, well what's in it for me?
-  - m_Set: help_earnest_downplay
+  - m_Set: help us_earnest_downplay
     m_Mood: neutral
     m_Points: 4
     m_Choice: Do you know any good tips on how to talk to people?
     m_Response: Ok, well what's in it for me?
-  - m_Set: help_earnest_straight
+  - m_Set: help us_earnest_straight
     m_Mood: negative
     m_Points: 4
     m_Choice: Can you help us with your vast knowledge of social relations?
     m_Response: My question for you, what's in it for me?
-  - m_Set: help_earnest_exaggerate
+  - m_Set: help us_earnest_exaggerate
     m_Mood: negative
     m_Points: 4
     m_Choice: Helping us with getting more people on our side will make us win for
       sure.
     m_Response: My question for you, what's in it for me?
-  - m_Set: help_earnest_downplay
+  - m_Set: help us_earnest_downplay
     m_Mood: negative
     m_Points: 4
     m_Choice: Do you know any good tips on how to talk to people?
     m_Response: My question for you, what's in it for me?
-  - m_Set: corruption_cautious_straight
+  - m_Set: mayor's corruption_cautious_straight
     m_Mood: positive
     m_Points: 3
     m_Choice: Have you noticed the difference between the Mayor and the townspeople
       when it comes to money?
     m_Response: Why yes, why do you think I don't trust anyone with my money?
-  - m_Set: corruption_cautious_exaggerate
+  - m_Set: mayor's corruption_cautious_exaggerate
     m_Mood: positive
     m_Points: 3
     m_Choice: The Mayor looks to be in a better state of living than the other townspeople.
     m_Response: Why yes, why do you think I don't trust anyone with my money?
-  - m_Set: corruption_cautious_downplay
+  - m_Set: mayor's corruption_cautious_downplay
     m_Mood: positive
     m_Points: 3
     m_Choice: The Mayor is really different compared to the rest of the town, is
       it maybe because of money?
     m_Response: Why yes, why do you think I don't trust anyone with my money?
-  - m_Set: corruption_cautious_straight
+  - m_Set: mayor's corruption_cautious_straight
     m_Mood: neutral
     m_Points: 3
     m_Choice: Have you noticed the difference between the Mayor and the townspeople
       when it comes to money?
     m_Response: Well of course, he's the Mayor and they're just the townspeople.
-  - m_Set: corruption_cautious_exaggerate
+  - m_Set: mayor's corruption_cautious_exaggerate
     m_Mood: neutral
     m_Points: 3
     m_Choice: The Mayor looks to be in a better state of living than the other townspeople.
     m_Response: Well of course, he's the Mayor and they're just the townspeople.
-  - m_Set: corruption_cautious_downplay
+  - m_Set: mayor's corruption_cautious_downplay
     m_Mood: neutral
     m_Points: 3
     m_Choice: The Mayor is really different compared to the rest of the town, is
       it maybe because of money?
     m_Response: Well of course, he's the Mayor and they're just the townspeople.
-  - m_Set: corruption_cautious_straight
+  - m_Set: mayor's corruption_cautious_straight
     m_Mood: negative
     m_Points: 6
     m_Choice: Have you noticed the difference between the Mayor and the townspeople
       when it comes to money?
     m_Response: Every single day, it makes me envious.
-  - m_Set: corruption_cautious_exaggerate
+  - m_Set: mayor's corruption_cautious_exaggerate
     m_Mood: negative
     m_Points: 6
     m_Choice: The Mayor looks to be in a better state of living than the other townspeople.
     m_Response: Every single day, it makes me envious.
-  - m_Set: corruption_cautious_downplay
+  - m_Set: mayor's corruption_cautious_downplay
     m_Mood: negative
     m_Points: 6
     m_Choice: The Mayor is really different compared to the rest of the town, is
       it maybe because of money?
     m_Response: Every single day, it makes me envious.
-  - m_Set: justice_cautious_straight
+  - m_Set: injustice in town_cautious_straight
     m_Mood: positive
     m_Points: 4
     m_Choice: I saw someone get punished by the Mayor, I'm not sure what they did.
     m_Response: So there's a chance they actually did something to deserve it.
-  - m_Set: justice_cautious_exaggerate
+  - m_Set: injustice in town_cautious_exaggerate
     m_Mood: positive
     m_Points: 4
     m_Choice: Someone was almost beaten to death by the Mayor's goons, I'm not sure
       if they even did anything to get that.
     m_Response: So there's a chance they actually did something to deserve it.
-  - m_Set: justice_cautious_downplay
+  - m_Set: injustice in town_cautious_downplay
     m_Mood: positive
     m_Points: 4
     m_Choice: There was someone screaming near the Mayor's house did you hear about
       what happened there?
     m_Response: So there's a chance they actually did something to deserve it.
-  - m_Set: justice_cautious_straight
+  - m_Set: injustice in town_cautious_straight
     m_Mood: neutral
     m_Points: 4
     m_Choice: I saw someone get punished by the Mayor, I'm not sure what they did.
     m_Response: The people here are thieves, liars, and cheaters. No one here is
       innocent.
-  - m_Set: justice_cautious_exaggerate
+  - m_Set: injustice in town_cautious_exaggerate
     m_Mood: neutral
     m_Points: 4
     m_Choice: Someone was almost beaten to death by the Mayor's goons, I'm not sure
       if they even did anything to get that.
     m_Response: The people here are thieves, liars, and cheaters. No one here is
       innocent.
-  - m_Set: justice_cautious_downplay
+  - m_Set: injustice in town_cautious_downplay
     m_Mood: neutral
     m_Points: 4
     m_Choice: There was someone screaming near the Mayor's house did you hear about
       what happened there?
     m_Response: The people here are thieves, liars, and cheaters. No one here is
       innocent.
-  - m_Set: justice_cautious_straight
+  - m_Set: injustice in town_cautious_straight
     m_Mood: negative
     m_Points: 4
     m_Choice: I saw someone get punished by the Mayor, I'm not sure what they did.
     m_Response: That Mayor, he has all the money and power to himself. More so with
       the military coming to-and-fro this place.
-  - m_Set: justice_cautious_exaggerate
+  - m_Set: injustice in town_cautious_exaggerate
     m_Mood: negative
     m_Points: 4
     m_Choice: Someone was almost beaten to death by the Mayor's goons, I'm not sure
       if they even did anything to get that.
     m_Response: That Mayor, he has all the money and power to himself. More so with
       the military coming to-and-fro this place.
-  - m_Set: justice_cautious_downplay
+  - m_Set: injustice in town_cautious_downplay
     m_Mood: negative
     m_Points: 4
     m_Choice: There was someone screaming near the Mayor's house did you hear about
       what happened there?
     m_Response: That Mayor, he has all the money and power to himself. More so with
       the military coming to-and-fro this place.
-  - m_Set: help_cautious_straight
+  - m_Set: help us_cautious_straight
     m_Mood: positive
     m_Points: 5
     m_Choice: We could really use more people to help us.
     m_Response: Well you can always ask help from me, just promise that you'll pay
       me what is due after.
-  - m_Set: help_cautious_exaggerate
+  - m_Set: help us_cautious_exaggerate
     m_Mood: positive
     m_Points: 5
     m_Choice: We'e desperate for someone to help us in public relations.
     m_Response: Well you can always ask help from me, just promise that you'll pay
       me what is due after.
-  - m_Set: help_cautious_downplay
+  - m_Set: help us_cautious_downplay
     m_Mood: positive
     m_Points: 5
     m_Choice: We need someone in our team that is really good with public relations,
       can you help us?
     m_Response: Well you can always ask help from me, just promise that you'll pay
       me what is due after.
-  - m_Set: help_cautious_straight
+  - m_Set: help us_cautious_straight
     m_Mood: neutral
     m_Points: 2
     m_Choice: We could really use more people to help us.
     m_Response: Then go and ask someone else for help, I'm too busy running a business
       here.
-  - m_Set: help_cautious_exaggerate
+  - m_Set: help us_cautious_exaggerate
     m_Mood: neutral
     m_Points: 2
     m_Choice: We'e desperate for someone to help us in public relations.
     m_Response: Then go and ask someone else for help, I'm too busy running a business
       here.
-  - m_Set: help_cautious_downplay
+  - m_Set: help us_cautious_downplay
     m_Mood: neutral
     m_Points: 2
     m_Choice: We need someone in our team that is really good with public relations,
       can you help us?
     m_Response: Then go and ask someone else for help, I'm too busy running a business
       here.
-  - m_Set: help_cautious_straight
+  - m_Set: help us_cautious_straight
     m_Mood: negative
     m_Points: 5
     m_Choice: We could really use more people to help us.
     m_Response: Ohhh I know you do.
-  - m_Set: help_cautious_exaggerate
+  - m_Set: help us_cautious_exaggerate
     m_Mood: negative
     m_Points: 5
     m_Choice: We'e desperate for someone to help us in public relations.
     m_Response: Ohhh I know you do.
-  - m_Set: help_cautious_downplay
+  - m_Set: help us_cautious_downplay
     m_Mood: negative
     m_Points: 5
     m_Choice: We need someone in our team that is really good with public relations,
       can you help us?
     m_Response: Ohhh I know you do.
-  - m_Set: corruption_blunt_straight
+  - m_Set: mayor's corruption_blunt_straight
     m_Mood: positive
     m_Points: 2
     m_Choice: The Mayor is hoarding the town's money all to himself.
     m_Response: Which is why I don't help anyone, especially with money.
-  - m_Set: corruption_blunt_exaggerate
+  - m_Set: mayor's corruption_blunt_exaggerate
     m_Mood: positive
     m_Points: 2
     m_Choice: The Mayor has all of the money of the town and he keeps it all to himself.
     m_Response: Which is why I don't help anyone, especially with money.
-  - m_Set: corruption_blunt_downplay
+  - m_Set: mayor's corruption_blunt_downplay
     m_Mood: positive
     m_Points: 2
     m_Choice: The town isn't developing because the Mayor keeps stealing our money.
     m_Response: Which is why I don't help anyone, especially with money.
-  - m_Set: corruption_blunt_straight
+  - m_Set: mayor's corruption_blunt_straight
     m_Mood: neutral
     m_Points: 4
     m_Choice: The Mayor is hoarding the town's money all to himself.
     m_Response: Be careful with your words little one, but I do agree to some extent.
-  - m_Set: corruption_blunt_exaggerate
+  - m_Set: mayor's corruption_blunt_exaggerate
     m_Mood: neutral
     m_Points: 4
     m_Choice: The Mayor has all of the money of the town and he keeps it all to himself.
     m_Response: Be careful with your words little one, but I do agree to some extent.
-  - m_Set: corruption_blunt_downplay
+  - m_Set: mayor's corruption_blunt_downplay
     m_Mood: neutral
     m_Points: 4
     m_Choice: The town isn't developing because the Mayor keeps stealing our money.
     m_Response: Be careful with your words little one, but I do agree to some extent.
-  - m_Set: corruption_blunt_straight
+  - m_Set: mayor's corruption_blunt_straight
     m_Mood: negative
     m_Points: 4
     m_Choice: The Mayor is hoarding the town's money all to himself.
     m_Response: You're gonna die with such words, but I do agree.
-  - m_Set: corruption_blunt_exaggerate
+  - m_Set: mayor's corruption_blunt_exaggerate
     m_Mood: negative
     m_Points: 4
     m_Choice: The Mayor has all of the money of the town and he keeps it all to himself.
     m_Response: You're gonna die with such words, but I do agree.
-  - m_Set: corruption_blunt_downplay
+  - m_Set: mayor's corruption_blunt_downplay
     m_Mood: negative
     m_Points: 4
     m_Choice: The town isn't developing because the Mayor keeps stealing our money.
     m_Response: You're gonna die with such words, but I do agree.
-  - m_Set: justice_blunt_straight
+  - m_Set: injustice in town_blunt_straight
     m_Mood: positive
     m_Points: 3
     m_Choice: The Mayor is unjustly punishing the townspeople.
     m_Response: So?
-  - m_Set: justice_blunt_exaggerate
+  - m_Set: injustice in town_blunt_exaggerate
     m_Mood: positive
     m_Points: 3
     m_Choice: The Mayor is killing our people!
     m_Response: So?
-  - m_Set: justice_blunt_downplay
+  - m_Set: injustice in town_blunt_downplay
     m_Mood: positive
     m_Points: 3
     m_Choice: The Mayor keeps on punishing people that do nothing wrong.
     m_Response: So?
-  - m_Set: justice_blunt_straight
+  - m_Set: injustice in town_blunt_straight
     m_Mood: neutral
     m_Points: 5
     m_Choice: The Mayor is unjustly punishing the townspeople.
     m_Response: Well maybe they did do something, you never know with this town.
-  - m_Set: justice_blunt_exaggerate
+  - m_Set: injustice in town_blunt_exaggerate
     m_Mood: neutral
     m_Points: 5
     m_Choice: The Mayor is killing our people!
     m_Response: Well maybe they did do something, you never know with this town.
-  - m_Set: justice_blunt_downplay
+  - m_Set: injustice in town_blunt_downplay
     m_Mood: neutral
     m_Points: 5
     m_Choice: The Mayor keeps on punishing people that do nothing wrong.
     m_Response: Well maybe they did do something, you never know with this town.
-  - m_Set: justice_blunt_straight
+  - m_Set: injustice in town_blunt_straight
     m_Mood: negative
     m_Points: 2
     m_Choice: The Mayor is unjustly punishing the townspeople.
     m_Response: Hahahah, I love watching that and see how it unfolds.
-  - m_Set: justice_blunt_exaggerate
+  - m_Set: injustice in town_blunt_exaggerate
     m_Mood: negative
     m_Points: 2
     m_Choice: The Mayor is killing our people!
     m_Response: Hahahah, I love watching that and see how it unfolds.
-  - m_Set: justice_blunt_downplay
+  - m_Set: injustice in town_blunt_downplay
     m_Mood: negative
     m_Points: 2
     m_Choice: The Mayor keeps on punishing people that do nothing wrong.
     m_Response: Hahahah, I love watching that and see how it unfolds.
-  - m_Set: help_blunt_straight
+  - m_Set: help us_blunt_straight
     m_Mood: positive
     m_Points: 4
     m_Choice: We need you to help us gather support by talking to the townspeople.
     m_Response: You're a demanding one aren't you?
-  - m_Set: help_blunt_exaggerate
+  - m_Set: help us_blunt_exaggerate
     m_Mood: positive
     m_Points: 4
     m_Choice: Your legendary skills with public relations will really help us win.
     m_Response: You're a demanding one aren't you?
-  - m_Set: help_blunt_downplay
+  - m_Set: help us_blunt_downplay
     m_Mood: positive
     m_Points: 4
     m_Choice: Your skills of socializing will help us.
     m_Response: You're a demanding one aren't you?
-  - m_Set: help_blunt_straight
+  - m_Set: help us_blunt_straight
     m_Mood: neutral
     m_Points: 3
     m_Choice: We need you to help us gather support by talking to the townspeople.
     m_Response: For your campaign I assume?
-  - m_Set: help_blunt_exaggerate
+  - m_Set: help us_blunt_exaggerate
     m_Mood: neutral
     m_Points: 3
     m_Choice: Your legendary skills with public relations will really help us win.
     m_Response: For your campaign I assume?
-  - m_Set: help_blunt_downplay
+  - m_Set: help us_blunt_downplay
     m_Mood: neutral
     m_Points: 3
     m_Choice: Your skills of socializing will help us.
     m_Response: For your campaign I assume?
-  - m_Set: help_blunt_straight
+  - m_Set: help us_blunt_straight
     m_Mood: negative
     m_Points: 3
     m_Choice: We need you to help us gather support by talking to the townspeople.
     m_Response: That's your problem, not mine.
-  - m_Set: help_blunt_exaggerate
+  - m_Set: help us_blunt_exaggerate
     m_Mood: negative
     m_Points: 3
     m_Choice: Your legendary skills with public relations will really help us win.
     m_Response: That's your problem, not mine.
-  - m_Set: help_blunt_downplay
+  - m_Set: help us_blunt_downplay
     m_Mood: negative
     m_Points: 3
     m_Choice: Your skills of socializing will help us.

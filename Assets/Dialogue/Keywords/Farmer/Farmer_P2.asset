@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Keywords:
     m_Topic:
-    - corruption
-    - hope
-    - help
+    - mayor's corruption
+    - hope for better
+    - help you
     m_Tone:
     - earnest
     - cautious
@@ -27,433 +27,433 @@ MonoBehaviour:
     - downplay
     m_Restrictions: []
   m_Combinations:
-  - m_Set: corruption_earnest_straight
+  - m_Set: mayor's corruption_earnest_straight
     m_Mood: positive
     m_Points: 6
     m_Choice: The corruption of this town's leaders need to stop for the good of
       the people.
     m_Response: Yes, they've been doing it for decades. I've seen all of it.
-  - m_Set: corruption_earnest_exaggerate
+  - m_Set: mayor's corruption_earnest_exaggerate
     m_Mood: positive
     m_Points: 6
     m_Choice: The corruption of this town's leaders need to stop, else we are doomed.
     m_Response: Yes, they've been doing it for decades. I've seen all of it.
-  - m_Set: corruption_earnest_downplay
+  - m_Set: mayor's corruption_earnest_downplay
     m_Mood: positive
     m_Points: 6
     m_Choice: The corruption of this town's leaders is not good for us.
     m_Response: Yes, they've been doing it for decades. I've seen all of it.
-  - m_Set: corruption_earnest_straight
+  - m_Set: mayor's corruption_earnest_straight
     m_Mood: neutral
     m_Points: 4
     m_Choice: The corruption of this town's leaders need to stop for the good of
       the people.
     m_Response: Mhm.
-  - m_Set: corruption_earnest_exaggerate
+  - m_Set: mayor's corruption_earnest_exaggerate
     m_Mood: neutral
     m_Points: 4
     m_Choice: The corruption of this town's leaders need to stop, else we are doomed.
     m_Response: Mhm.
-  - m_Set: corruption_earnest_downplay
+  - m_Set: mayor's corruption_earnest_downplay
     m_Mood: neutral
     m_Points: 4
     m_Choice: The corruption of this town's leaders is not good for us.
     m_Response: Mhm.
-  - m_Set: corruption_earnest_straight
+  - m_Set: mayor's corruption_earnest_straight
     m_Mood: negative
     m_Points: 4
     m_Choice: The corruption of this town's leaders need to stop for the good of
       the people.
     m_Response: There shouldn't be any corruption.
-  - m_Set: corruption_earnest_exaggerate
+  - m_Set: mayor's corruption_earnest_exaggerate
     m_Mood: negative
     m_Points: 4
     m_Choice: The corruption of this town's leaders need to stop, else we are doomed.
     m_Response: There shouldn't be any corruption.
-  - m_Set: corruption_earnest_downplay
+  - m_Set: mayor's corruption_earnest_downplay
     m_Mood: negative
     m_Points: 4
     m_Choice: The corruption of this town's leaders is not good for us.
     m_Response: There shouldn't be any corruption.
-  - m_Set: hope_earnest_straight
+  - m_Set: hope for better_earnest_straight
     m_Mood: positive
     m_Points: 5
     m_Choice: We can't just give up and let people take advantage of our own works.
     m_Response: I know kid, I've always known. I'm old though, can't do as much as
       I did before.
-  - m_Set: hope_earnest_exaggerate
+  - m_Set: hope for better_earnest_exaggerate
     m_Mood: positive
     m_Points: 5
     m_Choice: We can't just give up and let these people steal what little we have!
     m_Response: I know kid, I've always known. I'm old though, can't do as much as
       I did before.
-  - m_Set: hope_earnest_downplay
+  - m_Set: hope for better_earnest_downplay
     m_Mood: positive
     m_Points: 5
     m_Choice: If we give up here, they'll just keep on taking and taking.
     m_Response: I know kid, I've always known. I'm old though, can't do as much as
       I did before.
-  - m_Set: hope_earnest_straight
+  - m_Set: hope for better_earnest_straight
     m_Mood: neutral
     m_Points: 5
     m_Choice: We can't just give up and let people take advantage of our own works.
     m_Response: Well, got any ideas?
-  - m_Set: hope_earnest_exaggerate
+  - m_Set: hope for better_earnest_exaggerate
     m_Mood: neutral
     m_Points: 5
     m_Choice: We can't just give up and let these people steal what little we have!
     m_Response: Well, got any ideas?
-  - m_Set: hope_earnest_downplay
+  - m_Set: hope for better_earnest_downplay
     m_Mood: neutral
     m_Points: 5
     m_Choice: If we give up here, they'll just keep on taking and taking.
     m_Response: Well, got any ideas?
-  - m_Set: hope_earnest_straight
+  - m_Set: hope for better_earnest_straight
     m_Mood: negative
     m_Points: 5
     m_Choice: We can't just give up and let people take advantage of our own works.
     m_Response: I know, but not everyone can do something about it.
-  - m_Set: hope_earnest_exaggerate
+  - m_Set: hope for better_earnest_exaggerate
     m_Mood: negative
     m_Points: 5
     m_Choice: We can't just give up and let these people steal what little we have!
     m_Response: I know, but not everyone can do something about it.
-  - m_Set: hope_earnest_downplay
+  - m_Set: hope for better_earnest_downplay
     m_Mood: negative
     m_Points: 5
     m_Choice: If we give up here, they'll just keep on taking and taking.
     m_Response: I know, but not everyone can do something about it.
-  - m_Set: help_earnest_straight
+  - m_Set: help you_earnest_straight
     m_Mood: positive
     m_Points: 4
     m_Choice: We can help you, as long as you'll talk and interact with us.
     m_Response: Maybe you can kid, maybe you can.
-  - m_Set: help_earnest_exaggerate
+  - m_Set: help you_earnest_exaggerate
     m_Mood: positive
     m_Points: 4
     m_Choice: Your problems will go away, if you'll help us.
     m_Response: Maybe you can kid, maybe you can.
-  - m_Set: help_earnest_downplay
+  - m_Set: help you_earnest_downplay
     m_Mood: positive
     m_Points: 4
     m_Choice: Can you to talk to us, so that we can help you?
     m_Response: Maybe you can kid, maybe you can.
-  - m_Set: help_earnest_straight
+  - m_Set: help you_earnest_straight
     m_Mood: neutral
     m_Points: 6
     m_Choice: We can help you, as long as you'll talk and interact with us.
     m_Response: Alright kid, I'll help you.
-  - m_Set: help_earnest_exaggerate
+  - m_Set: help you_earnest_exaggerate
     m_Mood: neutral
     m_Points: 6
     m_Choice: Your problems will go away, if you'll help us.
     m_Response: Alright kid, I'll help you.
-  - m_Set: help_earnest_downplay
+  - m_Set: help you_earnest_downplay
     m_Mood: neutral
     m_Points: 6
     m_Choice: Can you to talk to us, so that we can help you?
     m_Response: Alright kid, I'll help you.
-  - m_Set: help_earnest_straight
+  - m_Set: help you_earnest_straight
     m_Mood: negative
     m_Points: 3
     m_Choice: We can help you, as long as you'll talk and interact with us.
     m_Response: You can't help me kid.
-  - m_Set: help_earnest_exaggerate
+  - m_Set: help you_earnest_exaggerate
     m_Mood: negative
     m_Points: 3
     m_Choice: Your problems will go away, if you'll help us.
     m_Response: You can't help me kid.
-  - m_Set: help_earnest_downplay
+  - m_Set: help you_earnest_downplay
     m_Mood: negative
     m_Points: 3
     m_Choice: Can you to talk to us, so that we can help you?
     m_Response: You can't help me kid.
-  - m_Set: corruption_cautious_straight
+  - m_Set: mayor's corruption_cautious_straight
     m_Mood: positive
     m_Points: 5
     m_Choice: Works of lies and deceit cause harm to the good of the community.
     m_Response: I agree with you on that kid.
-  - m_Set: corruption_cautious_exaggerate
+  - m_Set: mayor's corruption_cautious_exaggerate
     m_Mood: positive
     m_Points: 5
     m_Choice: Lies can grow and deceit can kill.
     m_Response: I agree with you on that kid.
-  - m_Set: corruption_cautious_downplay
+  - m_Set: mayor's corruption_cautious_downplay
     m_Mood: positive
     m_Points: 5
     m_Choice: Communities shouldn't lie and trick each other.
     m_Response: I agree with you on that kid.
-  - m_Set: corruption_cautious_straight
+  - m_Set: mayor's corruption_cautious_straight
     m_Mood: neutral
     m_Points: 2
     m_Choice: Works of lies and deceit cause harm to the good of the community.
     m_Response: ...
-  - m_Set: corruption_cautious_exaggerate
+  - m_Set: mayor's corruption_cautious_exaggerate
     m_Mood: neutral
     m_Points: 2
     m_Choice: Lies can grow and deceit can kill.
     m_Response: ...
-  - m_Set: corruption_cautious_downplay
+  - m_Set: mayor's corruption_cautious_downplay
     m_Mood: neutral
     m_Points: 2
     m_Choice: Communities shouldn't lie and trick each other.
     m_Response: ...
-  - m_Set: corruption_cautious_straight
+  - m_Set: mayor's corruption_cautious_straight
     m_Mood: negative
     m_Points: 5
     m_Choice: Works of lies and deceit cause harm to the good of the community.
     m_Response: Depends on where it's from and why it was done.
-  - m_Set: corruption_cautious_exaggerate
+  - m_Set: mayor's corruption_cautious_exaggerate
     m_Mood: negative
     m_Points: 5
     m_Choice: Lies can grow and deceit can kill.
     m_Response: Depends on where it's from and why it was done.
-  - m_Set: corruption_cautious_downplay
+  - m_Set: mayor's corruption_cautious_downplay
     m_Mood: negative
     m_Points: 5
     m_Choice: Communities shouldn't lie and trick each other.
     m_Response: Depends on where it's from and why it was done.
-  - m_Set: hope_cautious_straight
+  - m_Set: hope for better_cautious_straight
     m_Mood: positive
     m_Points: 4
     m_Choice: A lot of people say to just give up going against the Mayor, but we
       shouldn't.
     m_Response: Don't know if you even have a chance with stopping him kid.
-  - m_Set: hope_cautious_exaggerate
+  - m_Set: hope for better_cautious_exaggerate
     m_Mood: positive
     m_Points: 4
     m_Choice: We truly lose only when we give up.
     m_Response: Don't know if you even have a chance with stopping him kid.
-  - m_Set: hope_cautious_downplay
+  - m_Set: hope for better_cautious_downplay
     m_Mood: positive
     m_Points: 4
     m_Choice: We can win as long as we don't give up.
     m_Response: Don't know if you even have a chance with stopping him kid.
-  - m_Set: hope_cautious_straight
+  - m_Set: hope for better_cautious_straight
     m_Mood: neutral
     m_Points: 3
     m_Choice: A lot of people say to just give up going against the Mayor, but we
       shouldn't.
     m_Response: Don't have a choice now do we.
-  - m_Set: hope_cautious_exaggerate
+  - m_Set: hope for better_cautious_exaggerate
     m_Mood: neutral
     m_Points: 3
     m_Choice: We truly lose only when we give up.
     m_Response: Don't have a choice now do we.
-  - m_Set: hope_cautious_downplay
+  - m_Set: hope for better_cautious_downplay
     m_Mood: neutral
     m_Points: 3
     m_Choice: We can win as long as we don't give up.
     m_Response: Don't have a choice now do we.
-  - m_Set: hope_cautious_straight
+  - m_Set: hope for better_cautious_straight
     m_Mood: negative
     m_Points: 3
     m_Choice: A lot of people say to just give up going against the Mayor, but we
       shouldn't.
     m_Response: With moxy like that, I guess your team has some chance of winning.
-  - m_Set: hope_cautious_exaggerate
+  - m_Set: hope for better_cautious_exaggerate
     m_Mood: negative
     m_Points: 3
     m_Choice: We truly lose only when we give up.
     m_Response: With moxy like that, I guess your team has some chance of winning.
-  - m_Set: hope_cautious_downplay
+  - m_Set: hope for better_cautious_downplay
     m_Mood: negative
     m_Points: 3
     m_Choice: We can win as long as we don't give up.
     m_Response: With moxy like that, I guess your team has some chance of winning.
-  - m_Set: help_cautious_straight
+  - m_Set: help you_cautious_straight
     m_Mood: positive
     m_Points: 3
     m_Choice: We can both help each other with our problems regarding the Mayor.
     m_Response: Yes, I guess we can.
-  - m_Set: help_cautious_exaggerate
+  - m_Set: help you_cautious_exaggerate
     m_Mood: positive
     m_Points: 3
     m_Choice: We help you with your Mayor problems, you help us with learning the
       bad things the Mayor has done.
     m_Response: Yes, I guess we can.
-  - m_Set: help_cautious_downplay
+  - m_Set: help you_cautious_downplay
     m_Mood: positive
     m_Points: 3
     m_Choice: We can help you, and you can help us.
     m_Response: Yes, I guess we can.
-  - m_Set: help_cautious_straight
+  - m_Set: help you_cautious_straight
     m_Mood: neutral
     m_Points: 4
     m_Choice: We can both help each other with our problems regarding the Mayor.
     m_Response: Sure you can.
-  - m_Set: help_cautious_exaggerate
+  - m_Set: help you_cautious_exaggerate
     m_Mood: neutral
     m_Points: 4
     m_Choice: We help you with your Mayor problems, you help us with learning the
       bad things the Mayor has done.
     m_Response: Sure you can.
-  - m_Set: help_cautious_downplay
+  - m_Set: help you_cautious_downplay
     m_Mood: neutral
     m_Points: 4
     m_Choice: We can help you, and you can help us.
     m_Response: Sure you can.
-  - m_Set: help_cautious_straight
+  - m_Set: help you_cautious_straight
     m_Mood: negative
     m_Points: 4
     m_Choice: We can both help each other with our problems regarding the Mayor.
     m_Response: Maybe we can.
-  - m_Set: help_cautious_exaggerate
+  - m_Set: help you_cautious_exaggerate
     m_Mood: negative
     m_Points: 4
     m_Choice: We help you with your Mayor problems, you help us with learning the
       bad things the Mayor has done.
     m_Response: Maybe we can.
-  - m_Set: help_cautious_downplay
+  - m_Set: help you_cautious_downplay
     m_Mood: negative
     m_Points: 4
     m_Choice: We can help you, and you can help us.
     m_Response: Maybe we can.
-  - m_Set: corruption_blunt_straight
+  - m_Set: mayor's corruption_blunt_straight
     m_Mood: positive
     m_Points: 4
     m_Choice: The Mayor is corrupt and we need to stop him.
     m_Response: You'll need a miracle to get that done kid.
-  - m_Set: corruption_blunt_exaggerate
+  - m_Set: mayor's corruption_blunt_exaggerate
     m_Mood: positive
     m_Points: 4
     m_Choice: The Mayor is the main problem of our town and we need to stop him.
     m_Response: You'll need a miracle to get that done kid.
-  - m_Set: corruption_blunt_downplay
+  - m_Set: mayor's corruption_blunt_downplay
     m_Mood: positive
     m_Points: 4
     m_Choice: The Mayor is causing many problems for our town, something must be
       done.
     m_Response: You'll need a miracle to get that done kid.
-  - m_Set: corruption_blunt_straight
+  - m_Set: mayor's corruption_blunt_straight
     m_Mood: neutral
     m_Points: 3
     m_Choice: The Mayor is corrupt and we need to stop him.
     m_Response: Maybe.
-  - m_Set: corruption_blunt_exaggerate
+  - m_Set: mayor's corruption_blunt_exaggerate
     m_Mood: neutral
     m_Points: 3
     m_Choice: The Mayor is the main problem of our town and we need to stop him.
     m_Response: Maybe.
-  - m_Set: corruption_blunt_downplay
+  - m_Set: mayor's corruption_blunt_downplay
     m_Mood: neutral
     m_Points: 3
     m_Choice: The Mayor is causing many problems for our town, something must be
       done.
     m_Response: Maybe.
-  - m_Set: corruption_blunt_straight
+  - m_Set: mayor's corruption_blunt_straight
     m_Mood: negative
     m_Points: 3
     m_Choice: The Mayor is corrupt and we need to stop him.
     m_Response: Can you?
-  - m_Set: corruption_blunt_exaggerate
+  - m_Set: mayor's corruption_blunt_exaggerate
     m_Mood: negative
     m_Points: 3
     m_Choice: The Mayor is the main problem of our town and we need to stop him.
     m_Response: Can you?
-  - m_Set: corruption_blunt_downplay
+  - m_Set: mayor's corruption_blunt_downplay
     m_Mood: negative
     m_Points: 3
     m_Choice: The Mayor is causing many problems for our town, something must be
       done.
     m_Response: Can you?
-  - m_Set: hope_blunt_straight
+  - m_Set: hope for better_blunt_straight
     m_Mood: positive
     m_Points: 3
     m_Choice: We have to fight back to make our lives better.
     m_Response: Yes, but that doesn't mean we can.
-  - m_Set: hope_blunt_exaggerate
+  - m_Set: hope for better_blunt_exaggerate
     m_Mood: positive
     m_Points: 3
     m_Choice: We need to fight back against the attrocities done by the Mayor towards
       our town.
     m_Response: Yes, but that doesn't mean we can.
-  - m_Set: hope_blunt_downplay
+  - m_Set: hope for better_blunt_downplay
     m_Mood: positive
     m_Points: 3
     m_Choice: Our lives can be better if we go against the corrupt Mayor.
     m_Response: Yes, but that doesn't mean we can.
-  - m_Set: hope_blunt_straight
+  - m_Set: hope for better_blunt_straight
     m_Mood: neutral
     m_Points: 4
     m_Choice: We have to fight back to make our lives better.
     m_Response: Yes, but that doesn't mean we can.
-  - m_Set: hope_blunt_exaggerate
+  - m_Set: hope for better_blunt_exaggerate
     m_Mood: neutral
     m_Points: 4
     m_Choice: We need to fight back against the attrocities done by the Mayor towards
       our town.
     m_Response: Yes, but that doesn't mean we can.
-  - m_Set: hope_blunt_downplay
+  - m_Set: hope for better_blunt_downplay
     m_Mood: neutral
     m_Points: 4
     m_Choice: Our lives can be better if we go against the corrupt Mayor.
     m_Response: Yes, but that doesn't mean we can.
-  - m_Set: hope_blunt_straight
+  - m_Set: hope for better_blunt_straight
     m_Mood: negative
     m_Points: 4
     m_Choice: We have to fight back to make our lives better.
     m_Response: You sure you can finish that fight?
-  - m_Set: hope_blunt_exaggerate
+  - m_Set: hope for better_blunt_exaggerate
     m_Mood: negative
     m_Points: 4
     m_Choice: We need to fight back against the attrocities done by the Mayor towards
       our town.
     m_Response: You sure you can finish that fight?
-  - m_Set: hope_blunt_downplay
+  - m_Set: hope for better_blunt_downplay
     m_Mood: negative
     m_Points: 4
     m_Choice: Our lives can be better if we go against the corrupt Mayor.
     m_Response: You sure you can finish that fight?
-  - m_Set: help_blunt_straight
+  - m_Set: help you_blunt_straight
     m_Mood: positive
     m_Points: 2
     m_Choice: We need you to talk to us about your problems towards the Mayor so
       that we can help you.
     m_Response: ...
-  - m_Set: help_blunt_exaggerate
+  - m_Set: help you_blunt_exaggerate
     m_Mood: positive
     m_Points: 2
     m_Choice: The problems the Mayor caused towards you can be used to help you and
       gain info on what the Mayor has done.
     m_Response: ...
-  - m_Set: help_blunt_downplay
+  - m_Set: help you_blunt_downplay
     m_Mood: positive
     m_Points: 2
     m_Choice: We can't help you against the Mayor until you tell us what the problems
       are.
     m_Response: ...
-  - m_Set: help_blunt_straight
+  - m_Set: help you_blunt_straight
     m_Mood: neutral
     m_Points: 5
     m_Choice: We need you to talk to us about your problems towards the Mayor so
       that we can help you.
     m_Response: Fine.
-  - m_Set: help_blunt_exaggerate
+  - m_Set: help you_blunt_exaggerate
     m_Mood: neutral
     m_Points: 5
     m_Choice: The problems the Mayor caused towards you can be used to help you and
       gain info on what the Mayor has done.
     m_Response: Fine.
-  - m_Set: help_blunt_downplay
+  - m_Set: help you_blunt_downplay
     m_Mood: neutral
     m_Points: 5
     m_Choice: We can't help you against the Mayor until you tell us what the problems
       are.
     m_Response: Fine.
-  - m_Set: help_blunt_straight
+  - m_Set: help you_blunt_straight
     m_Mood: negative
     m_Points: 2
     m_Choice: We need you to talk to us about your problems towards the Mayor so
       that we can help you.
     m_Response: ...
-  - m_Set: help_blunt_exaggerate
+  - m_Set: help you_blunt_exaggerate
     m_Mood: negative
     m_Points: 2
     m_Choice: The problems the Mayor caused towards you can be used to help you and
       gain info on what the Mayor has done.
     m_Response: ...
-  - m_Set: help_blunt_downplay
+  - m_Set: help you_blunt_downplay
     m_Mood: negative
     m_Points: 2
     m_Choice: We can't help you against the Mayor until you tell us what the problems

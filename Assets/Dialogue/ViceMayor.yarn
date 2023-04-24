@@ -1,16 +1,4 @@
-﻿title: ViceMayorTP
-tags: cutscene
----
-<<togglefriend "Game Manager">>
-Having talked to much of the town, the pair are suddenly invited by government officials...
-...to have a 'discernment' talk.
-AMSEL: Well, looks like we'll just have to talk to her.
-SATE: ...
-<<togglefriend "Game Manager">>
-<<enddialogue "Game Manager">>
-===
-
-title: ViceMayorIntro
+﻿title: ViceMayorIntro
 tags: Intro
 ---
 <<setcharacter "Game Manager" "Vice Mayor">>

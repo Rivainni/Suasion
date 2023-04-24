@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2207b7e575914c8c9c57de80ab7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: ViceMayorTP
+  title: All_ViceMayor
   type: Cutscene
   gameManager: {fileID: 0}
   storyManager: {fileID: 0}

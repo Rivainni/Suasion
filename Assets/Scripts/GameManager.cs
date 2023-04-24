@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
     [SerializeField] PCharacter[] characterProperties;
     [SerializeField] GameObject waypoints;
     [SerializeField] GameObject bossGate;
-    [SerializeField] GameObject endingDialogue;
 
     Dictionary<string, int> levelObjectMapping = new Dictionary<string, int>();
     // Start is called before the first frame update
@@ -632,7 +631,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     public void Leave()
     {
-        storyManager.TriggerCutscene();
+        storyManager.TriggerEndCutscene();
     }
 
     public void SaveData(ref GameData gameData)

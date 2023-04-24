@@ -207,6 +207,7 @@ public class StoryManager : MonoBehaviour
                     break;
             }
 
+            dialogueRunner.StartDialogue(dialogue);
             if (!CheckCutscene())
             {
                 gameManager.LockMovement(true);
@@ -214,7 +215,6 @@ public class StoryManager : MonoBehaviour
                 gameManager.HideTimer(true);
                 dialogueUp = true;
             }
-            dialogueRunner.StartDialogue(dialogue);
         }
     }
 
@@ -315,14 +315,7 @@ public class StoryManager : MonoBehaviour
         }
         else if (gameManager.GetCharacter() == "Vice Mayor")
         {
-            if (gameManager.GetElectionStatus())
-            {
-                cutscenes[5].TriggerDialogue();
-            }
-            else
-            {
-                cutscenes[6].TriggerDialogue();
-            }
+            //do nothing
         }
         else if (gameManager.CheckAllCharactersDone())
         {
@@ -335,6 +328,21 @@ public class StoryManager : MonoBehaviour
         else if (gameManager.GetCharacter() == "Baker")
         {
             cutscenes[3].TriggerDialogue();
+        }
+    }
+
+    public void TriggerEndCutscene()
+    {
+        if (gameManager.GetCharacter() == "Vice Mayor")
+        {
+            if (gameManager.GetElectionStatus())
+            {
+                cutscenes[5].TriggerDialogue();
+            }
+            else
+            {
+                cutscenes[6].TriggerDialogue();
+            }
         }
     }
 

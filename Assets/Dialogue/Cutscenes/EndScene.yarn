@@ -1,9 +1,9 @@
 ﻿title: Victory
-tags: end
+tags: cutscene
 ---
 <<transition "Game Manager">>
 <<setcspeaker "CutsceneAdvance" 0>>
-The future is uncertain; the old mayor, while certain corrupt, was at least competent enough to get the town running.
+The future is uncertain; the old mayor, while certainly corrupt, was at least competent enough to get the town running.
 Only time will tell whether Sate can do better than the old mayor.
 <<transition "Game Manager">>
 <<enddialogue "Game Manager">>
@@ -11,7 +11,7 @@ Only time will tell whether Sate can do better than the old mayor.
 ===
 
 title: Defeat
-tags: end
+tags: cutscene
 ---
 <<transition "Game Manager">>
 <<setcspeaker "CutsceneAdvance" 0>>
