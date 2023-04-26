@@ -48185,6 +48185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 721600334}
   - component: {fileID: 721600335}
+  - component: {fileID: 721600336}
   m_Layer: 0
   m_Name: Baker_House_Furniture_0 (4)
   m_TagString: Untagged
@@ -48259,6 +48260,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &721600336
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721600333}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.1799998, y: 1.7199999}
+    newSize: {x: 0.87, y: 1.43}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.1799998, y: 1.7199999}
+  m_EdgeRadius: 0
 --- !u!1 &736217177
 GameObject:
   m_ObjectHideFlags: 0
@@ -60126,7 +60153,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d6a3b4305ceb6a34d9b24cd6ccb32d81, type: 2}
   waypoints: {fileID: 1046251687}
   bossGate: {fileID: 1472657375}
-  endingDialogue: {fileID: 0}
 --- !u!114 &1901980258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64946,7 +64972,9 @@ PolygonCollider2D:
       - {x: 22.0625, y: 6.25}
       - {x: 22.0625, y: 4.03125}
       - {x: 22.1875, y: 3.875}
-      - {x: 22.125, y: 2.78125}
+      - {x: 22.624731, y: 3.907323}
+      - {x: 22.60126, y: 3.3203325}
+      - {x: 22.557112, y: 2.7404842}
       - {x: 21.96875, y: 2.375}
       - {x: 16.15625, y: 2.375}
       - {x: 16.15625, y: 3.9375}
@@ -65386,19 +65414,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 276690740417879096, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 276690740417879096, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 276690740417879096, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1901980258}
+    - target: {fileID: 276690740417879096, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 276690740417879096, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TriggerEndCutscene
+      objectReference: {fileID: 0}
+    - target: {fileID: 276690740417879096, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: StoryManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 276690740417879096, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1098977604503419682, guid: 679321c42de3e3b46923f7edb9943a55, type: 3}
       propertyPath: m_AnchorMax.y

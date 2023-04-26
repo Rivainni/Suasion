@@ -383,7 +383,6 @@ public class MainUI : MonoBehaviour
 
     public void Leave()
     {
-        endPanel.SetActive(false);
         gameManager.Leave();
     }
 
@@ -405,7 +404,7 @@ public class MainUI : MonoBehaviour
         endPanel.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = status;
         endPanel.transform.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Votes " + gameManager.GetPlayerVotes() + "/" + gameManager.GetTotalVotes(); ;
         endPanel.transform.GetChild(1).GetChild(2).GetComponent<TextMeshProUGUI>().text = "Score: " + gameManager.GetTotalScore();
-        endPanel.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(delegate { Leave(); });
+        // endPanel.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(delegate { Leave(); });
     }
 
     bool CheckHasClue(string keyword, KeywordSet keywordSet)
