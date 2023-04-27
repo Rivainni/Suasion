@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: ViceMayor_P2
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - support of the town
+    - youth and experience
+    - not cynical
+    m_Tone:
+    - earnest
+    - cautious
+    - blunt
+    m_Honesty:
+    - straight
+    - exaggerate
+    - downplay
+    m_Restrictions: []
+  m_Combinations:
+  - m_Set: support of the town_earnest_straight
+    m_Mood: earnest
+    m_Points: 5
+    m_Choice: A lot of townspeople are willing to support us!
+    m_Response: I told him as much.
+  - m_Set: youth and experience_earnest_straight
+    m_Mood: earnest
+    m_Points: 6
+    m_Choice: We have the enthusiasm; all we need is experience.
+    m_Response: ...Hmph. Maybe.
+  - m_Set: not cynical_earnest_straight
+    m_Mood: earnest
+    m_Points: 3
+    m_Choice: We haven't lost hope!
+    m_Response: That doesn't prove anything.
+  m_Type: Persuasion

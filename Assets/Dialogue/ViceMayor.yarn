@@ -39,7 +39,8 @@ tags: clue
 ---
 (Clue found - fountain)
 AMSEL: Is that a fountain?
-AMSEL: Just how?
+AMSEL: Unbelievable.
+AMSEL: Some people really have it better, huh.
 <<enddialogue "Game Manager">>
 ===
 
@@ -69,16 +70,36 @@ PETRA: {$response}
 <<elseif $persuasion< 50>>
     She does not look impressed.
 <<endif>>
-
+<<setactive "Advance" 6>>
+PETRA: Sigh. Tell me. 
+PETRA: I used to be like that, you know.
+PETRA: Promise, reform, change. 
+PETRA: What makes this time around so different?
+<<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+PETRA: {$response}
 <<checkitemunlock "Game Manager">>
+<<setactive "Advance" 0>>
 <<if $itemon == true>>
     Use items? Click one of the buttons below.
     <<callitems "Game Manager">>
 <<endif>>
+
+<<setactive "Advance" 6>>
+<<set $success to false>>
+<<rollsuccess "Game Manager">>
+<<if $success == true>>
+    MANUEL: Enough. I am satisfied. For now.
+<<else>>
+    MANUEL: We are going to be here for a while...
+<<endif>>
+
 This is as much content as we have right now for the final boss.
 The game will now show the end screen.
 Thank you for playing the game!
-
 <<enddialogue "Game Manager">>
 <<endlevel "Game Manager">>
 ===
