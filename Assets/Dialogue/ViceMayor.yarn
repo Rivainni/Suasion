@@ -81,25 +81,25 @@ AMSEL: Hmm...
 AMSEL: {$choice}
 <<focustarget "Advance" true>>
 PETRA: {$response}
+<<setactive "Advance" 0>>
 <<checkitemunlock "Game Manager">>
 <<setactive "Advance" 0>>
 <<if $itemon == true>>
     Use items? Click one of the buttons below.
     <<callitems "Game Manager">>
 <<endif>>
-
+Petra looks around.
+Her eyes settle at you, then at Sate.
+She takes a deep breath...
+And begins to speak.
 <<setactive "Advance" 6>>
 <<set $success to false>>
 <<rollsuccess "Game Manager">>
 <<if $success == true>>
-    MANUEL: Enough. I am satisfied. For now.
+    PETRA: Enough. I am satisfied. For now.
 <<else>>
-    MANUEL: We are going to be here for a while...
+    PETRA: We are going to be here for a while...
 <<endif>>
-
-This is as much content as we have right now for the final boss.
-The game will now show the end screen.
-Thank you for playing the game!
 <<enddialogue "Game Manager">>
 <<endlevel "Game Manager">>
 ===
