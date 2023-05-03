@@ -391,6 +391,16 @@ public class MainUI : MonoBehaviour
         transition.SetActive(true);
     }
 
+    public void FadeIn()
+    {
+        dialogueScreen.GetComponent<DialogueFade>().StartFadeIn();
+    }
+
+    public void FadeOut()
+    {
+        dialogueScreen.GetComponent<DialogueFade>().StartFadeOut();
+    }
+
     public void ResetBars()
     {
         empathyBar.SetHealth(30);

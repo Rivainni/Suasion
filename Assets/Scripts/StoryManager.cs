@@ -167,7 +167,7 @@ public class StoryManager : MonoBehaviour
                     break;
                 case 1:
                     innerDialogue.SetActive(true);
-                    // mainUI.Fade();
+                    mainUI.FadeIn();
                     if (previousType != dialogueType)
                     {
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
@@ -181,7 +181,7 @@ public class StoryManager : MonoBehaviour
                     break;
                 case 2:
                     innerDialogue.SetActive(true);
-                    // mainUI.Fade();
+                    mainUI.FadeIn();
                     if (previousType != dialogueType)
                     {
                         dialogueRunner.SetDialogueViews(new DialogueViewBase[] { mcDialogue.GetComponent<DuoView>(), targetDialogue.GetComponent<DuoView>() });
@@ -355,7 +355,10 @@ public class StoryManager : MonoBehaviour
         {
             dialogueUp = false;
             outerDialogue.SetActive(false);
-            innerDialogue.SetActive(false);
+            if (innerDialogue.activeSelf)
+            {
+                mainUI.FadeOut();
+            }
             cutsceneDialogue.SetActive(false);
             gameManager.SetIntro(false);
             gameManager.SetPersuade(false);
