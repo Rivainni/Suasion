@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: T_Intro1
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - game
+    - health
+    - weather
+    m_Tone:
+    - concerned
+    - demanding
+    - cheerful
+    m_Honesty: []
+  m_Combinations:
+  - m_Set: health_concerned
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: You goods bro?
+    m_Response: Fine, just tired.
+  m_Type: Intro

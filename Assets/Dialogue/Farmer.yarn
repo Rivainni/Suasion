@@ -1,0 +1,139 @@
+﻿title: FarmerNear
+tags: Area
+---
+<<togglefriend "Game Manager">>
+AMSEL: Ewww, what's that smell?
+SATE: I think that's fertilizer...
+SATE: And fruits?
+AMSEL: Hmm.
+AMSEL: Anyway, let's go!
+SATE: [nomarkup]:([/nomarkup]
+<<togglefriend "Game Manager">>
+<<enddialogue "Game Manager">>
+===
+
+title: FarmerIntro
+tags: Intro
+---
+<<setcharacter "Game Manager" "Farmer">>
+<<setmultiplier "Game Manager" 1>>
+<<set $choice to "">>
+<<set $response to "">>
+<<set $empathy to 30>>
+<<set $mood to "">>
+<<settarget "Advance" 5>>
+<<setactive "Advance" 5>>
+<<focustarget "Advance" false>>
+AMSEL: Hello?
+<<randomisemood "Game Manager">>
+<<focustarget "Advance" true>>
+<<if $mood == "positive">>
+    MANUEL: Good day, kid.
+<<elseif $mood == "neutral">>
+    MANUEL: What do you want, kid?
+<<else>>
+    MANUEL: Hmph.
+<<endif>>
+<<callkeywords "Game Manager">>
+<<focustarget "Advance" false>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MANUEL: {$response}
+<<checkempathy "Game Manager">>
+<<if $empathy >= 50>>
+    His mood has not changed at all, at least this means he will still listen.
+<<elseif $empathy < 50>>
+    He really doesn't want to talk to you.
+<<endif>>
+<<focustarget "Advance" false>>
+AMSEL: I'll just take a look around your farm, if that's ok?
+<<focustarget "Advance" true>>
+MANUEL: ...
+<<focustarget "Advance" false>>
+AMSEL: I assume that's a yes.
+<<focustarget "Advance" true>>
+MANUEL: Just be careful, kid.
+<<enddialogue "Game Manager">>
+===
+
+title: FarmerBed
+tags: Clue
+---
+AMSEL: Is this really where he sleeps? It's covered with dirt and mud.
+AMSEL: This poor guy, he must've been through a lot.
+<<addclue "Game Manager" "Farmer Bed" "Is this really where he sleeps? It's covered with dirt and mud. This poor guy, he must've been through a lot." "Manuel">>
+<<enddialogue "Game Manager">>
+===
+
+title: FarmerHayStacks
+tags: Clue
+---
+AMSEL: A lot of hay stacks, but no animals to feed it to.
+AMSEL: Was he forced to sell all of them?
+AMSEL: The Mayor has been beating this guy to death at this point.
+<<addclue "Game Manager" "Farmer Hay Stacks" "A lot of hay stacks, but no animals to feed it to. Was he forced to sell all of them? The Mayor has been beating this guy to death at this point." "Manuel">>
+<<enddialogue "Game Manager">>
+===
+
+title: FarmerMetalTub
+tags: Clue
+---
+AMSEL: A metal tub with red liquid on it. 
+AMSEL: It looks like the same liquid he uses on his breathing mask.
+AMSEL: Does he suffer from some condition that makes breathing hard?
+<<addclue "Game Manager" "Farmer Metal Tub" "A metal tub with red liquid on it. It looks like the same liquid he uses on his breathing mask. Does he suffer from some condition that makes breathing hard?" "Manuel">>
+<<enddialogue "Game Manager">>
+===
+
+title: FarmerPersuasion
+tags: persuasion
+---
+<<setmultiplier "Game Manager" 1>>
+<<modmultiplier "Game Manager">>
+<<set $choice to "">>
+<<set $response to "">>
+<<set $persuasion to 30>>
+<<set $itemon to false>>
+<<settarget "Advance" 5>>
+<<setactive "Advance" 5>>
+<<focustarget "Advance" false>>
+AMSEL: Hello?
+<<focustarget "Advance" true>>
+MANUEL: What do you want child?
+<<callkeywords "Game Manager">>
+<<focustarget "Advance" false>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MANUEL: {$response}
+<<checkpersuasion "Game Manager">>
+<<if $persuasion >= 50>>
+    He looks indifferent, at least that's not negative right?
+<<elseif $persuasion< 50>>
+    He's getting a bit pissed.
+<<endif>>
+<<callkeywords "Game Manager">>
+<<focustarget "Advance" false>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MANUEL: {$response}
+<<checkitemunlock "Game Manager">>
+<<if $itemon == true>>
+    <<callitems "Game Manager">>
+    You may use items now.
+    If desired, please click one of the items below *before advancing*.
+<<endif>>
+<<set $success to false>>
+<<rollsuccess "Game Manager">>
+
+<<if $success == true>>
+    MANUEL: Fine.
+<<else>>
+    MANUEL: I'll think about it.
+<<endif>>
+
+<<enddialogue "Game Manager">>
+<<endlevel "Game Manager">>
+===

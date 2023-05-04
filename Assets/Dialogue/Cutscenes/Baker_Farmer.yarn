@@ -1,0 +1,43 @@
+﻿title: Baker_Farmer
+tags: cutscene
+---
+<<transition "Game Manager">>
+<<set $reqBaker to false>>
+<<checkpersuaded "Game Manager" "Baker">>
+<<if $reqBaker == true>>
+    <<setcspeaker "CutsceneAdvance" 4>>
+    Fine, I'll help you kids on your campaign.
+    I'll spread the word of your political campaign to my patrons. Good luck babies!
+    <<setcspeaker "CutsceneAdvance" 0>>
+    The next day...
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: Ok now we got Maria, our next course should be to talk to the Farmer.
+    <<setcspeaker "CutsceneAdvance" 2>>
+    SATE: Thank goodness we're done with talking to that creepy baker, I really don't like her.
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: Lmaooo, didn't you notice she was looking at you more than me when we talked to her?
+    <<setcspeaker "CutsceneAdvance" 2>>
+    SATE: WHAT!?
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: Yeah I think she likes the quiet ones.
+    <<setcspeaker "CutsceneAdvance" 2>>
+    SATE: Ughhh could we please just go to the Farmer and move on from that woman.
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: Hahahha sure mate.
+<<else>>
+    <<setcspeaker "CutsceneAdvance" 4>>
+    MARIA: Yeeesh, you babies have no idea as to what you're doing hmm?
+    MARIA: I won't support your little campaign, it'll be a waste of my precious time.
+    MARIA: But please, do go on!.
+    MARIA: I would love to see how it all unfolds.
+    MARIA: Burning to the ground while the townspeople shun you to the side in shame and disgust hahaha!
+    <<setcspeaker "CutsceneAdvance" 1>>
+    AMSEL: Cmon Sate, let's get out of here.
+    <<setcspeaker "CutsceneAdvance" 2>>
+    SATE: Yes please.
+    <<setcspeaker "CutsceneAdvance" 4>>
+    MARIA: Bye little ones! Good luck on your doomed venture!
+<<endif>>
+<<transition "Game Manager">>
+<<enddialogue "Game Manager">>
+===

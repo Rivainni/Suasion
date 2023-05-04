@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: e220b1bfd2d1b0d4580ec6abf04ebe76
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 053561912b1654d80a424bb0696a74ae, type: 3}
+  sourceScripts:
+  - {fileID: 6391573757903218779, guid: 8f6265fd75246634eac38d711880f1d7, type: 3}
+  - {fileID: 6391573757903218779, guid: f38efa078a81d854694e1e90c5c48046, type: 3}
+  - {fileID: 6391573757903218779, guid: 1968162837234d14c80f5ad38695ce75, type: 3}
+  - {fileID: 6391573757903218779, guid: 35dbc6d26c1810b4e81b701a53d0112a, type: 3}
+  - {fileID: 6391573757903218779, guid: e8b094fe828d64746ae2bea904c9f558, type: 3}
+  - {fileID: 6391573757903218779, guid: aae89cf52a62689428b6985f3d767753, type: 3}
+  - {fileID: 6391573757903218779, guid: e47a616658680ab47b18aba979b46e0f, type: 3}
+  - {fileID: 6391573757903218779, guid: b5a7bc3ad49bfdf439dc568e950eee82, type: 3}
+  - {fileID: 6391573757903218779, guid: 90e8b1ff3d095e04e95e5571c074026b, type: 3}
+  - {fileID: 6391573757903218779, guid: c4db920d4f83e5b4dbcb2b6ec5341da6, type: 3}
+  - {fileID: 6391573757903218779, guid: 3e7e3e6de966c494d9407ce05e05abd1, type: 3}
+  - {fileID: 6391573757903218779, guid: 6e98a619d03ebb245a74b709051c986c, type: 3}
+  - {fileID: 6391573757903218779, guid: 5465c36779cd71b4999791a6f2a1a741, type: 3}
+  - {fileID: 6391573757903218779, guid: 0bee56fee6c325348ba823589a86bd58, type: 3}
+  - {fileID: 6391573757903218779, guid: c35882e05c619bf41ad2f5dc08aa8533, type: 3}
+  compileErrors: []
+  serializedDeclarations:
+  - name: $choice
+    typeName: String
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: 
+    isImplicit: 0
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: f38efa078a81d854694e1e90c5c48046, type: 3}
+  - name: $response
+    typeName: String
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: 
+    isImplicit: 0
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: f38efa078a81d854694e1e90c5c48046, type: 3}
+  - name: $clueCount
+    typeName: Number
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Tutorial.yarn, node DetectEntry
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: f38efa078a81d854694e1e90c5c48046, type: 3}
+  - name: $success
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Tutorial.yarn, node TutorialEnd
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: f38efa078a81d854694e1e90c5c48046, type: 3}
+  - name: $mood
+    typeName: String
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Level1.yarn, node Level1Intro
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 1968162837234d14c80f5ad38695ce75, type: 3}
+  - name: $persuasion
+    typeName: Number
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Level1.yarn, node Level1Persuasion
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 1968162837234d14c80f5ad38695ce75, type: 3}
+  - name: $itemon
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Baker.yarn, node BakerPersuasion
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 35dbc6d26c1810b4e81b701a53d0112a, type: 3}
+  - name: $empathy
+    typeName: Number
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Farmer.yarn, node FarmerIntro
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: aae89cf52a62689428b6985f3d767753, type: 3}
+  - name: $reqBaker
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in All_ViceMayor.yarn, node All_ViceMayor
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 6e98a619d03ebb245a74b709051c986c, type: 3}
+  - name: $reqFarmer
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in All_ViceMayor.yarn, node All_ViceMayor
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 6e98a619d03ebb245a74b709051c986c, type: 3}
+  defaultLanguage: en-PH
+  languagesToSourceAssets: []
+  useAddressableAssets: 0
+  searchAllAssembliesForActions: 1
+  assembliesToSearch: []
+  ListOfFunctions:
+  - Name: Random
+    ReturnType: -> Single
+    Parameters: []
+  - Name: RandomRange
+    ReturnType: -> Single
+    Parameters:
+    - minInclusive
+    - maxInclusive
+  - Name: Dice
+    ReturnType: -> Int32
+    Parameters:
+    - sides
+  - Name: Round
+    ReturnType: -> Int32
+    Parameters:
+    - num
+  - Name: RoundPlaces
+    ReturnType: -> Single
+    Parameters:
+    - num
+    - places
+  - Name: Floor
+    ReturnType: -> Int32
+    Parameters:
+    - num
+  - Name: Ceil
+    ReturnType: -> Int32
+    Parameters:
+    - num
+  - Name: Inc
+    ReturnType: -> Int32
+    Parameters:
+    - num
+  - Name: Dec
+    ReturnType: -> Int32
+    Parameters:
+    - num
+  - Name: Decimal
+    ReturnType: -> Single
+    Parameters:
+    - num
+  - Name: Int
+    ReturnType: -> Int32
+    Parameters:
+    - num
+  - Name: CoolFunction
+    ReturnType: -> Int32
+    Parameters: []

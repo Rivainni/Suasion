@@ -1,0 +1,105 @@
+﻿title: ViceMayorIntro
+tags: Intro
+---
+<<setcharacter "Game Manager" "Vice Mayor">>
+<<setmultiplier "Game Manager" 1>>
+<<set $choice to "">>
+<<set $response to "">>
+<<set $empathy to 30>>
+<<settarget "Advance" 6>>
+<<setactive "Advance" 6>>
+<<focustarget "Advance" false>>
+AMSEL: Hello.
+<<randomisemood "Game Manager">>
+<<focustarget "Advance" true>>
+<<if $mood == "positive">>
+    PETRA: Welcome. So...?
+<<elseif $mood == "neutral">>
+    PETRA: Do you know what you two have done?
+<<else>>
+    PETRA: You two...
+<<endif>>
+<<callkeywords "Game Manager">>
+<<focustarget "Advance" false>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MANUEL: {$response}
+<<focustarget "Advance" true>>
+PETRA: But I need more than that.
+<<focustarget "Advance" false>>
+AMSEL: (We should take a second)
+SATE: *nod*
+AMSEL: Sorry, excuse us for a second.
+<<enddialogue "Game Manager">>
+===
+
+title: Fountain
+tags: clue
+---
+(Clue found - fountain)
+AMSEL: Is that a fountain?
+AMSEL: Unbelievable.
+AMSEL: Some people really have it better, huh.
+<<enddialogue "Game Manager">>
+===
+
+title: ViceMayorPersuasion
+tags: persuasion
+---
+<<setmultiplier "Game Manager" 1>>
+<<modmultiplier "Game Manager">>
+<<set $choice to "">>
+<<set $response to "">>
+<<set $persuasion to 30>>
+<<set $itemon to false>>
+<<settarget "Advance" 6>>
+<<setactive "Advance" 6>>
+<<focustarget "Advance" true>>
+PETRA: Well?
+<<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+PETRA: {$response}
+<<setactive "Advance" 0>>
+<<checkpersuasion "Game Manager">>
+<<if $persuasion >= 50>>
+    Maybe you can carry on...
+<<elseif $persuasion< 50>>
+    She does not look impressed.
+<<endif>>
+<<setactive "Advance" 6>>
+PETRA: Sigh. Tell me. 
+PETRA: I used to be like that, you know.
+PETRA: Promise, reform, change. 
+PETRA: What makes this time around so different?
+<<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+PETRA: {$response}
+<<setactive "Advance" 0>>
+<<checkitemunlock "Game Manager">>
+<<setactive "Advance" 0>>
+<<if $itemon == true>>
+    Use items? Click one of the buttons below.
+    <<callitems "Game Manager">>
+<<endif>>
+Petra looks around.
+Her eyes settle at you, then at Sate.
+She takes a deep breath...
+And begins to speak.
+<<setactive "Advance" 6>>
+<<set $success to false>>
+<<rollsuccess "Game Manager">>
+<<if $success == true>>
+    PETRA: Enough. I am satisfied. For now.
+<<else>>
+    PETRA: We are going to be here for a while...
+<<endif>>
+<<enddialogue "Game Manager">>
+<<endlevel "Game Manager">>
+===

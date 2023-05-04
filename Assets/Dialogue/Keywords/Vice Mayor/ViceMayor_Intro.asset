@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: ViceMayor_Intro
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - mayoral campaign
+    - converse neighbors
+    m_Tone:
+    - polite
+    - direct
+    m_Honesty: []
+    m_Restrictions: []
+  m_Combinations:
+  - m_Set: mayoral campaign_polite
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We ran a campaign, ma'am.
+    m_Response: Good, honest.
+  - m_Set: mayoral campaign_polite
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We ran a campaign, ma'am.
+    m_Response: Correct.
+  - m_Set: mayoral campaign_polite
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: We ran a campaign, ma'am.
+    m_Response: Honest, at least.
+  - m_Set: converse neighbors_polite
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: Ma'am, we talked to our neighbors.
+    m_Response: I suppose that's correct. But...
+  - m_Set: converse neighbors_polite
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: Ma'am, we talked to our neighbors.
+    m_Response: Yes, I know.
+  - m_Set: converse neighbors_polite
+    m_Mood: negative
+    m_Points: 1
+    m_Choice: Ma'am, we talked to our neighbors.
+    m_Response: Ugh. You know the answer yet you tell me that?
+  - m_Set: mayoral campaign_direct
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We ran a campaign to win the election.
+    m_Response: Rude. But that's right.
+  - m_Set: mayoral campaign_direct
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We ran a campaign to win the election.
+    m_Response: Yes. Now...
+  - m_Set: mayoral campaign_direct
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: We ran a campaign to win the election.
+    m_Response: How dare you.
+  - m_Set: converse neighbors_direct
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: We went around and talked to people.
+    m_Response: Wow. Of course.
+  - m_Set: converse neighbors_direct
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We went around and talked to people.
+    m_Response: Really.
+  - m_Set: converse neighbors_direct
+    m_Mood: negative
+    m_Points: 1
+    m_Choice: We went around and talked to people.
+    m_Response: You dare?!
+  m_Type: Intro

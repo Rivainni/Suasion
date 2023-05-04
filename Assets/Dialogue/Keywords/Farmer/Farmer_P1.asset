@@ -1,0 +1,438 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: Farmer_P1
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - what happened here?
+    - give you support
+    - mayor's politics
+    m_Tone:
+    - earnest
+    - cautious
+    - blunt
+    m_Honesty:
+    - straight
+    - exaggerate
+    - downplay
+    m_Restrictions: []
+  m_Combinations:
+  - m_Set: what happened here?_earnest_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Can we ask you what happened to your farm?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Can we ask you what happened to all the things in your farm?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_earnest_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Can we ask what made you farm look like this?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_earnest_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: Can we ask you what happened to your farm?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: Can we ask you what happened to all the things in your farm?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_earnest_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: Can we ask what made you farm look like this?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_earnest_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Can we ask you what happened to your farm?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Can we ask you what happened to all the things in your farm?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_earnest_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Can we ask what made you farm look like this?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: give you support_earnest_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We want to help you.
+    m_Response: Not sure you can kid.
+  - m_Set: give you support_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We really want to help you. It's like we were born for this.
+    m_Response: Not sure you can kid.
+  - m_Set: give you support_earnest_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: You know, we think we can help you.
+    m_Response: Not sure you can kid.
+  - m_Set: give you support_earnest_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We want to help you.
+    m_Response: Okay, so?
+  - m_Set: give you support_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We really want to help you. It's like we were born for this.
+    m_Response: Okay, so?
+  - m_Set: give you support_earnest_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: You know, we think we can help you.
+    m_Response: Okay, so?
+  - m_Set: give you support_earnest_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: We want to help you.
+    m_Response: I don't need it.
+  - m_Set: give you support_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: We really want to help you. It's like we were born for this.
+    m_Response: I don't need it.
+  - m_Set: give you support_earnest_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: You know, we think we can help you.
+    m_Response: I don't need it.
+  - m_Set: mayor's politics_earnest_straight
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: The Mayor hasn't been kind to the farmers of our town.
+    m_Response: No, no he hasn't.
+  - m_Set: mayor's politics_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: The Mayor has been brutal to the farmers of our town.
+    m_Response: No, no he hasn't.
+  - m_Set: mayor's politics_earnest_downplay
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: The Mayor hasn't been great to the farmers of our town.
+    m_Response: No, no he hasn't.
+  - m_Set: mayor's politics_earnest_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: The Mayor hasn't been kind to the farmers of our town.
+    m_Response: He has his reasons.
+  - m_Set: mayor's politics_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: The Mayor has been brutal to the farmers of our town.
+    m_Response: He has his reasons.
+  - m_Set: mayor's politics_earnest_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: The Mayor hasn't been great to the farmers of our town.
+    m_Response: He has his reasons.
+  - m_Set: mayor's politics_earnest_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: The Mayor hasn't been kind to the farmers of our town.
+    m_Response: He has his reasons.
+  - m_Set: mayor's politics_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: The Mayor has been brutal to the farmers of our town.
+    m_Response: He has his reasons.
+  - m_Set: mayor's politics_earnest_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: The Mayor hasn't been great to the farmers of our town.
+    m_Response: He has his reasons.
+  - m_Set: what happened here?_cautious_straight
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: What happened here?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_cautious_neutral
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: What... drained this place?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: Something happened here.
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_cautious_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: What happened here?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: What... drained this place?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_cautious_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Something happened here.
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_cautious_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: What happened here?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: What... drained this place?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_cautious_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Something happened here.
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: give you support_cautious_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We should help him.
+    m_Response: No you don't.
+  - m_Set: give you support_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We need to help him.
+    m_Response: No you don't.
+  - m_Set: give you support_cautious_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Maybe we should help him...
+    m_Response: No you don't.
+  - m_Set: give you support_cautious_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We should help him.
+    m_Response: And why is that?
+  - m_Set: give you support_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We need to help him.
+    m_Response: And why is that?
+  - m_Set: give you support_cautious_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Maybe we should help him...
+    m_Response: And why is that?
+  - m_Set: give you support_cautious_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We should help him.
+    m_Response: Help me care about your campaign? No.
+  - m_Set: give you support_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We need to help him.
+    m_Response: Help me care about your campaign? No.
+  - m_Set: give you support_cautious_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Maybe we should help him...
+    m_Response: Help me care about your campaign? No.
+  - m_Set: mayor's politics_cautious_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: Pretty sure the Mayor has something to do with this.
+    m_Response: Yes.
+  - m_Set: mayor's politics_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: 100%. The Mayor has something to do with this.
+    m_Response: Yes.
+  - m_Set: mayor's politics_cautious_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: It's possible that the Mayor has something to do with this.
+    m_Response: Yes.
+  - m_Set: mayor's politics_cautious_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Pretty sure the Mayor has something to do with this.
+    m_Response: Well what's it to you?
+  - m_Set: mayor's politics_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: 100%. The Mayor has something to do with this.
+    m_Response: Well what's it to you?
+  - m_Set: mayor's politics_cautious_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: It's possible that the Mayor has something to do with this.
+    m_Response: Well what's it to you?
+  - m_Set: mayor's politics_cautious_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Pretty sure the Mayor has something to do with this.
+    m_Response: No, he doesn't.
+  - m_Set: mayor's politics_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: 100%. The Mayor has something to do with this.
+    m_Response: No, he doesn't.
+  - m_Set: mayor's politics_cautious_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: It's possible that the Mayor has something to do with this.
+    m_Response: No, he doesn't.
+  - m_Set: what happened here?_blunt_straight
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We need to know what happened here that made it so miserable.
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: Please, sir, we really need to know what happened here that made it
+      so miserable.
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_blunt_downplay
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: Can you tell us why this place is so miserable now?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_blunt_straight
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: We need to know what happened here that made it so miserable.
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: Please, sir, we really need to know what happened here that made it
+      so miserable.
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_blunt_downplay
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: Can you tell us why this place is so miserable now?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_blunt_straight
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: We need to know what happened here that made it so miserable.
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: Please, sir, we really need to know what happened here that made it
+      so miserable.
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: what happened here?_blunt_downplay
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: Can you tell us why this place is so miserable now?
+    m_Response: Taxes and sudden land relocations.
+  - m_Set: give you support_blunt_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We want to help you to boost our ratings.
+    m_Response: Of course you do.
+  - m_Set: give you support_blunt_exaggearte
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Listen. We need you to boost our ratings.
+    m_Response: Of course you do.
+  - m_Set: give you support_blunt_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Could you help us boost our ratings?
+    m_Response: Of course you do.
+  - m_Set: give you support_blunt_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We want to help you to boost our ratings.
+    m_Response: Okay.
+  - m_Set: give you support_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: Listen. We need you to boost our ratings.
+    m_Response: Okay.
+  - m_Set: give you support_blunt_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: Could you help us boost our ratings?
+    m_Response: Okay.
+  - m_Set: give you support_blunt_straight
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: We want to help you to boost our ratings.
+    m_Response: ...
+  - m_Set: give you support_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: Listen. We need you to boost our ratings.
+    m_Response: ...
+  - m_Set: give you support_blunt_downplay
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: Could you help us boost our ratings?
+    m_Response: ...
+  - m_Set: mayor's politics_blunt_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: This is the Mayor's fault.
+    m_Response: It is.
+  - m_Set: mayor's politics_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: The Mayor. It's always him.
+    m_Response: It is.
+  - m_Set: mayor's politics_blunt_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: I think it's *that* man...
+    m_Response: It is.
+  - m_Set: mayor's politics_blunt_straight
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: I think it's *that* man...
+    m_Response: Says everyone else.
+  - m_Set: mayor's politics_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: The Mayor. It's always him.
+    m_Response: Says everyone else.
+  - m_Set: mayor's politics_blunt_downplay
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: I think it's *that* man...
+    m_Response: Says everyone else.
+  - m_Set: mayor's politics_blunt_straight
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: This is the Mayor's fault.
+    m_Response: Assumptions are dangerous in this town.
+  - m_Set: mayor's politics_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: The Mayor. It's always him.
+    m_Response: Assumptions are dangerous in this town.
+  - m_Set: mayor's politics_blunt_downplay
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: I think it's *that* man...
+    m_Response: Assumptions are dangerous in this town.
+  m_Type: Persuasion

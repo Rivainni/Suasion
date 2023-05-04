@@ -1,0 +1,150 @@
+﻿title: BakerNear
+tags: Area
+---
+<<togglefriend "Game Manager">>
+AMSEL: Here's the bakery.
+SATE: I never liked going here, some kind of ominous aura on it.
+AMSEL: Come on! It'll be fine, everyone buys their bread here. Pretty sure that's mostly because she's the only baker in town.
+SATE: Well if it's for the cause, fine.
+AMSEL: Eyyyyy! That's the spirit.
+<<togglefriend "Game Manager">>
+<<enddialogue "Game Manager">>
+===
+
+title: BakerIntro
+tags: Intro
+---
+<<setcharacter "Game Manager" "Baker">>
+<<setmultiplier "Game Manager" 1>>
+<<set $choice to "">>
+<<set $response to "">>
+<<settarget "Advance" 4>>
+<<setactive "Advance" 4>>
+<<randomisemood "Game Manager">>
+<<focustarget "Advance" true>>
+<<if $mood == "positive">>
+    MARIA: Ohh my. If it isn't Amsel and their little friend Sate.
+<<elseif $mood == "neutral">>
+    MARIA: Ohh dear, it's Amsel and Sate!
+<<else>>
+    MARIA: Amsel and Sate... hehehe.
+<<endif>>
+MARIA: What can I do for you little babies today?
+MARIA: If you're here to buy our bestseller Pan de Regla, it'll still be 10 minutes before we can take it out the oven.
+MARIA: If you want a made to order cake, it'll be a minimum of 5 days before you can pick it up.
+MARIA: But if you babies just want to chit chat, then Momma Maria can give you 5 minutes of her time, plus 5 more if you actually buy something.
+<<focustarget "Advance" false>>
+AMSEL: Hello Ms...
+<<focustarget "Advance" true>>
+MARIA: Please dear Amsel, Maria is fine enough.
+<<callkeywords "Game Manager">>
+<<focustarget "Advance" false>>
+AMSEL: Hmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MARIA: {$response}
+MARIA: Well, let me just take the bread out of the ovens before we talk.
+MARIA: Feel free to take a look around the store for now. Just don't peek into the kitchen little cutties or mommy is gonna be very angry.
+<<enddialogue "Game Manager">>
+===
+
+title: BakerAfterIntro
+tags: Event
+---
+MARIA: Well, let me just take the bread out of the ovens before we talk.
+MARIA: Feel free to take a look around the store for now. Just don't peek into the kitchen little cutties or mommy is gonna be very angry.
+<<enddialogue "Game Manager">>
+===
+
+title: Cashier
+tags: Clue
+---
+AMSEL: The cashier has a ton of locks on it, I know people want their money secured but this is just over the top.
+AMSEL: I guess she's possessive when it comes to control and security.
+<<addclue "Game Manager" "Cashier" "The cashier has a ton of locks on it, I know people want their money secured but this is just over the top. I guess she's possessive when it comes to control and security." "MARIA">>
+<<enddialogue "Game Manager">>
+===
+
+title: BreadTrays
+tags: Clue
+---
+(Clue found - bread trays)
+AMSEL: These are the trays Maria uses to place the bread she sells.
+AMSEL: Each of them are labeled by a little card with the name.
+AMSEL: Hmmm, looks like she's organized.
+<<addclue "Game Manager" "Bread Trays" "These are the trays Maria uses to place the bread she sells. Each of them are labeled by a little card with the name. Hmmm, looks like she's organized." "MARIA">>
+<<enddialogue "Game Manager">>
+===
+
+title: IndoorPlants
+tags: Clue
+---
+(Clue found - indoor plants)
+AMSEL: All of the plants are fake, except for one pink flower on the counter. 
+AMSEL: It has some unnatural red marks on it and it looks well taken care of.
+AMSEL: The red marks look like blood, is this some kind of sick joke she set up!?
+<<addclue "Game Manager" "Indoor Plants" "All of the plants are fake, except for one pink flower on the counter. It has some unnatural red marks on it and it looks well taken care of. The red marks look like blood, is this some kind of sick joke she set up!?" "MARIA">>
+<<enddialogue "Game Manager">>
+===
+
+title: KitchenDoor
+tags: Clue
+---
+(Clue found - kitchen door)
+AMSEL: The door is metal with a single window on top covered with black paint. 
+AMSEL: I could barely see and hear what is in there. 
+AMSEL: Red marks are all over the door, similar to the ones the flower has.
+AMSEL: I'm getting really dangerous vibes from this woman. I should be cautious when talking to her.
+<<addclue "Game Manager" "Kitchen Door" "The door is metal with a single window on top covered with black paint. I could barely see and hear what is in there. Red marks are all over the door, similar to the ones the flower has. I'm getting really dangerous vibes from this woman. I should be cautious when talking to her." "MARIA">>
+<<enddialogue "Game Manager">>
+===
+
+title: BakerPersuasion
+tags: persuasion targetstart
+---
+<<setmultiplier "Game Manager" 2>>
+<<modmultiplier "Game Manager">>
+<<set $persuasion to 30>>
+<<set $itemon to false>>
+<<set $choice to "">>
+<<set $response to "">>
+<<settarget "Advance" 4>>
+<<setactive "Advance" 4>>
+<<focustarget "Advance" true>>
+MARIA: I'm back, let me just stock the trays first before we talk about your little escapade.
+<<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
+AMSEL: Okay...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MARIA: {$response}
+<<checkpersuasion "Game Manager">>
+<<if $persuasion >= 50>>
+    She's looking more interested in our conversation.
+<<elseif $persuasion < 50>>
+    Her smile is growing....she looks ominous.
+<<endif>>
+<<focustarget "Advance" false>>
+<<callkeywords "Game Manager">>
+AMSEL: Hmmm...
+AMSEL: {$choice}
+<<focustarget "Advance" true>>
+MARIA: {$response}
+<<checkitemunlock "Game Manager">>
+<<if $itemon == true>>
+    <<callitems "Game Manager">>
+    You may use items now.
+    If desired, please click one of the items below *before advancing*.
+<<endif>>
+<<set $success to false>>
+<<rollsuccess "Game Manager">>
+
+<<if $success == true>>
+    MARIA: Hmm... I'll see who I can talk to.
+<<else>>
+    MARIA: Nuh uh. It's time for you to go, my dears.
+<<endif>>
+<<setmainspeaker "Advance" 0>>
+<<enddialogue "Game Manager">>
+<<endlevel "Game Manager">>
+===

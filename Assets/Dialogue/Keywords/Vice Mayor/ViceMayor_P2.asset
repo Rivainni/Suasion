@@ -1,0 +1,435 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: ViceMayor_P2
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - support of the town
+    - youth and experience
+    - not cynical
+    m_Tone:
+    - earnest
+    - cautious
+    - blunt
+    m_Honesty:
+    - straight
+    - exaggerate
+    - downplay
+    m_Restrictions: []
+  m_Combinations:
+  - m_Set: support of the town_earnest_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: A lot of townspeople are willing to support us!
+    m_Response: I told him as much.
+  - m_Set: support of the town_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: The entire town is willing to support us!
+    m_Response: I told him as much.
+  - m_Set: support of the town_earnest_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: More than a few townspeople are willing to support us.
+    m_Response: I told him as much.
+  - m_Set: support of the town_earnest_straight
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: A lot of townspeople are willing to support us!
+    m_Response: ...And that does count for something.
+  - m_Set: support of the town_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: The entire town is willing to support us!
+    m_Response: ...And that does count for something.
+  - m_Set: support of the town_earnest_downplay
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: More than a few townspeople are willing to support us.
+    m_Response: ...And that does count for something.
+  - m_Set: support of the town_earnest_straight
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: A lot of townspeople are willing to support us!
+    m_Response: And?
+  - m_Set: support of the town_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: The entire town is willing to support us!
+    m_Response: And?
+  - m_Set: support of the town_earnest_downplay
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: More than a few townspeople are willing to support us.
+    m_Response: And?
+  - m_Set: youth and experience_earnest_straight
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: We have the enthusiasm; all we need is experience.
+    m_Response: ...Hmph. Maybe.
+  - m_Set: youth and experience_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: We just need experience, then we're good!
+    m_Response: ...Hmph. Maybe.
+  - m_Set: youth and experience_earnest_downplay
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: We're young, we can still learn.
+    m_Response: ...Hmph. Maybe.
+  - m_Set: youth and experience_earnest_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We have the enthusiasm; all we need is experience.
+    m_Response: I suppose.
+  - m_Set: youth and experience_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We just need experience, then we're good!
+    m_Response: I suppose.
+  - m_Set: youth and experience_earnest_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We're young, we can still learn.
+    m_Response: I suppose.
+  - m_Set: youth and experience_earnest_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We have the enthusiasm; all we need is experience.
+    m_Response: Okay, sure.
+  - m_Set: youth and experience_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We just need experience, then we're good!
+    m_Response: Okay, sure.
+  - m_Set: youth and experience_earnest_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We're young, we can still learn.
+    m_Response: Okay, sure.
+  - m_Set: not cynical_earnest_straight
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We haven't lost hope!
+    m_Response: That doesn't prove anything.
+  - m_Set: not cynical_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We are the only ones who haven't lost hope!
+    m_Response: That doesn't prove anything.
+  - m_Set: not cynical_earnest_downplay
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We still have hope.
+    m_Response: That doesn't prove anything.
+  - m_Set: not cynical_earnest_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We haven't lost hope!
+    m_Response: Unlike me, you mean?
+  - m_Set: not cynical_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We are the only ones who haven't lost hope!
+    m_Response: Unlike me, you mean?
+  - m_Set: not cynical_earnest_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We still have hope.
+    m_Response: Unlike me, you mean?
+  - m_Set: not cynical_earnest_straight
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: We haven't lost hope!
+    m_Response: I suppose I am cynical.
+  - m_Set: not cynical_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: We are the only ones who haven't lost hope!
+    m_Response: I suppose I am cynical.
+  - m_Set: not cynical_earnest_downplay
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: We still have hope.
+    m_Response: I suppose I am cynical.
+  - m_Set: support of the town_cautious_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: They support us.
+    m_Response: Right...
+  - m_Set: support of the town_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: They would vouch for us, come what may!
+    m_Response: Right...
+  - m_Set: support of the town_cautious_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We have support.
+    m_Response: Right...
+  - m_Set: support of the town_cautious_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: They support us.
+    m_Response: Who is "they"?
+  - m_Set: support of the town_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: They would vouch for us, come what may!
+    m_Response: Who is "they"?
+  - m_Set: support of the town_cautious_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We have support.
+    m_Response: Who is "they"?
+  - m_Set: support of the town_cautious_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: They support us.
+    m_Response: What does that count for?
+  - m_Set: support of the town_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: They would vouch for us, come what may!
+    m_Response: What does that count for?
+  - m_Set: support of the town_cautious_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: We have support.
+    m_Response: What does that count for?
+  - m_Set: youth and experience_cautious_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: Unlike our elders, we are amiable to change through experience.
+    m_Response: You certainly have the enthusiasm. But experience...
+  - m_Set: youth and experience_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We can change through experience, you know!
+    m_Response: You certainly have the enthusiasm. But experience...
+  - m_Set: youth and experience_cautious_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We can change through experience.
+    m_Response: You certainly have the enthusiasm. But experience...
+  - m_Set: youth and experience_cautious_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: Unlike our elders, we are amiable to change through experience.
+    m_Response: Hmm.
+  - m_Set: youth and experience_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We can change through experience, you know!
+    m_Response: Hmm.
+  - m_Set: youth and experience_cautious_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We can change through experience.
+    m_Response: Hmm.
+  - m_Set: youth and experience_cautious_straight
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: Unlike our elders, we are amiable to change through experience.
+    m_Response: Change... like the town.
+  - m_Set: youth and experience_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: We can change through experience, you know!
+    m_Response: Change... like the town.
+  - m_Set: youth and experience_cautious_downplay
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: We can change through experience.
+    m_Response: Change... like the town.
+  - m_Set: not cynical_cautious_straight
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: We believe in the people.
+    m_Response: Change will only come if the people will it.
+  - m_Set: not cynical_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: The people have our full trust.
+    m_Response: Change will only come if the people will it.
+  - m_Set: not cynical_cautious_downplay
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: We have *some* trust in the people, unlike...
+    m_Response: Change will only come if the people will it.
+  - m_Set: not cynical_cautious_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We believe in the people.
+    m_Response: Perhaps.
+  - m_Set: not cynical_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: The people have our full trust.
+    m_Response: Perhaps.
+  - m_Set: not cynical_cautious_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We have *some* trust in the people, unlike...
+    m_Response: Perhaps.
+  - m_Set: not cynical_cautious_straight
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: We believe in the people.
+    m_Response: Hmph. You have a point.
+  - m_Set: not cynical_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: The people have our full trust.
+    m_Response: Hmph. You have a point.
+  - m_Set: not cynical_cautious_downplay
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: We have *some* trust in the people, unlike...
+    m_Response: Hmph. You have a point.
+  - m_Set: support of the town_blunt_straight
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: You called us here right? Surely you've seen our support.
+    m_Response: Does it matter?
+  - m_Set: support of the town_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We're here, with everyone behind us.
+    m_Response: Does it matter?
+  - m_Set: support of the town_blunt_downplay
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We have a considerable number of townspeople behind us.
+    m_Response: Does it matter?
+  - m_Set: support of the town_blunt_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: You called us here right? Surely you've seen our support.
+    m_Response: You're right.
+  - m_Set: support of the town_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We're here, with everyone behind us.
+    m_Response: You're right.
+  - m_Set: support of the town_blunt_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We have a considerable number of townspeople behind us.
+    m_Response: You're right.
+  - m_Set: support of the town_blunt_straight
+    m_Mood: negative
+    m_Points: 1
+    m_Choice: You called us here right? Surely you've seen our support.
+    m_Response: Hmph.
+  - m_Set: support of the town_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 1
+    m_Choice: We're here, with everyone behind us.
+    m_Response: Hmph.
+  - m_Set: support of the town_blunt_downplay
+    m_Mood: negative
+    m_Points: 1
+    m_Choice: You called us here right? Surely you've seen our support.
+    m_Response: Hmph.
+  - m_Set: youth and experience_blunt_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: You're old. We're young. We can still learn.
+    m_Response: Is that enough, I wonder?
+  - m_Set: youth and experience_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: You're too old for this. Let us take over.
+    m_Response: Is that enough, I wonder?
+  - m_Set: youth and experience_blunt_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We're young. Learning isn't out of the question.
+    m_Response: Is that enough, I wonder?
+  - m_Set: youth and experience_blunt_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: You're old. We're young. We can still learn.
+    m_Response: But age is also an indicator of wisdom. Is this wise?
+  - m_Set: youth and experience_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: You're too old for this. Let us take over.
+    m_Response: But age is also an indicator of wisdom. Is this wise?
+  - m_Set: youth and experience_blunt_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We're young. Learning isn't out of the question.
+    m_Response: But age is also an indicator of wisdom. Is this wise?
+  - m_Set: youth and experience_blunt_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: You're old. We're young. We can still learn.
+    m_Response: Me?! Hmph.
+  - m_Set: youth and experience_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: You're too old for this. Let us take over.
+    m_Response: Me?! Hmph.
+  - m_Set: youth and experience_blunt_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: We're young. Learning isn't out of the question.
+    m_Response: Me?! Hmph.
+  - m_Set: not cynical_blunt_straight
+    m_Mood: positive
+    m_Points: 1
+    m_Choice: Unlike you, we can still believe!
+    m_Response: The people don't want it. I've seen it myself.
+  - m_Set: not cynical_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 1
+    m_Choice: Unlike you, we still believe that this can be done!
+    m_Response: The people don't want it. I've seen it myself.
+  - m_Set: not cynical_blunt_downplay
+    m_Mood: positive
+    m_Points: 1
+    m_Choice: We still believe, unlike you, that there is a chance.
+    m_Response: The people don't want it. I've seen it myself.
+  - m_Set: not cynical_blunt_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Unlike you, we can still believe!
+    m_Response: No comment.
+  - m_Set: not cynical_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Unlike you, we still believe that this can be done!
+    m_Response: No comment.
+  - m_Set: not cynical_blunt_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We still believe, unlike you, that there is a chance.
+    m_Response: No comment.
+  - m_Set: not cynical_blunt_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Unlike you, we can still believe!
+    m_Response: I-I can't deny that.
+  - m_Set: not cynical_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Unlike you, we still believe that this can be done!
+    m_Response: I-I can't deny that.
+  - m_Set: not cynical_blunt_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We still believe, unlike you, that there is a chance.
+    m_Response: I-I can't deny that.
+  m_Type: Persuasion

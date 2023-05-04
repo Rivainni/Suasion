@@ -1,0 +1,475 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: Maria_P1
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - mayoral campaign
+    - give us support
+    - gossip townspeople
+    m_Tone:
+    - earnest
+    - cautious
+    - blunt
+    m_Honesty:
+    - straight
+    - exaggerate
+    - downplay
+    m_Restrictions: []
+  m_Combinations:
+  - m_Set: mayoral campaign_earnest_straight
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We are starting a campaign to go against our current Mayor in the elections
+    m_Response: Not a good idea, baby.
+  - m_Set: mayoral campaign_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We need to banish the poisonous Mayor that's killing our town, and
+      we have a plan
+    m_Response: Not a good idea baby.
+  - m_Set: mayoral campaign_earnest_downplay
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We're trying to fix a problem concerning our homes and its politics
+    m_Response: Not a good idea baby.
+  - m_Set: mayoral campaign_earnest_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We are starting a campaign to go against our current Mayor in the elections
+    m_Response: I don't like politics, they bore me.
+  - m_Set: mayoral campaign_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We need to banish the poisonous Mayor that's killing our town, and
+      we have a plan
+    m_Response: I don't like politics, they bore me.
+  - m_Set: mayoral campaign_earnest_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We're trying to fix a problem concerning our homes and its politics
+    m_Response: I don't like politics, they bore me.
+  - m_Set: mayoral campaign_earnest_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We are starting a campaign to go against our current Mayor in the elections
+    m_Response: Not a promising cause there, but I am interested to see how it turns
+      out.
+  - m_Set: mayoral campaign_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We need to banish the poisonous Mayor that's killing our town, and
+      we have a plan
+    m_Response: Not a promising cause there, but I am interested to see how it turns
+      out.
+  - m_Set: mayoral campaign_earnest_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We're trying to fix a problem concerning our homes and its politics
+    m_Response: Not a promising cause there, but I am interested to see how it turns
+      out.
+  - m_Set: give us support_earnest_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We need support to succeed in our cause.
+    m_Response: Ohh dear, the poor people. Yes, of course I will help you little
+      ones.
+  - m_Set: give us support_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We can't do it without your help, and you know a lot of people that
+      could help us too.
+    m_Response: Ohh dear, the poor people. Yes, of course I will help you little
+      ones
+  - m_Set: give us support_earnest_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We want to help people but we can't do it alone.
+    m_Response: Ohh dear, the poor people. Yes, of course I will help you little
+      ones
+  - m_Set: give us support_earnest_straight
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: We need support to succeed in our cause.
+    m_Response: You gotta give me more than that little baby.
+  - m_Set: give us support_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: We can't do it without your help, and you know a lot of people that
+      could help us too.
+    m_Response: You gotta give me more than that little baby.
+  - m_Set: give us support_earnest_downplay
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: We want to help people but we can't do it alone.
+    m_Response: You gotta give me more than that little baby.
+  - m_Set: give us support_earnest_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: We need support to succeed in our cause.
+    m_Response: You haven't even told me about what your cause is.
+  - m_Set: give us support_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: We can't do it without your help, and you know a lot of people that
+      could help us too.
+    m_Response: You haven't even told me about what your cause is.
+  - m_Set: give us support_earnest_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: We want to help people but we can't do it alone.
+    m_Response: You haven't even told me about what your cause is.
+  - m_Set: gossip townspeople_earnest_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: Helping someone is of no use, unless you know their true problems
+    m_Response: Well first you'll need to get them to talk in the first place.
+  - m_Set: gossip townspeople_earnest_exaggerate
+    m_Mood: 5
+    m_Points: 0
+    m_Choice: To truly help someone, we need to know them first.
+    m_Response: Well first you'll need to get them to talk in the first place.
+  - m_Set: gossip townspeople_earnest_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We want to know more about our neighbors, but we're too shy to ask
+      them directly.
+    m_Response: Well first you'll need to get them to talk in the first place.
+  - m_Set: gossip townspeople_earnest_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Helping someone is of no use, unless you know their true problems.
+    m_Response: Well who are you to advocate such a philosophy?
+  - m_Set: gossip townspeople_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: To truly help someone, we need to know them first.
+    m_Response: Well who are you to advocate such a philosophy?
+  - m_Set: gossip townspeople_earnest_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We want to know more about our neighbors, but we're too shy to ask
+      them directly.
+    m_Response: Well who are you to advocate such a philosophy?
+  - m_Set: gossip townspeople_earnest_straight
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: Helping someone is of no use, unless you know their true problems.
+    m_Response: Cut to the chase, these prerequisites are boring me.
+  - m_Set: gossip townspeople_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: To truly help someone, we need to know them first.
+    m_Response: Cut to the chase, these prerequisites are boring me.
+  - m_Set: gossip townspeople_earnest_downplay
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: We want to know more about our neighbors, but we're too shy to ask
+      them directly.
+    m_Response: Cut to the chase, these prerequisites are boring me.
+  - m_Set: mayoral campaign_cautious_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: There's a problem we have in this town and our campaign can fix it
+    m_Response: I'm listening...
+  - m_Set: mayoral campaign_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We have a huge problem happening in this town and we're all affected!
+    m_Response: I'm listening...
+  - m_Set: mayoral campaign_cautious_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: There's a slight concern in the current state of our town.
+    m_Response: I'm listening...
+  - m_Set: mayoral campaign_cautious_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: There's a problem we have in this town and our campaign can fix it
+    m_Response: I'm interested to see what you can do to fix it, little baby.
+  - m_Set: mayoral campaign_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We have a huge problem happening in this town and we're all affected!
+    m_Response: I'm interested to see what you can do to fix it, little baby.
+  - m_Set: mayoral campaign_cautious_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: There's a slight concern in the current state of our town.
+    m_Response: I'm interested to see what you can do to fix it, little baby.
+  - m_Set: mayoral campaign_cautious_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: There's a problem we have in this town and our campaign can fix it
+    m_Response: Well, you have a long road ahead of you and your friend, then.
+  - m_Set: mayoral campaign_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We have a huge problem happening in this town and we're all affected!
+    m_Response: Well, you have a long road ahead of you and your friend, then.
+  - m_Set: mayoral campaign_cautious_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: There's a slight concern in the current state of our town.
+    m_Response: Well, you have a long road ahead of you and your friend, then.
+  - m_Set: give us support_cautious_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We don't want to burden people, which is why we are just asking certain
+      individuals to support us.
+    m_Response: You're an observant one. So what now smart one, you need my help?
+  - m_Set: give us support_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We wouldn't want to leave the people alone, we need to help them!
+    m_Response: You're an observant one. So what now smart one, you need my help?
+  - m_Set: give us support_cautious_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: They won't suffer anymore if we help them.
+    m_Response: You're an observant one. So what now smart one, you need my help?
+  - m_Set: give us support_cautious_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We don't want to burden people, which is why we are just asking certain
+      individuals to support us.
+    m_Response: Why not? Some of them deserve the burden for being bad people
+  - m_Set: give us support_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We wouldn't want to leave the people alone, we need to help them!
+    m_Response: Why not? Some of them deserve the burden for being bad people
+  - m_Set: give us support_cautious_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: They won't suffer anymore if we help them.
+    m_Response: Why not? Some of them deserve the burden for being bad people
+  - m_Set: give us support_cautious_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We don't want to burden people, which is why we are just asking certain
+      individuals to support us.
+    m_Response: So individuals that you targeted to help you then?
+  - m_Set: give us support_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We wouldn't want to leave the people alone, we need to help them!
+    m_Response: So individuals that you targeted to help you then?
+  - m_Set: give us support_cautious_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: They won't suffer anymore if we help them.
+    m_Response: So individuals that you targeted to help you then?
+  - m_Set: gossip townspeople_cautious_straight
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: Uhh is it ok if we could ask you about our townsfolk?
+    m_Response: Awwww little baby wants to have new friends, I can help you with
+      that.
+  - m_Set: gossip townspeople_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: We wanna know about our neighbors more.
+    m_Response: Awwww little baby wants to have new friends, I can help you with
+      that.
+  - m_Set: gossip townspeople_cautious_downplay
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: We want to make more friends here, could you please introduce us to
+      them?
+    m_Response: Awwww little baby wants to have new friends, I can help you with
+      that.
+  - m_Set: gossip townspeople_cautious_straight
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: Uhh is it ok if we could ask you about our townsfolk?
+    m_Response: Lucky for you, I have a fondness with the innocence of relations...
+  - m_Set: gossip townspeople_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: We wanna know about our neighbors more.
+    m_Response: Lucky for you, I have a fondness with the innocence of relations...
+  - m_Set: gossip townspeople_cautious_downplay
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: We want to make more friends here, could you please introduce us to
+      them?
+    m_Response: Lucky for you, I have a fondness with the innocence of relations...
+  - m_Set: gossip townspeople_cautious_straight
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: Uhh is it ok if we could ask you about our townsfolk?
+    m_Response: Want to have more people to mess with, cause I love to mess with
+      people!
+  - m_Set: gossip townspeople_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: We wanna know about our neighbors more.
+    m_Response: Want to have more people to mess with, cause I love to mess with
+      people!
+  - m_Set: gossip townspeople_cautious_downplay
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: We want to make more friends here, could you please introduce us to
+      them?
+    m_Response: Want to have more people to mess with, cause I love to mess with
+      people!
+  - m_Set: mayoral campaign_blunt_straight
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: The Mayor is destroying our town and we want to stop it.
+    m_Response: Keep squawking like that and you'll be dead by tomorrow.
+  - m_Set: mayoral campaign_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: Our Mayor and their political dynasty has been destroying this town
+      for generations.
+    m_Response: Keep squawking like that and you'll be dead by tomorrow.
+  - m_Set: mayoral campaign_blunt_downplay
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: The Mayor's policies are not enough to fix the problems of our town,
+      so we want to propose an alternative
+    m_Response: Keep squawking like that and you'll be dead by tomorrow.
+  - m_Set: mayoral campaign_blunt_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: The Mayor is destroying our town and we want to stop it.
+    m_Response: Intrusive thoughts getting a hold of you?
+  - m_Set: mayoral campaign_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Our Mayor and their political dynasty has been destroying this town
+      for generations.
+    m_Response: Intrusive thoughts getting a hold of you?
+  - m_Set: mayoral campaign_blunt_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: The Mayor's policies are not enough to fix the problems of our town,
+      so we want to propose an alternative.
+    m_Response: Intrusive thoughts getting a hold of you?
+  - m_Set: mayoral campaign_blunt_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: The Mayor's policies are not enough to fix the problems of our town,
+      so we want to propose an alternative.
+    m_Response: A lost cause little baby, it'll be better if you crawl back to your
+      crib and shut the heck up.
+  - m_Set: mayoral campaign_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Our Mayor and their political dynasty has been destroying this town
+      for generations.
+    m_Response: A lost cause little baby, it'll be better if you crawl back to your
+      crib and shut the heck up.
+  - m_Set: mayoral campaign_blunt_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: The Mayor's policies are not enough to fix the problems of our town,
+      so we want to propose an alternative.
+    m_Response: A lost cause little baby, it'll be better if you crawl back to your
+      crib and shut the heck up.
+  - m_Set: give us support_blunt_straight
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: If we don't help them, then who will?
+    m_Response: Well then, why don't you ask your gods for help?
+  - m_Set: give us support_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: If we do help them, they won't suffer under extreme poverty anymore.
+    m_Response: Well then, why don't you ask your gods for help?
+  - m_Set: give us support_blunt_downplay
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: They can't fix their problems on their own.
+    m_Response: Well then, why don't you ask your gods for help?
+  - m_Set: give us support_blunt_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: If we don't help them, then who will?
+    m_Response: Then just ask the Mayor for help, he loves to "help" those in need.
+  - m_Set: give us support_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: If we do help them, they won't suffer under extreme poverty anymore.
+    m_Response: Then just ask the Mayor for help, he loves to "help" those in need.
+  - m_Set: give us support_blunt_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: They can't fix their problems on their own.
+    m_Response: Then just ask the Mayor for help, he loves to "help" those in need.
+  - m_Set: give us support_blunt_straight
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: If we don't help them, then who will?
+    m_Response: How is that my problem? All I care is my own profit from such exchanges
+      baby.
+  - m_Set: give us support_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: If we do help them, they won't suffer under extreme poverty anymore.
+    m_Response: How is that my problem? All I care is my own profit from such exchanges
+      baby.
+  - m_Set: give us support_blunt_downplay
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: They can't fix their problems on their own.
+    m_Response: How is that my problem? All I care is my own profit from such exchanges
+      baby.
+  - m_Set: gossip townspeople_blunt_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We need information about our townsfolk.
+    m_Response: Everything has a price little one, even information.
+  - m_Set: gossip townspeople_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Information is key to a successful operation.
+    m_Response: Everything has a price little one, even information.
+  - m_Set: gossip townspeople_blunt_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We need info so that we can truly help the people of our town.
+    m_Response: Everything has a price little one, even information.
+  - m_Set: gossip townspeople_blunt_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We need info so that we can truly help the people of our town.
+    m_Response: I can divulge such, for a price of course.
+  - m_Set: gossip townspeople_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Information is key to a successful operation.
+    m_Response: I can divulge such, for a price of course.
+  - m_Set: gossip townspeople_blunt_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: We need info so that we can truly help the people of our town.
+    m_Response: I can divulge such, for a price of course.
+  - m_Set: gossip townspeople_blunt_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We need information about our townsfolk.
+    m_Response: What are you, a stalker?
+  - m_Set: gossip townspeople_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Information is key to a successful operation.
+    m_Response: What are you, a stalker?
+  - m_Set: gossip townspeople_blunt_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We need info so that we can truly help the people of our town.
+    m_Response: What are you, a stalker?
+  m_Type: Persuasion

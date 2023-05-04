@@ -1,0 +1,449 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: L1_P2
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - shortage of goods
+    - unique viewpoint
+    - trust us
+    m_Tone:
+    - earnest
+    - cautious
+    - blunt
+    m_Honesty:
+    - straight
+    - exaggerate
+    - downplay
+    m_Restrictions:
+    - m_Keyword: shortage
+      m_Clue: Sticky Notes
+  m_Combinations:
+  - m_Set: shortage of goods_earnest_straight
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: There is a growing shortage of goods that we can help address.
+    m_Response: Indeed. How did you know? You did your research.
+  - m_Set: shortage of goods_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: There is a shortage of goods that we will help address.
+    m_Response: Indeed. How did you know? You did your research.
+  - m_Set: shortage of goods_earnest_downplay
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: There is a shortage of some goods that we might help address.
+    m_Response: Indeed. How did you know? You did your research.
+  - m_Set: shortage of goods_earnest_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: There is a growing shortage of goods that we can help address.
+    m_Response: I cannot deny that.
+  - m_Set: shortage of goods_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: There is a shortage of goods that we will help address.
+    m_Response: I cannot deny that.
+  - m_Set: shortage of goods_earnest_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: There is a shortage of some goods that we might help address.
+    m_Response: I cannot deny that.
+  - m_Set: shortage of goods_earnest_straight
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: There is a growing shortage of goods that we can help address.
+    m_Response: "Yes. Indeed. You\u2019re right!"
+  - m_Set: shortage of goods_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: There is a shortage of goods that we will help address.
+    m_Response: "Yes. Indeed. You\u2019re right!"
+  - m_Set: shortage of goods_earnest_downplay
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: There is a shortage of some goods that we might help address.
+    m_Response: "Yes. Indeed. You\u2019re right!"
+  - m_Set: unique viewpoint_earnest_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: Our background gives a unique perspective to address the issues.
+    m_Response: That is a possibility.
+  - m_Set: unique viewpoint_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: Due to the fact that we are going to be the future leaders, we could
+      be the best choice for helping our community.
+    m_Response: That is a possibility.
+  - m_Set: unique viewpoint_earnest_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: Our perspective is the best to use to solve the current issues.
+    m_Response: That is a possibility.
+  - m_Set: unique viewpoint_earnest_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: Our background gives a unique perspective to address the issues.
+    m_Response: Highly unlikely, considering many factors, such as age.
+  - m_Set: unique viewpoint_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: Due to the fact that we are going to be the future leaders, we could
+      be the best choice for helping our community.
+    m_Response: Highly unlikely, considering many factors, such as age.
+  - m_Set: unique viewpoint_earnest_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: Our perspective is the best to use to solve the current issues.
+    m_Response: Highly unlikely, considering many factors, such as age.
+  - m_Set: unique viewpoint_earnest_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Our background gives a unique perspective to address the issues.
+    m_Response: Perhaps.
+  - m_Set: unique viewpoint_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Due to the fact that we are going to be the future leaders, we could
+      be the best choice for helping our community.
+    m_Response: Perhaps.
+  - m_Set: unique viewpoint_earnest_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Our perspective is the best to use to solve the current issues.
+    m_Response: Perhaps.
+  - m_Set: trust us_earnest_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Just trust us, please.
+    m_Response: "Errr\u2026"
+  - m_Set: trust us_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: "All we\u2019re asking for is your trust."
+    m_Response: "Errr\u2026"
+  - m_Set: trust us_earnest_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: The least we need is your trust.
+    m_Response: "Errr\u2026"
+  - m_Set: trust us_earnest_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: The least we need is your trust.
+    m_Response: I trust my child. With a group however, I am unsure.
+  - m_Set: trust us_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: "All we\u2019re asking for is your trust."
+    m_Response: I trust my child. With a group however, I am unsure.
+  - m_Set: trust us_earnest_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: The least we need is your trust.
+    m_Response: I trust my child. With a group however, I am unsure.
+  - m_Set: trust us_earnest_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Just trust us, please.
+    m_Response: Hrr. You need to give me more than that.
+  - m_Set: trust us_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: "All we\u2019re asking for is your trust."
+    m_Response: Hrr. You need to give me more than that.
+  - m_Set: trust us_earnest_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: The least we need is your trust.
+    m_Response: Hrr. You need to give me more than that.
+  - m_Set: shortage of goods_cautious_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: I read somewhere that we are lacking goods.
+    m_Response: "I hope that somewhere isn\u2019t my office. But you\u2019re right."
+  - m_Set: shortage of goods_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: I read somewhere that we are lacking a lot of goods.
+    m_Response: "I hope that somewhere isn\u2019t my office. But you\u2019re right."
+  - m_Set: shortage of goods_cautious_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: I read somewhere that we are lacking certain types of goods.
+    m_Response: "I hope that somewhere isn\u2019t my office. But you\u2019re right."
+  - m_Set: shortage of goods_cautious_straight
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: I read somewhere that we are lacking goods.
+    m_Response: "I hope that somewhere isn\u2019t my office. But you\u2019re right."
+  - m_Set: shortage of goods_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: I read somewhere that we are lacking a lot of goods.
+    m_Response: "I hope that somewhere isn\u2019t my office. But you\u2019re right."
+  - m_Set: shortage of goods_cautious_downplay
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: I read somewhere that we are lacking certain types of goods.
+    m_Response: "I hope that somewhere isn\u2019t my office. But you\u2019re right."
+  - m_Set: shortage of goods_cautious_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: I read somewhere that we are lacking goods.
+    m_Response: "Speak plainly. But you\u2019re right."
+  - m_Set: shortage of goods_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: I read somewhere that we are lacking a lot of goods.
+    m_Response: "Speak plainly. But you\u2019re right."
+  - m_Set: shortage of goods_cautious_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: I read somewhere that we are lacking certain types of goods.
+    m_Response: "Speak plainly. But you\u2019re right."
+  - m_Set: unique viewpoint_cautious_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Not a lot of groups here in our town that stand out.
+    m_Response: "That\u2019s debatable."
+  - m_Set: unique viewpoint_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: No one is as special and unique as us!
+    m_Response: "That\u2019s debatable."
+  - m_Set: unique viewpoint_cautious_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: "In all of my time here in this town, I haven\u2019t seen any groups
+      that are unique."
+    m_Response: "That\u2019s debatable."
+  - m_Set: unique viewpoint_cautious_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Not a lot of groups here in our town that stand out.
+    m_Response: Nope.
+  - m_Set: unique viewpoint_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: No one is as special and unique as us!
+    m_Response: Nope.
+  - m_Set: unique viewpoint_cautious_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: "In all of my time here in this town, I haven\u2019t seen any groups
+      that are unique."
+    m_Response: Nope.
+  - m_Set: unique viewpoint_cautious_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Not a lot of groups here in our town that stand out.
+    m_Response: Where do we fit in though, hmm?
+  - m_Set: unique viewpoint_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: No one is as special and unique as us!
+    m_Response: Where do we fit in though, hmm?
+  - m_Set: unique viewpoint_cautious_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: "In all of my time here in this town, I haven\u2019t seen any groups
+      that are unique."
+    m_Response: Where do we fit in though, hmm?
+  - m_Set: trust us_cautious_straight
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: "Before anything, we\u2019d just like for you to listen."
+    m_Response: I am listening.
+  - m_Set: trust us_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: Right now, we just need you to consider it.
+    m_Response: I am listening.
+  - m_Set: trust us_cautious_downplay
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: "Your consideration is what we\u2019re asking for, for now."
+    m_Response: I am listening.
+  - m_Set: trust us_cautious_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: "Before anything, we\u2019d just like for you to listen."
+    m_Response: Ok.
+  - m_Set: trust us_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Right now, we just need you to consider it.
+    m_Response: Ok.
+  - m_Set: trust us_cautious_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: "Your consideration is what we\u2019re asking for, for now."
+    m_Response: Ok.
+  - m_Set: trust us_cautious_straight
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: "Before anything, we\u2019d just like for you to listen."
+    m_Response: "That\u2019s not enough."
+  - m_Set: trust us_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: Right now, we just need you to consider it.
+    m_Response: "That\u2019s not enough."
+  - m_Set: trust us_cautious_downplay
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: "Your consideration is what we\u2019re asking for, for now."
+    m_Response: "That\u2019s not enough."
+  - m_Set: shortage of goods_blunt_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We know that there is a shortage of goods. We need to help with that.
+    m_Response: Point taken.
+  - m_Set: shortage of goods_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We know that there is a shortage of goods. We seriously need to help
+      with that.
+    m_Response: Point taken.
+  - m_Set: shortage of goods_blunt_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We know that there is a shortage of goods. We could help with that.
+    m_Response: Point taken.
+  - m_Set: shortage of goods_blunt_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We know that there is a shortage of goods. We could help with that.
+    m_Response: Yes, how can you help is the question however.
+  - m_Set: shortage of goods_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We know that there is a shortage of goods. We seriously need to help
+      with that.
+    m_Response: Yes, how can you help is the question however.
+  - m_Set: shortage of goods_blunt_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We know that there is a shortage of goods. We could help with that.
+    m_Response: Yes, how can you help is the question however.
+  - m_Set: shortage of goods_blunt_straight
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: We know that there is a shortage of goods. We need to help with that.
+    m_Response: "Yes. Indeed. You\u2019re right!"
+  - m_Set: shortage of goods_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: We know that there is a shortage of goods. We seriously need to help
+      with that.
+    m_Response: "Yes. Indeed. You\u2019re right!"
+  - m_Set: shortage of goods_blunt_downplay
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: We know that there is a shortage of goods. We could help with that.
+    m_Response: "Yes. Indeed. You\u2019re right!"
+  - m_Set: unique viewpoint_blunt_straight
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We are the most capable group that you can find anywhere in the town.
+    m_Response: Debatable.
+  - m_Set: unique viewpoint_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We will be the most successful political group to ever come from this
+      town!
+    m_Response: Debatable.
+  - m_Set: unique viewpoint_blunt_downplay
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: No one can do this but us.
+    m_Response: Debatable.
+  - m_Set: unique viewpoint_blunt_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We are the most capable group that you can find anywhere in the town.
+    m_Response: Highly unlikely, considering many factors, such as age.
+  - m_Set: unique viewpoint_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We will be the most successful political group to ever come from this
+      town!
+    m_Response: Highly unlikely, considering many factors, such as age.
+  - m_Set: unique viewpoint_blunt_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: No one can do this but us.
+    m_Response: Highly unlikely, considering many factors, such as age.
+  - m_Set: unique viewpoint_blunt_straight
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: We are the most capable group that you can find anywhere in the town.
+    m_Response: "I suppose that\u2019s one thing to consider..."
+  - m_Set: unique viewpoint_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: We will be the most successful political group to ever come from this
+      town!
+    m_Response: "I suppose that\u2019s one thing to consider..."
+  - m_Set: unique viewpoint_blunt_downplay
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: No one can do this but us.
+    m_Response: "I suppose that\u2019s one thing to consider..."
+  - m_Set: trust us_blunt_straight
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: Give us your trust.
+    m_Response: "I\u2019m not sure about this."
+  - m_Set: trust us_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: Surely you can give us the bare minimum - your trust?
+    m_Response: "I\u2019m not sure about this."
+  - m_Set: trust us_blunt_downplay
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: Give. Trust. First thing we need.
+    m_Response: "I\u2019m not sure about this."
+  - m_Set: trust us_blunt_straight
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: Give us your trust.
+    m_Response: Explain.
+  - m_Set: trust us_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: Surely you can give us the bare minimum - your trust?
+    m_Response: Explain.
+  - m_Set: trust us_blunt_downplay
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: Give. Trust. First thing we need.
+    m_Response: Explain.
+  - m_Set: trust us_blunt_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Give us your trust.
+    m_Response: We need more than trust, you know.
+  - m_Set: trust us_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Surely you can give us the bare minimum - your trust?
+    m_Response: We need more than trust, you know.
+  - m_Set: trust us_blunt_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Give. Trust. First thing we need.
+    m_Response: We need more than trust, you know.
+  m_Type: Persuasion

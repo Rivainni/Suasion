@@ -7,12 +7,19 @@ using UnityEngine.EventSystems;
 public class ButtonGlow : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] Image Rectangle;
-    bool mouse_over = false;
-    Button current;
+    Selectable current;
 
     void Start()
     {
-        current = gameObject.GetComponent<Button>();
+        if (gameObject.GetComponent<Button>())
+        {
+            current = gameObject.GetComponent<Button>();
+        }
+        else
+        {
+            current = gameObject.GetComponent<Toggle>();
+        }
+
         SetInteractable();
     }
 
@@ -25,9 +32,16 @@ public class ButtonGlow : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (current.interactable)
         {
-            mouse_over = true;
             Color currentColor = GetComponent<Image>().color;
-            currentColor.a = 255;
+            currentColor.a = 1.0f;
+
+            if (gameObject.name == "Confirm")
+            {
+                Color confirmColor = Rectangle.color;
+                confirmColor.a = 1.0f;
+                Rectangle.color = confirmColor;
+            }
+
             GetComponent<Image>().color = currentColor;
         }
     }
@@ -36,9 +50,16 @@ public class ButtonGlow : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (current.interactable)
         {
-            mouse_over = false;
             Color currentColor = GetComponent<Image>().color;
             currentColor.a = 0;
+
+            if (gameObject.name == "Confirm")
+            {
+                Color confirmColor = Rectangle.color;
+                confirmColor.a = 0.5f;
+                Rectangle.color = confirmColor;
+            }
+
             GetComponent<Image>().color = currentColor;
         }
     }

@@ -1,0 +1,11 @@
+﻿title: BeforeDoctor
+tags: cutscene
+---
+5 years later...
+Over the years, Sate has been becoming more aware of the unjust corruption happening in the town.
+Sate wants to run for Mayor, and Amsel, being the good friend they are, wants to help.
+Now, the problem is knowing where to start.
+They decide to approach Sate's father Dr. Antoni for help, support, and permission.
+<<transition "Game Manager">>
+<<enddialogue "Game Manager">>
+===

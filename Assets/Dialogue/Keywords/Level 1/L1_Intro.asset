@@ -1,0 +1,188 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: L1_Intro
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - permission to run
+    - today's weather
+    - something to ask
+    m_Tone:
+    - direct
+    - polite
+    - demanding
+    m_Honesty: []
+    m_Restrictions: []
+  m_Combinations:
+  - m_Set: permission to run_demanding
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: Sir. You will give us permission to run and campaign for the mayorial
+      elections, right?
+    m_Response: Wait, you're planning to run for mayor? Explain this to me more.
+  - m_Set: permission to run_demanding
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Sir. You will give us permission to run and campaign for the mayorial
+      elections, right?
+    m_Response: "Very rude little child, also to assume someone\u2019s response and
+      include that in the conversation is not wise."
+  - m_Set: permission to run_demanding
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Sir. You will give us permission to run and campaign for the mayorial
+      elections, right?
+    m_Response: "What will you do if I say no? And why is it that you\u2019re the
+      one asking, not my own child?"
+  - m_Set: today's weather_demanding
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Hmmm. There is some nice weather today. You will grant us a favor,
+      right?
+    m_Response: Why not? But what does the weather have to do with it?
+  - m_Set: today's weather_demanding
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Hmmm. There is some nice weather today. You will grant us a favor,
+      right?
+    m_Response: What do you kids want?
+  - m_Set: today's weather_demanding
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Hmmm. There is some nice weather today. You will grant us a favor,
+      right?
+    m_Response: Depends on the favor.
+  - m_Set: something to ask_demanding
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: I have something to ask, and you will answer it.
+    m_Response: Well, it depends.
+  - m_Set: something to ask_demanding
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: I have something to ask, and you will answer it.
+    m_Response: With that tone, I am much more inclined to say no.
+  - m_Set: something to ask_demanding
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: I have something to ask, and you will answer it.
+    m_Response: "And what\u2019s stopping me from saying no?"
+  - m_Set: permission to run_polite
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: Doctor, may we have permission to start a campaign for your child to
+      become mayor?
+    m_Response: Hmm. Give me a moment.
+  - m_Set: permission to run_polite
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Doctor, may we have permission to start a campaign for your child to
+      become mayor?
+    m_Response: Why does my child want to become a mayor?
+  - m_Set: permission to run_polite
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: Doctor, may we have permission to start a campaign for your child to
+      become mayor?
+    m_Response: Become mayor! My kid!? Why?
+  - m_Set: today's weather_polite
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: We have it in good word that the moon will be bright and clear tonight.
+      Is it ok if we can ask you something?
+    m_Response: Are you feeling lucky for this evening? What do you want to ask?
+  - m_Set: today's weather_polite
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We have it in good word that the moon will be bright and clear tonight.
+      Is it ok if we can ask you something?
+    m_Response: Politeness then a sudden favor, what do you want?
+  - m_Set: today's weather_polite
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: We have it in good word that the moon will be bright and clear tonight.
+      Is it ok if we can ask you something?
+    m_Response: "I don\u2019t like suck ups. What is it that\u2019s so important
+      to sacrifice your dignity?"
+  - m_Set: something to ask_polite
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: Sir, may I have a word?
+    m_Response: Ok, what do you want?
+  - m_Set: something to ask_polite
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: Sir, may I have a word?
+    m_Response: Yes, what is it?
+  - m_Set: something to ask_polite
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: Sir, may I have a word?
+    m_Response: What?
+  - m_Set: permission to run_direct
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: Your child and I are planning to file a certificate for candidacy for
+      him to run as mayor. May we have your permission to do just that as well as
+      campaign?
+    m_Response: Can you explain this?
+  - m_Set: permission to run_direct
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: Your child and I are planning to file a certificate for candidacy for
+      him to run as mayor. May we have your permission to do just that as well as
+      campaign?
+    m_Response: "Hmmm, this is out of the blue, but I\u2019ll be willing to listen
+      if you explain your plan more."
+  - m_Set: permission to run_direct
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: Your child and I are planning to file a certificate for candidacy for
+      him to run as mayor. May we have your permission to do just that as well as
+      campaign?
+    m_Response: Run as mayor? Most people would still call both of you children.
+  - m_Set: today's weather_direct
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: The weather was stable for this day, hmm? We want to ask you a question
+      regarding the future of your child.
+    m_Response: A serious conversation then, go on.
+  - m_Set: today's weather_direct
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: The weather was stable for this day, hmm? We want to ask you a question
+      regarding the future of your child.
+    m_Response: "The future of my child\u2026go on."
+  - m_Set: today's weather_direct
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: The weather was stable for this day, hmm? We want to ask you a question
+      regarding the future of your child.
+    m_Response: The future of a child is not up to a friend, rather their own parents.
+      However, with enough deliberation, alternatives can be considered.
+  - m_Set: something to ask_direct
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: Your child and I have something important to ask you.
+    m_Response: Important? What is it?
+  - m_Set: something to ask_direct
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Your child and I have something important to ask you.
+    m_Response: What matter needs such serious attention?
+  - m_Set: something to ask_direct
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Your child and I have something important to ask you.
+    m_Response: "I\u2019ll only answer if it\u2019s about tomorrow's shift."
+  m_Type: Intro

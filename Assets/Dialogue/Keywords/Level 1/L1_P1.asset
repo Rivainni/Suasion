@@ -1,0 +1,435 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: L1_P1
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - issues of the town
+    - bringing change
+    - helping others
+    m_Tone:
+    - earnest
+    - cautious
+    - blunt
+    m_Honesty:
+    - straight
+    - exaggerate
+    - downplay
+    m_Restrictions: []
+  m_Combinations:
+  - m_Set: issues of the town_earnest_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: "We want to help address the town\u2019s issues."
+    m_Response: I see. Hmm.
+  - m_Set: issues of the town_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: "We want to help address the town\u2019s many issues."
+    m_Response: I see. Hmm.
+  - m_Set: issues of the town_earnest_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: "We want to help address some of the town\u2019s problems."
+    m_Response: I see. Hmm.
+  - m_Set: issues of the town_earnest_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: "We want to help address the town\u2019s issues."
+    m_Response: "That\u2019s good."
+  - m_Set: issues of the town_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: "We want to help address the town\u2019s many issues."
+    m_Response: "That\u2019s good."
+  - m_Set: issues of the town_earnest_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: "We want to help address some of the town\u2019s problems."
+    m_Response: "That\u2019s good."
+  - m_Set: issues of the town_earnest_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: "We want to help address the town\u2019s issues."
+    m_Response: "You\u2019re not the first."
+  - m_Set: issues of the town_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: "We want to help address the town\u2019s many issues."
+    m_Response: "You\u2019re not the first."
+  - m_Set: issues of the town_earnest_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: "We want to help address some of the town\u2019s problems."
+    m_Response: "You\u2019re not the first."
+  - m_Set: bringing change_earnest_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We want to help bring change.
+    m_Response: "You\u2019re not the first."
+  - m_Set: bringing change_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We may be the only ones to want to help bring change.
+    m_Response: "You\u2019re not the first."
+  - m_Set: bringing change_earnest_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We want to be of some help in transforming this town.
+    m_Response: "You\u2019re not the first."
+  - m_Set: bringing change_earnest_straight
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: We want to help bring change.
+    m_Response: Agreed.
+  - m_Set: bringing change_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: We may be the only ones to want to help bring change.
+    m_Response: Agreed.
+  - m_Set: bringing change_earnest_downplay
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: We want to be of some help in transforming this town.
+    m_Response: Agreed.
+  - m_Set: bringing change_earnest_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We want to help bring change.
+    m_Response: Change in what way?
+  - m_Set: bringing change_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We may be the only ones to want to help bring change.
+    m_Response: Change in what way?
+  - m_Set: bringing change_earnest_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We want to be of some help in transforming this town.
+    m_Response: Change in what way?
+  - m_Set: helping others_earnest_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We just want to help.
+    m_Response: But there are many ways to help.
+  - m_Set: helping others_earnest_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We have been inspired to help.
+    m_Response: But there are many ways to help.
+  - m_Set: helping others_earnest_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: "We thought about it and\u2026 we think that we should help."
+    m_Response: But there are many ways to help.
+  - m_Set: helping others_earnest_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We just want to help.
+    m_Response: Tell me how.
+  - m_Set: helping others_earnest_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We have been inspired to help.
+    m_Response: Tell me how.
+  - m_Set: helping others_earnest_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: "We thought about it and\u2026 we think that we should help."
+    m_Response: Tell me how.
+  - m_Set: helping others_earnest_straight
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: We just want to help.
+    m_Response: I can respect that - just tell me more.
+  - m_Set: helping others_earnest_exaggerate
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: We have been inspired to help.
+    m_Response: I can respect that - just tell me more.
+  - m_Set: helping others_earnest_downplay
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: "We thought about it and\u2026 we think that we should help."
+    m_Response: I can respect that - just tell me more.
+  - m_Set: issues of the town_cautious_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: "This town isn\u2019t perfect so\u2026"
+    m_Response: We know that. So?
+  - m_Set: issues of the town_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We all know that this town is not perfect.
+    m_Response: We know that. So?
+  - m_Set: issues of the town_cautious_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: "Hmmm, this town isn\u2019t perfect so\u2026"
+    m_Response: We know that. So?
+  - m_Set: issues of the town_cautious_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: "This town isn\u2019t perfect so\u2026"
+    m_Response: Ehh.
+  - m_Set: issues of the town_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We all know that this town is not perfect.
+    m_Response: Ehh.
+  - m_Set: issues of the town_cautious_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: "Hmmm, this town isn\u2019t perfect so\u2026"
+    m_Response: Ehh.
+  - m_Set: issues of the town_cautious_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: "This town isn\u2019t perfect so\u2026"
+    m_Response: Tell me more.
+  - m_Set: issues of the town_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We all know that this town is not perfect.
+    m_Response: Tell me more.
+  - m_Set: issues of the town_cautious_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: "Hmmm, this town isn\u2019t perfect so\u2026"
+    m_Response: Tell me more.
+  - m_Set: bringing change_cautious_straight
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: Well - maybe certain things need to change.
+    m_Response: Speak plainly.
+  - m_Set: bringing change_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: Certain things need to change.
+    m_Response: Speak plainly.
+  - m_Set: bringing change_cautious_downplay
+    m_Mood: positive
+    m_Points: 3
+    m_Choice: We could use a change of pace.
+    m_Response: Speak plainly.
+  - m_Set: bringing change_cautious_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Well - maybe certain things need to change.
+    m_Response: True, but what exactly?
+  - m_Set: bringing change_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Certain things need to change.
+    m_Response: True, but what exactly?
+  - m_Set: bringing change_cautious_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: We could use a change of pace.
+    m_Response: True, but what exactly?
+  - m_Set: bringing change_cautious_straight
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: Well - maybe certain things need to change.
+    m_Response: "Those things\u2026 what are they?"
+  - m_Set: bringing change_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: Certain things need to change.
+    m_Response: "Those things\u2026 what are they?"
+  - m_Set: bringing change_cautious_downplay
+    m_Mood: negative
+    m_Points: 5
+    m_Choice: We could use a change of pace.
+    m_Response: "Those things\u2026 what are they?"
+  - m_Set: helping others_cautious_straight
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: "We\u2019re in a unique position to\u2026 move things along."
+    m_Response: Hmm. How so?
+  - m_Set: helping others_cautious_exaggerate
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: We can move things along in this town.
+    m_Response: Hmm. How so?
+  - m_Set: helping others_cautious_downplay
+    m_Mood: positive
+    m_Points: 2
+    m_Choice: "Some might say that we\u2019re in unique position to move things along."
+    m_Response: Hmm. How so?
+  - m_Set: helping others_cautious_straight
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: "We\u2019re in a unique position to\u2026 move things along."
+    m_Response: "I don\u2019t know about that\u2026"
+  - m_Set: helping others_cautious_exaggerate
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: We can move things along in this town.
+    m_Response: "I don\u2019t know about that\u2026"
+  - m_Set: helping others_cautious_downplay
+    m_Mood: neutral
+    m_Points: 2
+    m_Choice: "Some might say that we\u2019re in unique position to move things along."
+    m_Response: "I don\u2019t know about that\u2026"
+  - m_Set: helping others_cautious_straight
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: "We\u2019re in a unique position to\u2026 move things along."
+    m_Response: "That\u2019s right."
+  - m_Set: helping others_cautious_exaggerate
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: We can move things along in this town.
+    m_Response: "That\u2019s right."
+  - m_Set: helping others_cautious_downplay
+    m_Mood: negative
+    m_Points: 6
+    m_Choice: "Some might say that we\u2019re in unique position to move things along."
+    m_Response: "That\u2019s right."
+  - m_Set: issues of the town_blunt_straight
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: This town is mismanaged.
+    m_Response: I agree.
+  - m_Set: issues of the town_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: This town is hopeless.
+    m_Response: I agree.
+  - m_Set: issues of the town_blunt_downplay
+    m_Mood: positive
+    m_Points: 6
+    m_Choice: This town has issues.
+    m_Response: I agree.
+  - m_Set: issues of the town_blunt_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: This town is mismanaged.
+    m_Response: I suppose.
+  - m_Set: issues of the town_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: This town is hopeless.
+    m_Response: I suppose.
+  - m_Set: issues of the town_blunt_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: This town has issues.
+    m_Response: I suppose.
+  - m_Set: issues of the town_blunt_straight
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: This town is mismanaged.
+    m_Response: "Tell me something I don\u2019t know."
+  - m_Set: issues of the town_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: This town is hopeless.
+    m_Response: "Tell me something I don\u2019t know."
+  - m_Set: issues of the town_blunt_downplay
+    m_Mood: negative
+    m_Points: 2
+    m_Choice: This town has issues.
+    m_Response: "Tell me something I don\u2019t know."
+  - m_Set: bringing change_blunt_straight
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: Things must change.
+    m_Response: What, exactly?
+  - m_Set: bringing change_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: Things need to change - or the town will fail.
+    m_Response: What, exactly?
+  - m_Set: bringing change_blunt_downplay
+    m_Mood: positive
+    m_Points: 5
+    m_Choice: Things must change.
+    m_Response: What, exactly?
+  - m_Set: bringing change_blunt_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Things must change.
+    m_Response: I agree, but maybe you can explain more.
+  - m_Set: bringing change_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Things need to change - or the town will fail.
+    m_Response: I agree, but maybe you can explain more.
+  - m_Set: bringing change_blunt_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: A few things need to change.
+    m_Response: I agree, but maybe you can explain more.
+  - m_Set: bringing change_blunt_straight
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Things must change.
+    m_Response: And?
+  - m_Set: bringing change_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: Things need to change - or the town will fail.
+    m_Response: And?
+  - m_Set: bringing change_blunt_downplay
+    m_Mood: negative
+    m_Points: 3
+    m_Choice: A few things need to change.
+    m_Response: And?
+  - m_Set: helping others_blunt_straight
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We must help.
+    m_Response: Definitely.
+  - m_Set: helping others_blunt_exaggerate
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We must help - or die.
+    m_Response: Definitely.
+  - m_Set: helping others_blunt_downplay
+    m_Mood: positive
+    m_Points: 4
+    m_Choice: We must help even a little.
+    m_Response: Definitely.
+  - m_Set: helping others_blunt_straight
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We must help.
+    m_Response: Do you have some sort of plan?
+  - m_Set: helping others_blunt_exaggerate
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We must help - or die.
+    m_Response: Do you have some sort of plan?
+  - m_Set: helping others_blunt_downplay
+    m_Mood: neutral
+    m_Points: 3
+    m_Choice: We must help even a little.
+    m_Response: Do you have some sort of plan?
+  - m_Set: helping others_blunt_straight
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We must help.
+    m_Response: "\u2026Right."
+  - m_Set: helping others_blunt_exaggerate
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We must help - or die.
+    m_Response: "\u2026Right."
+  - m_Set: helping others_blunt_downplay
+    m_Mood: negative
+    m_Points: 4
+    m_Choice: We must help even a little.
+    m_Response: "\u2026Right."
+  m_Type: Persuasion

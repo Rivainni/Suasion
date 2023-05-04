@@ -1,0 +1,22 @@
+﻿title: Doctor_2C
+tags: cutscene
+---
+<<transition "Game Manager">>
+<<setcspeaker "CutsceneAdvance" 0>>
+The next day...
+<<setcspeaker "CutsceneAdvance" 3>>
+DR. ANTONI: First thing you kids need to do is gather support from the main people in the town.
+DR. ANTONI: You could first go to either Maria the Baker or Manuel the Farmer.
+DR. ANTONI: I know that Maria is the town's most influential person. She basically holds the town's social power since she has information on almost everyone.
+DR. ANTONI: Be wary of her, she's been rumored to enjoy controlling the drama between people.
+DR. ANTONI: I suggest talking to her to get more support from the townspeople.
+DR. ANTONI: In contrast, however, is Manuel the lone workman.
+DR. ANTONI: He prefers to work alone and not converse with others. You need to talk to him cause the Mayor has been taking advantage of his silence for some time now.
+DR. ANTONI: Be careful talking to these people. Our town isn't known for its hospitality.
+<<setcspeaker "CutsceneAdvance" 2>>
+SATE: We will take care when conversing with these people, thank you Father.
+<<setcspeaker "CutsceneAdvance" 1>>
+AMSEL: Well Sate, let's go!
+<<transition "Game Manager">>
+<<enddialogue "Game Manager">>
+===

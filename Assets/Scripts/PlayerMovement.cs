@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
     [SerializeField] float moveSpeed;
     [SerializeField] Rigidbody2D rBody;
     [SerializeField] Animator animator;
 
     Vector2 movement;
+    bool isPlaying = false;
     bool activeLock = false;
+    float oldX;
+    float oldY;
 
     // Update is called once per frame
     void Update()
@@ -19,15 +22,41 @@ public class PlayerMovement : MonoBehaviour
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
 
-            animator.SetInteger("Horizontal", Mathf.RoundToInt(movement.x));
-            animator.SetInteger("Vertical", Mathf.RoundToInt(movement.y));
+            if ((movement.x != 0 || movement.y != 0) && !isPlaying)
+            {
+                PlayFootsteps();
+                isPlaying = true;
+            }
+            else if (isPlaying && (movement.x == 0 && movement.y == 0))
+            {
+                PauseFootsteps();
+                isPlaying = false;
+            }
+
+            animator.SetFloat("Horizontal", movement.x);
+            animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
+
+            if (movement.x == 0 && movement.y == 0)
+            {
+                animator.SetFloat("OldH", oldX);
+                animator.SetFloat("OldV", oldY);
+            }
+            else
+            {
+                oldX = movement.x;
+                oldY = movement.y;
+            }
         }
         else
         {
-            animator.SetInteger("Horizontal", 0);
-            animator.SetInteger("Vertical", 0);
+            animator.SetFloat("Horizontal", 0);
+            animator.SetFloat("Vertical", 0);
             animator.SetFloat("Speed", 0);
+            animator.SetFloat("OldH", oldX);
+            animator.SetFloat("OldV", oldY);
+            PauseFootsteps();
+            isPlaying = false;
         }
     }
 
@@ -35,8 +64,18 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!activeLock)
         {
-            rBody.MovePosition(rBody.position + movement * moveSpeed * Time.fixedDeltaTime);
+            rBody.MovePosition(rBody.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
         }
+    }
+
+    void PlayFootsteps()
+    {
+        AkSoundEngine.PostEvent("Player_Footsteps", gameObject);
+    }
+
+    void PauseFootsteps()
+    {
+        AkSoundEngine.ExecuteActionOnEvent("Player_Footsteps", AkActionOnEventType.AkActionOnEventType_Pause, gameObject);
     }
 
     public void LockMovement()
@@ -47,5 +86,15 @@ public class PlayerMovement : MonoBehaviour
     public void UnlockMovement()
     {
         activeLock = false;
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+        gameData.playerPosition = rBody.position;
+    }
+
+    public void LoadData(GameData gameData)
+    {
+        rBody.position = gameData.playerPosition;
     }
 }

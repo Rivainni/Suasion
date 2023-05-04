@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6a8c0cc9f04011b62f5adbbe7e784, type: 3}
+  m_Name: T_P3
+  m_EditorClassIdentifier: 
+  m_Keywords:
+    m_Topic:
+    - game
+    - age
+    m_Tone:
+    - cheerful
+    - angry
+    m_Honesty:
+    - straight
+    - exaggerate
+    - downplay
+    m_Restrictions: []
+  m_Combinations:
+  - m_Set: game_cheerful_downplay
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Maybe you want to play a game?
+    m_Response: Hmmm...
+  - m_Set: game_cheerful_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: "Let\u2019s play a game!"
+    m_Response: Hmmm...
+  - m_Set: game_cheerful_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: Wanna play a game?
+    m_Response: Hmmm...
+  - m_Set: game_angry_downplay
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: "Tsk. Maybe you should play with me - that\u2019s the least you could
+      do."
+    m_Response: Hmmm...
+  - m_Set: game_angry_exaggerate
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: WHICH IS WHY YOU SHOULD LISTEN AND PLAY WITH ME OR ELSE.
+    m_Response: Hmmm...
+  - m_Set: game_angry_straight
+    m_Mood: neutral
+    m_Points: 6
+    m_Choice: Which is why you should listen to me and play a game with me.
+    m_Response: Hmmm...
+  - m_Set: age_cheerful_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: "You might grow up faster\u2026"
+    m_Response: Hmmm...
+  - m_Set: age_cheerful_exaggerate
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: At this rate, you might just disappear.
+    m_Response: Hmmm...
+  - m_Set: age_cheerful_straight
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: "You know, if you don\u2019t relax, you might age faster!"
+    m_Response: Hmmm...
+  - m_Set: age_angry_downplay
+    m_Mood: neutral
+    m_Points: 4
+    m_Choice: Okay, boomer.
+    m_Response: Hmmm...
+  - m_Set: age_angry_exaggerate
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: You will die. Faster.
+    m_Response: Hmmm...
+  - m_Set: age_angry_straight
+    m_Mood: neutral
+    m_Points: 5
+    m_Choice: You might die early, you know that, right?
+    m_Response: Hmmm...
+  m_Type: Persuasion
